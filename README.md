@@ -1,5 +1,7 @@
 # Hacking Stanford Libraries
 
+This workshop as a GitBook: https://stanfordgeospatialcenter.github.io/hacking-stanford-libraries/ 
+
 A practical workshop on using Stanford Libraries' [Digital Stacks](https://api.library.stanford.edu/docs/digital-stacks/api/), [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page), and web mapping to build interactive applications.
 
 ## About This Workshop
