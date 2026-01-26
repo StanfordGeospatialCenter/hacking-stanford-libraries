@@ -1,5 +1,7 @@
 # Step 4: Add Popups with Information
 
+Live Demo: [cog_map_step_04.html](cog_map_step_04.html)
+
 ## Overview
 
 In this step, we'll make our map interactive by adding popups that display artwork information when users click on markers. This introduces working with feature properties and building dynamic HTML content.

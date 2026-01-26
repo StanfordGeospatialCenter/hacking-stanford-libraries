@@ -1,5 +1,7 @@
 # Step 2: Initialize Leaflet Map
 
+Live Demo: [cog_map_step_02.html](cog_map_step_02.html)
+
 ## Overview
 
 Now we'll transform our empty container into an interactive web map using Leaflet, a popular open-source JavaScript mapping library.
@@ -323,6 +325,11 @@ Your Object (druid:abc123xyz456)
     ├── 14/
     └── ...
 ```
+
+**Related resources:**
+- Stanford Digital Repository: https://sdr.stanford.edu/
+- Stanford Libraries APIs: https://api.library.stanford.edu/
+- Stanford Geospatial Center: https://gis.stanford.edu/
 
 4. **Your HTML references tiles:**
 ```javascript

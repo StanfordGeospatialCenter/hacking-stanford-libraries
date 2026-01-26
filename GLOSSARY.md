@@ -620,13 +620,15 @@ Multi-line comment in JavaScript and CSS: `/* Comment */`
 
 ---
 
-# Additional Resources
+## Additional Resources
 
 - [MDN Web Docs](https://developer.mozilla.org/) - Comprehensive web development documentation
 - [Leaflet Documentation](https://leafletjs.com/) - Official Leaflet mapping library docs
 - [Wikidata Query Service](https://query.wikidata.org/) - Query and explore Wikidata
 - [GeoJSON Specification](https://geojson.org/) - Official GeoJSON format documentation
 - [Stanford Digital Repository](https://sdr.stanford.edu/) - SDR documentation
+- [Stanford Libraries APIs](https://api.library.stanford.edu/) - API directory for Stanford Libraries
+- [Stanford Geospatial Center](https://gis.stanford.edu/) - GIS services, data, and support
 
 ---
 

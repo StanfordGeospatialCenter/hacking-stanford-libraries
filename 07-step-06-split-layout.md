@@ -1,5 +1,7 @@
 # Step 6: Split-Screen Layout with External CSS
 
+Live Demo: [cog_map_step_06.html](cog_map_step_06.html)
+
 ## Overview
 
 In this step, we'll reorganize our page layout and move our styling to an external CSS file. This creates a professional split-screen interface with the map on the left and space for information on the right.

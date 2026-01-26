@@ -1,5 +1,7 @@
 # Step 3: Load GeoJSON Points
 
+Live Demo: [cog_map_step_03.html](cog_map_step_03.html)
+
 ## Overview
 
 In this step, we'll add data points (artwork locations) to our map by loading a GeoJSON file. This introduces working with geographic data and customizing how markers appear.

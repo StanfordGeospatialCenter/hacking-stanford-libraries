@@ -4,6 +4,11 @@
 
 The Digital Stacks is Stanford's web service for accessing files stored in the Stanford Digital Repository (SDR). It provides direct HTTP access to preserved digital content.
 
+**Related Stanford resources:**
+- Stanford Digital Repository: https://sdr.stanford.edu/
+- Stanford Libraries APIs: https://api.library.stanford.edu/
+- Stanford Geospatial Center: https://gis.stanford.edu/
+
 ## URL Patterns
 
 ### Basic File Access

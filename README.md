@@ -39,6 +39,11 @@ Progress through these tutorials in order to build a Stanford Public Art Interac
 - **[Glossary](GLOSSARY.md)** - Technical terms, acronyms, and concepts
 - **[HonKit/GitBook Navigation](SUMMARY.md)** - Structured navigation for documentation systems
 
+## Stanford Resources
+- Stanford Digital Repository: https://sdr.stanford.edu/
+- Stanford Libraries APIs: https://api.library.stanford.edu/
+- Stanford Geospatial Center: https://gis.stanford.edu/
+
 ## Working Files
 
 Each step includes a corresponding working HTML file (`cog_map_step_00.html` through `cog_map_step_10.html`) demonstrating the complete code for that stage.

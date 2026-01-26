@@ -1,5 +1,7 @@
 # Step 1: Adding a Map Container
 
+Live Demo: [cog_map_step_01.html](cog_map_step_01.html)
+
 ## Overview
 
 In this step, we'll add visible content to our HTML page and create a container where our interactive map will live.
@@ -243,6 +245,11 @@ Your HTML can reference these files with relative paths:
 ```html
 <img src="images/logo.png">
 ```
+
+**Related resources:**
+- Stanford Digital Repository: https://sdr.stanford.edu/
+- Stanford Libraries APIs: https://api.library.stanford.edu/
+- Stanford Geospatial Center: https://gis.stanford.edu/
 
 And users access your page at:
 ```

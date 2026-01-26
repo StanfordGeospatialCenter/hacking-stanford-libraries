@@ -1,5 +1,7 @@
 # Step 9: Complete Integration
 
+Live Demo: [cog_map_step_09.html](cog_map_step_09.html)
+
 ## Overview
 
 In this final step, we'll create a fully-featured application by adding multiple Wikidata properties: artist names, creation dates, materials, and more. This demonstrates how to build a comprehensive information display from structured data.
@@ -656,6 +658,11 @@ https://stacks.stanford.edu/file/druid:abc123xyz456/index.html
 
 Works because:
 ✓ All local files use relative paths
+
+**Related resources:**
+- Stanford Digital Repository: https://sdr.stanford.edu/
+- Stanford Libraries APIs: https://api.library.stanford.edu/
+- Stanford Geospatial Center: https://gis.stanford.edu/
 ✓ External APIs (Wikidata, OpenStreetMap) use absolute URLs
 ✓ JavaScript executes client-side
 ✓ No server-side processing needed

@@ -1,5 +1,7 @@
 # Step 0: Basic HTML Structure
 
+Live Demo: [cog_map_step_00.html](cog_map_step_00.html)
+
 ## Overview
 
 In this first step, we'll create the most basic HTML document possible. This is the foundation that every web page needs.
@@ -206,6 +208,11 @@ https://stacks.stanford.edu/file/druid:abc123xyz456/my-first-page.html
 ```
 
 Anyone could then view your page by visiting that URL!
+
+**Related resources:**
+- Stanford Digital Repository: https://sdr.stanford.edu/
+- Stanford Libraries APIs: https://api.library.stanford.edu/
+- Stanford Geospatial Center: https://gis.stanford.edu/
 
 ## What's Next?
 

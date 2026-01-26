@@ -1,5 +1,7 @@
 # Step 5: Adding Cloud Optimized GeoTIFF from Digital Stacks
 
+Live Demo: [cog_map_step_05.html](cog_map_step_05.html)
+
 ## Overview
 
 In this step, we'll add a high-resolution aerial photograph of Stanford campus, served directly from the Stanford Digital Repository through the Digital Stacks API.

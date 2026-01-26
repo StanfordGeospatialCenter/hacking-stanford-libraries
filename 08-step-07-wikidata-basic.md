@@ -1,5 +1,7 @@
 # Step 7: Basic Wikidata Fetching
 
+Live Demo: [cog_map_step_07.html](cog_map_step_07.html)
+
 ## Overview
 
 In this step, we'll connect to the Wikidata API to fetch information about artworks and display it in our right panel. This introduces working with external APIs and asynchronous JavaScript.
@@ -481,6 +483,11 @@ project/
 **After SDR deposit (DRUID: abc123xyz456):**
 - HTML loads from: `https://stacks.stanford.edu/file/druid:abc123xyz456/index.html`
 - GeoJSON loads from: `https://stacks.stanford.edu/file/druid:abc123xyz456/collection/stanford_public_art.geojson`
+
+**Related resources:**
+- Stanford Digital Repository: https://sdr.stanford.edu/
+- Stanford Libraries APIs: https://api.library.stanford.edu/
+- Stanford Geospatial Center: https://gis.stanford.edu/
 - Wikidata API calls work from anywhere (external API)
 - No changes needed!
 

@@ -1,5 +1,7 @@
 # Step 8: Wikidata Images
 
+Live Demo: [cog_map_step_08.html](cog_map_step_08.html)
+
 ## Overview
 
 In this step, we'll enhance our application by fetching and displaying images of the artworks from Wikimedia Commons. Images make our application much more engaging and informative!
@@ -551,6 +553,11 @@ https://stacks.stanford.edu/file/druid:abc123xyz456/index.html
 ```
 
 **All four work together seamlessly!**
+
+**Related resources:**
+- Stanford Digital Repository: https://sdr.stanford.edu/
+- Stanford Libraries APIs: https://api.library.stanford.edu/
+- Stanford Geospatial Center: https://gis.stanford.edu/
 
 ## What's Next?
 
