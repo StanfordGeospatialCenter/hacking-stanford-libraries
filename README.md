@@ -28,7 +28,9 @@ The [Stanford Digital Repository](https://sdr.stanford.edu/) is Stanford Librari
 
 ### Purpose of This Workshop
 
-This hands-on workshop demonstrates how to **transform research data deposits into rich, interactive web experiences** using the Stanford Digital Repository as both repository and web infrastructure. You'll learn to:
+This hands-on workshop demonstrates how to **transform research data deposits into rich, interactive web experiences** using the Stanford Digital Repository as both repository and web infrastructure. It was inspired by extensive experimentation with SDR as spatial data infrastructure, particularly [this interactive web application](https://stacks.stanford.edu/file/dz983xf0632/data/raw/fig1/index.html) ([view the SDR deposit](https://purl.stanford.edu/dz983xf0632)), which demonstrates how SDR can serve as both a data archive and a platform for interactive scholarly applications.
+
+You'll learn to:
 
 - Create **well-styled documentation pages** that present your research data clearly and professionally
 - Build **fully interactive web applications** that let users explore and understand your data

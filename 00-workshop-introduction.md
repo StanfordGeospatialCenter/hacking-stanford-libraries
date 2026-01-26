@@ -4,6 +4,10 @@
 
 Welcome to this hands-on workshop on building interactive web applications using the Stanford Digital Repository (SDR) infrastructure!
 
+### Inspiration
+
+This workshop was inspired by extensive experimentation with SDR as a spatial data infrastructure. A key example that motivated this work is [this interactive web application](https://stacks.stanford.edu/file/dz983xf0632/data/raw/fig1/index.html), which is published directly within an [SDR deposit](https://purl.stanford.edu/dz983xf0632). It beautifully demonstrates that SDR is not just an archive—it's a complete platform for hosting interactive scholarly applications alongside your research data. This workshop teaches you how to create similar applications for your own projects.
+
 ## Workshop Objectives
 
 This workshop will teach you how to:
