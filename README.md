@@ -1,18 +1,43 @@
-# Hacking Stanford Libraries
+# Hacking Stanford Libraries: Building Interactive Web Applications with SDR
 
 This workshop as a GitBook: https://stanfordgeospatialcenter.github.io/hacking-stanford-libraries/ 
 
 A practical workshop on using Stanford Libraries' [Digital Stacks](https://api.library.stanford.edu/docs/digital-stacks/api/), [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page), and web mapping to build interactive applications.
 
+## Part of the "Hacking Stanford Libraries" Mini Bootcamp
+
+This workshop is part of a three-part mini bootcamp on "Hacking Stanford Libraries":
+
+1. **[Working with Images from the Stanford Digital Repository (SDR): Stanford University Library's IIIF API & OpenCV](https://colab.research.google.com/drive/1HQ6gQHVV2coZvz_QrrJ6IelLgp4gS8Fo?usp=sharing)** - Leveraging International Image Interoperability Framework (IIIF) and computational image analysis for research. In this portion of the workshop we will be exploring how to excerpt and download images from the SDR, applying size constraints and region parameters, which will be determined by using OpenCV.
+2. **Using the PURL API Programmatically** - Obtaining metadata about items in an [SDR](https://sdr.stanford.edu/) collection programmatically
+3. **This Workshop** - Building interactive web applications with the Stanford Digital Repository
+
 ## About This Workshop
 
-This hands-on workshop teaches you how to build interactive web applications using the [Stanford Digital Repository (SDR)](https://sdr.stanford.edu/) infrastructure. You'll learn to:
+### The Stanford Digital Repository (SDR)
 
-- Access and use content from the [Stanford Digital Repository](https://sdr.stanford.edu/) directly in web applications
-- Build interactive HTML, JavaScript, and CSS applications showcasing your collection deposits
-- Leverage the [Digital Stacks API](https://api.library.stanford.edu/docs/digital-stacks/api/) to reference and display materials hosted in SDR
-- Create user-friendly visualizations using Leaflet maps and [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) integration
-- Publish simple HTML documents alongside your SDR deposits
+The [Stanford Digital Repository](https://sdr.stanford.edu/) is Stanford Libraries' institutional repository for preserving and providing permanent access to digital content. Key advantages include:
+
+- **Permanent Preservation:** Your research data and web applications are preserved long-term with guaranteed access
+- **Permanent URLs (PURLs):** Every object receives a persistent identifier that never changes, ensuring your links never break
+- **DOIs:** Digital Object Identifiers are automatically created for all deposits, making your work citable and discoverable through academic indexing services
+- **Web Infrastructure:** [Digital Stacks](https://api.library.stanford.edu/docs/digital-stacks/api/) provides direct HTTP access to all your files, eliminating hosting costs
+- **Scalable Storage:** Unlimited capacity for your research data, media, and documentation
+- **Integration Ready:** APIs support programmatic access and rich integration with external services
+- **Future-Proof:** As institutional infrastructure, SDR evolves with Stanford, ensuring your work remains accessible
+
+### Purpose of This Workshop
+
+This hands-on workshop demonstrates how to **transform research data deposits into rich, interactive web experiences** using the Stanford Digital Repository as both repository and web infrastructure. You'll learn to:
+
+- Create **well-styled documentation pages** that present your research data clearly and professionally
+- Build **fully interactive web applications** that let users explore and understand your data
+- Keep everything **self-contained and future-proof** by using SDR for storage and [Digital Stacks](https://api.library.stanford.edu/docs/digital-stacks/api/) for delivery
+- Use **relative paths** so your applications work perfectly whether running locally or deployed in SDR
+- Integrate **external APIs** (Wikidata, OpenStreetMap) to enrich your deposits with linked open data
+- Avoid vendor lock-in by hosting your web applications alongside your data in a trusted institutional repository
+
+This workshop teaches you that SDR isn't just for archival—it's a complete platform for publishing interactive scholarly applications.
 
 ## Workshop Materials
 
@@ -35,6 +60,7 @@ Progress through these tutorials in order to build a Stanford Public Art Interac
 9. [Step 8: Wikidata Images](09-step-08-wikidata-images.md)
 10. [Step 9: Complete Integration](10-step-09-complete-integration.md)
 11. [BONUS: Wikidata Filter](11-bonus-step-10-wikidata-filter.md)
+12. [Step 11: Future Proofing](12-step-11-future-proofing.md)
 
 ### Reference Documentation
 - **[Digital Stacks Reference](DIGITAL-STACKS-REFERENCE.md)** - Quick reference for Digital Stacks API and DRUIDs
@@ -48,7 +74,7 @@ Progress through these tutorials in order to build a Stanford Public Art Interac
 
 ## Working Files
 
-Each step includes a corresponding working HTML file (`cog_map_step_00.html` through `cog_map_step_10.html`) demonstrating the complete code for that stage.
+Each step includes a corresponding working HTML file (`cog_map_step_00.html` through `cog_map_step_11.html`) demonstrating the complete code for that stage.
 
 ## Data Sources
 

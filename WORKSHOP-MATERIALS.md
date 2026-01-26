@@ -74,6 +74,12 @@ This folder contains complete workshop documentation for building an interactive
    - Handle empty datasets gracefully
    - Preserve interactivity and split layout
 
+12. **[12-step-11-future-proofing.md](12-step-11-future-proofing.md)** - Future Proofing: Creating Self-Contained Deposits | [View Demo →](cog_map_step_11.html)
+   - Download and include JavaScript libraries locally
+   - Create self-contained, future-proof applications
+   - Ensure your application works forever in SDR
+   - Best practices for institutional preservation
+
 ## Completed HTML Files
 
 Each step has a corresponding working HTML file:
@@ -89,6 +95,7 @@ Each step has a corresponding working HTML file:
 - [cog_map_step_08.html](cog_map_step_08.html) - Wikidata images
 - [cog_map_step_09.html](cog_map_step_09.html) - Complete application
 - [cog_map_step_10.html](cog_map_step_10.html) - BONUS: Filtered to features with Wikidata IDs
+- [cog_map_step_11.html](cog_map_step_11.html) - Future-proofed with local libraries
 
 ## Additional Files
 
@@ -169,6 +176,9 @@ These materials are designed for complete beginners. Every concept is explained 
 - **Base map tiles:** OpenStreetMap
 
 ## Additional Resources
+
+### Related Workshops
+- **[Working with Images from the Stanford Digital Repository (SDR): Stanford University Library's IIIF API & OpenCV](https://colab.research.google.com/drive/1HQ6gQHVV2coZvz_QrrJ6IelLgp4gS8Fo?usp=sharing)** - Part 1 of the Hacking Stanford Libraries mini bootcamp, covering computational image analysis with IIIF
 
 ### Stanford Digital Repository
 - **Stanford Digital Repository:** https://sdr.stanford.edu/
