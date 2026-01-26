@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_top">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stanford Campus Map - Step 11: Future-Proofed Deposit</title>
+
+    <!-- Local Leaflet CSS (stored in lib/ folder) -->
+    <link rel="stylesheet" href="lib/leaflet.css">
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #container {
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+
+        #map {
+            flex: 1;
+            background-color: #e1e5e3;
+        }
+
+        #wikidata-panel {
+            flex: 0 0 400px;
+            background-color: #f5f5f5;
+            padding: 20px;
+            overflow-y: auto;
+            border-left: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        #wikidata-panel h2 {
+            margin-top: 0;
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        #wikidata-panel p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        #no-selection {
+            color: #999;
+            font-style: italic;
+            padding: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            #container {
+                flex-direction: column;
+            }
+            #wikidata-panel {
+                flex: 0 0 250px;
+                border-left: none;
+                border-top: 1px solid #ccc;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <div id="map"></div>
+    <div id="wikidata-panel">
+        <div id="no-selection">Click on an artwork to see Wikidata information</div>
+    </div>
+</div>
+
+<!-- Local Leaflet JavaScript (loaded from lib/ folder using relative path) -->
+<script src="lib/leaflet.js"></script>
+
+<script>
+    // Initialize the map
+    const map = L.map('map').setView([37.427, -122.169], 15);
+
+    // Add OpenStreetMap tiles (external API - this is always fine to use)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors',
+        maxZoom: 19
+    }).addTo(map);
+
+    // Load and display GeoJSON points
+    fetch('collection/stanford_public_art.geojson')
+        .then(response => response.json())
+        .then(data => {
+            // Convert to CircleMarkers
+            L.geoJSON(data, {
+                pointToLayer: (feature, latlng) => {
+                    return L.circleMarker(latlng, {
+                        radius: 8,
+                        fillColor: "#ff7800",
+                        color: "#000",
+                        weight: 2,
+                        opacity: 1,
+                        fillOpacity: 0.8
+                    });
+                },
+                onEachFeature: (feature, layer) => {
+                    // Add click handler to show Wikidata info
+                    layer.on('click', () => {
+                        handleFeatureClick(feature);
+                    });
+                }
+            }).addTo(map);
+        })
+        .catch(error => {
+            console.error('Error loading GeoJSON:', error);
+            document.getElementById('wikidata-panel').innerHTML = 
+                '<div id="no-selection">Error loading artwork data</div>';
+        });
+
+    // Handle feature click: fetch and display Wikidata information
+    async function handleFeatureClick(feature) {
+        const name = feature.properties?.name || 'Unknown';
+        const wikidataId = feature.properties?.wikidata;
+
+        if (!wikidataId) {
+            document.getElementById('wikidata-panel').innerHTML = 
+                `<h2>${name}</h2><div id="no-selection">No Wikidata ID available for this artwork</div>`;
+            return;
+        }
+
+        document.getElementById('wikidata-panel').innerHTML = '<div id="no-selection">Loading...</div>';
+
+        try {
+            // Fetch from Wikidata (external API - always accessible)
+            const response = await fetch(
+                `https://www.wikidata.org/wiki/Special:EntityData/${wikidataId}.json`
+            );
+            
+            if (!response.ok) throw new Error('Wikidata fetch failed');
+            
+            const data = await response.json();
+            const entity = data.entities[wikidataId];
+
+            let html = `<h2>${name}</h2>`;
+
+            // Add Wikidata label if available
+            if (entity.labels?.en) {
+                html += `<p><strong>${entity.labels.en.value}</strong></p>`;
+            }
+
+            // Add description
+            if (entity.descriptions?.en) {
+                html += `<p>${entity.descriptions.en.value}</p>`;
+            }
+
+            // Add creator (P170)
+            if (entity.claims?.P170) {
+                const creatorId = entity.claims.P170[0].mainsnak.datavalue.value.id;
+                const creatorUrl = `https://www.wikidata.org/wiki/${creatorId}`;
+                html += `<p><strong>Creator:</strong> <a href="${creatorUrl}" target="_blank">${creatorId}</a></p>`;
+            }
+
+            // Add inception date (P571)
+            if (entity.claims?.P571) {
+                const dateStr = entity.claims.P571[0].mainsnak.datavalue.value.time;
+                const year = dateStr.split('-')[0];
+                html += `<p><strong>Created:</strong> ${year}</p>`;
+            }
+
+            // Add material (P186)
+            if (entity.claims?.P186) {
+                const materialId = entity.claims.P186[0].mainsnak.datavalue.value.id;
+                html += `<p><strong>Material:</strong> ${materialId}</p>`;
+            }
+
+            document.getElementById('wikidata-panel').innerHTML = html;
+
+        } catch (error) {
+            console.error('Error fetching from Wikidata:', error);
+            document.getElementById('wikidata-panel').innerHTML = 
+                `<h2>${name}</h2><div id="no-selection">Error loading Wikidata information</div>`;
+        }
+    }
+</script>
+
+</body>
+</html>

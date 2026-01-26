@@ -1,0 +1,830 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Step 11: Future Proofing · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.1.5">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="DIGITAL-STACKS-REFERENCE.html" />
+    
+    
+    <link rel="prev" href="11-bonus-step-10-wikidata-filter.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="00-workshop-introduction.html">
+            
+                <a href="00-workshop-introduction.html">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Related Workshops</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <a target="_blank" href="https://colab.research.google.com/drive/1HQ6gQHVV2coZvz_QrrJ6IelLgp4gS8Fo?usp=sharing">
+            
+                    
+                    Working with Images from the Stanford Digital Repository (SDR): IIIF API & OpenCV
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Step-by-Step Tutorials</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="01-step-00-basic-html.html">
+            
+                <a href="01-step-00-basic-html.html">
+            
+                    
+                    Step 0: Basic HTML Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="02-step-01-map-container.html">
+            
+                <a href="02-step-01-map-container.html">
+            
+                    
+                    Step 1: Adding a Map Container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="03-step-02-initialize-map.html">
+            
+                <a href="03-step-02-initialize-map.html">
+            
+                    
+                    Step 2: Initialize Leaflet Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="04-step-03-geojson-points.html">
+            
+                <a href="04-step-03-geojson-points.html">
+            
+                    
+                    Step 3: Load GeoJSON Points
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="05-step-04-popups.html">
+            
+                <a href="05-step-04-popups.html">
+            
+                    
+                    Step 4: Add Popups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="06-step-05-cog-from-stacks.html">
+            
+                <a href="06-step-05-cog-from-stacks.html">
+            
+                    
+                    Step 5: Cloud Optimized GeoTIFF from Digital Stacks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="07-step-06-split-layout.html">
+            
+                <a href="07-step-06-split-layout.html">
+            
+                    
+                    Step 6: Split-Screen Layout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="08-step-07-wikidata-basic.html">
+            
+                <a href="08-step-07-wikidata-basic.html">
+            
+                    
+                    Step 7: Basic Wikidata Fetching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="09-step-08-wikidata-images.html">
+            
+                <a href="09-step-08-wikidata-images.html">
+            
+                    
+                    Step 8: Wikidata Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="10-step-09-complete-integration.html">
+            
+                <a href="10-step-09-complete-integration.html">
+            
+                    
+                    Step 9: Complete Integration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.11" data-path="11-bonus-step-10-wikidata-filter.html">
+            
+                <a href="11-bonus-step-10-wikidata-filter.html">
+            
+                    
+                    BONUS Step 10: Wikidata Filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.12" data-path="12-step-11-future-proofing.html">
+            
+                <a href="12-step-11-future-proofing.html">
+            
+                    
+                    Step 11: Future Proofing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Reference</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="DIGITAL-STACKS-REFERENCE.html">
+            
+                <a href="DIGITAL-STACKS-REFERENCE.html">
+            
+                    
+                    Digital Stacks Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="WORKSHOP-MATERIALS.html">
+            
+                <a href="WORKSHOP-MATERIALS.html">
+            
+                    
+                    Workshop Materials Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="GLOSSARY.html">
+            
+                <a href="GLOSSARY.html">
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Step 11: Future Proofing</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="step-11-future-proofing---creating-self-contained-deposits">Step 11: Future Proofing - Creating Self-Contained Deposits</h1>
+<p>Live Demo: <a href="cog_map_step_11.html">cog_map_step_11.html</a></p>
+<h2 id="overview">Overview</h2>
+<p>In this final step, we'll ensure your interactive <a href="GLOSSARY.html#web-application" class="glossary-term" title="An application accessed through a web browser rather than installed software.">web application</a> remains fully functional in perpetuity by creating a self-contained deposit. Instead of relying on external CDNs that might change or disappear, we'll download and include local copies of all required JavaScript libraries with your deposit.</p>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<ul>
+<li>Understand the risks of relying on external CDNs</li>
+<li>Download and store JavaScript libraries locally</li>
+<li>Update HTML to reference local library copies</li>
+<li>Create a self-contained, future-proof deposit structure</li>
+<li>Test the application with local libraries</li>
+<li>Understand <a href="GLOSSARY.html#relative-path" class="glossary-term" title="A file path specified relative to the current file's location. Example: collection/data.json">relative path</a> benefits for long-term preservation</li>
+</ul>
+<h2 id="why-future-proofing-matters">Why Future Proofing Matters</h2>
+<p>When you deploy your application to the <a href="https://sdr.stanford.edu/" target="_blank">Stanford Digital Repository</a>, you want it to work perfectly today, tomorrow, and decades from now.</p>
+<p><strong>The Problem with CDNs:</strong></p>
+<ul>
+<li>Third-party services can change or disappear</li>
+<li>URLs might be deprecated</li>
+<li>Service availability isn't guaranteed forever</li>
+<li>Your application becomes dependent on external infrastructure</li>
+</ul>
+<p><strong>The Solution - Self-Contained Deposits:</strong></p>
+<ul>
+<li>Store all dependencies locally in your SDR deposit</li>
+<li>Use relative paths so everything stays together</li>
+<li>Your application remains functional regardless of external service status</li>
+<li>Demonstrates best practices for digital preservation</li>
+</ul>
+<h2 id="what-to-download">What to Download</h2>
+<p>For the complete Stanford Public Art Map application, you need:</p>
+<ol>
+<li><p><strong><a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> Library</strong> (mapping)</p>
+<ul>
+<li>File: <code>leaflet.js</code> and <code>leaflet.css</code></li>
+<li>Source: <a href="https://unpkg.com/leaflet@1.9.4/dist/" target="_blank">https://unpkg.com/leaflet@1.9.4/dist/</a></li>
+</ul>
+</li>
+<li><p><strong><a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> <a href="GLOSSARY.html#popup" class="glossary-term" title="A small window that appears on a map when clicking a marker or feature.">Popup</a> Plugin</strong> (optional - if using advanced popups)</p>
+<ul>
+<li>Various <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> plugins available on <a href="GLOSSARY.html#unpkg" class="glossary-term" title="A CDN for loading npm packages directly in browsers. Example: https://unpkg.com/leaflet">unpkg</a></li>
+</ul>
+</li>
+<li><p><strong>Your Application CSS</strong></p>
+<ul>
+<li>File: <code>styles_wikidata.css</code> (already local)</li>
+</ul>
+</li>
+</ol>
+<p><strong>Note on External Resources - Preservation vs. <a href="GLOSSARY.html#function" class="glossary-term" title="A reusable block of code that performs a specific task. Can accept input (parameters) and return output.">Function</a> Trade-off:</strong></p>
+<p>You do NOT need to download <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a>, <a href="GLOSSARY.html#wikimedia-commons" class="glossary-term" title="A free media repository containing images, videos, and other files that can be used by anyone.">Wikimedia Commons</a>, or OpenStreetMap files. These external APIs continue to work regardless of your deposit location, and downloading copies would create legal/licensing issues. </p>
+<p>However, this convenience comes with a trade-off: while external APIs enrich your application's functionality, they introduce a preservation risk. If those external services change their APIs, modify their data structure, or disappear entirely, your application may break or lose functionality—even though your SDR deposit itself remains intact. </p>
+<p><strong>Best practice:</strong> Only include external APIs for services that are well-established, widely-adopted infrastructure (like <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> and OpenStreetMap). For mission-critical data or specialized services, consider downloading and preserving local copies if licensing permits. Document these dependencies clearly in your README so future users understand which features rely on external resources.</p>
+<p>Only download and include open-source libraries you've licensed to redistribute (like <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a>).</p>
+<h2 id="deposit-structure-with-local-libraries">Deposit Structure with Local Libraries</h2>
+<p>Here's how your self-contained deposit should be organized:</p>
+<pre><code>Your SDR Deposit (druid:abc123xyz456)
+├── index.html (main application)
+├── styles_wikidata.css (your stylesheet)
+├── lib/ (JavaScript libraries - flat structure)
+│   ├── leaflet.js
+│   ├── leaflet.css
+│   ├── georaster.browser.bundle.min.js
+│   ├── georaster-layer-for-leaflet.min.js
+│   └── proj4-src.js
+├── collection/
+│   ├── stanford_public_art.geojson
+│   └── stanford_campus.geojson
+└── README.md (documentation)
+</code></pre><h2 id="the-complete-code">The Complete Code</h2>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">base</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_top"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Stanford Campus Map - Step 11: Future-Proofed Deposit<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Local Leaflet CSS (instead of CDN) --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"lib/leaflet.css"</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- Local Stylesheet --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"styles_wikidata.css"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Stanford Public Art Map<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Step 11: Future-Proofed with local libraries<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"container"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"map"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"wikidata-panel"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"no-selection"</span>&gt;</span>Click on an artwork to see Wikidata information<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Local Leaflet JavaScript (instead of CDN) --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"lib/leaflet.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript">
+    <span class="hljs-comment">// Initialize map</span>
+    <span class="hljs-keyword">const</span> map = L.<span class="hljs-title function_">map</span>(<span class="hljs-string">'map'</span>).<span class="hljs-title function_">setView</span>([<span class="hljs-number">37.427</span>, -<span class="hljs-number">122.169</span>], <span class="hljs-number">15</span>);
+
+    <span class="hljs-comment">// Add OpenStreetMap tiles (external API - this is fine!)</span>
+    L.<span class="hljs-title function_">tileLayer</span>(<span class="hljs-string">'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'</span>, {
+        <span class="hljs-attr">attribution</span>: <span class="hljs-string">'&amp;copy; OpenStreetMap contributors'</span>,
+        <span class="hljs-attr">maxZoom</span>: <span class="hljs-number">19</span>
+    }).<span class="hljs-title function_">addTo</span>(map);
+
+    <span class="hljs-comment">// Load and display GeoJSON</span>
+    <span class="hljs-title function_">fetch</span>(<span class="hljs-string">'collection/stanford_public_art.geojson'</span>)
+        .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.<span class="hljs-title function_">json</span>())
+        .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> {
+            L.<span class="hljs-title function_">geoJSON</span>(data, {
+                <span class="hljs-attr">pointToLayer</span>: <span class="hljs-function">(<span class="hljs-params">feature, latlng</span>) =&gt;</span> {
+                    <span class="hljs-keyword">return</span> L.<span class="hljs-title function_">circleMarker</span>(latlng, {
+                        <span class="hljs-attr">radius</span>: <span class="hljs-number">8</span>,
+                        <span class="hljs-attr">fillColor</span>: <span class="hljs-string">"#ff7800"</span>,
+                        <span class="hljs-attr">color</span>: <span class="hljs-string">"#000"</span>,
+                        <span class="hljs-attr">weight</span>: <span class="hljs-number">2</span>,
+                        <span class="hljs-attr">opacity</span>: <span class="hljs-number">1</span>,
+                        <span class="hljs-attr">fillOpacity</span>: <span class="hljs-number">0.8</span>
+                    });
+                },
+                <span class="hljs-attr">onEachFeature</span>: <span class="hljs-function">(<span class="hljs-params">feature, layer</span>) =&gt;</span> {
+                    layer.<span class="hljs-title function_">on</span>(<span class="hljs-string">'click'</span>, <span class="hljs-function">() =&gt;</span> {
+                        <span class="hljs-title function_">handleFeatureClick</span>(feature);
+                    });
+                }
+            }).<span class="hljs-title function_">addTo</span>(map);
+        });
+
+    <span class="hljs-comment">// Fetch and display Wikidata information</span>
+    <span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">handleFeatureClick</span>(<span class="hljs-params">feature</span>) {
+        <span class="hljs-keyword">const</span> wikidataId = feature.<span class="hljs-property">properties</span>?.<span class="hljs-property">wikidata</span>;
+
+        <span class="hljs-keyword">if</span> (!wikidataId) {
+            <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">'wikidata-panel'</span>).<span class="hljs-property">innerHTML</span> = 
+                <span class="hljs-string">'&lt;div id="no-selection"&gt;No Wikidata ID available&lt;/div&gt;'</span>;
+            <span class="hljs-keyword">return</span>;
+        }
+
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(
+                <span class="hljs-string">`https://www.wikidata.org/wiki/Special:EntityData/<span class="hljs-subst">${wikidataId}</span>.json`</span>
+            );
+            <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> response.<span class="hljs-title function_">json</span>();
+            <span class="hljs-keyword">const</span> entity = data.<span class="hljs-property">entities</span>[wikidataId];
+
+            <span class="hljs-keyword">let</span> html = <span class="hljs-string">`&lt;h2&gt;<span class="hljs-subst">${feature.properties.name}</span>&lt;/h2&gt;`</span>;
+
+            <span class="hljs-keyword">if</span> (entity.<span class="hljs-property">labels</span>?.<span class="hljs-property">en</span>) {
+                html += <span class="hljs-string">`&lt;p&gt;&lt;strong&gt;<span class="hljs-subst">${entity.labels.en.value}</span>&lt;/strong&gt;&lt;/p&gt;`</span>;
+            }
+
+            <span class="hljs-keyword">if</span> (entity.<span class="hljs-property">descriptions</span>?.<span class="hljs-property">en</span>) {
+                html += <span class="hljs-string">`&lt;p&gt;<span class="hljs-subst">${entity.descriptions.en.value}</span>&lt;/p&gt;`</span>;
+            }
+
+            <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">'wikidata-panel'</span>).<span class="hljs-property">innerHTML</span> = html;
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">'Error fetching Wikidata:'</span>, error);
+            <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">'wikidata-panel'</span>).<span class="hljs-property">innerHTML</span> = 
+                <span class="hljs-string">'&lt;div id="no-selection"&gt;Error loading details&lt;/div&gt;'</span>;
+        }
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h2 id="local-libraries-already-included">Local Libraries Already Included</h2>
+<p><strong>Good news!</strong> All required JavaScript libraries are already included in this <a href="GLOSSARY.html#repository" class="glossary-term" title="A storage location for digital content or code.">repository</a>'s <code>lib/</code> directory:</p>
+<ul>
+<li><code>leaflet.js</code> and <code>leaflet.css</code> - Core <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> mapping library</li>
+<li><code>georaster.browser.bundle.min.js</code> - For working with <a href="GLOSSARY.html#geotiff" class="glossary-term" title="A file format for storing geospatial raster images with geographic metadata.">GeoTIFF</a> rasters</li>
+<li><code>georaster-layer-for-leaflet.min.js</code> - <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> plugin for displaying rasters</li>
+<li><code>proj4-src.js</code> - Coordinate projection library</li>
+</ul>
+<p>You can simply use relative paths to reference these files, and they'll work both locally and when deployed to SDR.</p>
+<h3 id="if-you-need-to-download-additional-libraries">If You Need to Download Additional Libraries</h3>
+<p>For other projects, here's how to download libraries from CDNs:</p>
+<p><strong>Option A: Using your <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a></strong></p>
+<ul>
+<li>Navigate to the CDN URL (e.g., <a href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" target="_blank">https://unpkg.com/leaflet@1.9.4/dist/leaflet.js</a>)</li>
+<li>Right-click on the page → Save As → Save to <code>lib/leaflet.js</code></li>
+</ul>
+<p><strong>Option B: Using command line</strong></p>
+<pre><code class="lang-bash"><span class="hljs-built_in">mkdir</span> -p lib
+<span class="hljs-built_in">cd</span> lib
+
+<span class="hljs-comment"># Download JavaScript library</span>
+curl -O https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
+
+<span class="hljs-comment"># Download CSS</span>
+curl -O https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
+</code></pre>
+<h3 id="2-update-your-html">2. Update Your HTML</h3>
+<p>Change from:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>To:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"lib/leaflet.css"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"lib/leaflet.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h3 id="3-test-locally">3. Test Locally</h3>
+<ol>
+<li>Save all files locally on your computer</li>
+<li>Open your HTML file in a <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a> (no web <a href="GLOSSARY.html#server" class="glossary-term" title="A computer that provides resources or services to other computers (clients) over a network.">server</a> needed!)</li>
+<li>Test all functionality:<ul>
+<li>Map displays correctly</li>
+<li>Markers appear</li>
+<li>Clicking markers works</li>
+<li>Data loads properly</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-create-your-deposit-package">4. Create Your Deposit Package</h3>
+<p>Before submitting to SDR:</p>
+<ol>
+<li>Organize your files as shown above</li>
+<li>Include a README explaining what the application does</li>
+<li>List any data sources and licenses</li>
+<li>Note that <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> and OpenStreetMap APIs are external but reliable</li>
+</ol>
+<p><strong>Example file structure for deposit:</strong></p>
+<pre><code>Your Project/
+├── README.md
+├── index.html
+├── styles_wikidata.css
+├── lib/
+│   ├── leaflet.js
+│   ├── leaflet.css
+│   ├── georaster.browser.bundle.min.js
+│   ├── georaster-layer-for-leaflet.min.js
+│   └── proj4-src.js
+└── collection/
+    ├── stanford_public_art.geojson
+    └── stanford_campus.geojson
+</code></pre><h2 id="important-considerations">Important Considerations</h2>
+<h3 id="what-to-include-locally">What to Include Locally</h3>
+<p>✓ JavaScript libraries you've licensed to redistribute (MIT, Apache, etc.)
+✓ Your own CSS and JavaScript files
+✓ Your data files (<a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a>, images)
+✓ Configuration files</p>
+<h3 id="what-not-to-include-locally">What NOT to Include Locally</h3>
+<p>✗ <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> (external service - always use API)
+✗ OpenStreetMap tiles (external service - always use API)
+✗ Other third-party APIs (Geocoding, Weather, etc.)
+✗ Copyrighted materials you don't have rights to redistribute</p>
+<h3 id="licensing">Licensing</h3>
+<ul>
+<li>Always check the library's license</li>
+<li>Most web libraries (<a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a>, etc.) allow redistribution</li>
+<li>Include LICENSE files in your lib/ folder</li>
+<li>Document the license in your README</li>
+</ul>
+<h2 id="connection-to-digital-stacks">Connection to Digital Stacks</h2>
+<p><strong>Why this matters for SDR deposits:</strong></p>
+<pre><code>Your Deposit in SDR (DRUID: abc123xyz456)
+│
+├── Accessed via: https://stacks.stanford.edu/file/druid:abc123xyz456/index.html
+│
+├── Loads: lib/leaflet.js (relative path) ✓
+├── Loads: lib/leaflet.css (relative path) ✓
+├── Loads: styles_wikidata.css (relative path) ✓
+├── Loads: collection/stanford_public_art.geojson (relative path) ✓
+│
+├── Calls: Wikidata API (external, always works) ✓
+└── Calls: OpenStreetMap tiles (external, always works) ✓
+</code></pre><p><strong>This is truly future-proof because:</strong></p>
+<ul>
+<li>All relative paths work perfectly in SDR</li>
+<li>All external APIs continue to <a href="GLOSSARY.html#function" class="glossary-term" title="A reusable block of code that performs a specific task. Can accept input (parameters) and return output.">function</a> indefinitely</li>
+<li>Even if <a href="GLOSSARY.html#unpkg" class="glossary-term" title="A CDN for loading npm packages directly in browsers. Example: https://unpkg.com/leaflet">unpkg</a>.com disappeared, your copy works forever</li>
+<li>Your deposit is completely self-contained</li>
+<li>Permanent preservation through institutional infrastructure</li>
+</ul>
+<p><strong>Related resources:</strong></p>
+<ul>
+<li><a href="https://sdr.stanford.edu/" target="_blank">Stanford Digital Repository</a></li>
+<li><a href="https://api.library.stanford.edu/docs/digital-stacks/api/" target="_blank">Digital Stacks API</a></li>
+<li><a href="https://api.library.stanford.edu/" target="_blank">Stanford Libraries APIs</a></li>
+</ul>
+<h2 id="testing-checklist">Testing Checklist</h2>
+<p>Before depositing to SDR:</p>
+<ul>
+<li>[ ] All HTML files work when opened locally</li>
+<li>[ ] Markers appear on map</li>
+<li>[ ] <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> data loads correctly</li>
+<li>[ ] <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> queries work</li>
+<li>[ ] Images load from all sources</li>
+<li>[ ] CSS styling displays correctly</li>
+<li>[ ] No JavaScript console errors</li>
+<li>[ ] Responsive design works on mobile</li>
+<li>[ ] Relative paths used (not absolute paths to your computer)</li>
+<li>[ ] All external libraries downloaded and included</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>You've now learned to build a truly future-proof research application:</p>
+<ol>
+<li>Started with basic HTML structure</li>
+<li>Added interactive mapping</li>
+<li>Integrated geographic data</li>
+<li>Connected to external APIs (<a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a>)</li>
+<li>Created a professional split-screen interface</li>
+<li>Made it self-contained for permanent preservation</li>
+</ol>
+<p>Your application is now ready to deposit into the <a href="https://sdr.stanford.edu/" target="_blank">Stanford Digital Repository</a>, where it will be preserved and accessible for decades to come, without any external dependencies except for reliable, established APIs like <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> and OpenStreetMap.</p>
+<h3 id="next-steps">Next Steps</h3>
+<ol>
+<li>Customize this application with your own data</li>
+<li>Gather your research data and <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> files</li>
+<li>Contact Stanford Libraries to deposit your content in SDR</li>
+<li>Get a permanent DRUID and DOI for your scholarly work</li>
+<li>Share your interactive <a href="GLOSSARY.html#web-application" class="glossary-term" title="An application accessed through a web browser rather than installed software.">web application</a> with colleagues and the world!</li>
+</ol>
+<hr></hr>
+<p><strong>Want to learn more?</strong> Check out the companion workshops in the "Hacking Stanford Libraries" mini bootcamp on using IIIF resources and the PURL API for programmatic access to your SDR collections.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="11-bonus-step-10-wikidata-filter.html" class="navigation navigation-prev " aria-label="Previous page: BONUS Step 10: Wikidata Filter">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="DIGITAL-STACKS-REFERENCE.html" class="navigation navigation-next " aria-label="Next page: Digital Stacks Reference">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Step 11: Future Proofing","level":"3.12","depth":1,"next":{"title":"Digital Stacks Reference","level":"4.1","depth":1,"path":"DIGITAL-STACKS-REFERENCE.md","ref":"DIGITAL-STACKS-REFERENCE.md","articles":[]},"previous":{"title":"BONUS Step 10: Wikidata Filter","level":"3.11","depth":1,"path":"11-bonus-step-10-wikidata-filter.md","ref":"11-bonus-step-10-wikidata-filter.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"12-step-11-future-proofing.md","mtime":"2026-01-26T22:44:43.005Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T22:44:51.938Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
