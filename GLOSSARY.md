@@ -1,633 +1,415 @@
 # Glossary
 
-A comprehensive reference of technical terms, acronyms, and concepts used throughout this workshop.
+## Absolute Path
+Full path to a resource from the root or protocol (e.g., `https://stacks.stanford.edu/file/druid:abc123/image.jpg`).
 
----
+## API (Application Programming Interface)
+Rules that let software talk to software, like a waiter carrying orders between your code and a server.
 
-## A
+## API Endpoint
+A specific URL where an API can be accessed (e.g., `https://www.wikidata.org/wiki/Special:EntityData/`).
 
-### Absolute Path
-A complete file path that specifies the exact location of a file from the root of the file system or from a protocol (like `https://`). Example: `https://stacks.stanford.edu/file/druid:abc123/image.jpg`
+## Array
+Ordered list of values accessed by index (e.g., `['red', 'blue', 'green']`).
 
-### API (Application Programming Interface)
-A set of rules and protocols that allows different software applications to communicate with each other. Like a waiter taking orders between you (client) and the kitchen (server).
+## Asynchronous
+Non-blocking code that keeps running while waiting for operations like network requests to finish.
 
-### API Endpoint
-A specific URL where an API can be accessed. Example: `https://www.wikidata.org/wiki/Special:EntityData/`
+## Attribute (HTML)
+Extra info on an element, such as `id`, `class`, or `href` (e.g., `<div id="map">`).
 
-### Array
-A data structure that holds multiple values in a single variable, accessed by index numbers. Example: `['red', 'blue', 'green']`
+## await
+JavaScript keyword (inside `async` functions) that pauses execution until a Promise resolves.
 
-### Asynchronous
-Code that doesn't block execution while waiting for operations (like network requests) to complete. Allows other code to run while waiting.
+## Boolean
+A value that is either `true` or `false`.
 
-### Attribute (HTML)
-Additional information added to HTML elements. Example: `<div id="map" class="container">` - `id` and `class` are attributes.
+## Box Model
+CSS concept: each element has content, padding, border, and margin.
 
-### await
-A JavaScript keyword used with `async` functions to pause execution until a Promise resolves. Must be inside an `async` function.
+## Callback Function
+Function passed into another function to run later (e.g., `array.map(callback)`).
 
----
+## CDN (Content Delivery Network)
+Distributed servers that serve assets quickly (e.g., `https://unpkg.com/leaflet`).
 
-## B
+## CircleMarker
+Leaflet circle marker drawn at a point location.
 
-### Boolean
-A data type with only two possible values: `true` or `false`.
+## Claims (Wikidata)
+Property/value statements attached to a Wikidata entity (e.g., P170 for creator).
 
-### Box Model
-The CSS concept that every element is a rectangular box with content, padding, border, and margin.
+## Class (CSS)
+Reusable selector applied with `class="..."` and referenced as `.classname` in CSS.
 
-### Box Sizing
-CSS property that determines how width and height are calculated. `border-box` includes padding and border in the total dimensions.
+## Client-Side
+Code that runs in the browser rather than on a server.
 
-### Browser
-Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).
+## COG (Cloud Optimized GeoTIFF)
+GeoTIFF format optimized for HTTP range reads and web streaming.
 
----
+## Concatenation
+Joining strings together (e.g., `'Hello ' + 'World'`).
 
-## C
+## Coordinates
+Longitude/latitude pair specifying a location (e.g., `[-122.169, 37.427]`).
 
-### Callback Function
-A function passed as an argument to another function, to be executed later. Example: `array.map(callback)`
+## CORS (Cross-Origin Resource Sharing)
+Browser security rules controlling cross-domain requests.
 
-### CDN (Content Delivery Network)
-A network of servers that delivers web content quickly from locations close to users. Example: `unpkg.com` hosts JavaScript libraries.
+## CSS (Cascading Style Sheets)
+Language to style HTML (layout, colors, typography).
 
-### Chroma Key
-Technical term for the green/blue transparency technique used in COG masking.
+## Defensive Programming
+Coding with checks to prevent errors (e.g., `if (data) { ... }`).
 
-### CircleMarker
-A Leaflet marker type that draws a circular shape at a specific location on the map.
+## Digital Repository
+System for storing and serving digital content long-term.
 
-### Claims (Wikidata)
-The properties and values associated with a Wikidata entity. Example: P170 (creator) claim on an artwork.
+## Digital Stacks
+Stanford’s HTTP-accessible storage for SDR content.
 
-### Class (CSS)
-A selector that can be applied to multiple HTML elements. Defined with `.` in CSS. Example: `.map-container { }`
+## div
+Generic HTML container element (e.g., `<div id="container"></div>`).
 
-### Client-Side
-Code that runs in the user's browser, not on a server.
+## DOCTYPE
+Declaration at the top of HTML to set standards mode (e.g., `<!DOCTYPE html>`).
 
-### COG (Cloud Optimized GeoTIFF)
-A special format of GeoTIFF files optimized for cloud storage and web streaming, allowing partial reading without downloading the entire file.
+## DOM (Document Object Model)
+In-memory tree representation of an HTML document, manipulable with JS.
 
-### Concatenation
-Combining strings together. Example: `'Hello ' + 'World'` results in `'Hello World'`
+## DRUID
+Digital Repository Unique Identifier (format: two letters, three numbers, two letters, four numbers; e.g., `ab123cd4567`).
 
-### Coordinates
-Numbers that specify a location. In mapping: `[longitude, latitude]`. Example: `[-122.169, 37.427]`
+## Element (HTML)
+Building block in HTML defined by tags (e.g., `<p>...</p>`).
 
-### CORS (Cross-Origin Resource Sharing)
-A security feature that controls whether web pages can request resources from different domains.
+## Encode / URL Encoding
+Escaping special characters in URLs (space → `%20`).
 
-### CSS (Cascading Style Sheets)
-A language for describing how HTML elements should be displayed (colors, layout, fonts, etc.).
+## Entity (Wikidata)
+An item identified by a Q-number representing a concept, person, place, etc.
 
----
+## Event
+Action in the browser (click, scroll, keypress) that JS can listen to.
 
-## D
+## Event Listener
+JS function attached to an event (e.g., `element.addEventListener('click', handler)`).
 
-### Defensive Programming
-Writing code that checks for potential errors before they occur. Example: `if (data) { use(data); }`
+## External Stylesheet
+CSS stored in a separate file and linked with `<link rel="stylesheet" href="styles.css">`.
 
-### Digital Repository
-A system for storing, managing, and providing access to digital content over time.
+## Feature (GeoJSON)
+Geographic object with geometry and properties.
 
-### Digital Stacks
-Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.
+## FeatureCollection (GeoJSON)
+GeoJSON object grouping multiple features.
 
-### div
-An HTML element used as a container to group other elements. Example: `<div id="container">...</div>`
+## fetch API
+Modern JS API for HTTP requests; returns Promises.
 
-### DOCTYPE
-Declaration at the start of an HTML document that tells the browser which version of HTML is being used. Example: `<!DOCTYPE html>`
+## Flexbox
+CSS layout mode for flexible rows/columns with responsive sizing.
 
-### DOM (Document Object Model)
-A programming interface for HTML documents. Represents the page structure as a tree of objects that can be manipulated with JavaScript.
+## Function
+Reusable block of code that may take parameters and return a value.
 
-### DRUID (Digital Repository Unique Identifier)
-Stanford's identifier format for digital objects. Pattern: 2 letters + 3 numbers + 2 letters + 4 numbers. Example: `ab123cd4567`
+## GeoJSON
+JSON format for geographic features (points, lines, polygons with properties).
 
----
+## georaster
+JS library for reading raster data in the browser.
 
-## E
+## georaster-layer-for-leaflet
+Leaflet plugin to display georaster/COG data as map layers.
 
-### Element (HTML)
-A component of an HTML document defined by tags. Example: `<p>This is an element</p>`
+## GeoRasterLayer
+Leaflet layer type provided by georaster-layer-for-leaflet.
 
-### Encode/URL Encoding
-Converting special characters in URLs to a format safe for transmission. Example: space becomes `%20`
+## Georeferencing
+Linking pixel coordinates to real-world geographic coordinates.
 
-### Entity (Wikidata)
-An item in Wikidata with a unique identifier (Q-number) representing a concept, object, person, etc.
+## GeoTIFF
+Raster image format with embedded geospatial metadata.
 
-### Event
-An action that happens in the browser (click, scroll, key press) that can trigger JavaScript code.
+## Geometry (GeoJSON)
+Shape component of a GeoJSON feature (Point, LineString, Polygon, etc.).
 
-### Event Listener
-JavaScript code that watches for specific events and executes functions when they occur.
+## Head (HTML)
+HTML section containing metadata, links, and scripts; not rendered in the page body.
 
-### External Stylesheet
-A separate CSS file linked to an HTML document, rather than styles written inline or in `<style>` tags.
+## Helper Function
+Small utility function that isolates a specific task to keep code readable.
 
----
+## hex Color
+Color expressed in hexadecimal notation (e.g., `#FF5733`).
 
-## F
+## hover
+CSS pseudo-class applied when the pointer is over an element (e.g., `button:hover`).
 
-### Feature (GeoJSON)
-A geographic object with geometry and properties. Example: A point representing an artwork's location.
+## href
+Attribute on links specifying the target URL (e.g., `<a href="page.html">`).
 
-### FeatureCollection (GeoJSON)
-A GeoJSON object containing an array of features.
+## HTML (HyperText Markup Language)
+Language for structuring web documents with elements and attributes.
 
-### fetch API
-A modern JavaScript interface for making HTTP requests. Returns a Promise.
+## HTML5
+Current HTML standard with semantic elements and rich media support.
 
-### Flexbox
-A CSS layout method that arranges elements in rows or columns with flexible sizing and spacing.
+## HTTP / HTTPS
+Protocols for web requests; HTTPS is the encrypted, secure variant.
 
-### Function
-A reusable block of code that performs a specific task. Can accept input (parameters) and return output.
+## ID (HTML)
+Unique element identifier set with `id="..."` and selected via `#id`.
 
----
+## Inception (Wikidata)
+Property P571 indicating when something was created/founded.
 
-## G
+## Index (Array)
+Numeric position of an item in an array (first item is index 0).
 
-### GeoJSON
-A format for encoding geographic data structures using JSON. Defines features with geometry and properties.
+## innerHTML
+JS property to get/set the HTML content inside an element.
 
-### georaster
-A JavaScript library for working with raster geographic data in the browser.
+## Inline Style
+CSS written directly on an element via `style="..."`.
 
-### georaster-layer-for-leaflet
-A Leaflet plugin that displays georaster data (like COGs) as map layers.
+## Integrity
+Subresource Integrity (SRI) hash that ensures fetched assets match expected content.
 
-### GeoRasterLayer
-A Leaflet layer type that displays raster geographic data.
+## JavaScript (JS)
+Programming language for interactivity and logic in web pages.
 
-### Georeferencing
-The process of associating geographic coordinates with image pixels.
+## JSON (JavaScript Object Notation)
+Lightweight data format using key-value pairs (e.g., `{ "name": "value" }`).
 
-### GeoTIFF
-A file format for storing geospatial raster images with geographic metadata.
+## Key-Value Pair
+Fundamental structure pairing a name with a value (e.g., `"color": "red"`).
 
-### Geometry (GeoJSON)
-The shape and location data of a geographic feature (Point, LineString, Polygon, etc.).
+## Label (Wikidata)
+Human-readable name for a Wikidata entity, often per language.
 
----
+## Latitude
+North–south coordinate, second value in `[lon, lat]`.
 
-## H
+## Layer (Leaflet)
+Visual element added to a Leaflet map (tiles, markers, rasters, vectors).
 
-### Head (HTML)
-The section of an HTML document containing metadata, title, links to stylesheets, and scripts. Not displayed directly.
+## Leaflet
+JS library for interactive web maps.
 
-### Helper Function
-A utility function that performs a specific subtask, making main code cleaner and more reusable.
+## let
+Block-scoped JS variable declaration allowing reassignment.
 
-### hex color
-A color format using hexadecimal notation. Example: `#FF5733` (red-green-blue values)
+## Linked Data
+Connecting related data via identifiers (e.g., Wikidata items referencing each other).
 
-### hover
-CSS pseudo-class for styling elements when the mouse pointer is over them. Example: `button:hover { }`
+## Link Tag
+HTML element linking external resources like CSS (`<link rel="stylesheet" ...>`).
 
-### href
-HTML attribute specifying the URL a link points to. Example: `<a href="page.html">Link</a>`
+## Longitude
+East–west coordinate, first value in `[lon, lat]`.
 
-### HTML (HyperText Markup Language)
-The standard language for creating web pages, using tags to structure content.
+## Loop
+Code structure that repeats (e.g., `for`, `while`).
 
-### HTML5
-The latest version of HTML, introducing semantic elements, multimedia support, and improved APIs.
+## mainsnak
+Primary value holder in a Wikidata claim.
 
-### HTTP (HyperText Transfer Protocol)
-The protocol used for transferring web pages and resources over the internet.
+## Margin
+CSS space outside an element’s border.
 
-### HTTPS (HTTP Secure)
-The secure version of HTTP, using encryption to protect data transfer.
+## Marker
+Map symbol representing a point location.
 
----
+## Mask (COG)
+Vector boundary used to clip raster display to an area of interest.
 
-## I
+## Meta Tag
+HTML tag providing metadata (charset, viewport, description).
 
-### ID (HTML)
-A unique identifier for an HTML element. Defined with `id` attribute and selected in CSS with `#`. Example: `<div id="map"></div>`
+## Method
+Function that belongs to an object (e.g., `array.map()`).
 
-### Inception (Wikidata)
-Property P571 in Wikidata, indicating when something was created or founded.
+## Nested
+Content or data structures contained within another (e.g., a list inside a list item).
 
-### Indentation
-Spaces or tabs at the beginning of code lines to show structure and nesting.
+## Node
+Point in a tree structure; in the DOM, an element or text node.
 
-### Index (Array)
-The position of an item in an array, starting from 0. Example: `array[0]` is the first item.
+## Null
+JS value representing “no value.”
 
-### innerHTML
-JavaScript property that gets or sets the HTML content inside an element.
+## Object
+JS structure of key-value pairs (e.g., `{ name: 'Ada' }`).
 
-### Inline Style
-CSS written directly in an HTML element's `style` attribute. Example: `<div style="color: red;">`
+## onEachFeature
+Leaflet callback run for every GeoJSON feature; often used for popups and events.
 
-### Integrity
-An attribute ensuring that a loaded file hasn't been tampered with, using a cryptographic hash.
+## OpenStreetMap (OSM)
+Open, volunteer-built map of the world.
 
----
+## Overflow
+CSS property controlling content that exceeds a container (visible, hidden, scroll, auto).
 
-## J
+## Padding
+CSS space between content and border of an element.
 
-### JavaScript (JS)
-A programming language that runs in browsers, adding interactivity and dynamic behavior to web pages.
+## Panel
+UI section used to display information or controls.
 
-### JSON (JavaScript Object Notation)
-A text format for storing and exchanging data, using key-value pairs. Example: `{"name": "value"}`
+## Parameter
+Placeholder in function definitions for incoming values.
 
----
+## parseGeoraster
+Function that reads and parses raster data for georaster usage.
 
-## K
+## Path (File)
+Location of a file in a filesystem; can be relative or absolute.
 
-### Key-Value Pair
-A fundamental data structure where a key (name) is associated with a value. Example: `"color": "red"`
+## pointToLayer
+Leaflet option to convert GeoJSON points to custom layers (e.g., circle markers).
 
----
+## Popup
+Small info window in a map shown on interaction.
 
-## L
+## proj4
+Library for coordinate system transformations.
 
-### Label (Wikidata)
-The name or title of a Wikidata entity in different languages.
+## Promise
+JS object representing eventual completion or failure of an async operation.
 
-### Latitude
-Geographic coordinate measuring north-south position (-90° to +90°). Second number in coordinate pairs.
+## Property (CSS)
+Style attribute such as `color`, `margin`, or `font-size`.
 
-### Layer (Leaflet)
-Visual content displayed on a map (tiles, markers, shapes, images).
+## Property (JavaScript)
+Value associated with an object, accessed via dot or bracket notation.
 
-### Leaflet
-A JavaScript library for creating interactive maps in web browsers.
+## Property (Wikidata)
+Typed field identified by P-numbers (e.g., P18 image, P170 creator).
 
-### let
-JavaScript keyword for declaring variables that can be reassigned. Block-scoped.
+## Protocol
+First part of a URL describing communication scheme (e.g., `https://`).
 
-### Linked Data
-A method of connecting related data across different sources using references (like Wikidata items linking to other items).
+## PURL (Persistent URL)
+Stanford’s permanent catalog URL, e.g., `https://purl.stanford.edu/abc123xyz456`.
 
-### Link Tag
-HTML element that links external resources, commonly stylesheets. Example: `<link rel="stylesheet" href="styles.css">`
+## QID (Q-number)
+Wikidata entity identifier starting with Q (e.g., Q47522966).
 
-### Longitude
-Geographic coordinate measuring east-west position (-180° to +180°). First number in coordinate pairs.
+## Raster
+Pixel-based spatial data (e.g., imagery) as opposed to vector features.
 
-### Loop
-A programming structure that repeats code multiple times. Example: `for (let i = 0; i < 10; i++)`
+## Regex (Regular Expression)
+Pattern syntax for matching or extracting text.
 
----
+## Relative Path
+Path resolved from the current file’s location (e.g., `collection/data.json`).
 
-## M
+## Repository
+Storage location for code or digital content.
 
-### mainsnak
-The primary value in a Wikidata claim, as opposed to qualifiers or references.
+## Resolution (Map)
+Detail level of raster data; how many pixels represent an area.
 
-### Margin
-CSS property defining space outside an element's border.
+## Response
+Data returned from an HTTP request.
 
-### Marker
-A visual indicator on a map showing a specific location.
+## Return
+Statement that exits a function and optionally yields a value.
 
-### Mask (COG)
-A vector boundary defining which parts of a raster image to display, hiding everything outside.
+## RGB / RGBA
+Color models using red, green, blue (plus alpha for transparency in RGBA).
 
-### Meta Tag
-HTML elements providing metadata about the page (charset, viewport, description).
+## Script Tag
+HTML element that loads or contains JavaScript (`<script src="app.js"></script>`).
 
-### Method
-A function that belongs to an object. Example: `array.map()`, `string.toUpperCase()`
+## SDR (Stanford Digital Repository)
+Stanford’s preservation and access system for digital content.
 
----
+## Selector (CSS)
+Pattern that targets elements (e.g., `#id`, `.class`, `p`).
 
-## N
+## Semantic HTML
+Using elements for their meaning (e.g., `<header>`, `<nav>`, `<article>`).
 
-### Nested
-Elements or data structures contained within others. Example: `<div><p>Nested</p></div>`
+## Server
+Computer that provides resources or services over a network.
 
-### Node
-A point in a tree structure, like elements in the DOM.
+## setView
+Leaflet method to set map center and zoom.
 
-### Null
-A JavaScript value representing "no value" or "nothing."
+## Special:EntityData
+Wikidata endpoint returning entity data in machine-readable formats.
 
----
+## Special:FilePath
+Wikimedia Commons endpoint returning the actual file for a given filename.
 
-## O
+## String
+JS data type for text.
 
-### Object
-A JavaScript data structure storing key-value pairs. Example: `{name: "John", age: 30}`
+## Synchronous
+Code that runs sequentially, blocking until each step finishes.
 
-### onEachFeature
-Leaflet callback function executed for each GeoJSON feature, often used to attach popups or event handlers.
+## Tag (HTML)
+Markers defining elements, usually opening/closing pairs (e.g., `<div> ... </div>`).
 
-### OpenStreetMap (OSM)
-A free, editable map of the world created by volunteers.
+## Template Literal
+JS string syntax with backticks and `${}` interpolation.
 
-### Overflow
-CSS property controlling what happens when content is too large for its container. Values: `visible`, `hidden`, `scroll`, `auto`.
+## Ternary Operator
+Compact conditional: `condition ? valueIfTrue : valueIfFalse`.
 
----
+## Tile
+Small image chunk composing a tiled web map.
 
-## P
+## Tile Layer
+Leaflet layer serving tiled images from a server.
 
-### Padding
-CSS property defining space inside an element's border, between border and content.
+## Try-Catch
+JS error handling construct for trapping exceptions.
 
-### Panel
-A section of the interface, typically containing specific information or controls.
+## Type (Data)
+Category of a value: string, number, boolean, object, array, null, undefined.
 
-### Parameter
-A variable in a function definition that receives values when the function is called.
+## Undefined
+JS value for variables that have not been assigned.
 
-### parseGeoraster
-A function from the georaster library that reads and parses raster geographic data.
+## unpkg
+CDN for npm packages served over HTTPS.
 
-### Path (file)
-The location of a file in a directory structure. Can be relative or absolute.
+## URI / URL
+Identifiers for resources; URL is a locator (e.g., `https://example.com`).
 
-### pointToLayer
-Leaflet callback function that converts GeoJSON point features into Leaflet layers (like markers).
+## Value
+Data stored in a variable, property, or returned from a function.
 
-### Popup
-A small window that appears on a map when clicking a marker or feature.
+## Variable
+Named container for data, declared with `var`, `let`, or `const`.
 
-### proj4
-A JavaScript library for transforming coordinates between different projection systems.
+## Vector (Geographic)
+Coordinate-based geometries (points, lines, polygons) with exact locations.
 
-### Promise
-JavaScript object representing the eventual completion or failure of an asynchronous operation.
+## Viewport
+Visible portion of a web page in the browser window.
 
-### Property (CSS)
-An aspect of style that can be set. Example: `color`, `font-size`, `margin`
+## Viewport Meta Tag
+HTML tag that controls mobile scaling (e.g., `<meta name="viewport" content="width=device-width">`).
 
-### Property (JavaScript)
-A value associated with an object, accessed with dot or bracket notation. Example: `object.property`
+## Web Application
+Software accessed through a web browser.
 
-### Property (Wikidata)
-A specific type of data in Wikidata, identified by P-numbers. Example: P18 (image), P170 (creator)
+## Wikidata
+Open, structured knowledge base with items identified by QIDs.
 
-### Protocol
-The first part of a URL specifying the communication method. Example: `https://`
+## Wikimedia Commons
+Open media repository hosting images and other assets.
 
-### PURL (Persistent Uniform Resource Locator)
-Stanford's permanent URLs for catalog records. Example: `https://purl.stanford.edu/abc123xyz456`
+## XHR (XMLHttpRequest)
+Older JS API for HTTP requests (mostly replaced by `fetch`).
 
----
+## Zoom (Map)
+Map magnification level; higher zoom shows more detail.
 
-## Q
-
-### QID (Q-number)
-A Wikidata entity identifier starting with Q. Example: Q47522966
-
----
-
-## R
-
-### Raster
-Geographic data represented as a grid of pixels (like satellite imagery), as opposed to vector data.
-
-### Regex (Regular Expression)
-A pattern used to match and extract text. Example: `/\d{4}/` matches 4-digit numbers.
-
-### Relative Path
-A file path specified relative to the current file's location. Example: `collection/data.json`
-
-### Repository
-A storage location for digital content or code.
-
-### Resolution (map)
-The level of detail in raster data, determining how many pixels are displayed.
-
-### Response
-Data returned from an API request.
-
-### Return
-A statement that ends function execution and optionally provides a value back to the caller.
-
-### RGB
-A color model using Red, Green, Blue values. Example: `rgb(255, 87, 51)`
-
-### RGBA
-RGB color with an Alpha (transparency) channel. Example: `rgba(255, 87, 51, 0.5)`
-
----
-
-## S
-
-### Script Tag
-HTML element that loads or contains JavaScript code. Example: `<script src="app.js"></script>`
-
-### SDR (Stanford Digital Repository)
-Stanford's system for preserving and providing access to digital content.
-
-### Selector (CSS)
-A pattern used to select HTML elements for styling. Examples: `#id`, `.class`, `element`
-
-### Semantic HTML
-Using HTML elements according to their meaning (e.g., `<header>`, `<nav>`, `<article>`).
-
-### Server
-A computer that provides resources or services to other computers (clients) over a network.
-
-### setView
-A Leaflet method that sets the map's center coordinates and zoom level.
-
-### Special:EntityData
-A Wikidata API endpoint for retrieving entity data in various formats.
-
-### Special:FilePath
-A Wikimedia Commons endpoint that returns image files directly.
-
-### String
-A data type representing text. Created with quotes: `"text"` or `'text'`
-
-### Synchronous
-Code that executes line-by-line, blocking until each operation completes before moving to the next.
-
----
-
-## T
-
-### Tag (HTML)
-Markers that define HTML elements. Example: `<p>`, `</p>`, `<div>`
-
-### Template Literal
-JavaScript string syntax using backticks, allowing variable interpolation. Example: `` `Hello ${name}` ``
-
-### Ternary Operator
-JavaScript shorthand for if-else: `condition ? valueIfTrue : valueIfFalse`
-
-### Tile
-A small image piece that combines with others to form a complete map.
-
-### Tile Layer
-A map layer composed of tile images loaded from a server.
-
-### Try-Catch
-JavaScript error handling structure that attempts code and catches errors if they occur.
-
-### Type (data)
-The kind of value: string, number, boolean, object, array, null, undefined.
-
----
-
-## U
-
-### Undefined
-JavaScript value automatically assigned to variables that haven't been given a value.
-
-### unpkg
-A CDN for loading npm packages directly in browsers. Example: `https://unpkg.com/leaflet`
-
-### URI (Uniform Resource Identifier)
-A string identifying a resource (includes URLs and URNs).
-
-### URL (Uniform Resource Locator)
-A web address specifying the location of a resource. Example: `https://example.com/page.html`
-
-### URL Encoding
-See Encode/URL Encoding
-
----
-
-## V
-
-### Value
-The data assigned to a variable, property, or passed to a function.
-
-### Variable
-A named container for storing data values. Declared with `var`, `let`, or `const`.
-
-### Vector (geographic)
-Geographic data represented as points, lines, and polygons with exact coordinates.
-
-### Viewport
-The visible area of a web page in the browser window.
-
-### Viewport Meta Tag
-HTML tag that controls page scaling on mobile devices. Example: `<meta name="viewport" content="width=device-width">`
-
----
-
-## W
-
-### Web Application
-An application accessed through a web browser rather than installed software.
-
-### Wikidata
-A free, open knowledge base of structured data that can be read and edited by humans and machines.
-
-### Wikimedia Commons
-A free media repository containing images, videos, and other files that can be used by anyone.
-
----
-
-## X
-
-### XHR (XMLHttpRequest)
-An older API for making HTTP requests in JavaScript (largely replaced by fetch).
-
----
-
-## Z
-
-### Zoom (map)
-The level of magnification on a map. Higher numbers show more detail. Typical range: 0-19.
-
----
-
-## Symbols and Special Characters
-
-### { } (Curly Braces)
-Used for:
-- JavaScript object literals: `{key: value}`
-- Code blocks: `if (true) { }`
-- CSS rule sets: `.class { property: value; }`
-
-### [ ] (Square Brackets)
-Used for:
-- JavaScript arrays: `[1, 2, 3]`
-- Array/object access: `array[0]`, `object['key']`
-- CSS attribute selectors: `[type="text"]`
-
-### ( ) (Parentheses)
-Used for:
-- Function calls: `function(argument)`
-- Function parameters: `function(param1, param2)`
-- Grouping expressions: `(a + b) * c`
-
-### . (Dot)
-Used for:
-- Object property access: `object.property`
-- CSS class selectors: `.className`
-- Decimal numbers: `3.14`
-
-### # (Hash/Pound)
-Used for:
-- CSS ID selectors: `#idName`
-- Hex colors: `#FF0000`
-- URL fragments: `page.html#section`
-
-### $ (Dollar Sign)
-Used in:
-- Template literals for variable interpolation: `${variable}`
-- jQuery selector: `$('#element')` (not used in this workshop)
-
-### => (Arrow)
-JavaScript arrow function syntax: `(param) => { return value; }`
-
-### ... (Spread/Rest Operator)
-JavaScript operator for expanding or collecting values: `[...array]`, `function(...args)`
-
-### `` (Backticks)
-JavaScript template literal delimiters: `` `String with ${variable}` ``
-
-### // (Double Slash)
-- JavaScript single-line comment: `// This is a comment`
-- URL path separator: `https://example.com/path/file`
-
-### /* */ (Slash-Asterisk)
-Multi-line comment in JavaScript and CSS: `/* Comment */`
-
----
-
-## Acronyms Quick Reference
-
-- **API** = Application Programming Interface
-- **CDN** = Content Delivery Network
-- **COG** = Cloud Optimized GeoTIFF
-- **CORS** = Cross-Origin Resource Sharing
-- **CSS** = Cascading Style Sheets
-- **DOM** = Document Object Model
-- **DRUID** = Digital Repository Unique Identifier
-- **GeoTIFF** = Geographic Tagged Image File Format
-- **HTML** = HyperText Markup Language
-- **HTTP** = HyperText Transfer Protocol
-- **HTTPS** = HTTP Secure
-- **JS** = JavaScript
-- **JSON** = JavaScript Object Notation
-- **OSM** = OpenStreetMap
-- **PURL** = Persistent Uniform Resource Locator
-- **RGB** = Red Green Blue
-- **RGBA** = Red Green Blue Alpha
-- **SDR** = Stanford Digital Repository
-- **URI** = Uniform Resource Identifier
-- **URL** = Uniform Resource Locator
-- **XHR** = XMLHttpRequest
-
----
-
-## Additional Resources
-
-- [MDN Web Docs](https://developer.mozilla.org/) - Comprehensive web development documentation
-- [Leaflet Documentation](https://leafletjs.com/) - Official Leaflet mapping library docs
-- [Wikidata Query Service](https://query.wikidata.org/) - Query and explore Wikidata
-- [GeoJSON Specification](https://geojson.org/) - Official GeoJSON format documentation
-- [Stanford Digital Repository](https://sdr.stanford.edu/) - SDR documentation
-
----
-
-*This glossary supports the "Hacking Stanford Libraries" workshop materials and is compatible with HonKit/GitBook documentation systems.*
+## Acronyms (Quick Reference)
+API, CDN, COG, CORS, CSS, DOM, DRUID, GeoTIFF, HTML, HTTP, HTTPS, JS, JSON, OSM, PURL, RGB, RGBA, SDR, URI, URL, XHR.
