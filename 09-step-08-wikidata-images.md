@@ -541,7 +541,7 @@ function getWikidataImage(entity) {
 3. **Relative paths** still work for your GeoJSON/data
 4. **JavaScript executes client-side** in the user's browser
 
-**Example deployed to SDR (DRUID: abc123xyz456):**
+**Example deployed to [SDR](https://sdr.stanford.edu/) (DRUID: abc123xyz456):**
 
 ```
 https://stacks.stanford.edu/file/druid:abc123xyz456/index.html

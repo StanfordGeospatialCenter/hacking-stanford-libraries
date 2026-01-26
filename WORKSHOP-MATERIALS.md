@@ -1,6 +1,6 @@
 # Workshop Materials: Step-by-Step Documentation
 
-This folder contains complete workshop documentation for building an interactive web application using the Stanford Digital Repository infrastructure.
+This folder contains complete workshop documentation for building an interactive web application using the [Stanford Digital Repository](https://sdr.stanford.edu/) infrastructure.
 
 ## Workshop Documents (in order)
 

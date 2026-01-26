@@ -230,7 +230,7 @@ Try changing these values and reloading the page:
 
 ## Connection to Digital Stacks
 
-When you deposit this HTML file to SDR, you might have a structure like:
+When you deposit this HTML file to the [Stanford Digital Repository (SDR)](https://sdr.stanford.edu/), you might have a structure like:
 
 ```
 Your SDR Object (druid:abc123xyz456)

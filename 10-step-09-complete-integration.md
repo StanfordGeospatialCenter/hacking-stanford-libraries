@@ -640,7 +640,7 @@ html += '<h3>Physical Properties</h3>';
 
 ## Connection to Digital Stacks
 
-**This complete application works seamlessly with SDR:**
+**This complete application works seamlessly with [SDR](https://sdr.stanford.edu/):**
 
 ```
 Your local project/

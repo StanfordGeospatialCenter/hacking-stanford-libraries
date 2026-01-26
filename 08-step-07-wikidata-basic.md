@@ -480,7 +480,7 @@ project/
     └── stanford_public_art.geojson (with wikidata IDs)
 ```
 
-**After SDR deposit (DRUID: abc123xyz456):**
+**After [SDR](https://sdr.stanford.edu/) deposit (DRUID: abc123xyz456):**
 - HTML loads from: `https://stacks.stanford.edu/file/druid:abc123xyz456/index.html`
 - GeoJSON loads from: `https://stacks.stanford.edu/file/druid:abc123xyz456/collection/stanford_public_art.geojson`
 

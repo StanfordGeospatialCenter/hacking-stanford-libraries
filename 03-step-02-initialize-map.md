@@ -309,7 +309,7 @@ const tiles = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/
 
 ## Connection to Digital Stacks
 
-When you deposit this HTML to SDR:
+When you deposit this HTML to the [Stanford Digital Repository (SDR)](https://sdr.stanford.edu/):
 
 1. **External libraries** (Leaflet from unpkg.com) continue to work - no problem with absolute URLs!
 
