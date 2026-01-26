@@ -8,15 +8,19 @@
 
     <!-- Local Leaflet CSS (stored in lib/ folder) -->
     <link rel="stylesheet" href="lib/leaflet.css">
+    
+    <!-- External CSS file with all styling for the split-screen layout -->
+    <link rel="stylesheet" href="styles_wikidata.css">
+    
+    <!-- Local Leaflet JavaScript (must load BEFORE other libraries that depend on it) -->
+    <script src="lib/leaflet.js"></script>
+    
     <!-- Local projection library for geospatial coordinate transformations -->
     <script src="lib/proj4-src.js"></script>
     <!-- Local GeoRaster library for reading raster data -->
     <script src="lib/georaster.browser.bundle.min.js"></script>
     <!-- Local GeoRaster Layer plugin for Leaflet to display rasters -->
     <script src="lib/georaster-layer-for-leaflet.min.js"></script>
-    
-    <!-- External CSS file with all styling for the split-screen layout -->
-    <link rel="stylesheet" href="styles_wikidata.css">
 </head>
 <body>
 
@@ -36,9 +40,6 @@
         <div id="no-selection">Click on an artwork to see Wikidata information</div>
     </div>
 </div>
-
-<!-- Local Leaflet JavaScript (loaded from lib/ folder using relative path) -->
-<script src="lib/leaflet.js"></script>
 
 <script>
 
