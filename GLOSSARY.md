@@ -51,7 +51,7 @@ Software application used to access and display web pages (Chrome, Firefox, Safa
 A function passed as an argument to another function, to be executed later. Example: `array.map(callback)`
 
 ## CDN (Content Delivery Network)
-A network of servers that delivers web content quickly from locations close to users. Example: `unpkg.com` hosts JavaScript libraries.
+A network of servers that delivers web content quickly from locations close to users. Example: [unpkg.com](https://unpkg.com/) hosts JavaScript libraries.
 
 ## Chroma Key
 Technical term for the green/blue transparency technique used in COG masking.
@@ -94,7 +94,7 @@ Writing code that checks for potential errors before they occur. Example: `if (d
 A system for storing, managing, and providing access to digital content over time.
 
 ## Digital Stacks
-Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.
+[Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs](https://api.library.stanford.edu/docs/digital-stacks/api/).
 
 ## div
 An HTML element used as a container to group other elements. Example: `<div id="container">...</div>`
@@ -261,7 +261,7 @@ Geographic coordinate measuring north-south position (-90° to +90°). Second nu
 Visual content displayed on a map (tiles, markers, shapes, images).
 
 ## Leaflet
-A JavaScript library for creating interactive maps in web browsers.
+A [JavaScript library for creating interactive maps in web browsers](https://leafletjs.com/).
 
 ## let
 JavaScript keyword for declaring variables that can be reassigned. Block-scoped.
@@ -324,7 +324,7 @@ A JavaScript data structure storing key-value pairs. Example: `{name: "John", ag
 Leaflet callback function executed for each GeoJSON feature, often used to attach popups or event handlers.
 
 ## OpenStreetMap (OSM)
-A free, editable map of the world created by volunteers.
+A [free, editable map of the world created by volunteers](https://www.openstreetmap.org/).
 
 ## Overflow
 CSS property controlling what happens when content is too large for its container. Values: `visible`, `hidden`, `scroll`, `auto`.
@@ -421,7 +421,7 @@ RGB color with an Alpha (transparency) channel. Example: `rgba(255, 87, 51, 0.5)
 HTML element that loads or contains JavaScript code. Example: `<script src="app.js"></script>`
 
 ## SDR (Stanford Digital Repository)
-Stanford's system for preserving and providing access to digital content.
+[Stanford's system for preserving and providing access to digital content](https://sdr.stanford.edu/).
 
 ## Selector (CSS)
 A pattern used to select HTML elements for styling. Examples: `#id`, `.class`, `element`
@@ -436,10 +436,10 @@ A computer that provides resources or services to other computers (clients) over
 A Leaflet method that sets the map's center coordinates and zoom level.
 
 ## Special:EntityData
-A Wikidata API endpoint for retrieving entity data in various formats.
+A [Wikidata API endpoint for retrieving entity data in various formats](https://www.wikidata.org/wiki/Special:EntityData/).
 
 ## Special:FilePath
-A Wikimedia Commons endpoint that returns image files directly.
+A [Wikimedia Commons endpoint that returns image files directly](https://commons.wikimedia.org/wiki/Special:FilePath/).
 
 ## String
 A data type representing text. Created with quotes: `"text"` or `'text'`
@@ -480,7 +480,7 @@ The kind of value: string, number, boolean, object, array, null, undefined.
 JavaScript value automatically assigned to variables that haven't been given a value.
 
 ## unpkg
-A CDN for loading npm packages directly in browsers. Example: `https://unpkg.com/leaflet`
+A [CDN for loading npm packages directly in browsers](https://unpkg.com/). Example: `https://unpkg.com/leaflet`
 
 ## URI (Uniform Resource Identifier)
 A string identifying a resource (includes URLs and URNs).
@@ -518,10 +518,10 @@ HTML tag that controls page scaling on mobile devices. Example: `<meta name="vie
 An application accessed through a web browser rather than installed software.
 
 ## Wikidata
-A free, open knowledge base of structured data that can be read and edited by humans and machines.
+A [free, open knowledge base of structured data that can be read and edited by humans and machines](https://www.wikidata.org/wiki/Wikidata:Main_Page).
 
 ## Wikimedia Commons
-A free media repository containing images, videos, and other files that can be used by anyone.
+A [free media repository containing images, videos, and other files that can be used by anyone](https://commons.wikimedia.org/).
 
 ---
 

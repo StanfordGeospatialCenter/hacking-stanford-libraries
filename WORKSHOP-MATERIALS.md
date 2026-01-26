@@ -165,7 +165,7 @@ These materials are designed for complete beginners. Every concept is explained 
 
 - **Stanford campus aerial imagery:** Digital Stacks (druid:vb564st1676)
 - **Stanford public art locations:** OpenStreetMap via Overpass Turbo
-- **Artwork details:** Wikidata API
+- **Artwork details:** [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) API
 - **Base map tiles:** OpenStreetMap
 
 ## Additional Resources

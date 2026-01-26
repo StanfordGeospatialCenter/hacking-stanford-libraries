@@ -1,6 +1,6 @@
 # Hacking Stanford Libraries
 
-A practical workshop on using Stanford Libraries' [Digital Stacks](https://api.library.stanford.edu/docs/digital-stacks/api/), Wikidata, and web mapping to build interactive applications.
+A practical workshop on using Stanford Libraries' [Digital Stacks](https://api.library.stanford.edu/docs/digital-stacks/api/), [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page), and web mapping to build interactive applications.
 
 ## About This Workshop
 
@@ -9,7 +9,7 @@ This hands-on workshop teaches you how to build interactive web applications usi
 - Access and use content from the [Stanford Digital Repository](https://sdr.stanford.edu/) directly in web applications
 - Build interactive HTML, JavaScript, and CSS applications showcasing your collection deposits
 - Leverage the [Digital Stacks API](https://api.library.stanford.edu/docs/digital-stacks/api/) to reference and display materials hosted in SDR
-- Create user-friendly visualizations using Leaflet maps and Wikidata integration
+- Create user-friendly visualizations using Leaflet maps and [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) integration
 - Publish simple HTML documents alongside your SDR deposits
 
 ## Workshop Materials
