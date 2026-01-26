@@ -172,7 +172,7 @@ These materials are designed for complete beginners. Every concept is explained 
 
 ### Stanford Digital Repository
 - **Stanford Digital Repository:** https://sdr.stanford.edu/
-- **Digital Stacks documentation:** https://github.com/sul-dlss/stacks
+- **Digital Stacks documentation:** https://api.library.stanford.edu/docs/digital-stacks/api/
 - **SDR deposit guide:** Contact Stanford Libraries
 - **Stanford Libraries APIs:** https://api.library.stanford.edu/
 - **Stanford Geospatial Center:** https://gis.stanford.edu/

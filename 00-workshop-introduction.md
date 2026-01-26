@@ -129,7 +129,7 @@ Let's begin with [Step 0: Basic HTML Structure](01-step-00-basic-html.md)!
 
 ## Additional Resources
 
-- **Digital Stacks Documentation:** https://github.com/sul-dlss/stacks
+- **Digital Stacks Documentation:** https://api.library.stanford.edu/docs/digital-stacks/api/
 - **Leaflet Documentation:** https://leafletjs.com/
 - **Wikidata API:** https://www.wikidata.org/wiki/Wikidata:Data_access
 - **MDN Web Docs (HTML/CSS/JavaScript):** https://developer.mozilla.org/

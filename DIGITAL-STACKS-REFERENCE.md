@@ -339,7 +339,7 @@ To deposit content and get a DRUID:
 ## Additional Resources
 
 - **SDR Overview:** https://library.stanford.edu/research/stanford-digital-repository
-- **Technical Documentation:** https://github.com/sul-dlss/stacks
+- **Technical Documentation:** https://api.library.stanford.edu/docs/digital-stacks/api/
 - **PURL Service:** https://purl.stanford.edu/
 
 ---

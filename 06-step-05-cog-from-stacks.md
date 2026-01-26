@@ -4,12 +4,12 @@ Live Demo: [cog_map_step_05.html](cog_map_step_05.html)
 
 ## Overview
 
-In this step, we'll add a high-resolution aerial photograph of Stanford campus, served directly from the [Stanford Digital Repository](https://sdr.stanford.edu/) through the [Digital Stacks API](https://github.com/sul-dlss/stacks).
+In this step, we'll add a high-resolution aerial photograph of Stanford campus, served directly from the [Stanford Digital Repository](https://sdr.stanford.edu/) through the [Digital Stacks API](https://api.library.stanford.edu/docs/digital-stacks/api/).
 
 ## Learning Objectives
 
 - Understand what Cloud Optimized GeoTIFFs (COGs) are
-- Learn how to access raster imagery from [Digital Stacks](https://github.com/sul-dlss/stacks)
+- Learn how to access raster imagery from [Digital Stacks](https://api.library.stanford.edu/docs/digital-stacks/api/)
 - Use the georaster-layer-for-leaflet library
 - Understand PURLs and DRUIDs in the [Stanford Digital Repository](https://sdr.stanford.edu/)
 - Learn about masking/clipping raster data with GeoJSON

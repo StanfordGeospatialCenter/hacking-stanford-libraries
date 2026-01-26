@@ -201,7 +201,7 @@ You should see a blank white page. That's perfect! We'll add content in the next
 
 ## Connection to Digital Stacks
 
-When you deposit an HTML file like this into the [Stanford Digital Repository (SDR)](https://sdr.stanford.edu/), it becomes accessible via [Digital Stacks](https://github.com/sul-dlss/stacks). For example, if you deposited it with DRUID `abc123xyz456`, it would be available at:
+When you deposit an HTML file like this into the [Stanford Digital Repository (SDR)](https://sdr.stanford.edu/), it becomes accessible via [Digital Stacks](https://api.library.stanford.edu/docs/digital-stacks/api/). For example, if you deposited it with DRUID `abc123xyz456`, it would be available at:
 
 ```
 https://stacks.stanford.edu/file/druid:abc123xyz456/my-first-page.html
