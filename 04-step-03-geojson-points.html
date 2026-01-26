@@ -357,28 +357,28 @@
                                 
                                 <h1 id="step-3-load-geojson-points">Step 3: Load GeoJSON Points</h1>
 <h2 id="overview">Overview</h2>
-<p>In this step, we'll add data points (artwork locations) to our map by loading <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> GeoJSON file. This introduces working with geographic data and customizing how markers appear.</p>
+<p>In this step, we'll add data points (artwork locations) to our map by loading a <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> file. This introduces working with geographic data and customizing how markers appear.</p>
 <h2 id="learning-objectives">Learning Objectives</h2>
 <ul>
-<li>Understand what GeoJSON is and why it'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> useful</li>
+<li>Understand what <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> is and why it's useful</li>
 <li>Learn how to load external data files with <code>fetch()</code></li>
 <li>Create custom markers instead of default pins</li>
 <li>Work with feature properties (attributes)</li>
 <li>Transform default markers into styled circles</li>
 </ul>
 <h2 id="what-is-geojson">What is GeoJSON?</h2>
-<p><strong>GeoJSON</strong> is <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> format for encoding geographic data using JSON (JavaScript Object Notation).</p>
-<p><strong>Think of it like:</strong> <a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> spreadsheet (with rows of data and columns of attributes) that also knows where things are located on Earth.</p>
+<p><strong><a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a></strong> is a format for encoding geographic data using<a href="GLOSSARY.html#json-javascript-object-notation" class="glossary-term" title="A text format for storing and exchanging data, using key-value pairs. Example: {&quot;name&quot;: &quot;value&quot;}">JSON (JavaScript Object Notation)</a>.</p>
+<p><strong>Think of it like:</strong> A spreadsheet (with rows of data and columns of attributes) that also knows where things are located on Earth.</p>
 <h3 id="why-use-geojson">Why Use GeoJSON?</h3>
 <ul>
-<li><strong>Human-readable</strong> - You can open it in <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> text editor and understand it  </li>
+<li><strong>Human-readable</strong> - You can open it in a text editor and understand it  </li>
 <li><strong>Widely supported</strong> - Works with almost every mapping library and GIS software  </li>
 <li><strong>Combines geometry and attributes</strong> - Location + information in one file  </li>
 <li><strong>Web-friendly</strong> - Native JavaScript format, easy to work with  </li>
 <li><strong>Flexible</strong> - Can represent points, lines, polygons, and more  </li>
 </ul>
 <h3 id="geojson-structure">GeoJSON Structure</h3>
-<p><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> simple GeoJSON file looks like this:</p>
+<p>A simple <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> file looks like this:</p>
 <pre><code class="lang-json">{
   <span class="hljs-string">"type"</span>: <span class="hljs-string">"FeatureCollection"</span>,
   <span class="hljs-string">"features"</span>: [
@@ -400,14 +400,14 @@
 </code></pre>
 <p><strong>Breaking it down:</strong></p>
 <ul>
-<li><strong>FeatureCollection:</strong> <a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> container holding multiple features</li>
+<li><strong>FeatureCollection:</strong> A container holding multiple features</li>
 <li><strong>Features:</strong> Individual geographic objects (one artwork in this case)</li>
 <li><strong>Geometry:</strong> The location and shape<ul>
 <li><strong>type:</strong> "Point" (could also be LineString, Polygon, etc.)</li>
-<li><strong>coordinates:</strong> <code>[longitude, latitude]</code> - NOTE: Longitude comes first in GeoJSON!</li>
+<li><strong><a href="GLOSSARY.html#coordinates" class="glossary-term" title="Numbers that specify a location. In mapping: [longitude, latitude]. Example: [-122.169, 37.427]">coordinates</a>:</strong> <code>[longitude, latitude]</code> - NOTE: <a href="GLOSSARY.html#longitude" class="glossary-term" title="Geographic coordinate measuring east-west position (-180° to +180°). First number in coordinate pairs.">Longitude</a> comes first in <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a>!</li>
 </ul>
 </li>
-<li><strong>Properties:</strong> Attributes/information about this feature (like columns in <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> spreadsheet)</li>
+<li><strong>Properties:</strong> Attributes/information about this feature (like columns in a spreadsheet)</li>
 </ul>
 <h2 id="the-complete-code">The Complete Code</h2>
 <pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
@@ -482,19 +482,19 @@
 <h3 id="1-the-fetch-api">1. The Fetch API</h3>
 <pre><code class="lang-javascript"><span class="hljs-title function_">fetch</span>(<span class="hljs-string">'collection/stanford_public_art.geojson'</span>)
 </code></pre>
-<p><strong>What is <code>fetch()</code>?</strong> <a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> built-in JavaScript function for loading files from URLs (local or remote).</p>
-<p><strong>This is <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> relative path!</strong> Looking for:</p>
+<p><strong>What is <code>fetch()</code>?</strong> A built-in JavaScript <a href="GLOSSARY.html#function" class="glossary-term" title="A reusable block of code that performs a specific task. Can accept input (parameters) and return output.">function</a> for loading files from URLs (local or remote).</p>
+<p><strong>This is a <a href="GLOSSARY.html#relative-path" class="glossary-term" title="A file path specified relative to the current file's location. Example: collection/data.json">relative path</a>!</strong> Looking for:</p>
 <pre><code>your-project/
 ├── cog_map_step_03.html (this file)
 └── collection/
     └── stanford_public_art.geojson (the data file)
-</code></pre><p><strong>In Digital Stacks (after deposit to SDR):</strong></p>
+</code></pre><p><strong>In <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> (after deposit to SDR):</strong></p>
 <pre><code>https://stacks.stanford.edu/file/druid:abc123xyz456/
 ├── index.html
 └── collection/
     └── stanford_public_art.geojson
-</code></pre><p>The relative path <code>collection/stanford_public_art.geojson</code> works in both locations!</p>
-<p><strong>You could also use an absolute Digital Stacks URL:</strong></p>
+</code></pre><p>The <a href="GLOSSARY.html#relative-path" class="glossary-term" title="A file path specified relative to the current file's location. Example: collection/data.json">relative path</a> <code>collection/stanford_public_art.geojson</code> works in both locations!</p>
+<p><strong>You could also use an absolute <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> URL:</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-title function_">fetch</span>(<span class="hljs-string">'https://stacks.stanford.edu/file/druid:abc123xyz456/collection/data.geojson'</span>)
 </code></pre>
 <h3 id="2-promises-and-then-chains">2. Promises and .then() Chains</h3>
@@ -505,8 +505,8 @@
     })
     .<span class="hljs-title function_">catch</span>(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">'Error:'</span>, error));
 </code></pre>
-<p><strong>What'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> happening here?</strong></p>
-<p>Think of it like ordering <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> package:</p>
+<p><strong>What's happening here?</strong></p>
+<p>Think of it like ordering a package:</p>
 <ol>
 <li><strong><code>fetch()</code></strong> - Place the order (start downloading the file)</li>
 <li><strong><code>.then(response =&gt; response.json())</code></strong> - Package arrives, open it and read the contents</li>
@@ -514,8 +514,8 @@
 <li><strong><code>.catch(error =&gt; ...)</code></strong> - Handle problems (file not found, network error, etc.)</li>
 </ol>
 <p><strong>Why <code>.then()</code> chains?</strong></p>
-<p>JavaScript doesn'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> wait for files to download. It continues running other code. <code>.then()</code> says "when the download finishes, THEN do this."</p>
-<p><strong>Arrow functions:</strong> The <code>=&gt;</code> syntax is <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> shorter way to write functions:</p>
+<p>JavaScript doesn't wait for files to download. It continues running other code. <code>.then()</code> says "when the download finishes, THEN do this."</p>
+<p><strong>Arrow functions:</strong> The <code>=&gt;</code> syntax is a shorter way to write functions:</p>
 <pre><code class="lang-javascript"><span class="hljs-comment">// Traditional function</span>
 <span class="hljs-keyword">function</span>(<span class="hljs-params">response</span>) { <span class="hljs-keyword">return</span> response.<span class="hljs-title function_">json</span>(); }
 
@@ -525,8 +525,8 @@ response =&gt; response.<span class="hljs-title function_">json</span>()
 <h3 id="3-parsing-json">3. Parsing JSON</h3>
 <pre><code class="lang-javascript">.<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.<span class="hljs-title function_">json</span>())
 </code></pre>
-<p><strong>What this does:</strong> Converts the text file into <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> JavaScript object you can work with.</p>
-<p><strong>Without <code>.json()</code>:</strong> You'<a href="GLOSSARY.html#d" class="glossary-term" title="">d</a> just have <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> string of text<br></br><strong>With <code>.json()</code>:</strong> You have <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> structured object with properties you can access  </p>
+<p><strong>What this does:</strong> Converts the text file into a JavaScript <a href="GLOSSARY.html#object" class="glossary-term" title="A JavaScript data structure storing key-value pairs. Example: {name: &quot;John&quot;, age: 30}">object</a> you can work with.</p>
+<p><strong>Without <code>.json()</code>:</strong> You'd just have a <a href="GLOSSARY.html#string" class="glossary-term" title="A data type representing text. Created with quotes: &quot;text&quot; or 'text'">string</a> of text<br></br><strong>With <code>.json()</code>:</strong> You have a structured <a href="GLOSSARY.html#object" class="glossary-term" title="A JavaScript data structure storing key-value pairs. Example: {name: &quot;John&quot;, age: 30}">object</a> with properties you can access  </p>
 <h3 id="4-creating-a-geojson-layer">4. Creating a GeoJSON Layer</h3>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> artworkLayer = L.<span class="hljs-title function_">geoJSON</span>(data, {
     <span class="hljs-attr">pointToLayer</span>: <span class="hljs-keyword">function</span>(<span class="hljs-params">feature, latlng</span>) {
@@ -541,11 +541,11 @@ response =&gt; response.<span class="hljs-title function_">json</span>()
 }).<span class="hljs-title function_">addTo</span>(map);
 </code></pre>
 <p><strong>Breaking it down:</strong></p>
-<p><strong><code>L.geoJSON(data, options)</code></strong> - Leaflet'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> built-in function to display GeoJSON</p>
+<p><strong><code>L.geoJSON(data, options)</code></strong> - <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a>'s built-in <a href="GLOSSARY.html#function" class="glossary-term" title="A reusable block of code that performs a specific task. Can accept input (parameters) and return output.">function</a> to display <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a></p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><code>data</code> - The GeoJSON object we loaded</li>
-<li><code>options</code> - An object with settings (inside the <code>{}</code>)</li>
+<li><code>data</code> - The <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> <a href="GLOSSARY.html#object" class="glossary-term" title="A JavaScript data structure storing key-value pairs. Example: {name: &quot;John&quot;, age: 30}">object</a> we loaded</li>
+<li><code>options</code> - An <a href="GLOSSARY.html#object" class="glossary-term" title="A JavaScript data structure storing key-value pairs. Example: {name: &quot;John&quot;, age: 30}">object</a> with settings (inside the <code>{}</code>)</li>
 </ul>
 <h3 id="5-custom-point-styling-with-pointtolayer">5. Custom Point Styling with pointToLayer</h3>
 <pre><code class="lang-javascript"><span class="hljs-attr">pointToLayer</span>: <span class="hljs-keyword">function</span>(<span class="hljs-params">feature, latlng</span>) {
@@ -558,14 +558,14 @@ response =&gt; response.<span class="hljs-title function_">json</span>()
     });
 }
 </code></pre>
-<p><strong>What is <code>pointToLayer</code>?</strong> <a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> function that tells Leaflet how to draw each point.</p>
-<p><strong>Default behavior (without this):</strong> Leaflet uses blue pin markers<br></br><strong>With this:</strong> We create custom circle markers  </p>
-<p><strong>Parameters passed to the function:</strong></p>
+<p><strong>What is <code>pointToLayer</code>?</strong> A <a href="GLOSSARY.html#function" class="glossary-term" title="A reusable block of code that performs a specific task. Can accept input (parameters) and return output.">function</a> that tells <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> how to draw each point.</p>
+<p><strong>Default behavior (without this):</strong> <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> uses blue pin markers<br></br><strong>With this:</strong> We create custom circle markers  </p>
+<p><strong>Parameters passed to the <a href="GLOSSARY.html#function" class="glossary-term" title="A reusable block of code that performs a specific task. Can accept input (parameters) and return output.">function</a>:</strong></p>
 <ul>
-<li><strong><code>feature</code></strong> - The current GeoJSON feature (one artwork)</li>
-<li><strong><code>latlng</code></strong> - The coordinates as <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> Leaflet LatLng object</li>
+<li><strong><code>feature</code></strong> - The current <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> feature (one artwork)</li>
+<li><strong><code>latlng</code></strong> - The <a href="GLOSSARY.html#coordinates" class="glossary-term" title="Numbers that specify a location. In mapping: [longitude, latitude]. Example: [-122.169, 37.427]">coordinates</a> as a <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> LatLng <a href="GLOSSARY.html#object" class="glossary-term" title="A JavaScript data structure storing key-value pairs. Example: {name: &quot;John&quot;, age: 30}">object</a></li>
 </ul>
-<p><strong>What to return:</strong> <a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> Leaflet layer (marker, circle, etc.)</p>
+<p><strong>What to <a href="GLOSSARY.html#return" class="glossary-term" title="A statement that ends function execution and optionally provides a value back to the caller.">return</a>:</strong> A <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> layer (<a href="GLOSSARY.html#marker" class="glossary-term" title="A visual indicator on a map showing a specific location.">marker</a>, circle, etc.)</p>
 <h3 id="6-circle-marker-styling">6. Circle Marker Styling</h3>
 <pre><code class="lang-javascript">L.<span class="hljs-title function_">circleMarker</span>(latlng, {
     <span class="hljs-attr">radius</span>: <span class="hljs-number">6</span>,
@@ -587,9 +587,9 @@ response =&gt; response.<span class="hljs-title function_">json</span>()
 <ul>
 <li>Named: <code>'red'</code>, <code>'blue'</code>, <code>'green'</code></li>
 <li>Hex codes: <code>'#FF0000'</code> (red), <code>'#0000FF'</code> (blue)</li>
-<li>RGB: <code>'rgb(255, 0, 0)'</code></li>
+<li><a href="GLOSSARY.html#rgb" class="glossary-term" title="A color model using Red, Green, Blue values. Example: rgb(255, 87, 51)">RGB</a>: <code>'rgb(255, 0, 0)'</code></li>
 </ul>
-<p><strong>Circle vs. CircleMarker:</strong></p>
+<p><strong>Circle vs. <a href="GLOSSARY.html#circlemarker" class="glossary-term" title="A Leaflet marker type that draws a circular shape at a specific location on the map.">CircleMarker</a>:</strong></p>
 <ul>
 <li><strong><code>L.circle()</code></strong> - Size in meters, grows/shrinks with zoom</li>
 <li><strong><code>L.circleMarker()</code></strong> - Size in pixels, stays constant</li>
@@ -600,14 +600,14 @@ response =&gt; response.<span class="hljs-title function_">json</span>()
 <p><strong>What this does:</strong> Automatically zooms and centers the map to show all markers.</p>
 <p><strong><code>artworkLayer.getBounds()</code></strong> - Calculates the bounding box (rectangle) that contains all features</p>
 <p><strong><code>map.fitBounds()</code></strong> - Adjusts the map view to show that rectangle</p>
-<p><strong>Why use it:</strong> Instead of manually guessing zoom and center, let Leaflet calculate the best view.</p>
+<p><strong>Why use it:</strong> Instead of manually guessing zoom and center, <a href="GLOSSARY.html#let" class="glossary-term" title="JavaScript keyword for declaring variables that can be reassigned. Block-scoped.">let</a> <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> calculate the best view.</p>
 <h3 id="8-error-handling">8. Error Handling</h3>
 <pre><code class="lang-javascript">.<span class="hljs-title function_">catch</span>(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">'Error loading GeoJSON:'</span>, error));
 </code></pre>
 <p><strong>What this does:</strong> If anything goes wrong (file not found, invalid JSON, network error), log the error to the console.</p>
-<p><strong>To see errors:</strong> Press F12 in your browser to open Developer Tools, click Console tab.</p>
+<p><strong>To see errors:</strong> Press F12 in your <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a> to open Developer Tools, click Console tab.</p>
 <h2 id="understanding-feature-and-properties">Understanding Feature and Properties</h2>
-<p>Each point in your GeoJSON has properties you can access:</p>
+<p>Each point in your <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> has properties you can access:</p>
 <pre><code class="lang-javascript"><span class="hljs-attr">pointToLayer</span>: <span class="hljs-keyword">function</span>(<span class="hljs-params">feature, latlng</span>) {
     <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(feature.<span class="hljs-property">properties</span>.<span class="hljs-property">name</span>);  <span class="hljs-comment">// "The Sieve of Eratosthenes"</span>
     <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(feature.<span class="hljs-property">properties</span>.<span class="hljs-property">artist_name</span>);  <span class="hljs-comment">// "Mark di Suvero"</span>
@@ -616,7 +616,7 @@ response =&gt; response.<span class="hljs-title function_">json</span>()
     <span class="hljs-keyword">return</span> L.<span class="hljs-title function_">circleMarker</span>(latlng, { ... });
 }
 </code></pre>
-<p><strong><code>feature.properties</code></strong> - An object containing all the attributes from the GeoJSON</p>
+<p><strong><code>feature.properties</code></strong> - An <a href="GLOSSARY.html#object" class="glossary-term" title="A JavaScript data structure storing key-value pairs. Example: {name: &quot;John&quot;, age: 30}">object</a> containing all the attributes from the <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a></p>
 <p><strong>In the next step</strong>, we'll use these properties to create informative popups!</p>
 <h2 id="geojson-in-digital-stacks">GeoJSON in Digital Stacks</h2>
 <h3 id="local-development">Local Development</h3>
@@ -632,21 +632,21 @@ response =&gt; response.<span class="hljs-title function_">json</span>()
 <p>Files at:</p>
 <pre><code>https://stacks.stanford.edu/file/druid:abc123xyz456/index.html
 https://stacks.stanford.edu/file/druid:abc123xyz456/collection/stanford_public_art.geojson
-</code></pre><p>Your relative path <strong>still works!</strong> No changes needed.</p>
+</code></pre><p>Your <a href="GLOSSARY.html#relative-path" class="glossary-term" title="A file path specified relative to the current file's location. Example: collection/data.json">relative path</a> <strong>still works!</strong> No changes needed.</p>
 <h3 id="referencing-external-geojson">Referencing External GeoJSON</h3>
-<p>You can also load GeoJSON from other DRUIDs:</p>
+<p>You can also load <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> from other DRUIDs:</p>
 <pre><code class="lang-javascript"><span class="hljs-title function_">fetch</span>(<span class="hljs-string">'https://stacks.stanford.edu/file/druid:xyz789def123/boundaries.geojson'</span>)
 </code></pre>
-<p><strong>Use case:</strong> Build <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> collection viewer that combines data from multiple SDR deposits.</p>
+<p><strong>Use case:</strong> Build a collection viewer that combines data from multiple SDR deposits.</p>
 <h2 id="try-it-yourself">Try It Yourself</h2>
 <ol>
 <li><strong>Copy the complete code</strong> into <code>step-03.html</code></li>
 <li><strong>Make sure</strong> <code>collection/stanford_public_art.geojson</code> exists</li>
-<li><strong>Open in your browser</strong></li>
+<li><strong>Open in your <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a></strong></li>
 </ol>
 <p>You should see blue circles at artwork locations!</p>
 <h3 id="experiments">Experiments</h3>
-<p><strong>Change marker colors:</strong></p>
+<p><strong>Change <a href="GLOSSARY.html#marker" class="glossary-term" title="A visual indicator on a map showing a specific location.">marker</a> colors:</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-attr">color</span>: <span class="hljs-string">'red'</span>,
 <span class="hljs-attr">fillColor</span>: <span class="hljs-string">'orange'</span>
 </code></pre>
@@ -656,7 +656,7 @@ https://stacks.stanford.edu/file/druid:abc123xyz456/collection/stanford_public_a
 <p><strong>Make them transparent:</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-attr">fillOpacity</span>: <span class="hljs-number">0.3</span>
 </code></pre>
-<p><strong>Add <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> white border:</strong></p>
+<p><strong>Add a white border:</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-attr">color</span>: <span class="hljs-string">'white'</span>,
 <span class="hljs-attr">weight</span>: <span class="hljs-number">3</span>,
 <span class="hljs-attr">fillColor</span>: <span class="hljs-string">'blue'</span>
@@ -677,14 +677,14 @@ https://stacks.stanford.edu/file/druid:abc123xyz456/collection/stanford_public_a
 <li>Go to <a href="http://geojson.io/" target="_blank">http://geojson.io/</a></li>
 <li>Draw points, lines, or polygons on the map</li>
 <li>Add properties in the table</li>
-<li>Download the GeoJSON file</li>
+<li>Download the <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> file</li>
 <li>Add to your <code>collection/</code> folder</li>
 </ol>
 <h3 id="option-2-export-from-gis-software">Option 2: Export from GIS Software</h3>
 <ul>
-<li>QGIS: Layer → Save As → GeoJSON</li>
+<li>QGIS: Layer → Save As → <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a></li>
 <li>ArcGIS: Export Features → JSON</li>
-<li><a href="GLOSSARY.html#r" class="glossary-term" title="">R</a>: <code>st_write(data, "file.geojson", driver = "GeoJSON")</code></li>
+<li>R: <code>st_write(data, "file.geojson", driver = "GeoJSON")</code></li>
 </ul>
 <h3 id="option-3-write-by-hand">Option 3: Write by Hand</h3>
 <pre><code class="lang-json">{
@@ -724,19 +724,19 @@ https://stacks.stanford.edu/file/druid:abc123xyz456/collection/stanford_public_a
 <p>In <a href="05-step-04-popups.html">Step 4: Add Popups</a>, we'll make these markers interactive by adding popups that display artwork information when clicked!</p>
 <h2 id="key-takeaways">Key Takeaways</h2>
 <ul>
-<li>GeoJSON combines location data with attributes  </li>
+<li><a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> combines location data with attributes  </li>
 <li><code>fetch()</code> loads files asynchronously  </li>
-<li><code>.then()</code> chains handle asynchronous operations  </li>
+<li><code>.then()</code> chains handle <a href="GLOSSARY.html#asynchronous" class="glossary-term" title="Code that doesn't block execution while waiting for operations (like network requests) to complete. Allows other code to run while waiting.">asynchronous</a> operations  </li>
 <li><code>pointToLayer</code> customizes how points are displayed  </li>
 <li>Circle markers can be styled with colors, sizes, and opacity  </li>
 <li><code>fitBounds()</code> automatically centers the map on your data  </li>
 <li>Relative paths work perfectly in SDR deposits  </li>
 </ul>
 <h2 id="common-questions">Common Questions</h2>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Why do coordinates show [longitude, latitude] in GeoJSON but [latitude, longitude] in Leaflet?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: GeoJSON follows the (<a href="GLOSSARY.html#x" class="glossary-term" title="">x</a>, y) convention, treating longitude as <a href="GLOSSARY.html#x" class="glossary-term" title="">x</a> and latitude as y. Leaflet uses geographic convention (lat, lng). Leaflet handles the conversion automatically.</p>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Can <a href="GLOSSARY.html#i" class="glossary-term" title="">I</a> load GeoJSON from <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> URL?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: Yes! <code>fetch()</code> works with any URL, including Digital Stacks URLs.</p>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: What if my GeoJSON is invalid?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: You'll see an error in the console. Validate your GeoJSON at <a href="http://geojson.io/" target="_blank">http://geojson.io/</a> or <a href="https://geojsonlint.com/" target="_blank">https://geojsonlint.com/</a></p>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Can <a href="GLOSSARY.html#i" class="glossary-term" title="">I</a> use other geometry types?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: Yes! GeoJSON supports Points, LineStrings, Polygons, and more. Leaflet will draw them automatically.</p>
+<p><strong>Q: Why do <a href="GLOSSARY.html#coordinates" class="glossary-term" title="Numbers that specify a location. In mapping: [longitude, latitude]. Example: [-122.169, 37.427]">coordinates</a> show [<a href="GLOSSARY.html#longitude" class="glossary-term" title="Geographic coordinate measuring east-west position (-180° to +180°). First number in coordinate pairs.">longitude</a>, <a href="GLOSSARY.html#latitude" class="glossary-term" title="Geographic coordinate measuring north-south position (-90° to +90°). Second number in coordinate pairs.">latitude</a>] in <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> but [<a href="GLOSSARY.html#latitude" class="glossary-term" title="Geographic coordinate measuring north-south position (-90° to +90°). Second number in coordinate pairs.">latitude</a>, <a href="GLOSSARY.html#longitude" class="glossary-term" title="Geographic coordinate measuring east-west position (-180° to +180°). First number in coordinate pairs.">longitude</a>] in <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a>?</strong><br></br>A: <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> follows the (x, y) convention, treating <a href="GLOSSARY.html#longitude" class="glossary-term" title="Geographic coordinate measuring east-west position (-180° to +180°). First number in coordinate pairs.">longitude</a> as x and <a href="GLOSSARY.html#latitude" class="glossary-term" title="Geographic coordinate measuring north-south position (-90° to +90°). Second number in coordinate pairs.">latitude</a> as y. <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> uses geographic convention (lat, lng). <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> handles the conversion automatically.</p>
+<p><strong>Q: Can I load <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> from a URL?</strong><br></br>A: Yes! <code>fetch()</code> works with any URL, including <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> URLs.</p>
+<p><strong>Q: What if my <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> is invalid?</strong><br></br>A: You'll see an error in the console. Validate your <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> at <a href="http://geojson.io/" target="_blank">http://geojson.io/</a> or <a href="https://geojsonlint.com/" target="_blank">https://geojsonlint.com/</a></p>
+<p><strong>Q: Can I use other geometry types?</strong><br></br>A: Yes! <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> supports Points, LineStrings, Polygons, and more. <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> will draw them automatically.</p>
 <hr></hr>
 <p><strong>Previous:</strong> <a href="03-step-02-initialize-map.html">Step 2: Initialize Map</a> | <strong>Next:</strong> <a href="05-step-04-popups.html">Step 4: Add Popups</a></p>
 
@@ -782,7 +782,7 @@ https://stacks.stanford.edu/file/druid:abc123xyz456/collection/stanford_public_a
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Step 3: Load GeoJSON Points","level":"2.4","depth":1,"next":{"title":"Step 4: Add Popups","level":"2.5","depth":1,"path":"05-step-04-popups.md","ref":"05-step-04-popups.md","articles":[]},"previous":{"title":"Step 2: Initialize Leaflet Map","level":"2.3","depth":1,"path":"03-step-02-initialize-map.md","ref":"03-step-02-initialize-map.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"04-step-03-geojson-points.md","mtime":"2026-01-26T20:48:39.628Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T20:48:56.101Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Step 3: Load GeoJSON Points","level":"2.4","depth":1,"next":{"title":"Step 4: Add Popups","level":"2.5","depth":1,"path":"05-step-04-popups.md","ref":"05-step-04-popups.md","articles":[]},"previous":{"title":"Step 2: Initialize Leaflet Map","level":"2.3","depth":1,"path":"03-step-02-initialize-map.md","ref":"03-step-02-initialize-map.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"04-step-03-geojson-points.md","mtime":"2026-01-26T20:57:45.967Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T20:57:55.258Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

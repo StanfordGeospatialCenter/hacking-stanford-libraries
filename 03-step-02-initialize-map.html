@@ -357,17 +357,17 @@
                                 
                                 <h1 id="step-2-initialize-leaflet-map">Step 2: Initialize Leaflet Map</h1>
 <h2 id="overview">Overview</h2>
-<p>Now we'll transform our empty container into an interactive web map using Leaflet, <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> popular open-source JavaScript mapping library.</p>
+<p>Now we'll transform our empty container into an interactive web map using <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a>, a popular open-source JavaScript mapping library.</p>
 <h2 id="learning-objectives">Learning Objectives</h2>
 <ul>
 <li>Understand how to include external JavaScript libraries</li>
 <li>Learn about CDNs (Content Delivery Networks)</li>
 <li>Create your first interactive map</li>
 <li>Understand the basics of JavaScript</li>
-<li>Learn about map coordinates and zoom levels</li>
+<li>Learn about map <a href="GLOSSARY.html#coordinates" class="glossary-term" title="Numbers that specify a location. In mapping: [longitude, latitude]. Example: [-122.169, 37.427]">coordinates</a> and zoom levels</li>
 </ul>
 <h2 id="what-is-leaflet">What is Leaflet?</h2>
-<p><strong>Leaflet</strong> is <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> JavaScript library for creating interactive maps. It'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a>:</p>
+<p><strong><a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a></strong> is a JavaScript library for creating interactive maps. It's:</p>
 <ul>
 <li><strong>Free and open-source</strong></li>
 <li><strong>Lightweight</strong> (only 42KB)</li>
@@ -375,7 +375,7 @@
 <li><strong>Mobile-friendly</strong></li>
 <li><strong>Easy to use</strong></li>
 </ul>
-<p>Think of it like <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> toolkit - it provides all the functions you need to create maps without building everything from scratch.</p>
+<p>Think of it like a toolkit - it provides all the functions you need to create maps without building everything from scratch.</p>
 <h2 id="the-complete-code">The Complete Code</h2>
 <pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
@@ -427,27 +427,27 @@
 <h3 id="1-leaflet-css-stylesheet">1. Leaflet CSS (Stylesheet)</h3>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">"sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">""</span>/&gt;</span>
 </code></pre>
-<p><strong>What it does:</strong> Loads the Leaflet CSS file that styles the map controls (zoom buttons, attribution, etc.)</p>
+<p><strong>What it does:</strong> Loads the <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> CSS file that styles the map controls (zoom buttons, attribution, etc.)</p>
 <p><strong>Breaking it down:</strong></p>
 <ul>
-<li><code>&lt;link rel="stylesheet"&gt;</code> - Tell the browser we're loading <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> CSS file</li>
-<li><code>href="https://unpkg.com/..."</code> - The location of the file (<a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> CDN)</li>
-<li><code>integrity="sha256-..."</code> - Security check to ensure the file wasn'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> tampered with</li>
-<li><code>crossorigin=""</code> - Allows loading from <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> different domain</li>
+<li><code>&lt;link rel="stylesheet"&gt;</code> - Tell the <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a> we're loading a CSS file</li>
+<li><code>href="https://unpkg.com/..."</code> - The location of the file (a CDN)</li>
+<li><code>integrity="sha256-..."</code> - Security check to ensure the file wasn't tampered with</li>
+<li><code>crossorigin=""</code> - Allows loading from a different domain</li>
 </ul>
-<p><strong>What is unpkg.com?</strong> <a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> CDN (Content Delivery Network) that hosts JavaScript libraries. Benefits:</p>
+<p><strong>What is <a href="GLOSSARY.html#unpkg" class="glossary-term" title="A CDN for loading npm packages directly in browsers. Example: https://unpkg.com/leaflet">unpkg</a>.com?</strong> A<a href="GLOSSARY.html#cdn-content-delivery-network" class="glossary-term" title="A network of servers that delivers web content quickly from locations close to users. Example: unpkg.com hosts JavaScript libraries.">CDN (Content Delivery Network)</a>that hosts JavaScript libraries. Benefits:</p>
 <ul>
 <li>Fast delivery from servers around the world</li>
 <li>Libraries are cached by browsers (faster repeat visits)</li>
 <li>No need to download and host files yourself</li>
 </ul>
-<p><strong>Alternative (for SDR deposits):</strong> You can download <code>leaflet.css</code> and include it in your deposit, then use <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> relative path:</p>
+<p><strong>Alternative (for SDR deposits):</strong> You can download <code>leaflet.css</code> and include it in your deposit, then use a <a href="GLOSSARY.html#relative-path" class="glossary-term" title="A file path specified relative to the current file's location. Example: collection/data.json">relative path</a>:</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"lib/leaflet.css"</span>&gt;</span>
 </code></pre>
 <h3 id="2-leaflet-javascript-library">2. Leaflet JavaScript Library</h3>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">"sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
-<p><strong>What it does:</strong> Loads the Leaflet JavaScript library that provides all the mapping functions</p>
+<p><strong>What it does:</strong> Loads the <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> JavaScript library that provides all the mapping functions</p>
 <p><strong>The <code>&lt;script&gt;</code> tag:</strong> Used to include JavaScript code or JavaScript files</p>
 <p><strong>Two ways to use <code>&lt;script&gt;</code>:</strong></p>
 <ol>
@@ -477,7 +477,7 @@
 </code></pre>
 <ul>
 <li><code>html, body</code> - Applies these styles to both elements</li>
-<li><code>height: 100%</code> - Make them fill the full browser window height</li>
+<li><code>height: 100%</code> - Make them fill the full <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a> window height</li>
 <li><code>margin: 0</code> - Remove default margins (no gaps at edges)</li>
 </ul>
 <pre><code class="lang-css"><span class="hljs-selector-class">.leaflet-container</span> {
@@ -488,43 +488,43 @@
 }
 </code></pre>
 <ul>
-<li><code>.leaflet-container</code> - Styles any element with class="leaflet-container" (Leaflet adds this automatically)</li>
+<li><code>.leaflet-container</code> - Styles any element with class="<a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">leaflet</a>-container" (<a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> adds this automatically)</li>
 <li><code>height: 400px; width: 600px;</code> - Set specific dimensions</li>
-<li><code>max-width: 100%; max-height: 100%</code> - Don'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> exceed the browser window size (important for mobile)</li>
+<li><code>max-width: 100%; max-height: 100%</code> - Don't exceed the <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a> window size (important for mobile)</li>
 </ul>
 <h3 id="4-javascript-code-to-create-the-map">4. JavaScript Code to Create the Map</h3>
-<p>This is where the magic happens! Let'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> break it down line by line:</p>
+<p>This is where the magic happens! <a href="GLOSSARY.html#let" class="glossary-term" title="JavaScript keyword for declaring variables that can be reassigned. Block-scoped.">Let</a>'s break it down line by line:</p>
 <pre><code class="lang-javascript"><span class="hljs-comment">// Initialize map centered on Stanford campus</span>
 <span class="hljs-keyword">const</span> map = L.<span class="hljs-title function_">map</span>(<span class="hljs-string">'map'</span>).<span class="hljs-title function_">setView</span>([<span class="hljs-number">37.427</span>, -<span class="hljs-number">122.169</span>], <span class="hljs-number">15</span>);
 </code></pre>
 <p><strong>JavaScript comments:</strong> Lines starting with <code>//</code> are comments (notes for humans, ignored by computer)</p>
 <p><strong>Breaking down the code:</strong></p>
 <ul>
-<li><code>const</code> - Declares <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> constant variable (<a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> container for <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> value that won'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> change)</li>
-<li><code>map</code> - The name we're giving to our variable</li>
-<li><code>=</code> - Assignment operator (store the value on the right into the variable on the left)</li>
-<li><code>L.map('map')</code> - Call Leaflet'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> map function, targeting the element with id="map"</li>
+<li><code>const</code> - Declares a constant <a href="GLOSSARY.html#variable" class="glossary-term" title="A named container for storing data values. Declared with var, let, or const.">variable</a> (a container for a <a href="GLOSSARY.html#value" class="glossary-term" title="The data assigned to a variable, property, or passed to a function.">value</a> that won't change)</li>
+<li><code>map</code> - The name we're giving to our <a href="GLOSSARY.html#variable" class="glossary-term" title="A named container for storing data values. Declared with var, let, or const.">variable</a></li>
+<li><code>=</code> - Assignment operator (store the <a href="GLOSSARY.html#value" class="glossary-term" title="The data assigned to a variable, property, or passed to a function.">value</a> on the right into the <a href="GLOSSARY.html#variable" class="glossary-term" title="A named container for storing data values. Declared with var, let, or const.">variable</a> on the left)</li>
+<li><code>L.map('map')</code> - Call <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a>'s map <a href="GLOSSARY.html#function" class="glossary-term" title="A reusable block of code that performs a specific task. Can accept input (parameters) and return output.">function</a>, targeting the element with id="map"</li>
 <li><code>.setView([37.427, -122.169], 15)</code> - Set the initial map view</li>
 </ul>
 <p><strong>Understanding <code>.setView()</code>:</strong></p>
 <pre><code class="lang-javascript">.<span class="hljs-title function_">setView</span>([latitude, longitude], zoomLevel)
 </code></pre>
 <ul>
-<li><strong>Latitude:</strong> 37.427 (Stanford'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> position north of the equator)</li>
-<li><strong>Longitude:</strong> -122.169 (Stanford'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> position west of the prime meridian)</li>
+<li><strong><a href="GLOSSARY.html#latitude" class="glossary-term" title="Geographic coordinate measuring north-south position (-90° to +90°). Second number in coordinate pairs.">Latitude</a>:</strong> 37.427 (Stanford's position north of the equator)</li>
+<li><strong><a href="GLOSSARY.html#longitude" class="glossary-term" title="Geographic coordinate measuring east-west position (-180° to +180°). First number in coordinate pairs.">Longitude</a>:</strong> -122.169 (Stanford's position west of the prime meridian)</li>
 <li><strong>Zoom level:</strong> 15 (0 = whole world, 19 = maximum detail)</li>
 </ul>
-<p><strong>Geographic Coordinates Explained:</strong></p>
+<p><strong>Geographic <a href="GLOSSARY.html#coordinates" class="glossary-term" title="Numbers that specify a location. In mapping: [longitude, latitude]. Example: [-122.169, 37.427]">Coordinates</a> Explained:</strong></p>
 <ul>
-<li>Latitude: -90 (South Pole) to +90 (North Pole)</li>
-<li>Longitude: -180 to +180 (wraps around the globe)</li>
-<li>Stanford is at approximately 37.427°<a href="GLOSSARY.html#n" class="glossary-term" title="">N</a>, 122.169°<a href="GLOSSARY.html#w" class="glossary-term" title="">W</a></li>
+<li><a href="GLOSSARY.html#latitude" class="glossary-term" title="Geographic coordinate measuring north-south position (-90° to +90°). Second number in coordinate pairs.">Latitude</a>: -90 (South Pole) to +90 (North Pole)</li>
+<li><a href="GLOSSARY.html#longitude" class="glossary-term" title="Geographic coordinate measuring east-west position (-180° to +180°). First number in coordinate pairs.">Longitude</a>: -180 to +180 (wraps around the globe)</li>
+<li>Stanford is at approximately 37.427°N, 122.169°W</li>
 </ul>
-<p><strong>Finding coordinates for your location:</strong></p>
+<p><strong>Finding <a href="GLOSSARY.html#coordinates" class="glossary-term" title="Numbers that specify a location. In mapping: [longitude, latitude]. Example: [-122.169, 37.427]">coordinates</a> for your location:</strong></p>
 <ol>
 <li>Go to Google Maps</li>
-<li>Right-click on <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> location</li>
-<li>Click the coordinates that appear</li>
+<li>Right-click on a location</li>
+<li>Click the <a href="GLOSSARY.html#coordinates" class="glossary-term" title="Numbers that specify a location. In mapping: [longitude, latitude]. Example: [-122.169, 37.427]">coordinates</a> that appear</li>
 <li>Format as <code>[latitude, longitude]</code></li>
 </ol>
 <h3 id="5-adding-the-base-map-tiles">5. Adding the Base Map Tiles</h3>
@@ -534,20 +534,20 @@
     <span class="hljs-attr">attribution</span>: <span class="hljs-string">'&amp;copy; &lt;a href="http://www.openstreetmap.org/copyright"&gt;OpenStreetMap&lt;/a&gt;'</span>
 }).<span class="hljs-title function_">addTo</span>(map);
 </code></pre>
-<p><strong>What are tiles?</strong> Web maps are made of small square images (tiles) arranged like <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> grid. As you zoom and pan, new tiles load.</p>
+<p><strong>What are tiles?</strong> Web maps are made of small square images (tiles) arranged like a grid. As you zoom and pan, new tiles load.</p>
 <p><strong>The URL pattern:</strong></p>
 <pre><code>https://tile.openstreetmap.org/{z}/{x}/{y}.png
 </code></pre><ul>
-<li><code>{z}</code> - Zoom level (replaced by Leaflet automatically)</li>
-<li><code>{x}</code> - Tile column number</li>
-<li><code>{y}</code> - Tile row number</li>
+<li><code>{z}</code> - Zoom level (replaced by <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> automatically)</li>
+<li><code>{x}</code> - <a href="GLOSSARY.html#tile" class="glossary-term" title="A small image piece that combines with others to form a complete map.">Tile</a> column number</li>
+<li><code>{y}</code> - <a href="GLOSSARY.html#tile" class="glossary-term" title="A small image piece that combines with others to form a complete map.">Tile</a> row number</li>
 </ul>
-<p><strong>Options object</strong> (inside the <code>{}</code>):</p>
+<p><strong>Options <a href="GLOSSARY.html#object" class="glossary-term" title="A JavaScript data structure storing key-value pairs. Example: {name: &quot;John&quot;, age: 30}">object</a></strong> (inside the <code>{}</code>):</p>
 <ul>
 <li><code>maxZoom: 19</code> - Maximum zoom level available for these tiles</li>
 <li><code>attribution: '...'</code> - Credits for the map data (required by OpenStreetMap license)</li>
 </ul>
-<p><strong><code>.addTo(map)</code></strong> - Adds this tile layer to our map</p>
+<p><strong><code>.addTo(map)</code></strong> - Adds this <a href="GLOSSARY.html#tile" class="glossary-term" title="A small image piece that combines with others to form a complete map.">tile</a> layer to our map</p>
 <h2 id="using-digital-stacks-tiles">Using Digital Stacks Tiles</h2>
 <p>You can also use tiles hosted in SDR! For example:</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> tiles = L.<span class="hljs-title function_">tileLayer</span>(<span class="hljs-string">'collection/tiles/{z}/{x}/{y}.png'</span>, {
@@ -555,7 +555,7 @@
     <span class="hljs-attr">attribution</span>: <span class="hljs-string">'Stanford Libraries'</span>
 }).<span class="hljs-title function_">addTo</span>(map);
 </code></pre>
-<p><strong>This is <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> relative path!</strong> It looks for:</p>
+<p><strong>This is a <a href="GLOSSARY.html#relative-path" class="glossary-term" title="A file path specified relative to the current file's location. Example: collection/data.json">relative path</a>!</strong> It looks for:</p>
 <pre><code>your-project/
 ├── index.html (your HTML file)
 └── collection/
@@ -566,12 +566,12 @@
 </code></pre><p>When deposited to SDR with DRUID <code>abc123xyz456</code>, the tiles become accessible at:</p>
 <pre><code>https://stacks.stanford.edu/file/druid:abc123xyz456/collection/tiles/15/5280/12795.png
 </code></pre><h2 id="how-javascript-works-in-html">How JavaScript Works in HTML</h2>
-<p>JavaScript code executes when the browser encounters it. Our script is at the bottom of the <code>&lt;body&gt;</code> because:</p>
+<p>JavaScript code executes when the <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a> encounters it. Our script is at the bottom of the <code>&lt;body&gt;</code> because:</p>
 <ol>
 <li>The HTML needs to load first (the <code>&lt;div id="map"&gt;</code> must exist)</li>
-<li>Then JavaScript can find that div and put <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> map in it</li>
+<li>Then JavaScript can find that <a href="GLOSSARY.html#div" class="glossary-term" title="An HTML element used as a container to group other elements. Example: <div id=&quot;container&quot;>...</div>">div</a> and put a map in it</li>
 </ol>
-<p><strong>Order matters!</strong> This won'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> work:</p>
+<p><strong>Order matters!</strong> This won't work:</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript">
   <span class="hljs-keyword">const</span> map = L.<span class="hljs-title function_">map</span>(<span class="hljs-string">'map'</span>);  <span class="hljs-comment">// Error! div doesn't exist yet</span>
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
@@ -585,15 +585,15 @@
 </code></pre>
 <h2 id="try-it-yourself">Try It Yourself</h2>
 <ol>
-<li><strong>Copy the complete code</strong> into <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> new file called <code>step-02.html</code></li>
-<li><strong>Save and open in your browser</strong></li>
+<li><strong>Copy the complete code</strong> into a new file called <code>step-02.html</code></li>
+<li><strong>Save and open in your <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a></strong></li>
 <li><strong>You should see:</strong> An interactive map centered on Stanford campus!</li>
 </ol>
 <p><strong>Test the interactivity:</strong></p>
 <ul>
 <li><strong>Click and drag</strong> to pan around</li>
 <li><strong>Scroll wheel</strong> or use <strong>+ / - buttons</strong> to zoom in and out</li>
-<li><strong>Double-click</strong> to zoom in on <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> specific spot</li>
+<li><strong>Double-click</strong> to zoom in on a specific spot</li>
 </ul>
 <h3 id="experiments">Experiments</h3>
 <p><strong>Change the starting location</strong> to your hometown:</p>
@@ -603,7 +603,7 @@
 <pre><code class="lang-javascript">.<span class="hljs-title function_">setView</span>([<span class="hljs-number">37.427</span>, -<span class="hljs-number">122.169</span>], <span class="hljs-number">5</span>);  <span class="hljs-comment">// Zoomed way out</span>
 .<span class="hljs-title function_">setView</span>([<span class="hljs-number">37.427</span>, -<span class="hljs-number">122.169</span>], <span class="hljs-number">18</span>); <span class="hljs-comment">// Zoomed way in</span>
 </code></pre>
-<p><strong>Try different tile providers:</strong></p>
+<p><strong>Try different <a href="GLOSSARY.html#tile" class="glossary-term" title="A small image piece that combines with others to form a complete map.">tile</a> providers:</strong></p>
 <p><strong>Satellite imagery:</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> tiles = L.<span class="hljs-title function_">tileLayer</span>(<span class="hljs-string">'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'</span>, {
     <span class="hljs-attr">attribution</span>: <span class="hljs-string">'Esri'</span>
@@ -612,7 +612,7 @@
 <h2 id="connection-to-digital-stacks">Connection to Digital Stacks</h2>
 <p>When you deposit this HTML to SDR:</p>
 <ol>
-<li><p><strong>External libraries</strong> (Leaflet from unpkg.com) continue to work - no problem with absolute URLs!</p>
+<li><p><strong>External libraries</strong> (<a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> from <a href="GLOSSARY.html#unpkg" class="glossary-term" title="A CDN for loading npm packages directly in browsers. Example: https://unpkg.com/leaflet">unpkg</a>.com) continue to work - no problem with absolute URLs!</p>
 </li>
 <li><p><strong>Your own tiles</strong> should use relative paths so they work after deposit</p>
 </li>
@@ -638,16 +638,16 @@
 <h2 id="key-takeaways">Key Takeaways</h2>
 <ul>
 <li>External libraries can be loaded from CDNs using <code>&lt;link&gt;</code> and <code>&lt;script&gt;</code> tags  </li>
-<li>Leaflet makes it easy to create interactive maps  </li>
-<li>Maps need center coordinates <code>[latitude, longitude]</code> and <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> zoom level  </li>
-<li>Tile layers provide the base map imagery  </li>
+<li><a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> makes it easy to create interactive maps  </li>
+<li>Maps need center <a href="GLOSSARY.html#coordinates" class="glossary-term" title="Numbers that specify a location. In mapping: [longitude, latitude]. Example: [-122.169, 37.427]">coordinates</a> <code>[latitude, longitude]</code> and a zoom level  </li>
+<li><a href="GLOSSARY.html#tile" class="glossary-term" title="A small image piece that combines with others to form a complete map.">Tile</a> layers provide the base map imagery  </li>
 <li>JavaScript at the bottom of <code>&lt;body&gt;</code> runs after HTML loads  </li>
 <li>Relative paths work great for tiles in SDR deposits  </li>
 </ul>
 <h2 id="common-questions">Common Questions</h2>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Do <a href="GLOSSARY.html#i" class="glossary-term" title="">I</a> need an internet connection?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: Yes, if using tiles from OpenStreetMap or libraries from CDNs. For offline use, download and include everything locally.</p>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Can <a href="GLOSSARY.html#i" class="glossary-term" title="">I</a> use my own tiles?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: Yes! Generate tiles with tools like GDAL and reference them with relative paths.</p>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Why use unpkg.com instead of downloading Leaflet?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: CDNs are faster and users might have it cached. But for SDR deposits, downloading and including locally ensures it always works.</p>
+<p><strong>Q: Do I need an internet connection?</strong><br></br>A: Yes, if using tiles from OpenStreetMap or libraries from CDNs. For offline use, download and include everything locally.</p>
+<p><strong>Q: Can I use my own tiles?</strong><br></br>A: Yes! Generate tiles with tools like GDAL and reference them with relative paths.</p>
+<p><strong>Q: Why use <a href="GLOSSARY.html#unpkg" class="glossary-term" title="A CDN for loading npm packages directly in browsers. Example: https://unpkg.com/leaflet">unpkg</a>.com instead of downloading <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a>?</strong><br></br>A: CDNs are faster and users might have it cached. But for SDR deposits, downloading and including locally ensures it always works.</p>
 <hr></hr>
 <p><strong>Previous:</strong> <a href="02-step-01-map-container.html">Step 1: Map Container</a> | <strong>Next:</strong> <a href="04-step-03-geojson-points.html">Step 3: GeoJSON Points</a></p>
 
@@ -693,7 +693,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Step 2: Initialize Leaflet Map","level":"2.3","depth":1,"next":{"title":"Step 3: Load GeoJSON Points","level":"2.4","depth":1,"path":"04-step-03-geojson-points.md","ref":"04-step-03-geojson-points.md","articles":[]},"previous":{"title":"Step 1: Adding a Map Container","level":"2.2","depth":1,"path":"02-step-01-map-container.md","ref":"02-step-01-map-container.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"03-step-02-initialize-map.md","mtime":"2026-01-26T20:48:39.628Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T20:48:56.101Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Step 2: Initialize Leaflet Map","level":"2.3","depth":1,"next":{"title":"Step 3: Load GeoJSON Points","level":"2.4","depth":1,"path":"04-step-03-geojson-points.md","ref":"04-step-03-geojson-points.md","articles":[]},"previous":{"title":"Step 1: Adding a Map Container","level":"2.2","depth":1,"path":"02-step-01-map-container.md","ref":"02-step-01-map-container.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"03-step-02-initialize-map.md","mtime":"2026-01-26T20:57:45.967Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T20:57:55.258Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

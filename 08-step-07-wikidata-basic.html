@@ -357,46 +357,46 @@
                                 
                                 <h1 id="step-7-basic-wikidata-fetching">Step 7: Basic Wikidata Fetching</h1>
 <h2 id="overview">Overview</h2>
-<p>In this step, we'll connect to the Wikidata API to fetch information about artworks and display it in our right panel. This introduces working with external APIs and asynchronous JavaScript.</p>
+<p>In this step, we'll connect to the <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> API to fetch information about artworks and display it in our right <a href="GLOSSARY.html#panel" class="glossary-term" title="A section of the interface, typically containing specific information or controls.">panel</a>. This introduces working with external APIs and <a href="GLOSSARY.html#asynchronous" class="glossary-term" title="Code that doesn't block execution while waiting for operations (like network requests) to complete. Allows other code to run while waiting.">asynchronous</a> JavaScript.</p>
 <h2 id="learning-objectives">Learning Objectives</h2>
 <ul>
 <li>Understand what APIs are and how to use them</li>
-<li>Work with asynchronous JavaScript (async/await)</li>
-<li>Fetch data from Wikidata API</li>
+<li>Work with <a href="GLOSSARY.html#asynchronous" class="glossary-term" title="Code that doesn't block execution while waiting for operations (like network requests) to complete. Allows other code to run while waiting.">asynchronous</a> JavaScript (async/<a href="GLOSSARY.html#await" class="glossary-term" title="A JavaScript keyword used with async functions to pause execution until a Promise resolves. Must be inside an async function.">await</a>)</li>
+<li>Fetch data from <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> API</li>
 <li>Handle API responses and errors</li>
 <li>Display dynamic content based on user interactions</li>
 <li>Understand JSON data structures</li>
 </ul>
 <h2 id="what-is-wikidata">What is Wikidata?</h2>
-<p><strong>Wikidata</strong> is <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> free, open knowledge base that can be read and edited by both humans and machines.</p>
-<p><strong>Think of it as:</strong> <a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> massive database of facts about everything - people, places, artworks, historical events, scientific concepts, and more.</p>
-<p><strong>Why use Wikidata:</strong></p>
+<p><strong><a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a></strong> is a free, open knowledge base that can be read and edited by both humans and machines.</p>
+<p><strong>Think of it as:</strong> A massive database of facts about everything - people, places, artworks, historical events, scientific concepts, and more.</p>
+<p><strong>Why use <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a>:</strong></p>
 <ul>
 <li><strong>Free and open</strong> - No API keys required  </li>
 <li><strong>Multilingual</strong> - Data in hundreds of languages  </li>
 <li><strong>Comprehensive</strong> - Millions of items with structured data  </li>
-<li><strong>Linked data</strong> - Connections between related items  </li>
+<li><strong><a href="GLOSSARY.html#linked-data" class="glossary-term" title="A method of connecting related data across different sources using references (like Wikidata items linking to other items).">Linked data</a></strong> - Connections between related items  </li>
 <li><strong>Well-maintained</strong> - Community of contributors keeps it current  </li>
 </ul>
-<p><strong>Example Wikidata item:</strong> <a href="https://www.wikidata.org/wiki/Q47522966" target="_blank">https://www.wikidata.org/wiki/Q47522966</a>
+<p><strong>Example <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> item:</strong> <a href="https://www.wikidata.org/wiki/Q47522966" target="_blank">https://www.wikidata.org/wiki/Q47522966</a>
 This is "The Sieve of Eratosthenes" sculpture at Stanford.</p>
 <h2 id="what-is-an-api">What is an API?</h2>
 <p><strong>API</strong> = Application Programming Interface</p>
-<p><strong>Think of it as:</strong> <a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> way for programs to talk to each other. Like <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> waiter at <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> restaurant:</p>
+<p><strong>Think of it as:</strong> A way for programs to talk to each other. Like a waiter at a restaurant:</p>
 <ul>
-<li>You (your code) make <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> request</li>
-<li>The waiter (API) takes it to the kitchen (server)</li>
+<li>You (your code) make a request</li>
+<li>The waiter (API) takes it to the kitchen (<a href="GLOSSARY.html#server" class="glossary-term" title="A computer that provides resources or services to other computers (clients) over a network.">server</a>)</li>
 <li>The kitchen prepares your order (processes the request)</li>
 <li>The waiter brings back your food (API returns data)</li>
 </ul>
-<p><strong>The Wikidata API endpoint:</strong></p>
+<p><strong>The <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> <a href="GLOSSARY.html#api-endpoint" class="glossary-term" title="A specific URL where an API can be accessed. Example: https://www.wikidata.org/wiki/Special:EntityData/">API endpoint</a>:</strong></p>
 <pre><code>https://www.wikidata.org/wiki/Special:EntityData/Q47522966.json
 </code></pre><p><strong>Breaking it down:</strong></p>
 <ul>
-<li><code>https://www.wikidata.org</code> - The Wikidata server</li>
-<li><code>/wiki/Special:EntityData/</code> - The API endpoint path</li>
-<li><code>Q47522966</code> - The Wikidata ID (called <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> "QID")</li>
-<li><code>.json</code> - Return the data in JSON format</li>
+<li><code>https://www.wikidata.org</code> - The <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> <a href="GLOSSARY.html#server" class="glossary-term" title="A computer that provides resources or services to other computers (clients) over a network.">server</a></li>
+<li><code>/wiki/Special:EntityData/</code> - The <a href="GLOSSARY.html#api-endpoint" class="glossary-term" title="A specific URL where an API can be accessed. Example: https://www.wikidata.org/wiki/Special:EntityData/">API endpoint</a> path</li>
+<li><code>Q47522966</code> - The <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> ID (called a "QID")</li>
+<li><code>.json</code> - <a href="GLOSSARY.html#return" class="glossary-term" title="A statement that ends function execution and optionally provides a value back to the caller.">Return</a> the data in JSON format</li>
 </ul>
 <h2 id="the-complete-code">The Complete Code</h2>
 <pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
@@ -551,30 +551,30 @@ This is "The Sieve of Eratosthenes" sculpture at Stanford.</p>
     <span class="hljs-comment">// Function body</span>
 }
 </code></pre>
-<p><strong>The <code>async</code> keyword</strong> marks this as an asynchronous function.</p>
-<p><strong>What does asynchronous mean?</strong> The function can pause and wait for things (like API requests) without blocking other code.</p>
-<p><strong>Think of it like:</strong> Ordering food for delivery. You don'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> stand at the door waiting - you continue with your day and come back when it arrives.</p>
+<p><strong>The <code>async</code> keyword</strong> marks this as an <a href="GLOSSARY.html#asynchronous" class="glossary-term" title="Code that doesn't block execution while waiting for operations (like network requests) to complete. Allows other code to run while waiting.">asynchronous</a> <a href="GLOSSARY.html#function" class="glossary-term" title="A reusable block of code that performs a specific task. Can accept input (parameters) and return output.">function</a>.</p>
+<p><strong>What does <a href="GLOSSARY.html#asynchronous" class="glossary-term" title="Code that doesn't block execution while waiting for operations (like network requests) to complete. Allows other code to run while waiting.">asynchronous</a> mean?</strong> The <a href="GLOSSARY.html#function" class="glossary-term" title="A reusable block of code that performs a specific task. Can accept input (parameters) and return output.">function</a> can pause and wait for things (like API requests) without blocking other code.</p>
+<p><strong>Think of it like:</strong> Ordering food for delivery. You don't stand at the door waiting - you continue with your day and come back when it arrives.</p>
 <h3 id="2-the-await-keyword">2. The Await Keyword</h3>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(<span class="hljs-string">`https://www.wikidata.org/wiki/Special:EntityData/<span class="hljs-subst">${wikidataId}</span>.json`</span>);
 </code></pre>
-<p><strong>The <code>await</code> keyword</strong> pauses the function until the promise resolves (the fetch completes).</p>
+<p><strong>The <code>await</code> keyword</strong> pauses the <a href="GLOSSARY.html#function" class="glossary-term" title="A reusable block of code that performs a specific task. Can accept input (parameters) and return output.">function</a> until the <a href="GLOSSARY.html#promise" class="glossary-term" title="JavaScript object representing the eventual completion or failure of an asynchronous operation.">promise</a> resolves (the fetch completes).</p>
 <p><strong>Only works inside <code>async</code> functions!</strong></p>
-<p><strong>Without await:</strong></p>
+<p><strong>Without <a href="GLOSSARY.html#await" class="glossary-term" title="A JavaScript keyword used with async functions to pause execution until a Promise resolves. Must be inside an async function.">await</a>:</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> response = <span class="hljs-title function_">fetch</span>(url);  <span class="hljs-comment">// This is a Promise, not the data!</span>
 </code></pre>
-<p><strong>With await:</strong></p>
+<p><strong>With <a href="GLOSSARY.html#await" class="glossary-term" title="A JavaScript keyword used with async functions to pause execution until a Promise resolves. Must be inside an async function.">await</a>:</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(url);  <span class="hljs-comment">// This is the actual response!</span>
 </code></pre>
 <h3 id="3-template-literals-for-urls">3. Template Literals for URLs</h3>
 <pre><code class="lang-javascript"><span class="hljs-string">`https://www.wikidata.org/wiki/Special:EntityData/<span class="hljs-subst">${wikidataId}</span>.json`</span>
 </code></pre>
-<p><strong>Template literals</strong> (backticks) let you insert variables into strings.</p>
+<p><strong>Template literals</strong> (backticks) <a href="GLOSSARY.html#let" class="glossary-term" title="JavaScript keyword for declaring variables that can be reassigned. Block-scoped.">let</a> you insert variables into strings.</p>
 <p><strong>Example:</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> wikidataId = <span class="hljs-string">"Q47522966"</span>;
 <span class="hljs-keyword">const</span> url = <span class="hljs-string">`https://www.wikidata.org/wiki/Special:EntityData/<span class="hljs-subst">${wikidataId}</span>.json`</span>;
 <span class="hljs-comment">// Result: https://www.wikidata.org/wiki/Special:EntityData/Q47522966.json</span>
 </code></pre>
-<p><strong>Old way (string concatenation):</strong></p>
+<p><strong>Old way (<a href="GLOSSARY.html#string" class="glossary-term" title="A data type representing text. Created with quotes: &quot;text&quot; or 'text'">string</a> <a href="GLOSSARY.html#concatenation" class="glossary-term" title="Combining strings together. Example: 'Hello ' + 'World' results in 'Hello World'">concatenation</a>):</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> url = <span class="hljs-string">'https://www.wikidata.org/wiki/Special:EntityData/'</span> + wikidataId + <span class="hljs-string">'.json'</span>;
 </code></pre>
 <h3 id="4-try-catch-error-handling">4. Try-Catch Error Handling</h3>
@@ -591,7 +591,7 @@ This is "The Sieve of Eratosthenes" sculpture at Stanford.</p>
 <ol>
 <li>JavaScript tries to run the code in the <code>try</code> block</li>
 <li>If any error occurs, it immediately jumps to the <code>catch</code> block</li>
-<li>The <code>error</code> variable contains information about what went wrong</li>
+<li>The <code>error</code> <a href="GLOSSARY.html#variable" class="glossary-term" title="A named container for storing data values. Declared with var, let, or const.">variable</a> contains information about what went wrong</li>
 </ol>
 <p><strong>Why use it:</strong></p>
 <ul>
@@ -604,7 +604,7 @@ This is "The Sieve of Eratosthenes" sculpture at Stanford.</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> response.<span class="hljs-title function_">json</span>();
 <span class="hljs-keyword">const</span> entity = data.<span class="hljs-property">entities</span>[wikidataId];
 </code></pre>
-<p><strong>Wikidata returns complex nested JSON:</strong></p>
+<p><strong><a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> returns complex <a href="GLOSSARY.html#nested" class="glossary-term" title="Elements or data structures contained within others. Example: <div><p>Nested</p></div>">nested</a> JSON:</strong></p>
 <pre><code class="lang-json">{
   <span class="hljs-string">"entities"</span>: {
     <span class="hljs-string">"Q47522966"</span>: {
@@ -622,7 +622,7 @@ This is "The Sieve of Eratosthenes" sculpture at Stanford.</p>
   }
 }
 </code></pre>
-<p><strong>Accessing nested data:</strong></p>
+<p><strong>Accessing <a href="GLOSSARY.html#nested" class="glossary-term" title="Elements or data structures contained within others. Example: <div><p>Nested</p></div>">nested</a> data:</strong></p>
 <pre><code class="lang-javascript">data.<span class="hljs-property">entities</span>                    <span class="hljs-comment">// Get the entities object</span>
 data.<span class="hljs-property">entities</span>[wikidataId]       <span class="hljs-comment">// Get the specific entity</span>
 data.<span class="hljs-property">entities</span>[wikidataId].<span class="hljs-property">labels</span> <span class="hljs-comment">// Get all labels</span>
@@ -632,13 +632,13 @@ data.<span class="hljs-property">entities</span>[wikidataId].<span class="hljs-p
 <h3 id="6-safe-property-access-with-ternary-operator">6. Safe Property Access with Ternary Operator</h3>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> label = entity.<span class="hljs-property">labels</span>.<span class="hljs-property">en</span> ? entity.<span class="hljs-property">labels</span>.<span class="hljs-property">en</span>.<span class="hljs-property">value</span> : wikidataId;
 </code></pre>
-<p><strong>The ternary operator:</strong> <code>condition ? valueIfTrue : valueIfFalse</code></p>
+<p><strong>The <a href="GLOSSARY.html#ternary-operator" class="glossary-term" title="JavaScript shorthand for if-else: condition ? valueIfTrue : valueIfFalse">ternary operator</a>:</strong> <code>condition ? valueIfTrue : valueIfFalse</code></p>
 <p><strong>This line means:</strong></p>
 <ul>
 <li>If <code>entity.labels.en</code> exists, use <code>entity.labels.en.value</code></li>
-<li>Otherwise, use the <code>wikidataId</code> as <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> fallback</li>
+<li>Otherwise, use the <code>wikidataId</code> as a fallback</li>
 </ul>
-<p><strong>Why?</strong> Some items might not have English labels, so we need <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> fallback.</p>
+<p><strong>Why?</strong> Some items might not have English labels, so we need a fallback.</p>
 <p><strong>Longer version (equivalent):</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">let</span> label;
 <span class="hljs-keyword">if</span> (entity.<span class="hljs-property">labels</span>.<span class="hljs-property">en</span>) {
@@ -676,27 +676,27 @@ panel.<span class="hljs-property">innerHTML</span> = html;
     }
 });
 </code></pre>
-<p><strong><code>layer.on('click', function() { })</code></strong> - Attach <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> click event to this marker</p>
-<p><strong>When the marker is clicked:</strong></p>
+<p><strong><code>layer.on('click', function() { })</code></strong> - Attach a click <a href="GLOSSARY.html#event" class="glossary-term" title="An action that happens in the browser (click, scroll, key press) that can trigger JavaScript code.">event</a> to this <a href="GLOSSARY.html#marker" class="glossary-term" title="A visual indicator on a map showing a specific location.">marker</a></p>
+<p><strong>When the <a href="GLOSSARY.html#marker" class="glossary-term" title="A visual indicator on a map showing a specific location.">marker</a> is clicked:</strong></p>
 <ol>
-<li>Check if it has <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> <code>wikidata</code> property</li>
+<li>Check if it has a <code>wikidata</code> property</li>
 <li>If yes, call <code>displayWikidataInfo()</code> with that ID</li>
-<li>If no, show <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> message saying data isn'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> available</li>
+<li>If no, show a message saying data isn't available</li>
 </ol>
 <h2 id="understanding-wikidata-ids">Understanding Wikidata IDs</h2>
-<p><strong>Wikidata IDs (QIDs)</strong> always start with '<a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>' followed by numbers:</p>
+<p><strong><a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> IDs (QIDs)</strong> always start with 'Q' followed by numbers:</p>
 <ul>
 <li><code>Q47522966</code> - The Sieve of Eratosthenes sculpture</li>
 <li><code>Q16270988</code> - Gay Liberation sculpture</li>
 <li><code>Q5</code> - Human (yes, concepts have IDs too!)</li>
 </ul>
-<p><strong>How to find Wikidata IDs:</strong></p>
+<p><strong>How to find <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> IDs:</strong></p>
 <ol>
-<li>Search Wikidata: <a href="https://www.wikidata.org/" target="_blank">https://www.wikidata.org/</a></li>
+<li>Search <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a>: <a href="https://www.wikidata.org/" target="_blank">https://www.wikidata.org/</a></li>
 <li>Look in OpenStreetMap tags (many features have <code>wikidata</code> tags)</li>
-<li>Check Wikipedia - Wikidata items are linked from Wikipedia pages</li>
+<li>Check Wikipedia - <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> items are linked from Wikipedia pages</li>
 </ol>
-<p><strong>In our GeoJSON:</strong></p>
+<p><strong>In our <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a>:</strong></p>
 <pre><code class="lang-json">{
   <span class="hljs-string">"properties"</span>: {
     <span class="hljs-string">"name"</span>: <span class="hljs-string">"The Sieve of Eratosthenes"</span>,
@@ -706,39 +706,39 @@ panel.<span class="hljs-property">innerHTML</span> = html;
 </code></pre>
 <h2 id="how-the-data-flows">How the Data Flows</h2>
 <ol>
-<li><strong>User clicks</strong> on <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> blue circle marker</li>
-<li><strong>Click handler</strong> reads the <code>wikidata</code> property from GeoJSON</li>
-<li><strong><code>displayWikidataInfo()</code></strong> is called with the Wikidata ID</li>
-<li><strong>API request</strong> is sent to Wikidata'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> servers</li>
-<li><strong>Response arrives</strong> with JSON data</li>
+<li><strong>User clicks</strong> on a blue circle <a href="GLOSSARY.html#marker" class="glossary-term" title="A visual indicator on a map showing a specific location.">marker</a></li>
+<li><strong>Click handler</strong> reads the <code>wikidata</code> property from <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a></li>
+<li><strong><code>displayWikidataInfo()</code></strong> is called with the <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> ID</li>
+<li><strong>API request</strong> is sent to <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a>'s servers</li>
+<li><strong><a href="GLOSSARY.html#response" class="glossary-term" title="Data returned from an API request.">Response</a> arrives</strong> with JSON data</li>
 <li><strong>Data is parsed</strong> to extract label and description</li>
 <li><strong>HTML is built</strong> dynamically with the data</li>
-<li><strong>Right panel is updated</strong> with the new HTML</li>
+<li><strong>Right <a href="GLOSSARY.html#panel" class="glossary-term" title="A section of the interface, typically containing specific information or controls.">panel</a> is updated</strong> with the new HTML</li>
 </ol>
 <h2 id="api-rate-limiting">API Rate Limiting</h2>
 <p>Most APIs have limits on how many requests you can make:</p>
-<p><strong>Wikidata:</strong></p>
+<p><strong><a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a>:</strong></p>
 <ul>
 <li>No authentication required for basic use</li>
 <li>Reasonable rate limits (thousands of requests per day)</li>
-<li>Be respectful - don'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> hammer the API</li>
+<li>Be respectful - don't hammer the API</li>
 </ul>
 <p><strong>Best practices:</strong></p>
 <ul>
 <li>Cache results when possible</li>
-<li>Don'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> make unnecessary duplicate requests</li>
+<li>Don't make unnecessary duplicate requests</li>
 <li>Handle errors gracefully</li>
 </ul>
 <h2 id="try-it-yourself">Try It Yourself</h2>
 <ol>
 <li><strong>Copy the complete code</strong> into <code>step-07.html</code></li>
 <li><strong>Make sure <code>styles_wikidata.css</code> exists</strong></li>
-<li><strong>Open in your browser</strong></li>
-<li><strong>Click on any artwork marker</strong></li>
+<li><strong>Open in your <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a></strong></li>
+<li><strong>Click on any artwork <a href="GLOSSARY.html#marker" class="glossary-term" title="A visual indicator on a map showing a specific location.">marker</a></strong></li>
 </ol>
-<p>You should see the artwork'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> name and description appear in the right panel!</p>
+<p>You should see the artwork's name and description appear in the right <a href="GLOSSARY.html#panel" class="glossary-term" title="A section of the interface, typically containing specific information or controls.">panel</a>!</p>
 <h3 id="experiments">Experiments</h3>
-<p><strong>Test with different Wikidata items:</strong></p>
+<p><strong>Test with different <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> items:</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-title function_">displayWikidataInfo</span>(<span class="hljs-string">'Q5'</span>);  <span class="hljs-comment">// Human</span>
 <span class="hljs-title function_">displayWikidataInfo</span>(<span class="hljs-string">'Q2'</span>);  <span class="hljs-comment">// Earth</span>
 <span class="hljs-title function_">displayWikidataInfo</span>(<span class="hljs-string">'Q5083'</span>);  <span class="hljs-comment">// Stanford University</span>
@@ -764,34 +764,34 @@ html += <span class="hljs-string">`&lt;div&gt;<span class="hljs-subst">${labelEn
 </code></pre><p><strong>After SDR deposit (DRUID: abc123xyz456):</strong></p>
 <ul>
 <li>HTML loads from: <code>https://stacks.stanford.edu/file/druid:abc123xyz456/index.html</code></li>
-<li>GeoJSON loads from: <code>https://stacks.stanford.edu/file/druid:abc123xyz456/collection/stanford_public_art.geojson</code></li>
-<li>Wikidata API calls work from anywhere (external API)</li>
+<li><a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> loads from: <code>https://stacks.stanford.edu/file/druid:abc123xyz456/collection/stanford_public_art.geojson</code></li>
+<li><a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> API calls work from anywhere (external API)</li>
 <li>No changes needed!</li>
 </ul>
 <p><strong>Works because:</strong></p>
 <ul>
-<li>External API calls (to Wikidata) work from any domain</li>
-<li>Relative paths (your GeoJSON) work in SDR</li>
-<li>JavaScript runs in the user'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> browser, not on the server</li>
+<li>External API calls (to <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a>) work from any domain</li>
+<li>Relative paths (your <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a>) work in SDR</li>
+<li>JavaScript runs in the user's <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a>, not on the <a href="GLOSSARY.html#server" class="glossary-term" title="A computer that provides resources or services to other computers (clients) over a network.">server</a></li>
 </ul>
 <h2 id="whats-next">What's Next?</h2>
-<p>In <a href="09-step-08-wikidata-images.html">Step 8: Wikidata Images</a>, we'll enhance our display by fetching and showing images from Wikimedia Commons!</p>
+<p>In <a href="09-step-08-wikidata-images.html">Step 8: Wikidata Images</a>, we'll enhance our display by fetching and showing images from <a href="GLOSSARY.html#wikimedia-commons" class="glossary-term" title="A free media repository containing images, videos, and other files that can be used by anyone.">Wikimedia Commons</a>!</p>
 <h2 id="key-takeaways">Key Takeaways</h2>
 <ul>
-<li><code>async/await</code> makes asynchronous code easier to read and write  </li>
+<li><code>async/await</code> makes <a href="GLOSSARY.html#asynchronous" class="glossary-term" title="Code that doesn't block execution while waiting for operations (like network requests) to complete. Allows other code to run while waiting.">asynchronous</a> code easier to read and write  </li>
 <li>APIs provide structured data accessible via HTTP requests  </li>
 <li><code>try/catch</code> handles errors gracefully  </li>
-<li>Template literals simplify string construction with variables  </li>
-<li>JSON data can be deeply nested - access with dot notation  </li>
+<li>Template literals simplify <a href="GLOSSARY.html#string" class="glossary-term" title="A data type representing text. Created with quotes: &quot;text&quot; or 'text'">string</a> construction with variables  </li>
+<li>JSON data can be deeply <a href="GLOSSARY.html#nested" class="glossary-term" title="Elements or data structures contained within others. Example: <div><p>Nested</p></div>">nested</a> - access with dot notation  </li>
 <li>Ternary operators provide concise conditional values  </li>
 <li>External API calls work from SDR-hosted applications  </li>
 </ul>
 <h2 id="common-questions">Common Questions</h2>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Do <a href="GLOSSARY.html#i" class="glossary-term" title="">I</a> need an API key for Wikidata?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: No! Wikidata is completely open and free.</p>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: What if the API request fails?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: The <code>catch</code> block handles it, showing an error message to the user.</p>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Can <a href="GLOSSARY.html#i" class="glossary-term" title="">I</a> use other APIs the same way?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: Yes! The pattern is similar for most REST APIs. Some require API keys.</p>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Why use async/await instead of .then()?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: Both work, but async/await is more readable for complex logic with multiple asynchronous steps.</p>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Does this work offline?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: No, API calls require internet connectivity. You'<a href="GLOSSARY.html#d" class="glossary-term" title="">d</a> need to cache data for offline use.</p>
+<p><strong>Q: Do I need an API key for <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a>?</strong><br></br>A: No! <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> is completely open and free.</p>
+<p><strong>Q: What if the API request fails?</strong><br></br>A: The <code>catch</code> block handles it, showing an error message to the user.</p>
+<p><strong>Q: Can I use other APIs the same way?</strong><br></br>A: Yes! The pattern is similar for most REST APIs. Some require API keys.</p>
+<p><strong>Q: Why use async/<a href="GLOSSARY.html#await" class="glossary-term" title="A JavaScript keyword used with async functions to pause execution until a Promise resolves. Must be inside an async function.">await</a> instead of .then()?</strong><br></br>A: Both work, but async/<a href="GLOSSARY.html#await" class="glossary-term" title="A JavaScript keyword used with async functions to pause execution until a Promise resolves. Must be inside an async function.">await</a> is more readable for complex logic with multiple <a href="GLOSSARY.html#asynchronous" class="glossary-term" title="Code that doesn't block execution while waiting for operations (like network requests) to complete. Allows other code to run while waiting.">asynchronous</a> steps.</p>
+<p><strong>Q: Does this work offline?</strong><br></br>A: No, API calls require internet connectivity. You'd need to cache data for offline use.</p>
 <hr></hr>
 <p><strong>Previous:</strong> <a href="07-step-06-split-layout.html">Step 6: Split Layout</a> | <strong>Next:</strong> <a href="09-step-08-wikidata-images.html">Step 8: Wikidata Images</a></p>
 
@@ -837,7 +837,7 @@ html += <span class="hljs-string">`&lt;div&gt;<span class="hljs-subst">${labelEn
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Step 7: Basic Wikidata Fetching","level":"2.8","depth":1,"next":{"title":"Step 8: Wikidata Images","level":"2.9","depth":1,"path":"09-step-08-wikidata-images.md","ref":"09-step-08-wikidata-images.md","articles":[]},"previous":{"title":"Step 6: Split-Screen Layout","level":"2.7","depth":1,"path":"07-step-06-split-layout.md","ref":"07-step-06-split-layout.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"08-step-07-wikidata-basic.md","mtime":"2026-01-26T20:48:39.629Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T20:48:56.101Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Step 7: Basic Wikidata Fetching","level":"2.8","depth":1,"next":{"title":"Step 8: Wikidata Images","level":"2.9","depth":1,"path":"09-step-08-wikidata-images.md","ref":"09-step-08-wikidata-images.md","articles":[]},"previous":{"title":"Step 6: Split-Screen Layout","level":"2.7","depth":1,"path":"07-step-06-split-layout.md","ref":"07-step-06-split-layout.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"08-step-07-wikidata-basic.md","mtime":"2026-01-26T20:57:45.968Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T20:57:55.258Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

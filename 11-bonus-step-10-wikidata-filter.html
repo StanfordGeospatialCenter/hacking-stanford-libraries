@@ -357,18 +357,18 @@
                                 
                                 <h1 id="bonus-step-10-filter-to-features-with-wikidata-ids">BONUS Step 10: Filter to Features with Wikidata IDs</h1>
 <h2 id="overview">Overview</h2>
-<p>In this bonus step, we refine the application so it only displays artworks that include <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> <code>wikidata</code> identifier in the GeoJSON. This keeps the map focused on items that can return rich details from Wikidata.</p>
+<p>In this bonus step, we refine the application so it only displays artworks that include a <code>wikidata</code> identifier in the <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a>. This keeps the map focused on items that can <a href="GLOSSARY.html#return" class="glossary-term" title="A statement that ends function execution and optionally provides a value back to the caller.">return</a> rich details from <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a>.</p>
 <h2 id="goals">Goals</h2>
 <ul>
-<li>Filter GeoJSON features to only those that have <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> <code>wikidata</code> property.</li>
+<li>Filter <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> features to only those that have a <code>wikidata</code> property.</li>
 <li>Keep the UI responsive when the filtered set is empty.</li>
 <li>Preserve the split-screen experience from earlier steps.</li>
 <li>Maintain compatibility with SDR deployment (relative paths for local assets, absolute URLs for APIs).</li>
 </ul>
 <h2 id="why-filter">Why Filter?</h2>
 <ul>
-<li>Reduces visual noise to the records with linked data.</li>
-<li>Avoids user clicks that would return "No Wikidata ID available" messages.</li>
+<li>Reduces visual noise to the records with <a href="GLOSSARY.html#linked-data" class="glossary-term" title="A method of connecting related data across different sources using references (like Wikidata items linking to other items).">linked data</a>.</li>
+<li>Avoids user clicks that would <a href="GLOSSARY.html#return" class="glossary-term" title="A statement that ends function execution and optionally provides a value back to the caller.">return</a> "No <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> ID available" messages.</li>
 <li>Highlights the most informative features first.</li>
 </ul>
 <h2 id="the-key-changes">The Key Changes</h2>
@@ -385,7 +385,7 @@
   <span class="hljs-keyword">return</span>;
 }
 </code></pre>
-<p>4) <strong>Build <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> filtered FeatureCollection</strong> and feed it to Leaflet:</p>
+<p>4) <strong>Build a filtered FeatureCollection</strong> and feed it to <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a>:</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> filteredGeojson = {
   <span class="hljs-attr">type</span>: <span class="hljs-string">'FeatureCollection'</span>,
   <span class="hljs-attr">features</span>: filteredFeatures
@@ -459,22 +459,22 @@
 </code></pre>
 <h2 id="how-it-works">How It Works</h2>
 <ul>
-<li><strong>Filter early:</strong> We remove features without <code>wikidata</code> IDs before creating the Leaflet layer. This guarantees the click handler always has an ID to use.</li>
-<li><strong>Guard for empties:</strong> If the filtered array is empty, we show <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> clear message instead of leaving the right panel blank.</li>
+<li><strong>Filter early:</strong> We remove features without <code>wikidata</code> IDs before creating the <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> layer. This guarantees the click handler always has an ID to use.</li>
+<li><strong>Guard for empties:</strong> If the filtered <a href="GLOSSARY.html#array" class="glossary-term" title="A data structure that holds multiple values in a single variable, accessed by index numbers. Example: ['red', 'blue', 'green']">array</a> is empty, we show a clear message instead of leaving the right <a href="GLOSSARY.html#panel" class="glossary-term" title="A section of the interface, typically containing specific information or controls.">panel</a> blank.</li>
 <li><strong>Safe property access:</strong> <code>(data.features || [])</code> prevents errors if <code>features</code> is missing.</li>
-<li><strong>Boolean check:</strong> <code>Boolean(props.wikidata)</code> treats empty strings, null, or undefined as false, ensuring only valid IDs pass through.</li>
+<li><strong><a href="GLOSSARY.html#boolean" class="glossary-term" title="A data type with only two possible values: true or false.">Boolean</a> check:</strong> <code>Boolean(props.wikidata)</code> treats empty strings, <a href="GLOSSARY.html#null" class="glossary-term" title="A JavaScript value representing &quot;no value&quot; or &quot;nothing.&quot;">null</a>, or <a href="GLOSSARY.html#undefined" class="glossary-term" title="JavaScript value automatically assigned to variables that haven't been given a value.">undefined</a> as false, ensuring only valid IDs pass through.</li>
 </ul>
 <h2 id="sdr-considerations">SDR Considerations</h2>
 <ul>
 <li><strong>Relative paths</strong> remain unchanged for local files: <code>collection/stanford_public_art.geojson</code>, <code>collection/stanford_campus_irg.tif</code>, and <code>styles_wikidata.css</code>.</li>
-<li><strong>Absolute URLs</strong> continue for external resources (Leaflet CDNs, Wikidata API, Wikimedia images).</li>
-<li>When deployed to SDR (example DRUID <code>abc123xyz456</code>), your page loads from <code>https://stacks.stanford.edu/file/druid:abc123xyz456/cog_map_step_10.html</code> and still fetches the GeoJSON and COG via relative paths inside the same deposit.</li>
+<li><strong>Absolute URLs</strong> continue for external resources (<a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> CDNs, <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> API, Wikimedia images).</li>
+<li>When deployed to SDR (example DRUID <code>abc123xyz456</code>), your page loads from <code>https://stacks.stanford.edu/file/druid:abc123xyz456/cog_map_step_10.html</code> and still fetches the <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> and COG via relative paths inside the same deposit.</li>
 </ul>
 <h2 id="try-it">Try It</h2>
-<p>1) Open <code>cog_map_step_10.html</code> in the browser.
-2) Confirm only markers with Wikidata IDs appear.
-3) Click markers to see the fully populated panel.
-4) Test by temporarily removing <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> <code>wikidata</code> property in the GeoJSON to observe the empty-state message.</p>
+<p>1) Open <code>cog_map_step_10.html</code> in the <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a>.
+2) Confirm only markers with <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> IDs appear.
+3) Click markers to see the fully populated <a href="GLOSSARY.html#panel" class="glossary-term" title="A section of the interface, typically containing specific information or controls.">panel</a>.
+4) Test by temporarily removing a <code>wikidata</code> property in the <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> to observe the empty-state message.</p>
 <h2 id="key-takeaways">Key Takeaways</h2>
 <ul>
 <li>Filtering upstream keeps the UI focused and reduces error paths.</li>
@@ -484,7 +484,7 @@
 </ul>
 <h2 id="what-you-learned-in-the-bonus-step">What You Learned in the Bonus Step</h2>
 <ul>
-<li>How to filter GeoJSON features before rendering.</li>
+<li>How to filter <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> features before rendering.</li>
 <li>How to handle empty results gracefully.</li>
 <li>How to keep interactive handlers safe by ensuring required properties exist.</li>
 </ul>
@@ -532,7 +532,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"BONUS Step 10: Wikidata Filter","level":"2.11","depth":1,"next":{"title":"Digital Stacks Reference","level":"3.1","depth":1,"path":"DIGITAL-STACKS-REFERENCE.md","ref":"DIGITAL-STACKS-REFERENCE.md","articles":[]},"previous":{"title":"Step 9: Complete Integration","level":"2.10","depth":1,"path":"10-step-09-complete-integration.md","ref":"10-step-09-complete-integration.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"11-bonus-step-10-wikidata-filter.md","mtime":"2026-01-26T20:48:39.629Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T20:48:56.101Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"BONUS Step 10: Wikidata Filter","level":"2.11","depth":1,"next":{"title":"Digital Stacks Reference","level":"3.1","depth":1,"path":"DIGITAL-STACKS-REFERENCE.md","ref":"DIGITAL-STACKS-REFERENCE.md","articles":[]},"previous":{"title":"Step 9: Complete Integration","level":"2.10","depth":1,"path":"10-step-09-complete-integration.md","ref":"10-step-09-complete-integration.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"11-bonus-step-10-wikidata-filter.md","mtime":"2026-01-26T20:57:45.968Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T20:57:55.258Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

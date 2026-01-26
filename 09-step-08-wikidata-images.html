@@ -357,40 +357,40 @@
                                 
                                 <h1 id="step-8-wikidata-images">Step 8: Wikidata Images</h1>
 <h2 id="overview">Overview</h2>
-<p>In this step, we'll enhance our application by fetching and displaying images of the artworks from Wikimedia Commons. Images make our application much more engaging and informative!</p>
+<p>In this step, we'll enhance our application by fetching and displaying images of the artworks from <a href="GLOSSARY.html#wikimedia-commons" class="glossary-term" title="A free media repository containing images, videos, and other files that can be used by anyone.">Wikimedia Commons</a>. Images make our application much more engaging and informative!</p>
 <h2 id="learning-objectives">Learning Objectives</h2>
 <ul>
-<li>Access Wikidata properties (specifically P18 for images)</li>
-<li>Construct Wikimedia Commons image URLs</li>
+<li>Access <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> properties (specifically P18 for images)</li>
+<li>Construct <a href="GLOSSARY.html#wikimedia-commons" class="glossary-term" title="A free media repository containing images, videos, and other files that can be used by anyone.">Wikimedia Commons</a> image URLs</li>
 <li>Work with helper functions for code organization</li>
 <li>Handle cases where images might not exist</li>
 <li>Display images in HTML dynamically</li>
-<li>Understand Wikimedia Commons URL structure</li>
+<li>Understand <a href="GLOSSARY.html#wikimedia-commons" class="glossary-term" title="A free media repository containing images, videos, and other files that can be used by anyone.">Wikimedia Commons</a> URL structure</li>
 </ul>
 <h2 id="what-is-wikimedia-commons">What is Wikimedia Commons?</h2>
-<p><strong>Wikimedia Commons</strong> is <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> free media repository containing millions of freely usable images, videos, and other media files.</p>
+<p><strong><a href="GLOSSARY.html#wikimedia-commons" class="glossary-term" title="A free media repository containing images, videos, and other files that can be used by anyone.">Wikimedia Commons</a></strong> is a free media <a href="GLOSSARY.html#repository" class="glossary-term" title="A storage location for digital content or code.">repository</a> containing millions of freely usable images, videos, and other media files.</p>
 <p><strong>Key facts:</strong></p>
 <ul>
 <li>Over 90 million files</li>
 <li>All files are free to use (various open licenses)</li>
 <li>Sister project to Wikipedia</li>
-<li>Integrated with Wikidata</li>
+<li>Integrated with <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a></li>
 </ul>
-<p><strong>Connection to Wikidata:</strong></p>
+<p><strong>Connection to <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a>:</strong></p>
 <ul>
-<li>Wikidata items can link to Commons files</li>
+<li><a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> items can link to Commons files</li>
 <li>Property P18 = "image" (the main image for an item)</li>
-<li>Files stored on Commons, references stored in Wikidata</li>
+<li>Files stored on Commons, references stored in <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a></li>
 </ul>
 <h2 id="understanding-wikidata-properties">Understanding Wikidata Properties</h2>
-<p><strong>Wikidata uses <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> property system</strong> where each type of information has <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> unique identifier:</p>
+<p><strong><a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> uses a property system</strong> where each type of information has a unique identifier:</p>
 <table>
 <thead>
 <tr>
 <th>Property</th>
 <th>Name</th>
 <th>Description</th>
-<th>Example Value</th>
+<th>Example <a href="GLOSSARY.html#value" class="glossary-term" title="The data assigned to a variable, property, or passed to a function.">Value</a></th>
 </tr>
 </thead>
 <tbody>
@@ -415,7 +415,7 @@
 <tr>
 <td>P186</td>
 <td>material</td>
-<td>What it'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> made from</td>
+<td>What it's made from</td>
 <td>Steel</td>
 </tr>
 <tr>
@@ -613,9 +613,9 @@
     <span class="hljs-keyword">return</span> <span class="hljs-string">`https://commons.wikimedia.org/wiki/Special:FilePath/<span class="hljs-subst">${<span class="hljs-built_in">encodeURIComponent</span>(imageFilename)}</span>`</span>;
 }
 </code></pre>
-<p><strong>What is <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> helper function?</strong></p>
+<p><strong>What is a helper <a href="GLOSSARY.html#function" class="glossary-term" title="A reusable block of code that performs a specific task. Can accept input (parameters) and return output.">function</a>?</strong></p>
 <ul>
-<li><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> function that performs <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> specific, reusable task</li>
+<li>A <a href="GLOSSARY.html#function" class="glossary-term" title="A reusable block of code that performs a specific task. Can accept input (parameters) and return output.">function</a> that performs a specific, reusable task</li>
 <li>Makes main code cleaner and easier to read</li>
 <li>Can be tested independently</li>
 <li>Promotes code reusability</li>
@@ -628,7 +628,7 @@
 <li>Easier to modify or debug later</li>
 </ul>
 <h3 id="2-understanding-wikidata-claims-structure">2. Understanding Wikidata Claims Structure</h3>
-<p><strong>Wikidata entities have this structure:</strong></p>
+<p><strong><a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> entities have this structure:</strong></p>
 <pre><code class="lang-json">{
   <span class="hljs-string">"entities"</span>: {
     <span class="hljs-string">"Q47522966"</span>: {
@@ -653,27 +653,27 @@
 </code></pre>
 <p><strong>Breaking down the structure:</strong></p>
 <ul>
-<li><code>claims</code> - Object containing all properties</li>
-<li><code>P18</code> - Array of image claims (usually just one)</li>
+<li><code>claims</code> - <a href="GLOSSARY.html#object" class="glossary-term" title="A JavaScript data structure storing key-value pairs. Example: {name: &quot;John&quot;, age: 30}">Object</a> containing all properties</li>
+<li><code>P18</code> - <a href="GLOSSARY.html#array" class="glossary-term" title="A data structure that holds multiple values in a single variable, accessed by index numbers. Example: ['red', 'blue', 'green']">Array</a> of image claims (usually just one)</li>
 <li><code>[0]</code> - Get the first claim</li>
 <li><code>.mainsnak.datavalue.value</code> - The actual filename</li>
 </ul>
 <h3 id="3-checking-for-existence">3. Checking for Existence</h3>
 <pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (!entity.<span class="hljs-property">claims</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
 </code></pre>
-<p><strong>Defensive programming</strong> - Always check if data exists before using it.</p>
+<p><strong><a href="GLOSSARY.html#defensive-programming" class="glossary-term" title="Writing code that checks for potential errors before they occur. Example: if (data) { use(data); }">Defensive programming</a></strong> - Always check if data exists before using it.</p>
 <p><strong>What could go wrong:</strong></p>
 <ul>
 <li>Entity might have no claims at all</li>
 <li>P18 property might not exist</li>
-<li>P18 array might be empty</li>
+<li>P18 <a href="GLOSSARY.html#array" class="glossary-term" title="A data structure that holds multiple values in a single variable, accessed by index numbers. Example: ['red', 'blue', 'green']">array</a> might be empty</li>
 <li>datavalue might be missing</li>
 </ul>
 <p><strong>Each check prevents an error:</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (!entity.<span class="hljs-property">claims</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;                        <span class="hljs-comment">// Prevent: entity.claims.P18 when claims is undefined</span>
 <span class="hljs-keyword">if</span> (!imageClaims || imageClaims.<span class="hljs-property">length</span> === <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;  <span class="hljs-comment">// Prevent: accessing [0] on empty array</span>
 </code></pre>
-<p><strong>Return null</strong> = "No image available" (not an error, just missing data)</p>
+<p><strong><a href="GLOSSARY.html#return" class="glossary-term" title="A statement that ends function execution and optionally provides a value back to the caller.">Return</a> <a href="GLOSSARY.html#null" class="glossary-term" title="A JavaScript value representing &quot;no value&quot; or &quot;nothing.&quot;">null</a></strong> = "No image available" (not an error, just missing data)</p>
 <h3 id="4-getting-nested-array-data">4. Getting Nested Array Data</h3>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> imageFilename = imageClaims[<span class="hljs-number">0</span>].<span class="hljs-property">mainsnak</span>.<span class="hljs-property">datavalue</span>.<span class="hljs-property">value</span>;
 </code></pre>
@@ -687,9 +687,9 @@
 </code></pre><h3 id="5-constructing-wikimedia-commons-urls">5. Constructing Wikimedia Commons URLs</h3>
 <pre><code class="lang-javascript"><span class="hljs-keyword">return</span> <span class="hljs-string">`https://commons.wikimedia.org/wiki/Special:FilePath/<span class="hljs-subst">${<span class="hljs-built_in">encodeURIComponent</span>(imageFilename)}</span>`</span>;
 </code></pre>
-<p><strong>Special:FilePath</strong> is <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> magic Wikimedia endpoint that:</p>
+<p><strong><a href="GLOSSARY.html#specialfilepath" class="glossary-term" title="A Wikimedia Commons endpoint that returns image files directly.">Special:FilePath</a></strong> is a magic Wikimedia endpoint that:</p>
 <ul>
-<li>Accepts <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> filename</li>
+<li>Accepts a filename</li>
 <li>Returns the actual image file (not the page)</li>
 <li>Handles redirects automatically</li>
 <li>Works with any size/format</li>
@@ -727,7 +727,7 @@ Result: Redirects to actual image file
     html += <span class="hljs-string">`&lt;img src="<span class="hljs-subst">${imageUrl}</span>" alt="Artwork image" class="wikidata-image"&gt;`</span>;
 }
 </code></pre>
-<p><strong>If imageUrl is null</strong> (no image available), we skip adding the <code>&lt;img&gt;</code> tag.</p>
+<p><strong>If imageUrl is <a href="GLOSSARY.html#null" class="glossary-term" title="A JavaScript value representing &quot;no value&quot; or &quot;nothing.&quot;">null</a></strong> (no image available), we skip adding the <code>&lt;img&gt;</code> tag.</p>
 <p><strong>The img tag:</strong></p>
 <ul>
 <li><code>src</code> - URL where the image is located</li>
@@ -745,23 +745,23 @@ Result: Redirects to actual image file
 <h2 id="image-loading-flow">Image Loading Flow</h2>
 <p><strong>Step-by-step what happens:</strong></p>
 <ol>
-<li><strong>User clicks marker</strong> with Wikidata ID "Q47522966"</li>
+<li><strong>User clicks <a href="GLOSSARY.html#marker" class="glossary-term" title="A visual indicator on a map showing a specific location.">marker</a></strong> with <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> ID "Q47522966"</li>
 <li><strong>displayWikidataInfo()</strong> called</li>
-<li><strong>Fetch Wikidata</strong> entity data</li>
-<li><strong>Parse JSON</strong> response</li>
+<li><strong>Fetch <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a></strong> entity data</li>
+<li><strong>Parse JSON</strong> <a href="GLOSSARY.html#response" class="glossary-term" title="Data returned from an API request.">response</a></li>
 <li><strong>Call getWikidataImage(entity)</strong><ul>
 <li>Check if claims exist → ✓</li>
 <li>Check if P18 exists → ✓</li>
 <li>Extract filename → "The Sieve of Eratosthenes by Mark di Suvero.jpg"</li>
 <li>Encode filename → "The%20Sieve%20of%20Eratosthenes%20by%20Mark%20di%20Suvero.jpg"</li>
 <li>Construct URL → "<a href="https://commons.wikimedia.org/wiki/Special:FilePath/The%20Sieve" target="_blank">https://commons.wikimedia.org/wiki/Special:FilePath/The%20Sieve</a>..."</li>
-<li>Return URL</li>
+<li><a href="GLOSSARY.html#return" class="glossary-term" title="A statement that ends function execution and optionally provides a value back to the caller.">Return</a> URL</li>
 </ul>
 </li>
 <li><strong>Add <img></img> to HTML</strong> with that URL</li>
-<li><strong>Update panel</strong> with new HTML</li>
-<li><strong>Browser requests image</strong> from Wikimedia Commons</li>
-<li><strong>Image displays</strong> in the panel</li>
+<li><strong>Update <a href="GLOSSARY.html#panel" class="glossary-term" title="A section of the interface, typically containing specific information or controls.">panel</a></strong> with new HTML</li>
+<li><strong><a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">Browser</a> requests image</strong> from <a href="GLOSSARY.html#wikimedia-commons" class="glossary-term" title="A free media repository containing images, videos, and other files that can be used by anyone.">Wikimedia Commons</a></li>
+<li><strong>Image displays</strong> in the <a href="GLOSSARY.html#panel" class="glossary-term" title="A section of the interface, typically containing specific information or controls.">panel</a></li>
 </ol>
 <h2 id="working-with-wikimedia-commons">Working with Wikimedia Commons</h2>
 <p><strong>File naming on Commons:</strong></p>
@@ -780,20 +780,20 @@ Result: Redirects to actual image file
 </ul>
 <p><strong>Image resolution:</strong></p>
 <ul>
-<li>Special:FilePath returns full resolution</li>
+<li><a href="GLOSSARY.html#specialfilepath" class="glossary-term" title="A Wikimedia Commons endpoint that returns image files directly.">Special:FilePath</a>returns full resolution</li>
 <li>Can specify width: <code>Special:FilePath/image.jpg?width=500</code></li>
 <li>Commons stores multiple sizes</li>
 </ul>
 <h2 id="try-it-yourself">Try It Yourself</h2>
 <ol>
-<li><strong>Copy the complete code</strong> into <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> file named <code>step-08.html</code></li>
+<li><strong>Copy the complete code</strong> into a file named <code>step-08.html</code></li>
 <li><strong>Ensure you have <code>styles_wikidata.css</code></strong> in the same directory</li>
-<li><strong>Open in your browser</strong></li>
+<li><strong>Open in your <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a></strong></li>
 <li><strong>Click on artworks</strong></li>
 </ol>
 <p>You should now see images appear!</p>
 <h3 id="experiments">Experiments</h3>
-<p><strong>Test the helper function in the console:</strong></p>
+<p><strong>Test the helper <a href="GLOSSARY.html#function" class="glossary-term" title="A reusable block of code that performs a specific task. Can accept input (parameters) and return output.">function</a> in the console:</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-comment">// Manually test with a known entity</span>
 <span class="hljs-title function_">fetch</span>(<span class="hljs-string">'https://www.wikidata.org/wiki/Special:EntityData/Q47522966.json'</span>)
     .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">r</span> =&gt;</span> r.<span class="hljs-title function_">json</span>())
@@ -832,7 +832,7 @@ Result: Redirects to actual image file
 </code></pre>
 <h2 id="code-organization-best-practices">Code Organization Best Practices</h2>
 <p><strong>Why separate helper functions?</strong></p>
-<p><strong>Before (everything in one function):</strong></p>
+<p><strong>Before (everything in one <a href="GLOSSARY.html#function" class="glossary-term" title="A reusable block of code that performs a specific task. Can accept input (parameters) and return output.">function</a>):</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">displayWikidataInfo</span>(<span class="hljs-params">wikidataId</span>) {
     <span class="hljs-comment">// ... fetch code ...</span>
 
@@ -868,15 +868,15 @@ Result: Redirects to actual image file
 <li>Can test <code>getWikidataImage()</code> independently  </li>
 <li>Can reuse for multiple items  </li>
 <li>Changes to image logic are isolated  </li>
-<li>Main function stays focused on display  </li>
+<li>Main <a href="GLOSSARY.html#function" class="glossary-term" title="A reusable block of code that performs a specific task. Can accept input (parameters) and return output.">function</a> stays focused on display  </li>
 </ul>
 <h2 id="connection-to-digital-stacks">Connection to Digital Stacks</h2>
 <p><strong>This works perfectly with SDR deposits because:</strong></p>
 <ol>
 <li><strong>External resources (Wikimedia images)</strong> load from anywhere</li>
 <li><strong>No CORS issues</strong> - Commons serves images with permissive headers</li>
-<li><strong>Relative paths</strong> still work for your GeoJSON/data</li>
-<li><strong>JavaScript executes client-side</strong> in the user'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> browser</li>
+<li><strong>Relative paths</strong> still work for your <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a>/data</li>
+<li><strong>JavaScript executes<a href="GLOSSARY.html#client-side" class="glossary-term" title="Code that runs in the user's browser, not on a server.">client-side</a></strong> in the user's <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a></li>
 </ol>
 <p><strong>Example deployed to SDR (DRUID: abc123xyz456):</strong></p>
 <pre><code>https://stacks.stanford.edu/file/druid:abc123xyz456/index.html
@@ -887,35 +887,35 @@ Result: Redirects to actual image file
 └── Loads: Wikimedia Commons images (external, absolute URL) ✓
 </code></pre><p><strong>All four work together seamlessly!</strong></p>
 <h2 id="whats-next">What's Next?</h2>
-<p>In <a href="10-step-09-complete-integration.html">Step 9: Complete Integration</a>, we'll add even more Wikidata properties like artist names, dates, and materials to create <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> fully-featured artwork information display!</p>
+<p>In <a href="10-step-09-complete-integration.html">Step 9: Complete Integration</a>, we'll add even more <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> properties like artist names, dates, and materials to create a fully-featured artwork information display!</p>
 <h2 id="key-takeaways">Key Takeaways</h2>
 <ul>
 <li>Helper functions isolate complex logic and improve code organization  </li>
-<li>Wikidata properties (like P18) are accessed through the claims structure  </li>
-<li>Always check if data exists before accessing nested properties  </li>
-<li>Wikimedia Commons provides free images accessible via Special:FilePath  </li>
-<li>URL encoding prevents broken links with special characters  </li>
+<li><a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> properties (like P18) are accessed through the claims structure  </li>
+<li>Always check if data exists before accessing <a href="GLOSSARY.html#nested" class="glossary-term" title="Elements or data structures contained within others. Example: <div><p>Nested</p></div>">nested</a> properties  </li>
+<li><a href="GLOSSARY.html#wikimedia-commons" class="glossary-term" title="A free media repository containing images, videos, and other files that can be used by anyone.">Wikimedia Commons</a> provides free images accessible via<a href="GLOSSARY.html#specialfilepath" class="glossary-term" title="A Wikimedia Commons endpoint that returns image files directly.">Special:FilePath</a></li>
+<li><a href="GLOSSARY.html#url-encoding" class="glossary-term" title="See Encode/URL Encoding">URL encoding</a> prevents broken links with special characters  </li>
 <li>External image resources work seamlessly with SDR-hosted applications  </li>
 <li>Images make applications more engaging and informative  </li>
 </ul>
 <h2 id="common-questions">Common Questions</h2>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: What if an item has no image?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: The helper returns <code>null</code>, and we simply don'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> add an <code>&lt;img&gt;</code> tag. No error occurs.</p>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Can <a href="GLOSSARY.html#i" class="glossary-term" title="">I</a> use images from other sources?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: Yes, but be careful about:</p>
+<p><strong>Q: What if an item has no image?</strong><br></br>A: The helper returns <code>null</code>, and we simply don't add an <code>&lt;img&gt;</code> tag. No error occurs.</p>
+<p><strong>Q: Can I use images from other sources?</strong><br></br>A: Yes, but be careful about:</p>
 <ul>
 <li>Copyright/licensing</li>
 <li>CORS policies (some servers block cross-origin requests)</li>
 <li>Reliability (Commons is very stable)</li>
 </ul>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Why not download and include images in my deposit?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: You could, but:</p>
+<p><strong>Q: Why not download and include images in my deposit?</strong><br></br>A: You could, but:</p>
 <ul>
 <li>Images can be large (increases deposit size)</li>
 <li>Images might update on Commons</li>
 <li>Using live links ensures latest versions</li>
 <li>Commons handles hosting/bandwidth</li>
 </ul>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Can <a href="GLOSSARY.html#i" class="glossary-term" title="">I</a> specify image size?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: Yes! Add <code>?width=500</code> to the URL: <code>Special:FilePath/image.jpg?width=500</code></p>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: What if the image fails to load?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: Use the <code>onerror</code> attribute: <code>&lt;img src="..." onerror="this.style.display='none'"&gt;</code></p>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Are there other image properties besides P18?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: Yes! P154 (logo), P41 (flag), P94 (coat of arms), etc. P18 is the main image.</p>
+<p><strong>Q: Can I specify image size?</strong><br></br>A: Yes! Add <code>?width=500</code> to the URL: <code>Special:FilePath/image.jpg?width=500</code></p>
+<p><strong>Q: What if the image fails to load?</strong><br></br>A: Use the <code>onerror</code> attribute: <code>&lt;img src="..." onerror="this.style.display='none'"&gt;</code></p>
+<p><strong>Q: Are there other image properties besides P18?</strong><br></br>A: Yes! P154 (logo), P41 (flag), P94 (coat of arms), etc. P18 is the main image.</p>
 <hr></hr>
 <p><strong>Previous:</strong> <a href="08-step-07-wikidata-basic.html">Step 7: Basic Wikidata</a> | <strong>Next:</strong> <a href="10-step-09-complete-integration.html">Step 9: Complete Integration</a></p>
 
@@ -961,7 +961,7 @@ Result: Redirects to actual image file
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Step 8: Wikidata Images","level":"2.9","depth":1,"next":{"title":"Step 9: Complete Integration","level":"2.10","depth":1,"path":"10-step-09-complete-integration.md","ref":"10-step-09-complete-integration.md","articles":[]},"previous":{"title":"Step 7: Basic Wikidata Fetching","level":"2.8","depth":1,"path":"08-step-07-wikidata-basic.md","ref":"08-step-07-wikidata-basic.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"09-step-08-wikidata-images.md","mtime":"2026-01-26T20:48:39.629Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T20:48:56.101Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Step 8: Wikidata Images","level":"2.9","depth":1,"next":{"title":"Step 9: Complete Integration","level":"2.10","depth":1,"path":"10-step-09-complete-integration.md","ref":"10-step-09-complete-integration.md","articles":[]},"previous":{"title":"Step 7: Basic Wikidata Fetching","level":"2.8","depth":1,"path":"08-step-07-wikidata-basic.md","ref":"08-step-07-wikidata-basic.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"09-step-08-wikidata-images.md","mtime":"2026-01-26T20:57:45.968Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T20:57:55.258Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

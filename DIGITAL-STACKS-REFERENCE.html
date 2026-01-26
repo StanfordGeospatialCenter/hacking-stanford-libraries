@@ -357,7 +357,7 @@
                                 
                                 <h1 id="digital-stacks-quick-reference-guide">Digital Stacks Quick Reference Guide</h1>
 <h2 id="what-is-digital-stacks">What is Digital Stacks?</h2>
-<p>The Digital Stacks is Stanford'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> web service for accessing files stored in the Stanford Digital Repository (SDR). It provides direct HTTP access to preserved digital content.</p>
+<p>The <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> is Stanford's web service for accessing files stored in the Stanford <a href="GLOSSARY.html#digital-repository" class="glossary-term" title="A system for storing, managing, and providing access to digital content over time.">Digital Repository</a> (SDR). It provides direct HTTP access to preserved digital content.</p>
 <h2 id="url-patterns">URL Patterns</h2>
 <h3 id="basic-file-access">Basic File Access</h3>
 <pre><code>https://stacks.stanford.edu/file/druid:[DRUID]/[filename]
@@ -368,10 +368,10 @@
 <li><strong>Base URL:</strong> <code>https://stacks.stanford.edu</code></li>
 <li><strong>Path:</strong> <code>/file/</code> (indicates file access, not PURL landing page)</li>
 <li><strong>DRUID:</strong> <code>druid:vb564st1676</code> (unique identifier, always prefixed with "druid:")</li>
-<li><strong>Filename:</strong> <code>graduation-stanford.tif</code> (the specific file within the object)</li>
+<li><strong>Filename:</strong> <code>graduation-stanford.tif</code> (the specific file within the <a href="GLOSSARY.html#object" class="glossary-term" title="A JavaScript data structure storing key-value pairs. Example: {name: &quot;John&quot;, age: 30}">object</a>)</li>
 </ul>
 <h2 id="druids-explained">DRUIDs Explained</h2>
-<p><strong>DRUID</strong> = Digital Repository Unique Identifier</p>
+<p><strong>DRUID</strong> = <a href="GLOSSARY.html#digital-repository" class="glossary-term" title="A system for storing, managing, and providing access to digital content over time.">Digital Repository</a> Unique Identifier</p>
 <h3 id="format">Format</h3>
 <ul>
 <li>Always 11 characters after "druid:"</li>
@@ -443,7 +443,7 @@
 }).<span class="hljs-title function_">addTo</span>(map);
 </code></pre>
 <h2 id="relative-paths-in-sdr-deposits">Relative Paths in SDR Deposits</h2>
-<p>When you deposit files to SDR with <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> folder structure, that structure is preserved:</p>
+<p>When you deposit files to SDR with a folder structure, that structure is preserved:</p>
 <h3 id="your-deposit-structure">Your Deposit Structure</h3>
 <pre><code>my-collection/
 ├── index.html
@@ -474,35 +474,35 @@
 <p><strong>These relative paths work both:</strong></p>
 <ul>
 <li>Locally on your computer during development</li>
-<li>After deposit to SDR via Digital Stacks</li>
+<li>After deposit to SDR via <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a></li>
 </ul>
 <p><strong>No code changes needed!</strong></p>
 <h2 id="file-types-supported">File Types Supported</h2>
-<p>Digital Stacks serves any file type:</p>
+<p><a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> serves any file type:</p>
 <h3 id="common-formats">Common Formats</h3>
 <ul>
-<li><strong>Images:</strong> JPG, PNG, GIF, TIFF (including GeoTIFF)</li>
+<li><strong>Images:</strong> JPG, PNG, GIF, TIFF (including <a href="GLOSSARY.html#geotiff" class="glossary-term" title="A file format for storing geospatial raster images with geographic metadata.">GeoTIFF</a>)</li>
 <li><strong>Documents:</strong> PDF, TXT, HTML, XML</li>
-<li><strong>Data:</strong> CSV, JSON, GeoJSON, XML</li>
-<li><strong>Geospatial:</strong> SHP (shapefiles), KML, GeoTIFF, COG</li>
+<li><strong>Data:</strong> CSV, JSON, <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a>, XML</li>
+<li><strong>Geospatial:</strong> SHP (shapefiles), KML, <a href="GLOSSARY.html#geotiff" class="glossary-term" title="A file format for storing geospatial raster images with geographic metadata.">GeoTIFF</a>, COG</li>
 <li><strong>Multimedia:</strong> MP3, MP4, WAV (check format restrictions)</li>
 <li><strong>Archives:</strong> ZIP (served as-is, not extracted)</li>
 </ul>
 <h3 id="special-formats">Special Formats</h3>
 <ul>
-<li><strong>Cloud Optimized GeoTIFF (COG):</strong> Streams efficiently, perfect for web maps</li>
-<li><strong>PMTiles:</strong> Vector tile format for efficient map delivery</li>
+<li><strong>Cloud Optimized <a href="GLOSSARY.html#geotiff" class="glossary-term" title="A file format for storing geospatial raster images with geographic metadata.">GeoTIFF</a> (COG):</strong> Streams efficiently, perfect for web maps</li>
+<li><strong>PMTiles:</strong> Vector <a href="GLOSSARY.html#tile" class="glossary-term" title="A small image piece that combines with others to form a complete map.">tile</a> format for efficient map delivery</li>
 <li><strong>Tiles:</strong> Directory structures with <code>{z}/{x}/{y}</code> patterns work great</li>
 </ul>
 <h2 id="cors-cross-origin-resource-sharing">CORS (Cross-Origin Resource Sharing)</h2>
-<p><strong>Digital Stacks enables CORS</strong>, meaning you can:</p>
+<p><strong><a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> enables CORS</strong>, meaning you can:</p>
 <ul>
-<li>Load files from Digital Stacks in JavaScript from any domain  </li>
+<li>Load files from <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> in JavaScript from any domain  </li>
 <li>Use fetch(), XMLHttpRequest, or other AJAX methods  </li>
 <li>Embed in web maps hosted anywhere  </li>
-<li>Build applications on different servers that reference Digital Stacks  </li>
+<li>Build applications on different servers that reference <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a>  </li>
 </ul>
-<p><strong>No CORS errors!</strong> Unlike many file servers, Digital Stacks is designed for web application use.</p>
+<p><strong>No CORS errors!</strong> Unlike many file servers, <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> is designed for <a href="GLOSSARY.html#web-application" class="glossary-term" title="An application accessed through a web browser rather than installed software.">web application</a> use.</p>
 <h2 id="best-practices">Best Practices</h2>
 <h3 id="1-use-relative-paths-in-your-deposit">1. Use Relative Paths in Your Deposit</h3>
 <p><strong>Good:</strong></p>
@@ -520,7 +520,7 @@ css/styles.css
 js/app.js
 data/file.geojson
 images/photo.jpg
-</code></pre><p><strong>Why?</strong> Easy to navigate, intuitive paths, works well in Digital Stacks</p>
+</code></pre><p><strong>Why?</strong> Easy to navigate, intuitive paths, works well in <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a></p>
 <h3 id="3-name-files-clearly">3. Name Files Clearly</h3>
 <p><strong>Good:</strong></p>
 <pre><code>stanford_campus_boundary.geojson
@@ -552,7 +552,7 @@ file.geojson
 </ol>
 <p>After deposit:</p>
 <ol>
-<li>Test all links via Digital Stacks URLs</li>
+<li>Test all links via <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> URLs</li>
 <li>Verify functionality is preserved</li>
 <li>Check on different devices</li>
 </ol>
@@ -566,7 +566,7 @@ file.geojson
 <li>Path structure is correct</li>
 </ul>
 <h3 id="cors-errors">CORS Errors</h3>
-<p><strong>Should NOT happen with Digital Stacks</strong>, but if you see them:</p>
+<p><strong>Should NOT happen with <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a></strong>, but if you see them:</p>
 <ul>
 <li>Make sure you're using <code>https://stacks.stanford.edu</code> (not http)</li>
 <li>Check that the DRUID is correct</li>
@@ -590,20 +590,20 @@ file.geojson
 <h2 id="examples-from-this-workshop">Examples from This Workshop</h2>
 <h3 id="stanford-campus-cog">Stanford Campus COG</h3>
 <pre><code>https://stacks.stanford.edu/file/druid:vb564st1676/graduation-stanford_stanford-california_20240616_171600_ssc2_nrg_flat_50cm_rotated-154_large_COG.tif
-</code></pre><p><strong>DRUID:</strong> <code>vb564st1676</code><br></br><strong>File:</strong> <code>graduation-stanford_..._COG.tif</code><br></br><strong>Type:</strong> Cloud Optimized GeoTIFF (aerial imagery)<br></br><strong>Use:</strong> Display high-resolution aerial photography in web maps</p>
+</code></pre><p><strong>DRUID:</strong> <code>vb564st1676</code><br></br><strong>File:</strong> <code>graduation-stanford_..._COG.tif</code><br></br><strong>Type:</strong> Cloud Optimized <a href="GLOSSARY.html#geotiff" class="glossary-term" title="A file format for storing geospatial raster images with geographic metadata.">GeoTIFF</a> (aerial imagery)<br></br><strong>Use:</strong> Display high-resolution aerial photography in web maps</p>
 <h3 id="world-pmtiles">World PMTiles</h3>
 <pre><code>https://stacks.stanford.edu/file/druid:hf224mw4004/20231116.pmtiles
-</code></pre><p><strong>DRUID:</strong> <code>hf224mw4004</code><br></br><strong>File:</strong> <code>20231116.pmtiles</code><br></br><strong>Type:</strong> PMTiles (vector tiles)<br></br><strong>Use:</strong> Global base map alternative to raster tiles</p>
+</code></pre><p><strong>DRUID:</strong> <code>hf224mw4004</code><br></br><strong>File:</strong> <code>20231116.pmtiles</code><br></br><strong>Type:</strong> PMTiles (vector tiles)<br></br><strong>Use:</strong> Global base map alternative to <a href="GLOSSARY.html#raster" class="glossary-term" title="Geographic data represented as a grid of pixels (like satellite imagery), as opposed to vector data.">raster</a> tiles</p>
 <h2 id="getting-your-own-druid">Getting Your Own DRUID</h2>
-<p>To deposit content and get <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> DRUID:</p>
+<p>To deposit content and get a DRUID:</p>
 <ol>
 <li><strong>Contact Stanford Libraries</strong> about SDR deposits</li>
 <li><strong>Prepare your content</strong> with proper folder structure</li>
 <li><strong>Submit via deposit system</strong> (varies by collection)</li>
 <li><strong>Receive DRUID</strong> in deposit confirmation</li>
-<li><strong>Access via Digital Stacks</strong> immediately</li>
+<li><strong>Access via <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a></strong> immediately</li>
 </ol>
-<p><strong>Questions?</strong> Contact Stanford Libraries digital repository team</p>
+<p><strong>Questions?</strong> Contact Stanford Libraries <a href="GLOSSARY.html#digital-repository" class="glossary-term" title="A system for storing, managing, and providing access to digital content over time.">digital repository</a> team</p>
 <h2 id="additional-resources">Additional Resources</h2>
 <ul>
 <li><strong>SDR Overview:</strong> <a href="https://library.stanford.edu/research/stanford-digital-repository" target="_blank">https://library.stanford.edu/research/stanford-digital-repository</a></li>
@@ -611,7 +611,7 @@ file.geojson
 <li><strong>PURL Service:</strong> <a href="https://purl.stanford.edu/" target="_blank">https://purl.stanford.edu/</a></li>
 </ul>
 <hr></hr>
-<p><strong>Remember:</strong> Digital Stacks + relative paths = web applications that work forever! 🎉</p>
+<p><strong>Remember:</strong> <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> + relative paths = web applications that work forever! 🎉</p>
 
                                 
                                 </section>
@@ -655,7 +655,7 @@ file.geojson
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Digital Stacks Reference","level":"3.1","depth":1,"next":{"title":"Workshop Materials Index","level":"3.2","depth":1,"path":"WORKSHOP-MATERIALS.md","ref":"WORKSHOP-MATERIALS.md","articles":[]},"previous":{"title":"BONUS Step 10: Wikidata Filter","level":"2.11","depth":1,"path":"11-bonus-step-10-wikidata-filter.md","ref":"11-bonus-step-10-wikidata-filter.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"DIGITAL-STACKS-REFERENCE.md","mtime":"2026-01-26T20:48:39.629Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T20:48:56.101Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Digital Stacks Reference","level":"3.1","depth":1,"next":{"title":"Workshop Materials Index","level":"3.2","depth":1,"path":"WORKSHOP-MATERIALS.md","ref":"WORKSHOP-MATERIALS.md","articles":[]},"previous":{"title":"BONUS Step 10: Wikidata Filter","level":"2.11","depth":1,"path":"11-bonus-step-10-wikidata-filter.md","ref":"11-bonus-step-10-wikidata-filter.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"DIGITAL-STACKS-REFERENCE.md","mtime":"2026-01-26T20:57:45.968Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T20:57:55.258Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

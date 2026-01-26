@@ -365,10 +365,10 @@
 <li>Understand the Document Type Declaration and basic HTML structure</li>
 </ul>
 <h2 id="what-is-html">What is HTML?</h2>
-<p>HTML (HyperText Markup Language) is the standard language for creating web pages. It'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> not <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> programming language - it'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> <strong>markup language</strong>, which means it uses <strong>tags</strong> to describe the structure and content of <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> web page.</p>
-<p>Think of HTML tags like labels in <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> filing system - they tell the browser "this is <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> heading," "this is <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> paragraph," "this is an image," etc.</p>
+<p><a href="GLOSSARY.html#html-hypertext-markup-language" class="glossary-term" title="The standard language for creating web pages, using tags to structure content.">HTML (HyperText Markup Language)</a>is the standard language for creating web pages. It's not a programming language - it's a <strong>markup language</strong>, which means it uses <strong>tags</strong> to describe the structure and content of a web page.</p>
+<p>Think of HTML tags like labels in a filing system - they tell the <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a> "this is a heading," "this is a paragraph," "this is an image," etc.</p>
 <h2 id="understanding-file-paths">Understanding File Paths</h2>
-<p>Before we begin, let'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> understand where files are located:</p>
+<p>Before we begin, <a href="GLOSSARY.html#let" class="glossary-term" title="JavaScript keyword for declaring variables that can be reassigned. Block-scoped.">let</a>'s understand where files are located:</p>
 <h3 id="your-project-structure">Your Project Structure</h3>
 <p>When you download this workshop, your files are organized like this:</p>
 <pre><code>hacking-stanford-libraries/
@@ -380,16 +380,16 @@
 │   └── stanford_campus_irg.tif
 └── supporting_docs/
     └── Digital Stacks.pdf
-</code></pre><p><strong>Relative Path Example:</strong> If you're editing <code>cog_map_step_00.html</code> and want to reference <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> file in the <code>collection</code> folder, you would write:</p>
+</code></pre><p><strong><a href="GLOSSARY.html#relative-path" class="glossary-term" title="A file path specified relative to the current file's location. Example: collection/data.json">Relative Path</a> Example:</strong> If you're editing <code>cog_map_step_00.html</code> and want to reference a file in the <code>collection</code> folder, you would write:</p>
 <pre><code>collection/stanford_campus.geojson
-</code></pre><p>This means: "Look in the collection folder (which is in the same directory as this HTML file) for <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> file called stanford_campus.geojson"</p>
+</code></pre><p>This means: "Look in the collection folder (which is in the same directory as this HTML file) for a file called stanford_campus.<a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">geojson</a>"</p>
 <h3 id="digital-stacks-paths">Digital Stacks Paths</h3>
-<p>When files are in the Stanford Digital Repository, they have <strong>absolute URLs</strong>:</p>
+<p>When files are in the Stanford <a href="GLOSSARY.html#digital-repository" class="glossary-term" title="A system for storing, managing, and providing access to digital content over time.">Digital Repository</a>, they have <strong>absolute URLs</strong>:</p>
 <pre><code>https://stacks.stanford.edu/file/druid:vb564st1676/graduation-stanford.tif
-</code></pre><p>This is <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> complete address that works from anywhere on the internet.</p>
+</code></pre><p>This is a complete address that works from anywhere on the internet.</p>
 <p><strong>Key Point:</strong> In this workshop, we'll use relative paths for local files. When you deposit your application to SDR, these relative paths will continue to work because SDR preserves your folder structure!</p>
 <h2 id="the-basic-html-document">The Basic HTML Document</h2>
-<p>Here'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> the code for our starting point:</p>
+<p>Here's the code for our starting point:</p>
 <pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
@@ -403,13 +403,13 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
 <h2 id="breaking-down-the-code">Breaking Down the Code</h2>
-<p>Let'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> understand each part:</p>
+<p><a href="GLOSSARY.html#let" class="glossary-term" title="JavaScript keyword for declaring variables that can be reassigned. Block-scoped.">Let</a>'s understand each part:</p>
 <h3 id="1-document-type-declaration">1. Document Type Declaration</h3>
 <pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
 </code></pre>
-<p><strong>What it does:</strong> Tells the browser "this is an HTML5 document."</p>
+<p><strong>What it does:</strong> Tells the <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a> "this is an <a href="GLOSSARY.html#html5" class="glossary-term" title="The latest version of HTML, introducing semantic elements, multimedia support, and improved APIs.">HTML5</a> document."</p>
 <p><strong>Why we need it:</strong> Without this, browsers might display your page in "quirks mode," which can cause strange rendering issues. Always start your HTML files with this line.</p>
-<p><strong>Think of it as:</strong> The file format declaration, like saying "this is <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> Word document" or "this is <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> PDF."</p>
+<p><strong>Think of it as:</strong> The file format declaration, like saying "this is a Word document" or "this is a PDF."</p>
 <h3 id="2-the-html-element">2. The HTML Element</h3>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
 </code></pre>
@@ -420,24 +420,24 @@
 <li>Accessibility (screen readers can use the correct pronunciation)</li>
 <li>Translation tools</li>
 </ul>
-<p><strong>Closing tag:</strong> Every opening tag needs <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> closing tag. At the bottom of the file you'll see <code>&lt;/html&gt;</code></p>
+<p><strong>Closing tag:</strong> Every opening tag needs a closing tag. At the bottom of the file you'll see <code>&lt;/html&gt;</code></p>
 <h3 id="3-the-head-element">3. The Head Element</h3>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
     <span class="hljs-comment">&lt;!-- Meta information goes here --&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
 </code></pre>
-<p><strong>What it does:</strong> Contains metadata (information about the page) that doesn'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> appear in the visible content.</p>
-<p><strong>Think of it as:</strong> The "behind the scenes" information - like the credits at the end of <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> movie.</p>
+<p><strong>What it does:</strong> Contains metadata (information about the page) that doesn't appear in the visible content.</p>
+<p><strong>Think of it as:</strong> The "behind the scenes" information - like the credits at the end of a movie.</p>
 <h3 id="4-base-target">4. Base Target</h3>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">base</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_top"</span>&gt;</span>
 </code></pre>
-<p><strong>What it does:</strong> Tells the browser to open all links in the topmost browser window/tab.</p>
+<p><strong>What it does:</strong> Tells the <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a> to open all links in the topmost <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a> window/tab.</p>
 <p><strong>Why we need it:</strong> Prevents links from opening in embedded frames or iframes.</p>
-<p><strong>Can be omitted</strong> if you're sure your page won'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> be embedded in an iframe.</p>
+<p><strong>Can be omitted</strong> if you're sure your page won't be embedded in an iframe.</p>
 <h3 id="5-character-encoding">5. Character Encoding</h3>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span>
 </code></pre>
-<p><strong>What it does:</strong> Tells the browser which character set to use for displaying text.</p>
+<p><strong>What it does:</strong> Tells the <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a> which character set to use for displaying text.</p>
 <p><strong>UTF-8</strong> is the universal character encoding that supports:</p>
 <ul>
 <li>All languages (English, Chinese, Arabic, emoji, etc.)</li>
@@ -451,7 +451,7 @@
 <p><strong>What it does:</strong> Controls how the page is displayed on mobile devices.</p>
 <p><strong>Breaking it down:</strong></p>
 <ul>
-<li><code>width=device-width</code> - Make the page width match the device'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> screen width</li>
+<li><code>width=device-width</code> - Make the page width match the device's screen width</li>
 <li><code>initial-scale=1</code> - Start at 100% zoom (no zooming in or out by default)</li>
 </ul>
 <p><strong>Why we need it:</strong> Without this, mobile browsers try to display the full desktop version of your page, making everything tiny. This tag makes your page "mobile-friendly."</p>
@@ -461,7 +461,7 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
 </code></pre>
 <p><strong>What it does:</strong> Contains all the visible content of your web page - text, images, links, maps, etc.</p>
-<p><strong>Currently:</strong> It'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> empty! We'll add content in the next steps.</p>
+<p><strong>Currently:</strong> It's empty! We'll add content in the next steps.</p>
 <p><strong>Think of it as:</strong> The actual page that users see and interact with.</p>
 <h2 id="how-html-tags-work">How HTML Tags Work</h2>
 <p>HTML uses <strong>opening tags</strong> and <strong>closing tags</strong>:</p>
@@ -472,30 +472,30 @@
 <li>Closing tag: <code>&lt;/tagname&gt;</code> (note the forward slash)</li>
 <li>Content: Whatever goes between the tags</li>
 </ul>
-<p><strong>Self-closing tags</strong> don'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> have content and close themselves:</p>
+<p><strong>Self-closing tags</strong> don't have content and close themselves:</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span>
 </code></pre>
 <h2 id="try-it-yourself">Try It Yourself</h2>
 <ol>
-<li><strong>Open <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> text editor</strong> (Notepad, VS Code, Sublime Text, etc.)</li>
+<li><strong>Open a text editor</strong> (Notepad, VS Code, Sublime Text, etc.)</li>
 <li><strong>Copy the basic HTML structure</strong> from above</li>
 <li><strong>Save the file</strong> as <code>my-first-page.html</code></li>
-<li><strong>Open the file</strong> in your web browser (double-click it, or drag it into <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> browser window)</li>
+<li><strong>Open the file</strong> in your web <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a> (double-click it, or drag it into a <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a> window)</li>
 </ol>
-<p>You should see <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> blank white page. That'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> perfect! We'll add content in the next step.</p>
+<p>You should see a blank white page. That's perfect! We'll add content in the next step.</p>
 <h2 id="connection-to-digital-stacks">Connection to Digital Stacks</h2>
-<p>When you deposit an HTML file like this into SDR, it becomes accessible via the Digital Stacks. For example, if you deposited it with DRUID <code>abc123xyz456</code>, it would be available at:</p>
+<p>When you deposit an HTML file like this into SDR, it becomes accessible via the <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a>. For example, if you deposited it with DRUID <code>abc123xyz456</code>, it would be available at:</p>
 <pre><code>https://stacks.stanford.edu/file/druid:abc123xyz456/my-first-page.html
 </code></pre><p>Anyone could then view your page by visiting that URL!</p>
 <h2 id="whats-next">What's Next?</h2>
 <p>In <a href="01-step-01-map-container.md">Step 1: Adding a Map Container</a>, we'll add visible content to the page and prepare space for our interactive map.</p>
 <h2 id="key-takeaways">Key Takeaways</h2>
 <ul>
-<li>HTML is <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> markup language that structures web content  </li>
-<li>Every HTML document needs <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> DOCTYPE declaration  </li>
+<li>HTML is a markup language that structures web content  </li>
+<li>Every HTML document needs a <a href="GLOSSARY.html#doctype" class="glossary-term" title="Declaration at the start of an HTML document that tells the browser which version of HTML is being used. Example: <!DOCTYPE html>">DOCTYPE</a> declaration  </li>
 <li>The <code>&lt;head&gt;</code> contains metadata, the <code>&lt;body&gt;</code> contains visible content  </li>
 <li>Character encoding (UTF-8) ensures text displays correctly  </li>
-<li>The viewport meta tag makes pages mobile-friendly  </li>
+<li>The <a href="GLOSSARY.html#viewport" class="glossary-term" title="The visible area of a web page in the browser window.">viewport</a> <a href="GLOSSARY.html#meta-tag" class="glossary-term" title="HTML elements providing metadata about the page (charset, viewport, description).">meta tag</a> makes pages mobile-friendly  </li>
 <li>HTML files with relative paths work great in SDR!  </li>
 </ul>
 <hr></hr>
@@ -543,7 +543,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Step 0: Basic HTML Structure","level":"2.1","depth":1,"next":{"title":"Step 1: Adding a Map Container","level":"2.2","depth":1,"path":"02-step-01-map-container.md","ref":"02-step-01-map-container.md","articles":[]},"previous":{"title":"Workshop Introduction","level":"1.2","depth":1,"path":"00-workshop-introduction.md","ref":"00-workshop-introduction.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"01-step-00-basic-html.md","mtime":"2026-01-26T20:48:39.628Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T20:48:56.101Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Step 0: Basic HTML Structure","level":"2.1","depth":1,"next":{"title":"Step 1: Adding a Map Container","level":"2.2","depth":1,"path":"02-step-01-map-container.md","ref":"02-step-01-map-container.md","articles":[]},"previous":{"title":"Workshop Introduction","level":"1.2","depth":1,"path":"00-workshop-introduction.md","ref":"00-workshop-introduction.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"01-step-00-basic-html.md","mtime":"2026-01-26T20:57:45.967Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T20:57:55.258Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

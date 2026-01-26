@@ -357,31 +357,31 @@
                                 
                                 <h1 id="hacking-stanford-libraries-building-interactive-web-applications-with-sdr">Hacking Stanford Libraries: Building Interactive Web Applications with SDR</h1>
 <h2 id="workshop-introduction">Workshop Introduction</h2>
-<p>Welcome to this hands-on workshop on building interactive web applications using the Stanford Digital Repository (SDR) infrastructure!</p>
+<p>Welcome to this hands-on workshop on building interactive web applications using the Stanford <a href="GLOSSARY.html#digital-repository" class="glossary-term" title="A system for storing, managing, and providing access to digital content over time.">Digital Repository</a> (SDR) infrastructure!</p>
 <h2 id="workshop-objectives">Workshop Objectives</h2>
 <p>This workshop will teach you how to:</p>
 <ol>
-<li><strong>Access and use content from the Stanford Digital Repository (SDR)</strong> directly in your web applications</li>
+<li><strong>Access and use content from the Stanford <a href="GLOSSARY.html#digital-repository" class="glossary-term" title="A system for storing, managing, and providing access to digital content over time.">Digital Repository</a> (SDR)</strong> directly in your web applications</li>
 <li><strong>Build interactive HTML, JavaScript, and CSS applications</strong> that showcase your collection deposits</li>
-<li><strong>Leverage the Digital Stacks API</strong> to reference and display materials hosted in SDR</li>
+<li><strong>Leverage the <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> API</strong> to reference and display materials hosted in SDR</li>
 <li><strong>Create user-friendly visualizations</strong> that help users explore and understand your collections</li>
 <li><strong>Publish simple HTML documents</strong> alongside your SDR deposits to create custom collection viewers</li>
 </ol>
 <h2 id="what-is-the-stanford-digital-repository">What is the Stanford Digital Repository?</h2>
-<p>The Stanford Digital Repository (SDR) is Stanford'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> permanent digital preservation repository. When you deposit materials in SDR, they are:</p>
+<p>The Stanford <a href="GLOSSARY.html#digital-repository" class="glossary-term" title="A system for storing, managing, and providing access to digital content over time.">Digital Repository</a> (SDR) is Stanford's permanent digital preservation <a href="GLOSSARY.html#repository" class="glossary-term" title="A storage location for digital content or code.">repository</a>. When you deposit materials in SDR, they are:</p>
 <ul>
 <li><strong>Permanently preserved</strong> with long-term storage guarantees</li>
-<li><strong>Publicly accessible</strong> through the Digital Stacks web service</li>
+<li><strong>Publicly accessible</strong> through the <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> web service</li>
 <li><strong>Assigned permanent URLs (PURLs)</strong> that will never change</li>
 <li><strong>Available for direct linking</strong> from your own applications and websites</li>
 </ul>
 <h2 id="what-well-build">What We'll Build</h2>
-<p>In this workshop, we'll create <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> <strong>Stanford Public Art Interactive Map</strong> that:</p>
+<p>In this workshop, we'll create a <strong>Stanford Public Art Interactive Map</strong> that:</p>
 <ul>
-<li>Displays artwork locations on an interactive Leaflet map</li>
-<li>Shows <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> high-resolution aerial photograph from the Digital Stacks</li>
-<li>Integrates data from Wikidata to show images and details about each artwork</li>
-<li>Uses <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> split-screen layout for easy exploration</li>
+<li>Displays artwork locations on an interactive <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> map</li>
+<li>Shows a high-resolution aerial photograph from the <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a></li>
+<li>Integrates data from <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> to show images and details about each artwork</li>
+<li>Uses a split-screen layout for easy exploration</li>
 <li>Can be deposited directly into SDR alongside your data</li>
 </ul>
 <p><img src="supporting_docs/final-app-preview.png" alt="Final Application Screenshot"></img></p>
@@ -389,49 +389,49 @@
 <p><strong>No prior programming experience required!</strong> We'll teach you everything you need to know, starting from the basics.</p>
 <p>You will need:</p>
 <ul>
-<li><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> text editor (VS Code, Sublime Text, Notepad++, or even Notepad)</li>
-<li><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> web browser (Chrome, Firefox, Safari, or Edge)</li>
-<li>The sample files from this workshop repository</li>
+<li>A text editor (VS Code, Sublime Text, Notepad++, or even Notepad)</li>
+<li>A web <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a> (Chrome, Firefox, Safari, or Edge)</li>
+<li>The sample files from this workshop <a href="GLOSSARY.html#repository" class="glossary-term" title="A storage location for digital content or code.">repository</a></li>
 </ul>
 <h2 id="key-concepts-well-cover">Key Concepts We'll Cover</h2>
 <h3 id="1-file-paths-relative-vs-absolute">1. File Paths: Relative vs. Absolute</h3>
-<p>Understanding file paths is crucial for web development, especially when working with the Digital Stacks.</p>
-<p><strong>Absolute Paths</strong> start from the root of <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> file system or <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> complete URL:</p>
+<p>Understanding file paths is crucial for web development, especially when working with the <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a>.</p>
+<p><strong>Absolute Paths</strong> start from the root of a file system or a complete URL:</p>
 <ul>
 <li><code>https://stacks.stanford.edu/file/druid:vb564st1676/graduation-stanford.tif</code></li>
 <li><code>C:\Users\YourName\Documents\project\index.html</code> (Windows)</li>
 <li><code>/Users/YourName/Documents/project/index.html</code> (Mac/Linux)</li>
 </ul>
-<p><strong>Relative Paths</strong> are relative to the current file'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> location:</p>
+<p><strong>Relative Paths</strong> are relative to the current file's location:</p>
 <ul>
 <li><code>./image.jpg</code> - file in the same directory as the HTML file</li>
-<li><code>../data/info.json</code> - file in <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> data folder one level up</li>
-<li><code>collection/map.geojson</code> - file in <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> collection subfolder</li>
+<li><code>../data/info.json</code> - file in a data folder one level up</li>
+<li><code>collection/map.geojson</code> - file in a collection subfolder</li>
 </ul>
 <p><strong>Why This Matters for SDR:</strong>
 When you deposit files in SDR, they maintain their folder structure. If you use relative paths in your HTML files, they will continue to work after deposit!</p>
 <h3 id="2-the-digital-stacks-api">2. The Digital Stacks API</h3>
-<p>The Digital Stacks provides web access to files in SDR using <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> consistent URL pattern:</p>
+<p>The <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> provides web access to files in SDR using a consistent URL pattern:</p>
 <pre><code>https://stacks.stanford.edu/file/druid:[DRUID]/[filename]
 </code></pre><p>Where:</p>
 <ul>
-<li><code>[DRUID]</code> is the unique identifier for your SDR object (<a href="GLOSSARY.html#e" class="glossary-term" title="">e</a>.<a href="GLOSSARY.html#g" class="glossary-term" title="">g</a>., <code>vb564st1676</code>)</li>
-<li><code>[filename]</code> is the name of the file within that object (<a href="GLOSSARY.html#e" class="glossary-term" title="">e</a>.<a href="GLOSSARY.html#g" class="glossary-term" title="">g</a>., <code>data.geojson</code>)</li>
+<li><code>[DRUID]</code> is the unique identifier for your SDR <a href="GLOSSARY.html#object" class="glossary-term" title="A JavaScript data structure storing key-value pairs. Example: {name: &quot;John&quot;, age: 30}">object</a> (e.g., <code>vb564st1676</code>)</li>
+<li><code>[filename]</code> is the name of the file within that <a href="GLOSSARY.html#object" class="glossary-term" title="A JavaScript data structure storing key-value pairs. Example: {name: &quot;John&quot;, age: 30}">object</a> (e.g., <code>data.geojson</code>)</li>
 </ul>
 <p><strong>Example:</strong></p>
 <pre><code>https://stacks.stanford.edu/file/druid:vb564st1676/graduation-stanford_stanford-california_20240616_171600_ssc2_nrg_flat_50cm_rotated-154_large_COG.tif
 </code></pre><p>This URL pattern means:</p>
 <ul>
 <li>Your files are <strong>always accessible</strong> via their DRUID</li>
-<li>URLs are <strong>permanent</strong> and won'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> break</li>
+<li>URLs are <strong>permanent</strong> and won't break</li>
 <li>You can <strong>reference files from your HTML</strong> using these URLs</li>
 <li>Files can be <strong>accessed by anyone</strong> (if publicly available)</li>
 </ul>
 <h3 id="3-html-css-and-javascript-working-together">3. HTML, CSS, and JavaScript Working Together</h3>
-<p>Think of building <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> web application like building <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> house:</p>
+<p>Think of building a <a href="GLOSSARY.html#web-application" class="glossary-term" title="An application accessed through a web browser rather than installed software.">web application</a> like building a house:</p>
 <ul>
-<li><strong>HTML (HyperText Markup Language)</strong> is the structure - the walls, floors, and rooms</li>
-<li><strong>CSS (Cascading Style Sheets)</strong> is the decoration - paint colors, furniture arrangement, lighting</li>
+<li><strong><a href="GLOSSARY.html#html-hypertext-markup-language" class="glossary-term" title="The standard language for creating web pages, using tags to structure content.">HTML (HyperText Markup Language)</a></strong> is the structure - the walls, floors, and rooms</li>
+<li><strong><a href="GLOSSARY.html#css-cascading-style-sheets" class="glossary-term" title="A language for describing how HTML elements should be displayed (colors, layout, fonts, etc.).">CSS (Cascading Style Sheets)</a></strong> is the decoration - paint colors, furniture arrangement, lighting</li>
 <li><strong>JavaScript</strong> is the electricity and plumbing - makes things interactive and dynamic</li>
 </ul>
 <p>We'll build our application step by step, showing how each piece works.</p>
@@ -439,35 +439,35 @@ When you deposit files in SDR, they maintain their folder structure. If you use 
 <p>We'll progress through these steps:</p>
 <ol>
 <li><strong>Step 0:</strong> Basic HTML structure (the foundation)</li>
-<li><strong>Step 1:</strong> Adding <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> map container (creating the space for our map)</li>
-<li><strong>Step 2:</strong> Initializing <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> Leaflet map (making the map interactive)</li>
-<li><strong>Step 3:</strong> Loading GeoJSON points (adding artwork locations)</li>
+<li><strong>Step 1:</strong> Adding a map container (creating the space for our map)</li>
+<li><strong>Step 2:</strong> Initializing a <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> map (making the map interactive)</li>
+<li><strong>Step 3:</strong> Loading <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> points (adding artwork locations)</li>
 <li><strong>Step 4:</strong> Adding popups with information (making markers clickable)</li>
-<li><strong>Step 5:</strong> Adding <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> Cloud Optimized GeoTIFF from Digital Stacks (aerial imagery)</li>
-<li><strong>Step 6:</strong> Creating <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> split-screen layout with external CSS (organizing the page)</li>
-<li><strong>Step 7:</strong> Fetching basic Wikidata information (getting artwork details)</li>
-<li><strong>Step 8:</strong> Adding Wikidata images (showing artwork photos)</li>
+<li><strong>Step 5:</strong> Adding a Cloud Optimized <a href="GLOSSARY.html#geotiff" class="glossary-term" title="A file format for storing geospatial raster images with geographic metadata.">GeoTIFF</a> from <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> (aerial imagery)</li>
+<li><strong>Step 6:</strong> Creating a split-screen layout with external CSS (organizing the page)</li>
+<li><strong>Step 7:</strong> Fetching basic <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> information (getting artwork details)</li>
+<li><strong>Step 8:</strong> Adding <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> images (showing artwork photos)</li>
 <li><strong>Step 9:</strong> Complete integration with all properties (the final application)</li>
 </ol>
 <p>Each step builds on the previous one, so you'll see exactly how each feature is added.</p>
 <h2 id="how-to-use-these-materials">How to Use These Materials</h2>
 <ol>
-<li><strong>Read each step'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> markdown document</strong> to understand what you're building</li>
+<li><strong>Read each step's markdown document</strong> to understand what you're building</li>
 <li><strong>Look at the corresponding HTML file</strong> to see the working code</li>
-<li><strong>Open the HTML file in your browser</strong> to see the result</li>
+<li><strong>Open the HTML file in your <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a></strong> to see the result</li>
 <li><strong>Try modifying the code</strong> yourself to experiment</li>
 <li><strong>Use these examples as templates</strong> for your own projects</li>
 </ol>
 <h2 id="ready-to-get-started">Ready to Get Started?</h2>
-<p>Let'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> begin with <a href="01-step-00-basic-html.html">Step 0: Basic HTML Structure</a>!</p>
+<p><a href="GLOSSARY.html#let" class="glossary-term" title="JavaScript keyword for declaring variables that can be reassigned. Block-scoped.">Let</a>'s begin with <a href="01-step-00-basic-html.html">Step 0: Basic HTML Structure</a>!</p>
 <hr></hr>
 <h2 id="additional-resources">Additional Resources</h2>
 <ul>
-<li><strong>Digital Stacks Documentation:</strong> <a href="https://github.com/sul-dlss/stacks" target="_blank">https://github.com/sul-dlss/stacks</a></li>
-<li><strong>Leaflet Documentation:</strong> <a href="https://leafletjs.com/" target="_blank">https://leafletjs.com/</a></li>
-<li><strong>Wikidata API:</strong> <a href="https://www.wikidata.org/wiki/Wikidata:Data_access" target="_blank">https://www.wikidata.org/wiki/Wikidata:Data_access</a></li>
+<li><strong><a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> Documentation:</strong> <a href="https://github.com/sul-dlss/stacks" target="_blank">https://github.com/sul-dlss/stacks</a></li>
+<li><strong><a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> Documentation:</strong> <a href="https://leafletjs.com/" target="_blank">https://leafletjs.com/</a></li>
+<li><strong><a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> API:</strong> <a href="https://www.wikidata.org/wiki/Wikidata:Data_access" target="_blank">https://www.wikidata.org/wiki/Wikidata:Data_access</a></li>
 <li><strong>MDN Web Docs (HTML/CSS/JavaScript):</strong> <a href="https://developer.mozilla.org/" target="_blank">https://developer.mozilla.org/</a></li>
-<li><strong>GeoJSON Specification:</strong> <a href="https://geojson.org/" target="_blank">https://geojson.org/</a></li>
+<li><strong><a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> Specification:</strong> <a href="https://geojson.org/" target="_blank">https://geojson.org/</a></li>
 </ul>
 <hr></hr>
 <p><em>This workshop is brought to you by the Stanford Geospatial Center</em></p>
@@ -514,7 +514,7 @@ When you deposit files in SDR, they maintain their folder structure. If you use 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Workshop Introduction","level":"1.2","depth":1,"next":{"title":"Step 0: Basic HTML Structure","level":"2.1","depth":1,"path":"01-step-00-basic-html.md","ref":"01-step-00-basic-html.md","articles":[]},"previous":{"title":"Overview","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"00-workshop-introduction.md","mtime":"2026-01-26T20:48:39.628Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T20:48:56.101Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Workshop Introduction","level":"1.2","depth":1,"next":{"title":"Step 0: Basic HTML Structure","level":"2.1","depth":1,"path":"01-step-00-basic-html.md","ref":"01-step-00-basic-html.md","articles":[]},"previous":{"title":"Overview","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"00-workshop-introduction.md","mtime":"2026-01-26T20:57:45.967Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T20:57:55.258Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

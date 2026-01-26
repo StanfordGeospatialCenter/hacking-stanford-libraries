@@ -357,40 +357,40 @@
                                 
                                 <h1 id="step-5-adding-cloud-optimized-geotiff-from-digital-stacks">Step 5: Adding Cloud Optimized GeoTIFF from Digital Stacks</h1>
 <h2 id="overview">Overview</h2>
-<p>In this step, we'll add <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> high-resolution aerial photograph of Stanford campus, served directly from the Stanford Digital Repository through the Digital Stacks API.</p>
+<p>In this step, we'll add a high-resolution aerial photograph of Stanford campus, served directly from the Stanford <a href="GLOSSARY.html#digital-repository" class="glossary-term" title="A system for storing, managing, and providing access to digital content over time.">Digital Repository</a> through the <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> API.</p>
 <h2 id="learning-objectives">Learning Objectives</h2>
 <ul>
 <li>Understand what Cloud Optimized GeoTIFFs (COGs) are</li>
-<li>Learn how to access raster imagery from Digital Stacks</li>
-<li>Use the georaster-layer-for-leaflet library</li>
-<li>Understand PURLs and DRUIDs in the Stanford Digital Repository</li>
-<li>Learn about masking/clipping raster data with GeoJSON</li>
+<li>Learn how to access <a href="GLOSSARY.html#raster" class="glossary-term" title="Geographic data represented as a grid of pixels (like satellite imagery), as opposed to vector data.">raster</a> imagery from <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a></li>
+<li>Use the <a href="GLOSSARY.html#georaster" class="glossary-term" title="A JavaScript library for working with raster geographic data in the browser.">georaster</a>-layer-for-<a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">leaflet</a> library</li>
+<li>Understand PURLs and DRUIDs in the Stanford <a href="GLOSSARY.html#digital-repository" class="glossary-term" title="A system for storing, managing, and providing access to digital content over time.">Digital Repository</a></li>
+<li>Learn about masking/clipping <a href="GLOSSARY.html#raster" class="glossary-term" title="Geographic data represented as a grid of pixels (like satellite imagery), as opposed to vector data.">raster</a> data with <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a></li>
 </ul>
 <h2 id="what-is-a-cloud-optimized-geotiff-cog">What is a Cloud Optimized GeoTIFF (COG)?</h2>
-<p><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> <strong>Cloud Optimized GeoTIFF</strong> is <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> special format for storing geographic imagery that:</p>
+<p>A <strong>Cloud Optimized <a href="GLOSSARY.html#geotiff" class="glossary-term" title="A file format for storing geospatial raster images with geographic metadata.">GeoTIFF</a></strong> is a special format for storing geographic imagery that:</p>
 <ul>
-<li><strong>Streams efficiently</strong> over the internet (you don'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> need to download the whole file)</li>
+<li><strong>Streams efficiently</strong> over the internet (you don't need to download the whole file)</li>
 <li><strong>Loads progressively</strong> (low resolution first, then higher detail)</li>
-<li><strong>Includes georeferencing</strong> (knows exactly where on Earth it belongs)</li>
-<li><strong>Works with standard tools</strong> (compatible with all GeoTIFF software)</li>
+<li><strong>Includes <a href="GLOSSARY.html#georeferencing" class="glossary-term" title="The process of associating geographic coordinates with image pixels.">georeferencing</a></strong> (knows exactly where on Earth it belongs)</li>
+<li><strong>Works with standard tools</strong> (compatible with all <a href="GLOSSARY.html#geotiff" class="glossary-term" title="A file format for storing geospatial raster images with geographic metadata.">GeoTIFF</a> software)</li>
 </ul>
-<p>Think of it like <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> "smart image" that knows where it is on the map and can stream just the parts you need.</p>
+<p>Think of it like a "smart image" that knows where it is on the map and can stream just the parts you need.</p>
 <h2 id="understanding-digital-stacks-urls">Understanding Digital Stacks URLs</h2>
 <h3 id="the-anatomy-of-a-digital-stacks-url">The Anatomy of a Digital Stacks URL</h3>
 <pre><code>https://stacks.stanford.edu/file/druid:vb564st1676/graduation-stanford_stanford-california_20240616_171600_ssc2_nrg_flat_50cm_rotated-154_large_COG.tif
-</code></pre><p>Let'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> break this down:</p>
+</code></pre><p><a href="GLOSSARY.html#let" class="glossary-term" title="JavaScript keyword for declaring variables that can be reassigned. Block-scoped.">Let</a>'s break this down:</p>
 <ol>
-<li><strong><code>https://stacks.stanford.edu</code></strong> - The Digital Stacks web service</li>
-<li><strong><code>/file/</code></strong> - We're requesting <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> file (not <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> PURL page)</li>
-<li><strong><code>druid:vb564st1676</code></strong> - The DRUID (unique identifier) for this object</li>
-<li><strong><code>/graduation-stanford_...COG.tif</code></strong> - The filename within that object</li>
+<li><strong><code>https://stacks.stanford.edu</code></strong> - The <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> web service</li>
+<li><strong><code>/file/</code></strong> - We're requesting a file (not a PURL page)</li>
+<li><strong><code>druid:vb564st1676</code></strong> - The DRUID (unique identifier) for this <a href="GLOSSARY.html#object" class="glossary-term" title="A JavaScript data structure storing key-value pairs. Example: {name: &quot;John&quot;, age: 30}">object</a></li>
+<li><strong><code>/graduation-stanford_...COG.tif</code></strong> - The filename within that <a href="GLOSSARY.html#object" class="glossary-term" title="A JavaScript data structure storing key-value pairs. Example: {name: &quot;John&quot;, age: 30}">object</a></li>
 </ol>
 <h3 id="what-is-a-druid">What is a DRUID?</h3>
-<p><strong>DRUID</strong> = Digital Repository Unique Identifier</p>
+<p><strong>DRUID</strong> = <a href="GLOSSARY.html#digital-repository" class="glossary-term" title="A system for storing, managing, and providing access to digital content over time.">Digital Repository</a> Unique Identifier</p>
 <ul>
-<li><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> permanent ID for every object in SDR</li>
+<li>A permanent ID for every <a href="GLOSSARY.html#object" class="glossary-term" title="A JavaScript data structure storing key-value pairs. Example: {name: &quot;John&quot;, age: 30}">object</a> in SDR</li>
 <li>Format: <code>druid:</code> followed by 11 characters (like <code>vb564st1676</code>)</li>
-<li>Never changes, even if the object is updated</li>
+<li>Never changes, even if the <a href="GLOSSARY.html#object" class="glossary-term" title="A JavaScript data structure storing key-value pairs. Example: {name: &quot;John&quot;, age: 30}">object</a> is updated</li>
 <li>Guaranteed to work forever (permanent URLs)</li>
 </ul>
 <p><strong>Example DRUID:</strong> <code>druid:vb564st1676</code></p>
@@ -406,7 +406,7 @@
 <li>Shows metadata, description, download options</li>
 <li>Good for linking in papers and websites</li>
 </ul>
-<p><strong>Digital Stacks File URL:</strong></p>
+<p><strong><a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> File URL:</strong></p>
 <pre><code>https://stacks.stanford.edu/file/druid:vb564st1676/filename.tif
 </code></pre><ul>
 <li>Direct access to the file</li>
@@ -525,39 +525,39 @@
 </code></pre>
 <h2 id="whats-new">What's New?</h2>
 <h3 id="1-new-javascript-libraries">1. New JavaScript Libraries</h3>
-<p>We're adding three new libraries to handle GeoTIFF files:</p>
+<p>We're adding three new libraries to handle <a href="GLOSSARY.html#geotiff" class="glossary-term" title="A file format for storing geospatial raster images with geographic metadata.">GeoTIFF</a> files:</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/proj4"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/georaster"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/georaster-layer-for-leaflet"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
-<p><strong>proj4:</strong> Handles coordinate system transformations (different map projections)</p>
-<p><strong>georaster:</strong> Reads and parses GeoTIFF files</p>
-<p><strong>georaster-layer-for-leaflet:</strong> Displays georasters on Leaflet maps</p>
+<p><strong><a href="GLOSSARY.html#proj4" class="glossary-term" title="A JavaScript library for transforming coordinates between different projection systems.">proj4</a>:</strong> Handles coordinate system transformations (different map projections)</p>
+<p><strong><a href="GLOSSARY.html#georaster" class="glossary-term" title="A JavaScript library for working with raster geographic data in the browser.">georaster</a>:</strong> Reads and parses <a href="GLOSSARY.html#geotiff" class="glossary-term" title="A file format for storing geospatial raster images with geographic metadata.">GeoTIFF</a> files</p>
+<p><strong><a href="GLOSSARY.html#georaster" class="glossary-term" title="A JavaScript library for working with raster geographic data in the browser.">georaster</a>-layer-for-<a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">leaflet</a>:</strong> Displays georasters on <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> maps</p>
 <h3 id="2-constructing-the-file-url">2. Constructing the File URL</h3>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> url_to_geotiff_file = <span class="hljs-keyword">new</span> <span class="hljs-title function_">URL</span>(<span class="hljs-string">"collection/stanford_campus_irg.tif"</span>, <span class="hljs-variable language_">window</span>.<span class="hljs-property">location</span>.<span class="hljs-property">href</span>).<span class="hljs-property">href</span>;
 </code></pre>
-<p><strong>What this does:</strong> Converts <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> relative path to an absolute URL</p>
+<p><strong>What this does:</strong> Converts a <a href="GLOSSARY.html#relative-path" class="glossary-term" title="A file path specified relative to the current file's location. Example: collection/data.json">relative path</a> to an absolute URL</p>
 <p><strong>Breaking it down:</strong></p>
 <ul>
-<li><code>"collection/stanford_campus_irg.tif"</code> - Relative path to our file</li>
-<li><code>window.location.href</code> - The current page'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> full URL</li>
-<li><code>new URL(relative, base)</code> - JavaScript function that resolves relative paths</li>
-<li><code>.href</code> - Gets the full absolute URL as <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> string</li>
+<li><code>"collection/stanford_campus_irg.tif"</code> - <a href="GLOSSARY.html#relative-path" class="glossary-term" title="A file path specified relative to the current file's location. Example: collection/data.json">Relative path</a> to our file</li>
+<li><code>window.location.href</code> - The current page's full URL</li>
+<li><code>new URL(relative, base)</code> - JavaScript <a href="GLOSSARY.html#function" class="glossary-term" title="A reusable block of code that performs a specific task. Can accept input (parameters) and return output.">function</a> that resolves relative paths</li>
+<li><code>.href</code> - Gets the full absolute URL as a <a href="GLOSSARY.html#string" class="glossary-term" title="A data type representing text. Created with quotes: &quot;text&quot; or 'text'">string</a></li>
 </ul>
-<p><strong>Why we need this:</strong> The georaster library requires <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> full URL, not just <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> relative path.</p>
+<p><strong>Why we need this:</strong> The <a href="GLOSSARY.html#georaster" class="glossary-term" title="A JavaScript library for working with raster geographic data in the browser.">georaster</a> library requires a full URL, not just a <a href="GLOSSARY.html#relative-path" class="glossary-term" title="A file path specified relative to the current file's location. Example: collection/data.json">relative path</a>.</p>
 <p><strong>Example transformation:</strong></p>
 <ul>
 <li>Your HTML is at: <code>file:///Users/you/project/index.html</code></li>
-<li>Relative path: <code>collection/stanford_campus_irg.tif</code></li>
+<li><a href="GLOSSARY.html#relative-path" class="glossary-term" title="A file path specified relative to the current file's location. Example: collection/data.json">Relative path</a>: <code>collection/stanford_campus_irg.tif</code></li>
 <li>Result: <code>file:///Users/you/project/collection/stanford_campus_irg.tif</code></li>
 </ul>
 <p><strong>In SDR:</strong></p>
 <ul>
 <li>Your HTML is at: <code>https://stacks.stanford.edu/file/druid:abc123/index.html</code></li>
-<li>Relative path: <code>collection/stanford_campus_irg.tif</code></li>
+<li><a href="GLOSSARY.html#relative-path" class="glossary-term" title="A file path specified relative to the current file's location. Example: collection/data.json">Relative path</a>: <code>collection/stanford_campus_irg.tif</code></li>
 <li>Result: <code>https://stacks.stanford.edu/file/druid:abc123/collection/stanford_campus_irg.tif</code></li>
 </ul>
-<p><strong>Using Digital Stacks directly:</strong></p>
+<p><strong>Using <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> directly:</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> url_to_geotiff_file = <span class="hljs-string">"https://stacks.stanford.edu/file/druid:vb564st1676/graduation-stanford_COG.tif"</span>;
 </code></pre>
 <h3 id="3-parsing-the-geotiff">3. Parsing the GeoTIFF</h3>
@@ -566,7 +566,7 @@
   <span class="hljs-comment">// ... more code ...</span>
 }).<span class="hljs-title function_">catch</span>(<span class="hljs-variable language_">console</span>.<span class="hljs-property">error</span>);
 </code></pre>
-<p><strong>What is <code>.then()</code>?</strong> This is <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> <strong>Promise</strong> - JavaScript'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> way of handling asynchronous operations (tasks that take time).</p>
+<p><strong>What is <code>.then()</code>?</strong> This is a <strong><a href="GLOSSARY.html#promise" class="glossary-term" title="JavaScript object representing the eventual completion or failure of an asynchronous operation.">Promise</a></strong> - JavaScript's way of handling <a href="GLOSSARY.html#asynchronous" class="glossary-term" title="Code that doesn't block execution while waiting for operations (like network requests) to complete. Allows other code to run while waiting.">asynchronous</a> operations (tasks that take time).</p>
 <p><strong>Think of it like ordering food:</strong></p>
 <ol>
 <li>You order (call <code>parseGeoraster()</code>)</li>
@@ -574,14 +574,14 @@
 <li>Food arrives (<code>.then()</code> runs with the result)</li>
 <li>Something went wrong (<code>.catch()</code> handles errors)</li>
 </ol>
-<p><strong>The georaster object contains:</strong></p>
+<p><strong>The <a href="GLOSSARY.html#georaster" class="glossary-term" title="A JavaScript library for working with raster geographic data in the browser.">georaster</a> <a href="GLOSSARY.html#object" class="glossary-term" title="A JavaScript data structure storing key-value pairs. Example: {name: &quot;John&quot;, age: 30}">object</a> contains:</strong></p>
 <ul>
 <li>Image width and height</li>
 <li>Geographic bounds (where the image belongs on Earth)</li>
 <li>Pixel values (the actual image data)</li>
 <li>Coordinate reference system information</li>
 </ul>
-<p><strong><code>console.log()</code></strong> prints information to the browser'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> developer console (press F12 to see it).</p>
+<p><strong><code>console.log()</code></strong> prints information to the <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a>'s developer console (press F12 to see it).</p>
 <h3 id="4-loading-the-mask-geojson">4. Loading the Mask GeoJSON</h3>
 <pre><code class="lang-javascript"><span class="hljs-title function_">fetch</span>(<span class="hljs-string">"collection/stanford_campus.geojson"</span>)
   .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">r</span> =&gt;</span> r.<span class="hljs-title function_">json</span>())
@@ -589,15 +589,15 @@
     <span class="hljs-comment">// Use the mask</span>
   });
 </code></pre>
-<p><strong>What is <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> mask?</strong> <a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> GeoJSON polygon that clips (cuts out) the raster to <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> specific shape.</p>
-<p><strong>Why use <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> mask?</strong> The COG might cover <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> large area, but we only want to show Stanford campus.</p>
-<p><strong>The <code>fetch()</code> function:</strong></p>
+<p><strong>What is a mask?</strong> A <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> polygon that clips (cuts out) the <a href="GLOSSARY.html#raster" class="glossary-term" title="Geographic data represented as a grid of pixels (like satellite imagery), as opposed to vector data.">raster</a> to a specific shape.</p>
+<p><strong>Why use a mask?</strong> The COG might cover a large area, but we only want to show Stanford campus.</p>
+<p><strong>The <code>fetch()</code> <a href="GLOSSARY.html#function" class="glossary-term" title="A reusable block of code that performs a specific task. Can accept input (parameters) and return output.">function</a>:</strong></p>
 <ul>
 <li>Downloads files from URLs (local or remote)</li>
-<li>Returns <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> Promise (uses <code>.then()</code> like above)</li>
-<li><code>.json()</code> parses the response as JSON data</li>
+<li>Returns a <a href="GLOSSARY.html#promise" class="glossary-term" title="JavaScript object representing the eventual completion or failure of an asynchronous operation.">Promise</a> (uses <code>.then()</code> like above)</li>
+<li><code>.json()</code> parses the <a href="GLOSSARY.html#response" class="glossary-term" title="Data returned from an API request.">response</a> as JSON data</li>
 </ul>
-<p><strong>Nested .then():</strong> We wait for the GeoJSON to load, then create the layer.</p>
+<p><strong><a href="GLOSSARY.html#nested" class="glossary-term" title="Elements or data structures contained within others. Example: <div><p>Nested</p></div>">Nested</a> .then():</strong> We wait for the <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> to load, then create the layer.</p>
 <h3 id="5-creating-the-raster-layer">5. Creating the Raster Layer</h3>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> layer = <span class="hljs-keyword">new</span> <span class="hljs-title class_">GeoRasterLayer</span>({
   <span class="hljs-attr">attribution</span>: <span class="hljs-string">"Planet"</span>,
@@ -609,9 +609,9 @@
 <p><strong>Configuration options:</strong></p>
 <ul>
 <li><strong><code>attribution: "Planet"</code></strong> - Credit for the imagery source</li>
-<li><strong><code>georaster: georaster</code></strong> - The parsed GeoTIFF data</li>
+<li><strong><code>georaster: georaster</code></strong> - The parsed <a href="GLOSSARY.html#geotiff" class="glossary-term" title="A file format for storing geospatial raster images with geographic metadata.">GeoTIFF</a> data</li>
 <li><strong><code>resolution: 128</code></strong> - How many pixels to render (lower = faster but blockier)</li>
-<li><strong><code>mask: maskGeojson</code></strong> - Clip the raster to this polygon</li>
+<li><strong><code>mask: maskGeojson</code></strong> - Clip the <a href="GLOSSARY.html#raster" class="glossary-term" title="Geographic data represented as a grid of pixels (like satellite imagery), as opposed to vector data.">raster</a> to this polygon</li>
 </ul>
 <p><strong>Resolution explained:</strong></p>
 <ul>
@@ -624,7 +624,7 @@
 map.<span class="hljs-title function_">fitBounds</span>(layer.<span class="hljs-title function_">getBounds</span>());
 </code></pre>
 <p><strong><code>.addTo(map)</code></strong> - Displays the layer on the map</p>
-<p><strong><code>map.fitBounds()</code></strong> - Automatically zooms and centers the map to show the entire raster layer</p>
+<p><strong><code>map.fitBounds()</code></strong> - Automatically zooms and centers the map to show the entire <a href="GLOSSARY.html#raster" class="glossary-term" title="Geographic data represented as a grid of pixels (like satellite imagery), as opposed to vector data.">raster</a> layer</p>
 <h2 id="file-structure-for-sdr-deposit">File Structure for SDR Deposit</h2>
 <p>When depositing to SDR, organize your files like this:</p>
 <pre><code>your-sdr-object/
@@ -652,21 +652,21 @@ https://stacks.stanford.edu/file/druid:abc123xyz456/collection/stanford_campus.g
 <li>Always access the latest version</li>
 <li>Save storage space</li>
 </ul>
-<p><strong>Use case:</strong> Build <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> collection viewer that references imagery from multiple DRUIDs.</p>
+<p><strong>Use case:</strong> Build a collection viewer that references imagery from multiple DRUIDs.</p>
 <h2 id="try-it-yourself">Try It Yourself</h2>
 <ol>
-<li><strong>Make sure you have the GeoTIFF file</strong> in <code>collection/stanford_campus_irg.tif</code></li>
+<li><strong>Make sure you have the <a href="GLOSSARY.html#geotiff" class="glossary-term" title="A file format for storing geospatial raster images with geographic metadata.">GeoTIFF</a> file</strong> in <code>collection/stanford_campus_irg.tif</code></li>
 <li><strong>Copy the complete code</strong> into <code>step-05.html</code></li>
-<li><strong>Open in your browser</strong></li>
+<li><strong>Open in your <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a></strong></li>
 </ol>
 <p>You should see the aerial photograph overlaid on the map!</p>
 <h3 id="troubleshooting">Troubleshooting</h3>
-<p><strong>If the image doesn'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> appear:</strong></p>
+<p><strong>If the image doesn't appear:</strong></p>
 <ul>
-<li>Check the browser console (F12) for errors</li>
+<li>Check the <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a> console (F12) for errors</li>
 <li>Verify the file path is correct</li>
 <li>Make sure the file exists</li>
-<li>Try using the absolute Digital Stacks URL instead</li>
+<li>Try using the absolute <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> URL instead</li>
 </ul>
 <p><strong>If the image is too slow:</strong></p>
 <ul>
@@ -677,8 +677,8 @@ https://stacks.stanford.edu/file/druid:abc123xyz456/collection/stanford_campus.g
 <h2 id="the-power-of-cogs-with-digital-stacks">The Power of COGs with Digital Stacks</h2>
 <p>This combination is powerful because:</p>
 <ol>
-<li><strong>COGs stream efficiently</strong> - Users don'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> download the whole file</li>
-<li><strong>Digital Stacks serves reliably</strong> - Stanford'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> infrastructure is robust</li>
+<li><strong>COGs stream efficiently</strong> - Users don't download the whole file</li>
+<li><strong><a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> serves reliably</strong> - Stanford's infrastructure is robust</li>
 <li><strong>Files are permanent</strong> - DRUIDs never break</li>
 <li><strong>Bandwidth is optimized</strong> - Only needed tiles are transferred</li>
 <li><strong>Works globally</strong> - Fast access from anywhere</li>
@@ -686,34 +686,34 @@ https://stacks.stanford.edu/file/druid:abc123xyz456/collection/stanford_campus.g
 <p><strong>Traditional approach (without COGs):</strong></p>
 <ul>
 <li>User clicks "view map"</li>
-<li>Browser downloads 500MB GeoTIFF</li>
+<li><a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">Browser</a> downloads 500MB <a href="GLOSSARY.html#geotiff" class="glossary-term" title="A file format for storing geospatial raster images with geographic metadata.">GeoTIFF</a></li>
 <li>Wait 5+ minutes on slow connection</li>
-<li>Browser might crash with large files</li>
+<li><a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">Browser</a> might crash with large files</li>
 </ul>
 <p><strong>COG approach:</strong></p>
 <ul>
 <li>User clicks "view map"</li>
-<li>Browser fetches just the visible portions (~1-5MB)</li>
+<li><a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">Browser</a> fetches just the visible portions (~1-5MB)</li>
 <li>Map appears in seconds</li>
 <li>Smooth experience on any device</li>
 </ul>
 <h2 id="whats-next">What's Next?</h2>
-<p>In <a href="06-step-06-split-layout.md">Step 6: Split-Screen Layout with External CSS</a>, we'll reorganize our page to show the map on the left and create space for Wikidata information on the right!</p>
+<p>In <a href="06-step-06-split-layout.md">Step 6: Split-Screen Layout with External CSS</a>, we'll reorganize our page to show the map on the left and create space for <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> information on the right!</p>
 <h2 id="key-takeaways">Key Takeaways</h2>
 <ul>
-<li>COGs enable efficient streaming of large raster files  </li>
-<li>Digital Stacks URLs follow the pattern: <code>stacks.stanford.edu/file/druid:ID/filename</code>  </li>
+<li>COGs enable efficient streaming of large <a href="GLOSSARY.html#raster" class="glossary-term" title="Geographic data represented as a grid of pixels (like satellite imagery), as opposed to vector data.">raster</a> files  </li>
+<li><a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> URLs follow the pattern: <code>stacks.stanford.edu/file/druid:ID/filename</code>  </li>
 <li>DRUIDs are permanent identifiers that never change  </li>
 <li>Relative paths work perfectly in SDR deposits  </li>
-<li>The <code>new URL()</code> function resolves relative paths to absolute URLs  </li>
-<li>Promises (<code>.then()</code>) handle asynchronous operations  </li>
+<li>The <code>new URL()</code> <a href="GLOSSARY.html#function" class="glossary-term" title="A reusable block of code that performs a specific task. Can accept input (parameters) and return output.">function</a> resolves relative paths to absolute URLs  </li>
+<li>Promises (<code>.then()</code>) handle <a href="GLOSSARY.html#asynchronous" class="glossary-term" title="Code that doesn't block execution while waiting for operations (like network requests) to complete. Allows other code to run while waiting.">asynchronous</a> operations  </li>
 <li>Masks clip rasters to specific geographic areas  </li>
 </ul>
 <h2 id="common-questions">Common Questions</h2>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Can <a href="GLOSSARY.html#i" class="glossary-term" title="">I</a> use my own GeoTIFF?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: Yes! Use any georeferenced TIF file. Convert to COG format with GDAL for best performance.</p>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: How do <a href="GLOSSARY.html#i" class="glossary-term" title="">I</a> get <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> DRUID?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: Deposit your files to SDR through the Stanford digital repository system. <a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> DRUID is assigned automatically.</p>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Can <a href="GLOSSARY.html#i" class="glossary-term" title="">I</a> use COGs from other sources?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: Yes! Any publicly accessible COG works. Try USGS, NASA, or other open data sources.</p>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Why use <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> mask?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: Masks improve performance and focus attention on your area of interest.</p>
+<p><strong>Q: Can I use my own <a href="GLOSSARY.html#geotiff" class="glossary-term" title="A file format for storing geospatial raster images with geographic metadata.">GeoTIFF</a>?</strong><br></br>A: Yes! Use any georeferenced TIF file. Convert to COG format with GDAL for best performance.</p>
+<p><strong>Q: How do I get a DRUID?</strong><br></br>A: Deposit your files to SDR through the Stanford <a href="GLOSSARY.html#digital-repository" class="glossary-term" title="A system for storing, managing, and providing access to digital content over time.">digital repository</a> system. A DRUID is assigned automatically.</p>
+<p><strong>Q: Can I use COGs from other sources?</strong><br></br>A: Yes! Any publicly accessible COG works. Try USGS, NASA, or other open data sources.</p>
+<p><strong>Q: Why use a mask?</strong><br></br>A: Masks improve performance and focus attention on your area of interest.</p>
 <hr></hr>
 <p><strong>Previous:</strong> <a href="04-step-04-popups.md">Step 4: Add Popups</a> | <strong>Next:</strong> <a href="07-step-06-split-layout.html">Step 6: Split Layout</a></p>
 
@@ -759,7 +759,7 @@ https://stacks.stanford.edu/file/druid:abc123xyz456/collection/stanford_campus.g
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Step 5: Cloud Optimized GeoTIFF from Digital Stacks","level":"2.6","depth":1,"next":{"title":"Step 6: Split-Screen Layout","level":"2.7","depth":1,"path":"07-step-06-split-layout.md","ref":"07-step-06-split-layout.md","articles":[]},"previous":{"title":"Step 4: Add Popups","level":"2.5","depth":1,"path":"05-step-04-popups.md","ref":"05-step-04-popups.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"06-step-05-cog-from-stacks.md","mtime":"2026-01-26T20:48:39.629Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T20:48:56.101Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Step 5: Cloud Optimized GeoTIFF from Digital Stacks","level":"2.6","depth":1,"next":{"title":"Step 6: Split-Screen Layout","level":"2.7","depth":1,"path":"07-step-06-split-layout.md","ref":"07-step-06-split-layout.md","articles":[]},"previous":{"title":"Step 4: Add Popups","level":"2.5","depth":1,"path":"05-step-04-popups.md","ref":"05-step-04-popups.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"06-step-05-cog-from-stacks.md","mtime":"2026-01-26T20:57:45.967Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T20:57:55.258Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

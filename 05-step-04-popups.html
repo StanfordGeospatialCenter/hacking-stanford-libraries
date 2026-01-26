@@ -374,7 +374,7 @@
 <li>Show detailed information without cluttering the map</li>
 <li>Make maps interactive and explorable</li>
 <li>Provide context about geographic features</li>
-<li>Create <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> better user experience</li>
+<li>Create a better user experience</li>
 </ul>
 <h2 id="the-complete-code">The Complete Code</h2>
 <pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
@@ -466,20 +466,20 @@
     <span class="hljs-comment">// This runs for each feature in your GeoJSON</span>
 }
 </code></pre>
-<p><strong>What is <code>onEachFeature</code>?</strong> <a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> function that runs once for every feature (point, line, polygon) in your GeoJSON.</p>
+<p><strong>What is <code>onEachFeature</code>?</strong> A <a href="GLOSSARY.html#function" class="glossary-term" title="A reusable block of code that performs a specific task. Can accept input (parameters) and return output.">function</a> that runs once for every feature (point, line, polygon) in your <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a>.</p>
 <p><strong>When to use it:</strong></p>
 <ul>
 <li>Bind popups or tooltips</li>
-<li>Attach event listeners (clicks, hovers)</li>
+<li>Attach <a href="GLOSSARY.html#event" class="glossary-term" title="An action that happens in the browser (click, scroll, key press) that can trigger JavaScript code.">event</a> listeners (clicks, hovers)</li>
 <li>Style individual features based on their properties</li>
 <li>Add custom behavior to features</li>
 </ul>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><strong><code>feature</code></strong> - The GeoJSON feature (with geometry and properties)</li>
-<li><strong><code>layer</code></strong> - The Leaflet layer that was created for this feature (the circle marker)</li>
+<li><strong><code>feature</code></strong> - The <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> feature (with geometry and properties)</li>
+<li><strong><code>layer</code></strong> - The <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> layer that was created for this feature (the circle <a href="GLOSSARY.html#marker" class="glossary-term" title="A visual indicator on a map showing a specific location.">marker</a>)</li>
 </ul>
-<p><strong>Execution:</strong> If you have 50 artworks in your GeoJSON, this function runs 50 times (once per artwork).</p>
+<p><strong>Execution:</strong> If you have 50 artworks in your <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a>, this <a href="GLOSSARY.html#function" class="glossary-term" title="A reusable block of code that performs a specific task. Can accept input (parameters) and return output.">function</a> runs 50 times (once per artwork).</p>
 <h3 id="2-accessing-feature-properties-safely">2. Accessing Feature Properties Safely</h3>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> props = feature.<span class="hljs-property">properties</span> || {};
 <span class="hljs-keyword">const</span> title = props.<span class="hljs-property">name</span> || <span class="hljs-string">'Artwork'</span>;
@@ -490,17 +490,17 @@
 <p><strong>Line 1: Get properties safely</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> props = feature.<span class="hljs-property">properties</span> || {};
 </code></pre>
-<p><strong>The <code>||</code> operator</strong> means "or" - if <code>feature.properties</code> doesn'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> exist, use an empty object <code>{}</code> instead.</p>
-<p><strong>Why?</strong> Prevents errors if <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> feature is missing properties.</p>
+<p><strong>The <code>||</code> operator</strong> means "or" - if <code>feature.properties</code> doesn't exist, use an empty <a href="GLOSSARY.html#object" class="glossary-term" title="A JavaScript data structure storing key-value pairs. Example: {name: &quot;John&quot;, age: 30}">object</a> <code>{}</code> instead.</p>
+<p><strong>Why?</strong> Prevents errors if a feature is missing properties.</p>
 <p><strong>Line 2: Get name with fallback</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> title = props.<span class="hljs-property">name</span> || <span class="hljs-string">'Artwork'</span>;
 </code></pre>
-<p>If <code>props.name</code> doesn'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> exist or is empty, use the default value <code>'Artwork'</code>.</p>
+<p>If <code>props.name</code> doesn't exist or is empty, use the default <a href="GLOSSARY.html#value" class="glossary-term" title="The data assigned to a variable, property, or passed to a function.">value</a> <code>'Artwork'</code>.</p>
 <p><strong>Lines 3-4: Get other properties</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> artist = props.<span class="hljs-property">artist_name</span>;
 <span class="hljs-keyword">const</span> type = props.<span class="hljs-property">artwork_type</span>;
 </code></pre>
-<p>These might be <code>undefined</code> if the properties don'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> exist - we'll handle that next.</p>
+<p>These might be <code>undefined</code> if the properties don't exist - we'll handle that next.</p>
 <h3 id="3-building-html-content-dynamically">3. Building HTML Content Dynamically</h3>
 <pre><code class="lang-javascript"><span class="hljs-keyword">let</span> popupContent = <span class="hljs-string">'&lt;div style="min-width:200px;"&gt;'</span>;
 popupContent += <span class="hljs-string">'&lt;b&gt;'</span> + title + <span class="hljs-string">'&lt;/b&gt;&lt;br&gt;'</span>;
@@ -508,38 +508,38 @@ popupContent += <span class="hljs-string">'&lt;b&gt;'</span> + title + <span cla
 <span class="hljs-keyword">if</span> (type) popupContent += <span class="hljs-string">'&lt;b&gt;Type:&lt;/b&gt; '</span> + type;
 popupContent += <span class="hljs-string">'&lt;/div&gt;'</span>;
 </code></pre>
-<p><strong>What'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> happening:</strong> We're building an HTML string piece by piece.</p>
+<p><strong>What's happening:</strong> We're building an HTML <a href="GLOSSARY.html#string" class="glossary-term" title="A data type representing text. Created with quotes: &quot;text&quot; or 'text'">string</a> piece by piece.</p>
 <p><strong>Line by line:</strong></p>
-<p><strong>1. Start with <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> div wrapper:</strong></p>
+<p><strong>1. Start with a <a href="GLOSSARY.html#div" class="glossary-term" title="An HTML element used as a container to group other elements. Example: <div id=&quot;container&quot;>...</div>">div</a> wrapper:</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">let</span> popupContent = <span class="hljs-string">'&lt;div style="min-width:200px;"&gt;'</span>;
 </code></pre>
 <ul>
-<li><code>let</code> - <a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> variable that can change (we'll add more content)</li>
-<li><code>&lt;div style="min-width:200px;"&gt;</code> - Container with minimum width (so popups aren'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> too narrow)</li>
+<li><code>let</code> - A <a href="GLOSSARY.html#variable" class="glossary-term" title="A named container for storing data values. Declared with var, let, or const.">variable</a> that can change (we'll add more content)</li>
+<li><code>&lt;div style="min-width:200px;"&gt;</code> - Container with minimum width (so popups aren't too narrow)</li>
 </ul>
 <p><strong>2. Add the title (always shown):</strong></p>
 <pre><code class="lang-javascript">popupContent += <span class="hljs-string">'&lt;b&gt;'</span> + title + <span class="hljs-string">'&lt;/b&gt;&lt;br&gt;'</span>;
 </code></pre>
 <ul>
-<li><code>+=</code> - Append to the existing string</li>
+<li><code>+=</code> - Append to the existing <a href="GLOSSARY.html#string" class="glossary-term" title="A data type representing text. Created with quotes: &quot;text&quot; or 'text'">string</a></li>
 <li><code>&lt;b&gt;</code> - Bold HTML tag</li>
-<li><code>+</code> - String concatenation (joining text together)</li>
+<li><code>+</code> - <a href="GLOSSARY.html#string" class="glossary-term" title="A data type representing text. Created with quotes: &quot;text&quot; or 'text'">String</a> <a href="GLOSSARY.html#concatenation" class="glossary-term" title="Combining strings together. Example: 'Hello ' + 'World' results in 'Hello World'">concatenation</a> (joining text together)</li>
 <li><code>&lt;br&gt;</code> - Line break (new line)</li>
 </ul>
 <p><strong>3. Conditionally add artist (only if it exists):</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (artist) popupContent += <span class="hljs-string">'&lt;b&gt;Artist:&lt;/b&gt; '</span> + artist + <span class="hljs-string">'&lt;br&gt;'</span>;
 </code></pre>
 <ul>
-<li><code>if (artist)</code> - Only run this if <code>artist</code> has <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> value (not undefined, not empty)</li>
-<li>This prevents showing "Artist: undefined"</li>
+<li><code>if (artist)</code> - Only run this if <code>artist</code> has a <a href="GLOSSARY.html#value" class="glossary-term" title="The data assigned to a variable, property, or passed to a function.">value</a> (not <a href="GLOSSARY.html#undefined" class="glossary-term" title="JavaScript value automatically assigned to variables that haven't been given a value.">undefined</a>, not empty)</li>
+<li>This prevents showing "Artist: <a href="GLOSSARY.html#undefined" class="glossary-term" title="JavaScript value automatically assigned to variables that haven't been given a value.">undefined</a>"</li>
 </ul>
 <p><strong>4. Conditionally add type:</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (type) popupContent += <span class="hljs-string">'&lt;b&gt;Type:&lt;/b&gt; '</span> + type;
 </code></pre>
-<p><strong>5. Close the div:</strong></p>
+<p><strong>5. Close the <a href="GLOSSARY.html#div" class="glossary-term" title="An HTML element used as a container to group other elements. Example: <div id=&quot;container&quot;>...</div>">div</a>:</strong></p>
 <pre><code class="lang-javascript">popupContent += <span class="hljs-string">'&lt;/div&gt;'</span>;
 </code></pre>
-<p><strong>Result:</strong> <a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> string of HTML like:</p>
+<p><strong>Result:</strong> A <a href="GLOSSARY.html#string" class="glossary-term" title="A data type representing text. Created with quotes: &quot;text&quot; or 'text'">string</a> of HTML like:</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"min-width:200px;"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>The Sieve of Eratosthenes<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Artist:<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> Mark di Suvero<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
@@ -549,31 +549,31 @@ popupContent += <span class="hljs-string">'&lt;/div&gt;'</span>;
 <h3 id="4-binding-the-popup">4. Binding the Popup</h3>
 <pre><code class="lang-javascript">layer.<span class="hljs-title function_">bindPopup</span>(popupContent);
 </code></pre>
-<p><strong>What this does:</strong> Attaches the HTML content as <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> popup to this marker.</p>
-<p><strong><code>layer</code></strong> - The circle marker we created in <code>pointToLayer</code></p>
-<p><strong>When clicked:</strong> The popup opens automatically showing the HTML content.</p>
-<p><strong>Leaflet handles:</strong></p>
+<p><strong>What this does:</strong> Attaches the HTML content as a <a href="GLOSSARY.html#popup" class="glossary-term" title="A small window that appears on a map when clicking a marker or feature.">popup</a> to this <a href="GLOSSARY.html#marker" class="glossary-term" title="A visual indicator on a map showing a specific location.">marker</a>.</p>
+<p><strong><code>layer</code></strong> - The circle <a href="GLOSSARY.html#marker" class="glossary-term" title="A visual indicator on a map showing a specific location.">marker</a> we created in <code>pointToLayer</code></p>
+<p><strong>When clicked:</strong> The <a href="GLOSSARY.html#popup" class="glossary-term" title="A small window that appears on a map when clicking a marker or feature.">popup</a> opens automatically showing the HTML content.</p>
+<p><strong><a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> handles:</strong></p>
 <ul>
-<li>Opening/closing the popup</li>
-<li>Positioning it near the marker</li>
-<li>Closing other popups when <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> new one opens</li>
-<li>Adding <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> close button</li>
+<li>Opening/closing the <a href="GLOSSARY.html#popup" class="glossary-term" title="A small window that appears on a map when clicking a marker or feature.">popup</a></li>
+<li>Positioning it near the <a href="GLOSSARY.html#marker" class="glossary-term" title="A visual indicator on a map showing a specific location.">marker</a></li>
+<li>Closing other popups when a new one opens</li>
+<li>Adding a close button</li>
 </ul>
 <h2 id="string-concatenation-vs-template-literals">String Concatenation vs. Template Literals</h2>
-<p>The code above uses <strong>string concatenation</strong> with <code>+</code>:</p>
+<p>The code above uses <strong><a href="GLOSSARY.html#string" class="glossary-term" title="A data type representing text. Created with quotes: &quot;text&quot; or 'text'">string</a> <a href="GLOSSARY.html#concatenation" class="glossary-term" title="Combining strings together. Example: 'Hello ' + 'World' results in 'Hello World'">concatenation</a></strong> with <code>+</code>:</p>
 <pre><code class="lang-javascript"><span class="hljs-string">'&lt;b&gt;Artist:&lt;/b&gt; '</span> + artist + <span class="hljs-string">'&lt;br&gt;'</span>
 </code></pre>
 <p><strong>Modern alternative: Template literals</strong> (easier to read):</p>
 <pre><code class="lang-javascript"><span class="hljs-string">`&lt;b&gt;Artist:&lt;/b&gt; <span class="hljs-subst">${artist}</span>&lt;br&gt;`</span>
 </code></pre>
-<p><strong>Template literal features:</strong></p>
+<p><strong><a href="GLOSSARY.html#template-literal" class="glossary-term" title="JavaScript string syntax using backticks, allowing variable interpolation. Example: `Hello ${name}` ">Template literal</a> features:</strong></p>
 <ul>
 <li>Surrounded by backticks <code>` </code> (not quotes)</li>
 <li>Variables inserted with <code>${variableName}</code></li>
 <li>Can span multiple lines</li>
 <li>More readable for complex HTML</li>
 </ul>
-<p><strong>Our popup rewritten with template literals:</strong></p>
+<p><strong>Our <a href="GLOSSARY.html#popup" class="glossary-term" title="A small window that appears on a map when clicking a marker or feature.">popup</a> rewritten with template literals:</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> popupContent = <span class="hljs-string">`
   &lt;div style="min-width:200px;"&gt;
     &lt;b&gt;<span class="hljs-subst">${title}</span>&lt;/b&gt;&lt;br&gt;
@@ -582,7 +582,7 @@ popupContent += <span class="hljs-string">'&lt;/div&gt;'</span>;
   &lt;/div&gt;
 `</span>;
 </code></pre>
-<p><strong>The ternary operator:</strong> <code>condition ? valueIfTrue : valueIfFalse</code></p>
+<p><strong>The <a href="GLOSSARY.html#ternary-operator" class="glossary-term" title="JavaScript shorthand for if-else: condition ? valueIfTrue : valueIfFalse">ternary operator</a>:</strong> <code>condition ? valueIfTrue : valueIfFalse</code></p>
 <h2 id="enhancing-popups-with-styling">Enhancing Popups with Styling</h2>
 <p>You can add inline CSS to make popups look better:</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">let</span> popupContent = <span class="hljs-string">`
@@ -606,7 +606,7 @@ popupContent += <span class="hljs-string">'&lt;/div&gt;'</span>;
 `</span>;
 </code></pre>
 <h2 id="advanced-adding-links-to-digital-stacks">Advanced: Adding Links to Digital Stacks</h2>
-<p>If your GeoJSON includes DRUIDs, you can link to the full record:</p>
+<p>If your <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> includes DRUIDs, you can link to the full record:</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> druid = props.<span class="hljs-property">druid</span>;
 <span class="hljs-keyword">const</span> purlUrl = <span class="hljs-string">`https://purl.stanford.edu/<span class="hljs-subst">${druid}</span>`</span>;
 
@@ -618,9 +618,9 @@ popupContent += <span class="hljs-string">'&lt;/div&gt;'</span>;
   &lt;/div&gt;
 `</span>;
 </code></pre>
-<p><strong>This creates <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> clickable link</strong> that opens the PURL page in <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> new tab.</p>
+<p><strong>This creates a clickable link</strong> that opens the PURL page in a new tab.</p>
 <h2 id="adding-images-to-popups">Adding Images to Popups</h2>
-<p>If you have image URLs in your GeoJSON properties:</p>
+<p>If you have image URLs in your <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> properties:</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> imageUrl = props.<span class="hljs-property">image_url</span>;
 
 <span class="hljs-keyword">let</span> popupContent = <span class="hljs-string">`
@@ -631,26 +631,26 @@ popupContent += <span class="hljs-string">'&lt;/div&gt;'</span>;
   &lt;/div&gt;
 `</span>;
 </code></pre>
-<p><strong>For Digital Stacks images:</strong></p>
+<p><strong>For <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> images:</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> imagePath = props.<span class="hljs-property">image_filename</span>;
 <span class="hljs-keyword">const</span> imageUrl = <span class="hljs-string">`https://stacks.stanford.edu/file/druid:<span class="hljs-subst">${props.druid}</span>/<span class="hljs-subst">${imagePath}</span>`</span>;
 </code></pre>
 <h2 id="try-it-yourself">Try It Yourself</h2>
 <ol>
 <li><strong>Copy the complete code</strong> into <code>step-04.html</code></li>
-<li><strong>Open in your browser</strong></li>
+<li><strong>Open in your <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a></strong></li>
 <li><strong>Click on any blue circle</strong></li>
 </ol>
-<p>You should see <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> popup with artwork information!</p>
+<p>You should see a <a href="GLOSSARY.html#popup" class="glossary-term" title="A small window that appears on a map when clicking a marker or feature.">popup</a> with artwork information!</p>
 <h3 id="experiments">Experiments</h3>
-<p><strong>Add more properties from your GeoJSON:</strong></p>
+<p><strong>Add more properties from your <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a>:</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> material = props.<span class="hljs-property">material</span>;
 <span class="hljs-keyword">const</span> year = props.<span class="hljs-property">inception</span>;
 
 <span class="hljs-keyword">if</span> (material) popupContent += <span class="hljs-string">`&lt;b&gt;Material:&lt;/b&gt; <span class="hljs-subst">${material}</span>&lt;br&gt;`</span>;
 <span class="hljs-keyword">if</span> (year) popupContent += <span class="hljs-string">`&lt;b&gt;Year:&lt;/b&gt; <span class="hljs-subst">${year}</span>&lt;br&gt;`</span>;
 </code></pre>
-<p><strong>Style the popup with colors:</strong></p>
+<p><strong>Style the <a href="GLOSSARY.html#popup" class="glossary-term" title="A small window that appears on a map when clicking a marker or feature.">popup</a> with colors:</strong></p>
 <pre><code class="lang-javascript">popupContent = <span class="hljs-string">`
   &lt;div style="
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -675,12 +675,12 @@ popupContent += <span class="hljs-string">'&lt;/div&gt;'</span>;
 <h2 id="popups-in-sdr-context">Popups in SDR Context</h2>
 <p>When you deposit your map to SDR:</p>
 <ol>
-<li><strong>Popup content works exactly the same</strong> - it'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> just HTML strings</li>
+<li><strong><a href="GLOSSARY.html#popup" class="glossary-term" title="A small window that appears on a map when clicking a marker or feature.">Popup</a> content works exactly the same</strong> - it's just HTML strings</li>
 <li><strong>Relative image references</strong> in popups need care:<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> imageUrl = <span class="hljs-string">`images/<span class="hljs-subst">${props.image_file}</span>`</span>;  <span class="hljs-comment">// Relative path</span>
 </code></pre>
 </li>
-<li><strong>External links work fine</strong> (Wikidata, PURLs, etc.)</li>
-<li><strong>Can reference other DRUIDs</strong> in popup links</li>
+<li><strong>External links work fine</strong> (<a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a>, PURLs, etc.)</li>
+<li><strong>Can reference other DRUIDs</strong> in <a href="GLOSSARY.html#popup" class="glossary-term" title="A small window that appears on a map when clicking a marker or feature.">popup</a> links</li>
 </ol>
 <p><strong>Example combining local and external data:</strong></p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> localImage = <span class="hljs-string">`images/<span class="hljs-subst">${props.filename}</span>`</span>;  <span class="hljs-comment">// From your deposit</span>
@@ -710,22 +710,22 @@ popupContent = <span class="hljs-string">`
 popupContent = <span class="hljs-string">`&lt;div style="color:red"&gt;Text&lt;/div&gt;`</span>;  <span class="hljs-comment">// Also works!</span>
 </code></pre>
 <h2 id="whats-next">What's Next?</h2>
-<p>In <a href="06-step-05-cog-from-stacks.html">Step 5: Cloud Optimized GeoTIFF from Digital Stacks</a>, we'll add high-resolution aerial imagery from the Stanford Digital Repository!</p>
+<p>In <a href="06-step-05-cog-from-stacks.html">Step 5: Cloud Optimized GeoTIFF from Digital Stacks</a>, we'll add high-resolution aerial imagery from the Stanford <a href="GLOSSARY.html#digital-repository" class="glossary-term" title="A system for storing, managing, and providing access to digital content over time.">Digital Repository</a>!</p>
 <h2 id="key-takeaways">Key Takeaways</h2>
 <ul>
-<li><code>onEachFeature</code> runs once for each feature in your GeoJSON  </li>
-<li><code>layer.bindPopup()</code> attaches popup content to markers  </li>
+<li><code>onEachFeature</code> runs once for each feature in your <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a>  </li>
+<li><code>layer.bindPopup()</code> attaches <a href="GLOSSARY.html#popup" class="glossary-term" title="A small window that appears on a map when clicking a marker or feature.">popup</a> content to markers  </li>
 <li>Check if properties exist with <code>if (variable)</code> before using them  </li>
-<li>Build HTML strings dynamically with concatenation or template literals  </li>
+<li>Build HTML strings dynamically with <a href="GLOSSARY.html#concatenation" class="glossary-term" title="Combining strings together. Example: 'Hello ' + 'World' results in 'Hello World'">concatenation</a> or template literals  </li>
 <li><code>||</code> operator provides default values  </li>
 <li>Popups can include HTML, styling, images, and links  </li>
 <li>Works perfectly with SDR deposits using relative paths  </li>
 </ul>
 <h2 id="common-questions">Common Questions</h2>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Can <a href="GLOSSARY.html#i" class="glossary-term" title="">I</a> have multiple popups open at once?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: By default, Leaflet closes other popups when opening <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> new one. You can change this with <code>autoClose: false</code> in the popup options.</p>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: How do <a href="GLOSSARY.html#i" class="glossary-term" title="">I</a> make popups open on hover instead of click?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: Use <code>layer.bindTooltip()</code> instead of <code>layer.bindPopup()</code>, or add hover event listeners.</p>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Can <a href="GLOSSARY.html#i" class="glossary-term" title="">I</a> add buttons or interactive elements in popups?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: Yes! You can include any HTML, including buttons with onclick handlers.</p>
-<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: How do <a href="GLOSSARY.html#i" class="glossary-term" title="">I</a> control popup width?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: Set <code>minWidth</code> and <code>maxWidth</code> in the popup options, or use CSS in your HTML content.</p>
+<p><strong>Q: Can I have multiple popups open at once?</strong><br></br>A: By default, <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> closes other popups when opening a new one. You can change this with <code>autoClose: false</code> in the <a href="GLOSSARY.html#popup" class="glossary-term" title="A small window that appears on a map when clicking a marker or feature.">popup</a> options.</p>
+<p><strong>Q: How do I make popups open on <a href="GLOSSARY.html#hover" class="glossary-term" title="CSS pseudo-class for styling elements when the mouse pointer is over them. Example: button:hover { }">hover</a> instead of click?</strong><br></br>A: Use <code>layer.bindTooltip()</code> instead of <code>layer.bindPopup()</code>, or add <a href="GLOSSARY.html#hover" class="glossary-term" title="CSS pseudo-class for styling elements when the mouse pointer is over them. Example: button:hover { }">hover</a> <a href="GLOSSARY.html#event" class="glossary-term" title="An action that happens in the browser (click, scroll, key press) that can trigger JavaScript code.">event</a> listeners.</p>
+<p><strong>Q: Can I add buttons or interactive elements in popups?</strong><br></br>A: Yes! You can include any HTML, including buttons with onclick handlers.</p>
+<p><strong>Q: How do I control <a href="GLOSSARY.html#popup" class="glossary-term" title="A small window that appears on a map when clicking a marker or feature.">popup</a> width?</strong><br></br>A: Set <code>minWidth</code> and <code>maxWidth</code> in the <a href="GLOSSARY.html#popup" class="glossary-term" title="A small window that appears on a map when clicking a marker or feature.">popup</a> options, or use CSS in your HTML content.</p>
 <hr></hr>
 <p><strong>Previous:</strong> <a href="04-step-03-geojson-points.html">Step 3: GeoJSON Points</a> | <strong>Next:</strong> <a href="06-step-05-cog-from-stacks.html">Step 5: COG from Digital Stacks</a></p>
 
@@ -771,7 +771,7 @@ popupContent = <span class="hljs-string">`&lt;div style="color:red"&gt;Text&lt;/
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Step 4: Add Popups","level":"2.5","depth":1,"next":{"title":"Step 5: Cloud Optimized GeoTIFF from Digital Stacks","level":"2.6","depth":1,"path":"06-step-05-cog-from-stacks.md","ref":"06-step-05-cog-from-stacks.md","articles":[]},"previous":{"title":"Step 3: Load GeoJSON Points","level":"2.4","depth":1,"path":"04-step-03-geojson-points.md","ref":"04-step-03-geojson-points.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"05-step-04-popups.md","mtime":"2026-01-26T20:48:39.628Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T20:48:56.101Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Step 4: Add Popups","level":"2.5","depth":1,"next":{"title":"Step 5: Cloud Optimized GeoTIFF from Digital Stacks","level":"2.6","depth":1,"path":"06-step-05-cog-from-stacks.md","ref":"06-step-05-cog-from-stacks.md","articles":[]},"previous":{"title":"Step 3: Load GeoJSON Points","level":"2.4","depth":1,"path":"04-step-03-geojson-points.md","ref":"04-step-03-geojson-points.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"05-step-04-popups.md","mtime":"2026-01-26T20:57:45.967Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T20:57:55.258Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
