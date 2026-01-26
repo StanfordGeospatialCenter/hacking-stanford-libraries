@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_top">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stanford Campus Map - Step 6: Split Layout with External CSS</title>
+
+    <!-- Leaflet CSS for mapping library -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <!-- Leaflet JS for mapping functionality -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- Projection library for geospatial coordinate transformations -->
+    <script src="https://unpkg.com/proj4"></script>
+    <!-- GeoRaster library for reading raster data -->
+    <script src="https://unpkg.com/georaster"></script>
+    <!-- GeoRaster Layer plugin for Leaflet to display rasters -->
+    <script src="https://unpkg.com/georaster-layer-for-leaflet"></script>
+    
+    <!-- External CSS file with all styling for the split-screen layout -->
+    <link rel="stylesheet" href="styles_wikidata.css">
+</head>
+<body>
+
+<!-- Page heading -->
+<h1>Stanford Public Art Map</h1>
+<!-- Step description -->
+<p>Step 6: Create a split-screen layout with map on left and info panel on right</p>
+
+<!-- Main container divided into two sections: map and info panel -->
+<div id="container">
+    <!-- Left side: map wrapper contains the Leaflet map -->
+    <div id="mapWrapper">
+        <div id="map"></div>
+    </div>
+    <!-- Right side: Wikidata information panel (empty for now) -->
+    <div id="wikidata-panel">
+        <div id="no-selection">Click on an artwork to see information</div>
+    </div>
+</div>
+
+<script>
+
+    // Initialize the Leaflet map object centered on Stanford campus (lat: 37.427, lon: -122.169) at zoom level 15
+    const map = L.map('map').setView([37.427, -122.169], 15);
+
+    // Add OpenStreetMap basemap tiles to the map
+    const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    // Load and display the Cloud Optimized GeoTIFF (COG) raster layer
+    var url_to_geotiff_file = new URL("collection/stanford_campus_irg.tif", window.location.href).href;
+
+    // Parse the GeoTIFF file to extract georaster information
+    parseGeoraster(url_to_geotiff_file).then(georaster => {
+      console.log("georaster:", georaster);
+
+      // Fetch the mask GeoJSON to clip the raster to Stanford campus boundary
+      fetch("collection/stanford_campus.geojson")
+        .then(r => r.json())
+        .then(maskGeojson => {
+          // Create a new GeoRaster layer with the parsed data and mask
+          var layer = new GeoRasterLayer({
+            attribution: "Planet",
+            georaster: georaster,
+            resolution: 128,
+            mask: maskGeojson
+          });
+
+          // Add the raster layer to the map and adjust view to fit layer bounds
+          layer.addTo(map);
+          map.fitBounds(layer.getBounds());
+        });
+    }).catch(console.error);
+
+    // Load the public art GeoJSON file
+    fetch('collection/stanford_public_art.geojson')
+        .then(response => response.json())
+        .then(data => {
+            // Create a GeoJSON layer with custom styling and interactivity
+            const artworkLayer = L.geoJSON(data, {
+                // Custom function to create circle markers instead of default icons
+                pointToLayer: function(feature, latlng) {
+                    return L.circleMarker(latlng, {
+                        radius: 6,
+                        color: 'white',
+                        weight: 2,
+                        fillColor: 'blue',
+                        fillOpacity: 0.7
+                    });
+                },
+                // Add popup content to each feature
+                onEachFeature: function(feature, layer) {
+                    const props = feature.properties || {};
+                    const title = props.name || 'Artwork';
+                    const artist = props.artist_name;
+                    const type = props.artwork_type;
+                    
+                    // Build popup HTML content with artwork information
+                    let popupContent = '<div style="min-width:200px;">';
+                    popupContent += '<b>' + title + '</b><br>';
+                    if (artist) popupContent += '<b>Artist:</b> ' + artist + '<br>';
+                    if (type) popupContent += '<b>Type:</b> ' + type;
+                    popupContent += '</div>';
+                    
+                    // Bind the popup to the marker so it appears on click
+                    layer.bindPopup(popupContent);
+                }
+            }).addTo(map);
+
+            // Adjust map zoom and position to display all artwork markers
+            map.fitBounds(artworkLayer.getBounds());
+        })
+        .catch(error => console.error('Error loading GeoJSON:', error));
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,688 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Step 1: Adding a Map Container · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.1.5">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="03-step-02-initialize-map.html" />
+    
+    
+    <link rel="prev" href="01-step-00-basic-html.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="00-workshop-introduction.html">
+            
+                <a href="00-workshop-introduction.html">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Step-by-Step Tutorials</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="01-step-00-basic-html.html">
+            
+                <a href="01-step-00-basic-html.html">
+            
+                    
+                    Step 0: Basic HTML Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="02-step-01-map-container.html">
+            
+                <a href="02-step-01-map-container.html">
+            
+                    
+                    Step 1: Adding a Map Container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="03-step-02-initialize-map.html">
+            
+                <a href="03-step-02-initialize-map.html">
+            
+                    
+                    Step 2: Initialize Leaflet Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="04-step-03-geojson-points.html">
+            
+                <a href="04-step-03-geojson-points.html">
+            
+                    
+                    Step 3: Load GeoJSON Points
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="05-step-04-popups.html">
+            
+                <a href="05-step-04-popups.html">
+            
+                    
+                    Step 4: Add Popups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="06-step-05-cog-from-stacks.html">
+            
+                <a href="06-step-05-cog-from-stacks.html">
+            
+                    
+                    Step 5: Cloud Optimized GeoTIFF from Digital Stacks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="07-step-06-split-layout.html">
+            
+                <a href="07-step-06-split-layout.html">
+            
+                    
+                    Step 6: Split-Screen Layout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="08-step-07-wikidata-basic.html">
+            
+                <a href="08-step-07-wikidata-basic.html">
+            
+                    
+                    Step 7: Basic Wikidata Fetching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="09-step-08-wikidata-images.html">
+            
+                <a href="09-step-08-wikidata-images.html">
+            
+                    
+                    Step 8: Wikidata Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="10-step-09-complete-integration.html">
+            
+                <a href="10-step-09-complete-integration.html">
+            
+                    
+                    Step 9: Complete Integration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="11-bonus-step-10-wikidata-filter.html">
+            
+                <a href="11-bonus-step-10-wikidata-filter.html">
+            
+                    
+                    BONUS Step 10: Wikidata Filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Reference</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="DIGITAL-STACKS-REFERENCE.html">
+            
+                <a href="DIGITAL-STACKS-REFERENCE.html">
+            
+                    
+                    Digital Stacks Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="WORKSHOP-MATERIALS.html">
+            
+                <a href="WORKSHOP-MATERIALS.html">
+            
+                    
+                    Workshop Materials Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="GLOSSARY.html">
+            
+                <a href="GLOSSARY.html">
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Step 1: Adding a Map Container</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="step-1-adding-a-map-container">Step 1: Adding a Map Container</h1>
+<h2 id="overview">Overview</h2>
+<p>In this step, we'll add visible content to our HTML page and create <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> container where our interactive map will live.</p>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<ul>
+<li>Add <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> title and description to the page</li>
+<li>Create <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> <code>&lt;div&gt;</code> element to hold our map</li>
+<li>Understand inline CSS styling</li>
+<li>Learn about HTML headings and paragraphs</li>
+</ul>
+<h2 id="what-were-building">What We're Building</h2>
+<p>We'll add:</p>
+<ol>
+<li><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> page title (heading)</li>
+<li><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> brief description</li>
+<li>An empty container for our map (we'll make it interactive in the next step)</li>
+</ol>
+<h2 id="the-complete-code">The Complete Code</h2>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">base</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_top"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Stanford Campus Map - Step 1: Basic HTML<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Stanford Public Art Map<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Step 1: Basic HTML structure with map container<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"map"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 600px; height: 400px;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h2 id="whats-new">What's New?</h2>
+<p>Let'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> examine each new element:</p>
+<h3 id="1-page-title">1. Page Title</h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Stanford Campus Map - Step 1: Basic HTML<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+</code></pre>
+<p><strong>What it does:</strong> Sets the text that appears in the browser tab</p>
+<p><strong>Where it goes:</strong> Inside the <code>&lt;head&gt;</code> section (not visible on the page itself)</p>
+<p><strong>Why it matters:</strong></p>
+<ul>
+<li>Helps users identify your tab when they have multiple tabs open</li>
+<li>Used by search engines as the main title in search results</li>
+<li>Appears when users bookmark your page</li>
+</ul>
+<p><strong>Best practices:</strong></p>
+<ul>
+<li>Keep it concise (50-60 characters)</li>
+<li>Make it descriptive</li>
+<li>Put the most important keywords first</li>
+</ul>
+<h3 id="2-heading-element">2. Heading Element</h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Stanford Public Art Map<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+</code></pre>
+<p><strong>What it does:</strong> Creates <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> large, bold heading on the page</p>
+<p><strong>HTML Heading Levels:</strong> There are six levels of headings:</p>
+<ul>
+<li><code>&lt;h1&gt;</code> - Most important (largest)</li>
+<li><code>&lt;h2&gt;</code> - Second level</li>
+<li><code>&lt;h3&gt;</code> - Third level</li>
+<li><code>&lt;h4&gt;</code> - Fourth level</li>
+<li><code>&lt;h5&gt;</code> - Fifth level</li>
+<li><code>&lt;h6&gt;</code> - Least important (smallest)</li>
+</ul>
+<p><strong>Best practices:</strong></p>
+<ul>
+<li>Use only ONE <code>&lt;h1&gt;</code> per page (it'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> the main title)</li>
+<li>Use headings in order (don'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> skip from <code>&lt;h1&gt;</code> to <code>&lt;h3&gt;</code>)</li>
+<li>Think of headings as an outline for your page</li>
+</ul>
+<h3 id="3-paragraph-element">3. Paragraph Element</h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Step 1: Basic HTML structure with map container<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<p><strong>What it does:</strong> Creates <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> paragraph of text</p>
+<p><strong>Characteristics:</strong></p>
+<ul>
+<li>Automatically adds spacing before and after</li>
+<li>Text wraps to fit the width of the browser window</li>
+<li>Multiple <code>&lt;p&gt;</code> tags create separate paragraphs</li>
+</ul>
+<h3 id="4-the-map-container-div-element">4. The Map Container (Div Element)</h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"map"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 600px; height: 400px;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>This is the most important part! Let'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> break it down piece by piece:</p>
+<h4 id="the-div-tag">The <code>&lt;div&gt;</code> Tag</h4>
+<p><strong>What it is:</strong> <a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> generic container element (think of it as an empty box)</p>
+<p><strong>What it does:</strong> Groups content together or creates <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> space for content</p>
+<p><strong>"div" stands for:</strong> "division" - it divides your page into sections</p>
+<p><strong>Why we use it:</strong> We need <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> specific place on the page where the map will appear. The <code>&lt;div&gt;</code> creates that space.</p>
+<h4 id="the-id-attribute">The <code>id</code> Attribute</h4>
+<pre><code class="lang-html">id="map"
+</code></pre>
+<p><strong>What it does:</strong> Gives this specific <code>&lt;div&gt;</code> <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> unique identifier</p>
+<p><strong>Think of it as:</strong> <a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> name tag - this is how we'll tell our JavaScript "put the map HERE"</p>
+<p><strong>Rules for IDs:</strong></p>
+<ul>
+<li>Must be unique (only one element can have <code>id="map"</code>)</li>
+<li>Can'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> have spaces (use hyphens: <code>id="my-map"</code>)</li>
+<li>Case-sensitive (<code>id="Map"</code> is different from <code>id="map"</code>)</li>
+</ul>
+<p><strong>Why we need it:</strong> In Step 2, our JavaScript code will look for an element with <code>id="map"</code> and put an interactive map inside it.</p>
+<h4 id="inline-css-styling">Inline CSS Styling</h4>
+<pre><code class="lang-html">style="width: 600px; height: 400px;"
+</code></pre>
+<p><strong>What it does:</strong> Defines the appearance of this element using CSS</p>
+<p><strong>Breaking it down:</strong></p>
+<ul>
+<li><code>style=</code> - Indicates we're adding CSS styles</li>
+<li><code>width: 600px;</code> - Make this div 600 pixels wide</li>
+<li><code>height: 400px;</code> - Make this div 400 pixels tall</li>
+</ul>
+<p><strong>Understanding Pixels (px):</strong></p>
+<ul>
+<li><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> pixel is <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> tiny dot on your screen</li>
+<li>600px = 600 dots wide</li>
+<li>Most computer monitors are 1920px wide or more</li>
+<li>Most phones are 375-428px wide</li>
+</ul>
+<p><strong>Why we need size:</strong> Without <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> specific width and height, the div would be invisible (0 pixels tall). The map needs space to display!</p>
+<p><strong>The semicolon:</strong> Separates different CSS rules. Format is <code>property: value;</code></p>
+<h2 id="visualizing-the-structure">Visualizing the Structure</h2>
+<p>Here'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> how the browser interprets this code:</p>
+<pre><code>┌─────────────────────────────────────┐
+│ Browser Window                      │
+├─────────────────────────────────────┤
+│                                     │
+│  Stanford Public Art Map  &lt;- &lt;h1&gt;  │
+│                                     │
+│  Step 1: Basic HTML... &lt;- &lt;p&gt;      │
+│                                     │
+│  ┌─────────────────────┐           │
+│  │                     │           │
+│  │   [Empty div]       │ &lt;- &lt;div&gt;  │
+│  │   600px × 400px     │           │
+│  │                     │           │
+│  └─────────────────────┘           │
+│                                     │
+└─────────────────────────────────────┘
+</code></pre><h2 id="relative-paths-reminder">Relative Paths Reminder</h2>
+<p>Currently, all our content is in the HTML file itself. But soon we'll reference external files:</p>
+<p><strong>Local files</strong> (in your project folder):</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"collection/campus-photo.jpg"</span>&gt;</span>
+</code></pre>
+<p><strong>Digital Stacks files</strong> (from SDR):</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://stacks.stanford.edu/file/druid:abc123def456/campus-photo.jpg"</span>&gt;</span>
+</code></pre>
+<p><strong>When you deposit to SDR:</strong> Your HTML file and the <code>collection</code> folder maintain their relationship, so relative paths keep working!</p>
+<h2 id="try-it-yourself">Try It Yourself</h2>
+<ol>
+<li><strong>Create <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> new file</strong> called <code>step-01.html</code></li>
+<li><strong>Copy the complete code</strong> from above</li>
+<li><strong>Save the file</strong></li>
+<li><strong>Open it in your browser</strong></li>
+</ol>
+<p>You should see:</p>
+<ul>
+<li><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> large heading that says "Stanford Public Art Map"</li>
+<li><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> smaller line of text below it</li>
+<li><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> blank area where the map will go (you might need to look carefully - it'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> there but has no border)</li>
+</ul>
+<h3 id="experiment">Experiment!</h3>
+<p>Try changing these values and reloading the page:</p>
+<p><strong>Change the heading:</strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>My Custom Map Title<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+</code></pre>
+<p><strong>Change the size of the map container:</strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"map"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 800px; height: 600px;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p><strong>Add <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> border to see the map container more clearly:</strong></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"map"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 600px; height: 400px; border: 2px solid black;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<h2 id="connection-to-digital-stacks">Connection to Digital Stacks</h2>
+<p>When you deposit this HTML file to SDR, you might have <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> structure like:</p>
+<pre><code>Your SDR Object (druid:abc123xyz456)
+├── index.html (this file)
+├── collection/
+│   └── data.geojson
+└── images/
+    └── logo.png
+</code></pre><p>Your HTML can reference these files with relative paths:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/logo.png"</span>&gt;</span>
+</code></pre>
+<p>And users access your page at:</p>
+<pre><code>https://stacks.stanford.edu/file/druid:abc123xyz456/index.html
+</code></pre><p>All the relative references will work correctly!</p>
+<h2 id="whats-next">What's Next?</h2>
+<p>In <a href="02-step-02-initialize-map.md">Step 2: Initialize Leaflet Map</a>, we'll transform that empty <code>&lt;div&gt;</code> into <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> fully interactive web map!</p>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>The <code>&lt;title&gt;</code> tag sets the browser tab text  </li>
+<li><code>&lt;h1&gt;</code> creates the main heading for your page  </li>
+<li><code>&lt;p&gt;</code> creates paragraphs of text  </li>
+<li><code>&lt;div&gt;</code> creates container elements  </li>
+<li>The <code>id</code> attribute gives elements unique identifiers  </li>
+<li>Inline styles (CSS) control appearance with <code>width</code>, <code>height</code>, etc.  </li>
+<li>Elements need dimensions to be visible  </li>
+</ul>
+<h2 id="common-questions">Common Questions</h2>
+<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Why is the div empty?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: We're creating the space now. In the next step, JavaScript will fill it with <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> map.</p>
+<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Can <a href="GLOSSARY.html#i" class="glossary-term" title="">I</a> use different dimensions?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: Yes! Try different values to see what works best for your needs.</p>
+<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: What if <a href="GLOSSARY.html#i" class="glossary-term" title="">I</a> don'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> see anything?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: The div is there but might be invisible. Try adding <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> border to make it visible (see "Experiment" section above).</p>
+<hr></hr>
+<p><strong>Previous:</strong> <a href="01-step-00-basic-html.html">Step 0: Basic HTML Structure</a> | <strong>Next:</strong> <a href="03-step-02-initialize-map.html">Step 2: Initialize Leaflet Map</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="01-step-00-basic-html.html" class="navigation navigation-prev " aria-label="Previous page: Step 0: Basic HTML Structure">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="03-step-02-initialize-map.html" class="navigation navigation-next " aria-label="Next page: Step 2: Initialize Leaflet Map">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Step 1: Adding a Map Container","level":"2.2","depth":1,"next":{"title":"Step 2: Initialize Leaflet Map","level":"2.3","depth":1,"path":"03-step-02-initialize-map.md","ref":"03-step-02-initialize-map.md","articles":[]},"previous":{"title":"Step 0: Basic HTML Structure","level":"2.1","depth":1,"path":"01-step-00-basic-html.md","ref":"01-step-00-basic-html.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02-step-01-map-container.md","mtime":"2026-01-26T20:13:31.525Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T20:26:10.879Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

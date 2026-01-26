@@ -1,0 +1,1259 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-01-20T22:35:30Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5444091618",
+        "artist_name": "Mark di Suvero",
+        "artwork_type": "sculpture",
+        "material": "metal",
+        "name": "The Sieve of Eratosthenes",
+        "tourism": "artwork",
+        "wikidata": "Q47522966"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1656846,
+          37.425345
+        ]
+      },
+      "id": "node/5444091618"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5648594194",
+        "artist:wikidata": "Q703624",
+        "artist_name": "George Segal",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Gay Liberation",
+        "tourism": "artwork",
+        "wikidata": "Q16270988",
+        "wikipedia": "en:Gay_Liberation_Monument"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.171666,
+          37.4283311
+        ]
+      },
+      "id": "node/5648594194"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5648594207",
+        "artist_name": "Auguste Rodin",
+        "artwork_type": "sculpture",
+        "name": "The Burghers of Calais",
+        "name:fr": "Les Bourgeois de Calais",
+        "tourism": "artwork",
+        "wikidata": "Q47522991"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1699666,
+          37.4280172
+        ]
+      },
+      "id": "node/5648594207"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5758204464",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1737297,
+          37.4322423
+        ]
+      },
+      "id": "node/5758204464"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5758204515",
+        "artist_name": "Auguste Rodin",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "The Gates of Hell",
+        "tourism": "artwork",
+        "wikidata": "Q2003287",
+        "wikipedia": "en:The Gates of Hell"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1707984,
+          37.432494
+        ]
+      },
+      "id": "node/5758204515"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5802972690",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1682536,
+          37.4299033
+        ]
+      },
+      "id": "node/5802972690"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5802972691",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1681909,
+          37.429741
+        ]
+      },
+      "id": "node/5802972691"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6467594664",
+        "artwork_type": "sculpture",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1682476,
+          37.4254448
+        ]
+      },
+      "id": "node/6467594664"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6467594665",
+        "artist_name": "Charles Ginnever",
+        "artwork_type": "sculpture",
+        "material": "steel",
+        "name": "Luna Moth Walk I",
+        "tourism": "artwork",
+        "wikidata": "Q60747052",
+        "wikipedia": "en:Luna Moth Walk I"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.167901,
+          37.4251689
+        ]
+      },
+      "id": "node/6467594665"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6467594666",
+        "artwork_type": "sculpture",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1675001,
+          37.4249156
+        ]
+      },
+      "id": "node/6467594666"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6476775189",
+        "artist_name": "Auguste Rodin",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Head of Pierre de Wissant, Burgher of Calais",
+        "tourism": "artwork",
+        "wikidata": "Q22081438"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1711286,
+          37.4322456
+        ]
+      },
+      "id": "node/6476775189"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6476775190",
+        "artist_name": "Auguste Rodin",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Head of Jean d'Aire, Burgher of Calais",
+        "tourism": "artwork",
+        "wikidata": "Q63860726"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1710769,
+          37.4322365
+        ]
+      },
+      "id": "node/6476775190"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6476775191",
+        "artist_name": "Auguste Rodin",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Torso of the Falling Man",
+        "tourism": "artwork",
+        "wikidata": "Q24553121",
+        "wikipedia": "en:The Falling Man (Rodin)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1711095,
+          37.43235
+        ]
+      },
+      "id": "node/6476775191"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6476775192",
+        "artist_name": "Auguste Rodin",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Jean d'Aire, Burgher of Calais",
+        "tourism": "artwork",
+        "wikidata": "Q28017357",
+        "wikipedia": "en:Jean d'Aire"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1710244,
+          37.4323225
+        ]
+      },
+      "id": "node/6476775192"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6476775193",
+        "artist_name": "Auguste Rodin",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "The Walking Man",
+        "tourism": "artwork",
+        "wikidata": "Q7773288",
+        "wikipedia": "en:The Walking Man"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1710472,
+          37.4324065
+        ]
+      },
+      "id": "node/6476775193"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6476775194",
+        "artist_name": "Auguste Rodin",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Seated Woman (Cybele)",
+        "tourism": "artwork",
+        "wikidata": "Q25339893",
+        "wikipedia": "en:Cybele (sculpture)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1710618,
+          37.4324721
+        ]
+      },
+      "id": "node/6476775194"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6476775195",
+        "artist_name": "Auguste Rodin",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Prayer",
+        "tourism": "artwork",
+        "wikidata": "Q24568923",
+        "wikipedia": "en:The Prayer (sculpture)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1709662,
+          37.4325009
+        ]
+      },
+      "id": "node/6476775195"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6476775196",
+        "artist_name": "Auguste Rodin",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Adam",
+        "tourism": "artwork",
+        "wikidata": "Q55639111",
+        "wikipedia": "en:Adam (Rodin)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1708302,
+          37.4324918
+        ]
+      },
+      "id": "node/6476775196"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6476775197",
+        "artist_name": "Auguste Rodin",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Eve",
+        "tourism": "artwork",
+        "wikidata": "Q18147649",
+        "wikipedia": "en:Eve (Rodin)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1707692,
+          37.4324792
+        ]
+      },
+      "id": "node/6476775197"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6476775199",
+        "artist_name": "Auguste Rodin",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Meditation",
+        "tourism": "artwork",
+        "wikidata": "Q24568939",
+        "wikipedia": "en:Meditation (sculpture)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1706874,
+          37.4323868
+        ]
+      },
+      "id": "node/6476775199"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6476775200",
+        "artist_name": "Auguste Rodin",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Martyr",
+        "tourism": "artwork",
+        "wikidata": "Q16919276",
+        "wikipedia": "en:The Martyr (sculpture)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1707399,
+          37.4323403
+        ]
+      },
+      "id": "node/6476775200"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6476775201",
+        "artist_name": "Auguste Rodin",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "The Three Shades",
+        "tourism": "artwork",
+        "wikidata": "Q9632651",
+        "wikipedia": "en:The Three Shades"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1706255,
+          37.4323205
+        ]
+      },
+      "id": "node/6476775201"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6476775202",
+        "artist_name": "Auguste Rodin",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "The Spirit of Eternal Repose",
+        "tourism": "artwork",
+        "wikidata": "Q22025526",
+        "wikipedia": "en:The Spirit of Eternal Repose"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1709458,
+          37.4322853
+        ]
+      },
+      "id": "node/6476775202"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6476775203",
+        "artist_name": "Auguste Rodin",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Fallen Caryatid with Urn",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1707188,
+          37.4322702
+        ]
+      },
+      "id": "node/6476775203"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6476775204",
+        "artist_name": "Auguste Rodin",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Orpheus",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1708632,
+          37.4322271
+        ]
+      },
+      "id": "node/6476775204"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6476775209",
+        "artist_name": "Auguste Rodin",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Jules Bastien Lepage",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1710481,
+          37.4320983
+        ]
+      },
+      "id": "node/6476775209"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6476775210",
+        "artist_name": "Auguste Rodin",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Claude Lorrain",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1708311,
+          37.4321478
+        ]
+      },
+      "id": "node/6476775210"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6476775211",
+        "artist_name": "Auguste Rodin",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Meditation",
+        "tourism": "artwork",
+        "wikidata": "Q24568939",
+        "wikipedia": "en:Meditation (sculpture)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1706293,
+          37.43245
+        ]
+      },
+      "id": "node/6476775211"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6476775212",
+        "artist_name": "Auguste Rodin",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Fallen Caryatid with Stone",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1707845,
+          37.4322367
+        ]
+      },
+      "id": "node/6476775212"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6477042804",
+        "artwork_type": "sculpture",
+        "name": "Angel of Grief",
+        "tourism": "artwork",
+        "wikidata": "Q531989",
+        "wikipedia": "en:Angel of Grief"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1688001,
+          37.4373687
+        ]
+      },
+      "id": "node/6477042804"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6527889816",
+        "artist_name": "Dimitri Hadzi",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Pillars of Hercules III",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1678447,
+          37.4292355
+        ]
+      },
+      "id": "node/6527889816"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6532987276",
+        "artist_name": "Eugène-Louis Lequesne",
+        "artwork_type": "sculpture",
+        "material": "iron",
+        "name": "Griffins",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.168014,
+          37.4348544
+        ]
+      },
+      "id": "node/6532987276"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6532987277",
+        "artist_name": "Eugène-Louis Lequesne",
+        "artwork_type": "sculpture",
+        "material": "iron",
+        "name": "Griffins",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1680573,
+          37.4348052
+        ]
+      },
+      "id": "node/6532987277"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6558649951",
+        "artwork_type": "sculpture",
+        "fountain": "yes",
+        "name": "The Claw",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1693802,
+          37.4249612
+        ]
+      },
+      "id": "node/6558649951"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6559580258",
+        "artist_name": "Steve Bartlett",
+        "artwork_type": "sculpture",
+        "material": "metal",
+        "name": "Ella",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1723811,
+          37.4414268
+        ]
+      },
+      "id": "node/6559580258"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6574013075",
+        "artist_name": "Jack Zajac",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Big Ram Skull and Horn",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1662251,
+          37.4264359
+        ]
+      },
+      "id": "node/6574013075"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6592335032",
+        "artist_name": "Kenneth Snelson",
+        "artwork_type": "sculpture",
+        "material": "stainless_steel",
+        "name": "Six #1",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1759418,
+          37.4314889
+        ]
+      },
+      "id": "node/6592335032"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6919444062",
+        "artist:wikidata": "Q132305",
+        "artist_name": "Willem de Kooning",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Reclining Figure",
+        "owner": "The Willem de Kooning Foundation",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1631416,
+          37.4281072
+        ]
+      },
+      "id": "node/6919444062"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6919493502",
+        "artwork_type": "sculpture",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1630334,
+          37.4284866
+        ]
+      },
+      "id": "node/6919493502"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6920542711",
+        "artwork_type": "sculpture",
+        "material": "metal",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1674837,
+          37.4282871
+        ]
+      },
+      "id": "node/6920542711"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7132221675",
+        "artist_name": "Deborah Kass",
+        "artwork_type": "sculpture",
+        "material": "metal",
+        "name": "OY/YO",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1703859,
+          37.4329548
+        ]
+      },
+      "id": "node/7132221675"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8363994411",
+        "artist_name": "Richard Stella",
+        "artwork_type": "sculpture",
+        "material": "metal",
+        "name": "Sequence",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.170882,
+          37.4333105
+        ]
+      },
+      "id": "node/8363994411"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8574018948",
+        "artist_name": "Alexander Calder",
+        "artwork_type": "sculpture",
+        "material": "steel",
+        "name": "The Falcon",
+        "start_date": "1963",
+        "tourism": "artwork",
+        "wikidata": "Q130550031"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1679227,
+          37.4243177
+        ]
+      },
+      "id": "node/8574018948"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9393660196",
+        "artist_name": "Alicja Kwade",
+        "artwork_type": "sculpture",
+        "material": "stone",
+        "name": "Pars pro Toto",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1746879,
+          37.4284559
+        ]
+      },
+      "id": "node/9393660196"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10713147946",
+        "artist_name": "Beverly Pepper",
+        "artwork_type": "sculpture",
+        "material": "weathering_steel",
+        "name": "Stanford Columns",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1695267,
+          37.4339257
+        ]
+      },
+      "id": "node/10713147946"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11026848518",
+        "artist_name": "Ursula von Rydingsvard",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "MOCNA, 2018",
+        "tourism": "artwork",
+        "website": "https://news.stanford.edu/2018/09/17/sculpture-installed-stanford-universitys-denning-house-anchors-new-art-collection/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1737102,
+          37.4236446
+        ]
+      },
+      "id": "node/11026848518"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11216891437",
+        "artist_name": "Leo Villareal",
+        "artwork_type": "sculpture",
+        "name": "Buckyball",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1767308,
+          37.4341143
+        ]
+      },
+      "id": "node/11216891437"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11216893837",
+        "artist_name": "Fletcher Benton",
+        "artwork_type": "sculpture",
+        "name": "Folded Square Alphabet S",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1772549,
+          37.4335964
+        ]
+      },
+      "id": "node/11216893837"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11216900137",
+        "artist_name": "Jacques Lipchitz",
+        "artwork_type": "sculpture",
+        "name": "Song of the Vowels",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.176775,
+          37.4334795
+        ]
+      },
+      "id": "node/11216900137"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11590561443",
+        "artwork_type": "installation",
+        "name": "Air Tank Wind Chime",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1723632,
+          37.4207078
+        ]
+      },
+      "id": "node/11590561443"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11590561444",
+        "artwork_type": "installation",
+        "name": "Bike Tree",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1724544,
+          37.4207046
+        ]
+      },
+      "id": "node/11590561444"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12064311245",
+        "artist_name": "Todd McGrain",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Passenger Pigeon",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1704013,
+          37.433666
+        ]
+      },
+      "id": "node/12064311245"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12064311246",
+        "artist_name": "William Tucker",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "Fear",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1703894,
+          37.4335202
+        ]
+      },
+      "id": "node/12064311246"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12064311248",
+        "amenity": "bicycle_parking",
+        "artist_name": "David Byrne",
+        "artwork_type": "sculpture",
+        "material": "steel",
+        "name": "Cloud",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1701633,
+          37.433608
+        ]
+      },
+      "id": "node/12064311248"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12064311249",
+        "amenity": "bicycle_parking",
+        "artist_name": "David Byrne",
+        "artwork_type": "sculpture",
+        "material": "steel",
+        "name": "@",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1702233,
+          37.4335971
+        ]
+      },
+      "id": "node/12064311249"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12064311252",
+        "amenity": "bicycle_parking",
+        "artist_name": "David Byrne",
+        "artwork_type": "sculpture",
+        "material": "steel",
+        "name": "Rocket",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.170238,
+          37.4330701
+        ]
+      },
+      "id": "node/12064311252"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12064311257",
+        "artist_name": "Josef Albers",
+        "artwork_type": "sculpture",
+        "name": "Stanford Wall",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1681543,
+          37.4309175
+        ]
+      },
+      "id": "node/12064311257"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12064314969",
+        "artist_name": "Lee Kelly",
+        "artwork_type": "sculpture",
+        "material": "stainless_steel",
+        "name": "Stainless Garden",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1661256,
+          37.4280009
+        ]
+      },
+      "id": "node/12064314969"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12064314974",
+        "artwork_type": "sculpture",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1665234,
+          37.4316327
+        ]
+      },
+      "id": "node/12064314974"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12064315028",
+        "artist_name": "François Stahly",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "The Flame Birds",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1634816,
+          37.4278702
+        ]
+      },
+      "id": "node/12064315028"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12064315037",
+        "artist_name": "Peter Wegner",
+        "artwork_type": "installation",
+        "indoor": "no",
+        "level": "0",
+        "name": "Monument to Change as a Verb",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1620167,
+          37.4281675
+        ]
+      },
+      "id": "node/12064315037"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13099277456",
+        "artist_name": "Don Yeomans",
+        "artwork_type": "totem_pole",
+        "height": "12",
+        "material": "wood",
+        "name": "The Stanford Legacy",
+        "start_date": "2002-05-06",
+        "tourism": "artwork",
+        "wikidata": "Q60747046",
+        "wikipedia": "en:The Stanford Legacy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1675828,
+          37.4246633
+        ]
+      },
+      "id": "node/13099277456"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13099426856",
+        "artist_name": "Oleg Lobykin",
+        "artwork_type": "statue",
+        "level": "1",
+        "start_date": "2013",
+        "subject": "Benjamin Franklin",
+        "tourism": "artwork",
+        "wikidata": "Q59773488",
+        "wikipedia": "en:Statue of Benjamin Franklin (Stanford University)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.169045,
+          37.4284097
+        ]
+      },
+      "id": "node/13099426856"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13099426857",
+        "artist_name": "Oleg Lobykin",
+        "artwork_type": "statue",
+        "level": "1",
+        "start_date": "2018",
+        "subject": "Johannes Gutenberg",
+        "tourism": "artwork",
+        "wikidata": "Q59773486",
+        "wikipedia": "en:Statue of Johannes Gutenberg (Stanford University)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1689514,
+          37.4283903
+        ]
+      },
+      "id": "node/13099426857"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13312983238",
+        "artwork_type": "statue",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.1697017,
+          37.436577
+        ]
+      },
+      "id": "node/13312983238"
+    }
+  ]
+}

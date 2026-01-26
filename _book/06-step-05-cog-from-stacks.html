@@ -1,0 +1,842 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Step 5: Cloud Optimized GeoTIFF from Digital Stacks · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.1.5">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="07-step-06-split-layout.html" />
+    
+    
+    <link rel="prev" href="05-step-04-popups.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="00-workshop-introduction.html">
+            
+                <a href="00-workshop-introduction.html">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Step-by-Step Tutorials</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="01-step-00-basic-html.html">
+            
+                <a href="01-step-00-basic-html.html">
+            
+                    
+                    Step 0: Basic HTML Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="02-step-01-map-container.html">
+            
+                <a href="02-step-01-map-container.html">
+            
+                    
+                    Step 1: Adding a Map Container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="03-step-02-initialize-map.html">
+            
+                <a href="03-step-02-initialize-map.html">
+            
+                    
+                    Step 2: Initialize Leaflet Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="04-step-03-geojson-points.html">
+            
+                <a href="04-step-03-geojson-points.html">
+            
+                    
+                    Step 3: Load GeoJSON Points
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="05-step-04-popups.html">
+            
+                <a href="05-step-04-popups.html">
+            
+                    
+                    Step 4: Add Popups
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.6" data-path="06-step-05-cog-from-stacks.html">
+            
+                <a href="06-step-05-cog-from-stacks.html">
+            
+                    
+                    Step 5: Cloud Optimized GeoTIFF from Digital Stacks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="07-step-06-split-layout.html">
+            
+                <a href="07-step-06-split-layout.html">
+            
+                    
+                    Step 6: Split-Screen Layout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="08-step-07-wikidata-basic.html">
+            
+                <a href="08-step-07-wikidata-basic.html">
+            
+                    
+                    Step 7: Basic Wikidata Fetching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="09-step-08-wikidata-images.html">
+            
+                <a href="09-step-08-wikidata-images.html">
+            
+                    
+                    Step 8: Wikidata Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="10-step-09-complete-integration.html">
+            
+                <a href="10-step-09-complete-integration.html">
+            
+                    
+                    Step 9: Complete Integration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="11-bonus-step-10-wikidata-filter.html">
+            
+                <a href="11-bonus-step-10-wikidata-filter.html">
+            
+                    
+                    BONUS Step 10: Wikidata Filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Reference</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="DIGITAL-STACKS-REFERENCE.html">
+            
+                <a href="DIGITAL-STACKS-REFERENCE.html">
+            
+                    
+                    Digital Stacks Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="WORKSHOP-MATERIALS.html">
+            
+                <a href="WORKSHOP-MATERIALS.html">
+            
+                    
+                    Workshop Materials Index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="GLOSSARY.html">
+            
+                <a href="GLOSSARY.html">
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Step 5: Cloud Optimized GeoTIFF from Digital Stacks</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="step-5-adding-cloud-optimized-geotiff-from-digital-stacks">Step 5: Adding Cloud Optimized GeoTIFF from Digital Stacks</h1>
+<h2 id="overview">Overview</h2>
+<p>In this step, we'll add <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> high-resolution aerial photograph of Stanford campus, served directly from the Stanford Digital Repository through the Digital Stacks API.</p>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<ul>
+<li>Understand what Cloud Optimized GeoTIFFs (COGs) are</li>
+<li>Learn how to access raster imagery from Digital Stacks</li>
+<li>Use the georaster-layer-for-leaflet library</li>
+<li>Understand PURLs and DRUIDs in the Stanford Digital Repository</li>
+<li>Learn about masking/clipping raster data with GeoJSON</li>
+</ul>
+<h2 id="what-is-a-cloud-optimized-geotiff-cog">What is a Cloud Optimized GeoTIFF (COG)?</h2>
+<p><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> <strong>Cloud Optimized GeoTIFF</strong> is <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> special format for storing geographic imagery that:</p>
+<ul>
+<li><strong>Streams efficiently</strong> over the internet (you don'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> need to download the whole file)</li>
+<li><strong>Loads progressively</strong> (low resolution first, then higher detail)</li>
+<li><strong>Includes georeferencing</strong> (knows exactly where on Earth it belongs)</li>
+<li><strong>Works with standard tools</strong> (compatible with all GeoTIFF software)</li>
+</ul>
+<p>Think of it like <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> "smart image" that knows where it is on the map and can stream just the parts you need.</p>
+<h2 id="understanding-digital-stacks-urls">Understanding Digital Stacks URLs</h2>
+<h3 id="the-anatomy-of-a-digital-stacks-url">The Anatomy of a Digital Stacks URL</h3>
+<pre><code>https://stacks.stanford.edu/file/druid:vb564st1676/graduation-stanford_stanford-california_20240616_171600_ssc2_nrg_flat_50cm_rotated-154_large_COG.tif
+</code></pre><p>Let'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> break this down:</p>
+<ol>
+<li><strong><code>https://stacks.stanford.edu</code></strong> - The Digital Stacks web service</li>
+<li><strong><code>/file/</code></strong> - We're requesting <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> file (not <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> PURL page)</li>
+<li><strong><code>druid:vb564st1676</code></strong> - The DRUID (unique identifier) for this object</li>
+<li><strong><code>/graduation-stanford_...COG.tif</code></strong> - The filename within that object</li>
+</ol>
+<h3 id="what-is-a-druid">What is a DRUID?</h3>
+<p><strong>DRUID</strong> = Digital Repository Unique Identifier</p>
+<ul>
+<li><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> permanent ID for every object in SDR</li>
+<li>Format: <code>druid:</code> followed by 11 characters (like <code>vb564st1676</code>)</li>
+<li>Never changes, even if the object is updated</li>
+<li>Guaranteed to work forever (permanent URLs)</li>
+</ul>
+<p><strong>Example DRUID:</strong> <code>druid:vb564st1676</code></p>
+<ul>
+<li><code>vb564st1676</code> is the actual ID</li>
+<li>Broken down: <code>vb</code> + <code>564</code> + <code>st</code> + <code>1676</code> (letters and numbers)</li>
+</ul>
+<h3 id="purls-vs-digital-stacks-urls">PURLs vs. Digital Stacks URLs</h3>
+<p><strong>PURL (Persistent URL):</strong></p>
+<pre><code>https://purl.stanford.edu/vb564st1676
+</code></pre><ul>
+<li>Human-readable landing page</li>
+<li>Shows metadata, description, download options</li>
+<li>Good for linking in papers and websites</li>
+</ul>
+<p><strong>Digital Stacks File URL:</strong></p>
+<pre><code>https://stacks.stanford.edu/file/druid:vb564st1676/filename.tif
+</code></pre><ul>
+<li>Direct access to the file</li>
+<li>Machine-readable</li>
+<li>Used in code and applications</li>
+<li>Can be loaded directly by mapping libraries</li>
+</ul>
+<h2 id="the-complete-code">The Complete Code</h2>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">base</span> <span class="hljs-attr">target</span>=<span class="hljs-string">"_top"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Stanford Campus Map - Step 5: Add COG<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">"sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">""</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">"sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/proj4"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/georaster"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/georaster-layer-for-leaflet"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="language-css">
+        <span class="hljs-selector-tag">html</span>, <span class="hljs-selector-tag">body</span> {
+            <span class="hljs-attribute">height</span>: <span class="hljs-number">100%</span>;
+            <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+        }
+        <span class="hljs-selector-class">.leaflet-container</span> {
+            <span class="hljs-attribute">height</span>: <span class="hljs-number">600px</span>;
+            <span class="hljs-attribute">width</span>: <span class="hljs-number">800px</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+            <span class="hljs-attribute">max-height</span>: <span class="hljs-number">100%</span>;
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Stanford Public Art Map<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Step 5: Add a Cloud Optimized GEOTIFF (COG) from Digital Stacks<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"map"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 800px; height: 600px;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript">
+
+    <span class="hljs-comment">// Initialize map centered on Stanford campus</span>
+    <span class="hljs-keyword">const</span> map = L.<span class="hljs-title function_">map</span>(<span class="hljs-string">'map'</span>).<span class="hljs-title function_">setView</span>([<span class="hljs-number">37.427</span>, -<span class="hljs-number">122.169</span>], <span class="hljs-number">15</span>);
+
+    <span class="hljs-comment">// Add OpenStreetMap tile layer</span>
+    <span class="hljs-keyword">const</span> tiles = L.<span class="hljs-title function_">tileLayer</span>(<span class="hljs-string">'https://tile.openstreetmap.org/{z}/{x}/{y}.png'</span>, {
+        <span class="hljs-attr">maxZoom</span>: <span class="hljs-number">19</span>,
+        <span class="hljs-attr">attribution</span>: <span class="hljs-string">'&amp;copy; &lt;a href="http://www.openstreetmap.org/copyright"&gt;OpenStreetMap&lt;/a&gt;'</span>
+    }).<span class="hljs-title function_">addTo</span>(map);
+
+    <span class="hljs-comment">// URL to the COG file - using relative path</span>
+    <span class="hljs-keyword">var</span> url_to_geotiff_file = <span class="hljs-keyword">new</span> <span class="hljs-title function_">URL</span>(<span class="hljs-string">"collection/stanford_campus_irg.tif"</span>, <span class="hljs-variable language_">window</span>.<span class="hljs-property">location</span>.<span class="hljs-property">href</span>).<span class="hljs-property">href</span>;
+
+    <span class="hljs-comment">// Parse and display the COG</span>
+    <span class="hljs-title function_">parseGeoraster</span>(url_to_geotiff_file).<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">georaster</span> =&gt;</span> {
+      <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">"georaster:"</span>, georaster);
+
+      <span class="hljs-comment">// Fetch mask GeoJSON to clip the raster</span>
+      <span class="hljs-title function_">fetch</span>(<span class="hljs-string">"collection/stanford_campus.geojson"</span>)
+        .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">r</span> =&gt;</span> r.<span class="hljs-title function_">json</span>())
+        .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">maskGeojson</span> =&gt;</span> {
+          <span class="hljs-comment">// Create the raster layer</span>
+          <span class="hljs-keyword">var</span> layer = <span class="hljs-keyword">new</span> <span class="hljs-title class_">GeoRasterLayer</span>({
+            <span class="hljs-attr">attribution</span>: <span class="hljs-string">"Planet"</span>,
+            <span class="hljs-attr">georaster</span>: georaster,
+            <span class="hljs-attr">resolution</span>: <span class="hljs-number">128</span>,
+            <span class="hljs-attr">mask</span>: maskGeojson
+          });
+
+          <span class="hljs-comment">// Add to map and zoom to bounds</span>
+          layer.<span class="hljs-title function_">addTo</span>(map);
+          map.<span class="hljs-title function_">fitBounds</span>(layer.<span class="hljs-title function_">getBounds</span>());
+        });
+    }).<span class="hljs-title function_">catch</span>(<span class="hljs-variable language_">console</span>.<span class="hljs-property">error</span>);
+
+    <span class="hljs-comment">// Load and display artwork points (from previous step)</span>
+    <span class="hljs-title function_">fetch</span>(<span class="hljs-string">'collection/stanford_public_art.geojson'</span>)
+        .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.<span class="hljs-title function_">json</span>())
+        .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> {
+            <span class="hljs-keyword">const</span> artworkLayer = L.<span class="hljs-title function_">geoJSON</span>(data, {
+                <span class="hljs-attr">pointToLayer</span>: <span class="hljs-keyword">function</span>(<span class="hljs-params">feature, latlng</span>) {
+                    <span class="hljs-keyword">return</span> L.<span class="hljs-title function_">circleMarker</span>(latlng, {
+                        <span class="hljs-attr">radius</span>: <span class="hljs-number">6</span>,
+                        <span class="hljs-attr">color</span>: <span class="hljs-string">'white'</span>,
+                        <span class="hljs-attr">weight</span>: <span class="hljs-number">2</span>,
+                        <span class="hljs-attr">fillColor</span>: <span class="hljs-string">'blue'</span>,
+                        <span class="hljs-attr">fillOpacity</span>: <span class="hljs-number">0.7</span>
+                    });
+                },
+                <span class="hljs-attr">onEachFeature</span>: <span class="hljs-keyword">function</span>(<span class="hljs-params">feature, layer</span>) {
+                    <span class="hljs-keyword">const</span> props = feature.<span class="hljs-property">properties</span> || {};
+                    <span class="hljs-keyword">const</span> title = props.<span class="hljs-property">name</span> || <span class="hljs-string">'Artwork'</span>;
+                    <span class="hljs-keyword">const</span> artist = props.<span class="hljs-property">artist_name</span>;
+                    <span class="hljs-keyword">const</span> type = props.<span class="hljs-property">artwork_type</span>;
+
+                    <span class="hljs-keyword">let</span> popupContent = <span class="hljs-string">'&lt;div style="min-width:200px;"&gt;'</span>;
+                    popupContent += <span class="hljs-string">'&lt;b&gt;'</span> + title + <span class="hljs-string">'&lt;/b&gt;&lt;br&gt;'</span>;
+                    <span class="hljs-keyword">if</span> (artist) popupContent += <span class="hljs-string">'&lt;b&gt;Artist:&lt;/b&gt; '</span> + artist + <span class="hljs-string">'&lt;br&gt;'</span>;
+                    <span class="hljs-keyword">if</span> (type) popupContent += <span class="hljs-string">'&lt;b&gt;Type:&lt;/b&gt; '</span> + type;
+                    popupContent += <span class="hljs-string">'&lt;/div&gt;'</span>;
+
+                    layer.<span class="hljs-title function_">bindPopup</span>(popupContent);
+                }
+            }).<span class="hljs-title function_">addTo</span>(map);
+
+            map.<span class="hljs-title function_">fitBounds</span>(artworkLayer.<span class="hljs-title function_">getBounds</span>());
+        })
+        .<span class="hljs-title function_">catch</span>(<span class="hljs-function"><span class="hljs-params">error</span> =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">'Error loading GeoJSON:'</span>, error));
+
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h2 id="whats-new">What's New?</h2>
+<h3 id="1-new-javascript-libraries">1. New JavaScript Libraries</h3>
+<p>We're adding three new libraries to handle GeoTIFF files:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/proj4"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/georaster"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/georaster-layer-for-leaflet"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p><strong>proj4:</strong> Handles coordinate system transformations (different map projections)</p>
+<p><strong>georaster:</strong> Reads and parses GeoTIFF files</p>
+<p><strong>georaster-layer-for-leaflet:</strong> Displays georasters on Leaflet maps</p>
+<h3 id="2-constructing-the-file-url">2. Constructing the File URL</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> url_to_geotiff_file = <span class="hljs-keyword">new</span> <span class="hljs-title function_">URL</span>(<span class="hljs-string">"collection/stanford_campus_irg.tif"</span>, <span class="hljs-variable language_">window</span>.<span class="hljs-property">location</span>.<span class="hljs-property">href</span>).<span class="hljs-property">href</span>;
+</code></pre>
+<p><strong>What this does:</strong> Converts <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> relative path to an absolute URL</p>
+<p><strong>Breaking it down:</strong></p>
+<ul>
+<li><code>"collection/stanford_campus_irg.tif"</code> - Relative path to our file</li>
+<li><code>window.location.href</code> - The current page'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> full URL</li>
+<li><code>new URL(relative, base)</code> - JavaScript function that resolves relative paths</li>
+<li><code>.href</code> - Gets the full absolute URL as <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> string</li>
+</ul>
+<p><strong>Why we need this:</strong> The georaster library requires <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> full URL, not just <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> relative path.</p>
+<p><strong>Example transformation:</strong></p>
+<ul>
+<li>Your HTML is at: <code>file:///Users/you/project/index.html</code></li>
+<li>Relative path: <code>collection/stanford_campus_irg.tif</code></li>
+<li>Result: <code>file:///Users/you/project/collection/stanford_campus_irg.tif</code></li>
+</ul>
+<p><strong>In SDR:</strong></p>
+<ul>
+<li>Your HTML is at: <code>https://stacks.stanford.edu/file/druid:abc123/index.html</code></li>
+<li>Relative path: <code>collection/stanford_campus_irg.tif</code></li>
+<li>Result: <code>https://stacks.stanford.edu/file/druid:abc123/collection/stanford_campus_irg.tif</code></li>
+</ul>
+<p><strong>Using Digital Stacks directly:</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> url_to_geotiff_file = <span class="hljs-string">"https://stacks.stanford.edu/file/druid:vb564st1676/graduation-stanford_COG.tif"</span>;
+</code></pre>
+<h3 id="3-parsing-the-geotiff">3. Parsing the GeoTIFF</h3>
+<pre><code class="lang-javascript"><span class="hljs-title function_">parseGeoraster</span>(url_to_geotiff_file).<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">georaster</span> =&gt;</span> {
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">"georaster:"</span>, georaster);
+  <span class="hljs-comment">// ... more code ...</span>
+}).<span class="hljs-title function_">catch</span>(<span class="hljs-variable language_">console</span>.<span class="hljs-property">error</span>);
+</code></pre>
+<p><strong>What is <code>.then()</code>?</strong> This is <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> <strong>Promise</strong> - JavaScript'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> way of handling asynchronous operations (tasks that take time).</p>
+<p><strong>Think of it like ordering food:</strong></p>
+<ol>
+<li>You order (call <code>parseGeoraster()</code>)</li>
+<li>You wait (the file downloads and processes)</li>
+<li>Food arrives (<code>.then()</code> runs with the result)</li>
+<li>Something went wrong (<code>.catch()</code> handles errors)</li>
+</ol>
+<p><strong>The georaster object contains:</strong></p>
+<ul>
+<li>Image width and height</li>
+<li>Geographic bounds (where the image belongs on Earth)</li>
+<li>Pixel values (the actual image data)</li>
+<li>Coordinate reference system information</li>
+</ul>
+<p><strong><code>console.log()</code></strong> prints information to the browser'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> developer console (press F12 to see it).</p>
+<h3 id="4-loading-the-mask-geojson">4. Loading the Mask GeoJSON</h3>
+<pre><code class="lang-javascript"><span class="hljs-title function_">fetch</span>(<span class="hljs-string">"collection/stanford_campus.geojson"</span>)
+  .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">r</span> =&gt;</span> r.<span class="hljs-title function_">json</span>())
+  .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">maskGeojson</span> =&gt;</span> {
+    <span class="hljs-comment">// Use the mask</span>
+  });
+</code></pre>
+<p><strong>What is <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> mask?</strong> <a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> GeoJSON polygon that clips (cuts out) the raster to <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> specific shape.</p>
+<p><strong>Why use <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> mask?</strong> The COG might cover <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> large area, but we only want to show Stanford campus.</p>
+<p><strong>The <code>fetch()</code> function:</strong></p>
+<ul>
+<li>Downloads files from URLs (local or remote)</li>
+<li>Returns <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> Promise (uses <code>.then()</code> like above)</li>
+<li><code>.json()</code> parses the response as JSON data</li>
+</ul>
+<p><strong>Nested .then():</strong> We wait for the GeoJSON to load, then create the layer.</p>
+<h3 id="5-creating-the-raster-layer">5. Creating the Raster Layer</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> layer = <span class="hljs-keyword">new</span> <span class="hljs-title class_">GeoRasterLayer</span>({
+  <span class="hljs-attr">attribution</span>: <span class="hljs-string">"Planet"</span>,
+  <span class="hljs-attr">georaster</span>: georaster,
+  <span class="hljs-attr">resolution</span>: <span class="hljs-number">128</span>,
+  <span class="hljs-attr">mask</span>: maskGeojson
+});
+</code></pre>
+<p><strong>Configuration options:</strong></p>
+<ul>
+<li><strong><code>attribution: "Planet"</code></strong> - Credit for the imagery source</li>
+<li><strong><code>georaster: georaster</code></strong> - The parsed GeoTIFF data</li>
+<li><strong><code>resolution: 128</code></strong> - How many pixels to render (lower = faster but blockier)</li>
+<li><strong><code>mask: maskGeojson</code></strong> - Clip the raster to this polygon</li>
+</ul>
+<p><strong>Resolution explained:</strong></p>
+<ul>
+<li>Higher numbers (256, 512) = sharper but slower</li>
+<li>Lower numbers (64, 128) = faster but more pixelated</li>
+<li>Try different values to balance quality and performance</li>
+</ul>
+<h3 id="6-adding-to-map-and-fitting-bounds">6. Adding to Map and Fitting Bounds</h3>
+<pre><code class="lang-javascript">layer.<span class="hljs-title function_">addTo</span>(map);
+map.<span class="hljs-title function_">fitBounds</span>(layer.<span class="hljs-title function_">getBounds</span>());
+</code></pre>
+<p><strong><code>.addTo(map)</code></strong> - Displays the layer on the map</p>
+<p><strong><code>map.fitBounds()</code></strong> - Automatically zooms and centers the map to show the entire raster layer</p>
+<h2 id="file-structure-for-sdr-deposit">File Structure for SDR Deposit</h2>
+<p>When depositing to SDR, organize your files like this:</p>
+<pre><code>your-sdr-object/
+├── index.html (your main HTML file)
+├── collection/
+│   ├── stanford_campus_irg.tif (the COG)
+│   ├── stanford_campus.geojson (mask boundary)
+│   └── stanford_public_art.geojson (artwork points)
+└── README.md (optional documentation)
+</code></pre><p><strong>All file references in your HTML use relative paths:</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-title function_">fetch</span>(<span class="hljs-string">"collection/stanford_campus.geojson"</span>)
+</code></pre>
+<p><strong>After deposit with DRUID <code>abc123xyz456</code>, files are accessible at:</strong></p>
+<pre><code>https://stacks.stanford.edu/file/druid:abc123xyz456/index.html
+https://stacks.stanford.edu/file/druid:abc123xyz456/collection/stanford_campus_irg.tif
+https://stacks.stanford.edu/file/druid:abc123xyz456/collection/stanford_campus.geojson
+</code></pre><p><strong>Your relative paths keep working!</strong></p>
+<h2 id="referencing-external-cogs-from-digital-stacks">Referencing External COGs from Digital Stacks</h2>
+<p>You can also reference COGs from other SDR deposits:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> url_to_geotiff_file = <span class="hljs-string">"https://stacks.stanford.edu/file/druid:vb564st1676/graduation-stanford_stanford-california_20240616_171600_ssc2_nrg_flat_50cm_rotated-154_large_COG.tif"</span>;
+</code></pre>
+<p><strong>Benefits:</strong></p>
+<ul>
+<li>No need to duplicate large files</li>
+<li>Always access the latest version</li>
+<li>Save storage space</li>
+</ul>
+<p><strong>Use case:</strong> Build <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> collection viewer that references imagery from multiple DRUIDs.</p>
+<h2 id="try-it-yourself">Try It Yourself</h2>
+<ol>
+<li><strong>Make sure you have the GeoTIFF file</strong> in <code>collection/stanford_campus_irg.tif</code></li>
+<li><strong>Copy the complete code</strong> into <code>step-05.html</code></li>
+<li><strong>Open in your browser</strong></li>
+</ol>
+<p>You should see the aerial photograph overlaid on the map!</p>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<p><strong>If the image doesn'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> appear:</strong></p>
+<ul>
+<li>Check the browser console (F12) for errors</li>
+<li>Verify the file path is correct</li>
+<li>Make sure the file exists</li>
+<li>Try using the absolute Digital Stacks URL instead</li>
+</ul>
+<p><strong>If the image is too slow:</strong></p>
+<ul>
+<li>Reduce the resolution: <code>resolution: 64</code></li>
+<li>Check your internet connection</li>
+<li>The first load is always slower (caching helps after)</li>
+</ul>
+<h2 id="the-power-of-cogs-with-digital-stacks">The Power of COGs with Digital Stacks</h2>
+<p>This combination is powerful because:</p>
+<ol>
+<li><strong>COGs stream efficiently</strong> - Users don'<a href="GLOSSARY.html#t" class="glossary-term" title="">t</a> download the whole file</li>
+<li><strong>Digital Stacks serves reliably</strong> - Stanford'<a href="GLOSSARY.html#s" class="glossary-term" title="">s</a> infrastructure is robust</li>
+<li><strong>Files are permanent</strong> - DRUIDs never break</li>
+<li><strong>Bandwidth is optimized</strong> - Only needed tiles are transferred</li>
+<li><strong>Works globally</strong> - Fast access from anywhere</li>
+</ol>
+<p><strong>Traditional approach (without COGs):</strong></p>
+<ul>
+<li>User clicks "view map"</li>
+<li>Browser downloads 500MB GeoTIFF</li>
+<li>Wait 5+ minutes on slow connection</li>
+<li>Browser might crash with large files</li>
+</ul>
+<p><strong>COG approach:</strong></p>
+<ul>
+<li>User clicks "view map"</li>
+<li>Browser fetches just the visible portions (~1-5MB)</li>
+<li>Map appears in seconds</li>
+<li>Smooth experience on any device</li>
+</ul>
+<h2 id="whats-next">What's Next?</h2>
+<p>In <a href="06-step-06-split-layout.md">Step 6: Split-Screen Layout with External CSS</a>, we'll reorganize our page to show the map on the left and create space for Wikidata information on the right!</p>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>COGs enable efficient streaming of large raster files  </li>
+<li>Digital Stacks URLs follow the pattern: <code>stacks.stanford.edu/file/druid:ID/filename</code>  </li>
+<li>DRUIDs are permanent identifiers that never change  </li>
+<li>Relative paths work perfectly in SDR deposits  </li>
+<li>The <code>new URL()</code> function resolves relative paths to absolute URLs  </li>
+<li>Promises (<code>.then()</code>) handle asynchronous operations  </li>
+<li>Masks clip rasters to specific geographic areas  </li>
+</ul>
+<h2 id="common-questions">Common Questions</h2>
+<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Can <a href="GLOSSARY.html#i" class="glossary-term" title="">I</a> use my own GeoTIFF?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: Yes! Use any georeferenced TIF file. Convert to COG format with GDAL for best performance.</p>
+<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: How do <a href="GLOSSARY.html#i" class="glossary-term" title="">I</a> get <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> DRUID?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: Deposit your files to SDR through the Stanford digital repository system. <a href="GLOSSARY.html#a" class="glossary-term" title="">A</a> DRUID is assigned automatically.</p>
+<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Can <a href="GLOSSARY.html#i" class="glossary-term" title="">I</a> use COGs from other sources?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: Yes! Any publicly accessible COG works. Try USGS, NASA, or other open data sources.</p>
+<p><strong><a href="GLOSSARY.html#q" class="glossary-term" title="">Q</a>: Why use <a href="GLOSSARY.html#a" class="glossary-term" title="">a</a> mask?</strong><br></br><a href="GLOSSARY.html#a" class="glossary-term" title="">A</a>: Masks improve performance and focus attention on your area of interest.</p>
+<hr></hr>
+<p><strong>Previous:</strong> <a href="04-step-04-popups.md">Step 4: Add Popups</a> | <strong>Next:</strong> <a href="07-step-06-split-layout.html">Step 6: Split Layout</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="05-step-04-popups.html" class="navigation navigation-prev " aria-label="Previous page: Step 4: Add Popups">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="07-step-06-split-layout.html" class="navigation navigation-next " aria-label="Next page: Step 6: Split-Screen Layout">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Step 5: Cloud Optimized GeoTIFF from Digital Stacks","level":"2.6","depth":1,"next":{"title":"Step 6: Split-Screen Layout","level":"2.7","depth":1,"path":"07-step-06-split-layout.md","ref":"07-step-06-split-layout.md","articles":[]},"previous":{"title":"Step 4: Add Popups","level":"2.5","depth":1,"path":"05-step-04-popups.md","ref":"05-step-04-popups.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"06-step-05-cog-from-stacks.md","mtime":"2026-01-26T20:13:31.525Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T20:26:10.879Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
