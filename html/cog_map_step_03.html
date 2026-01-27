@@ -40,7 +40,7 @@
     }).addTo(map);
 
     // Load GeoJSON data
-    fetch('collection/stanford_public_art.geojson')
+    fetch('../stanford_public_art.geojson')
         .then(response => response.json())
         .then(data => {
             // Add GeoJSON layer with custom circle markers

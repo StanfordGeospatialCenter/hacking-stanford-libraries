@@ -387,7 +387,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="step-0-basic-html-structure">Step 0: Basic HTML Structure</h1>
-<p>Live Demo: <a href="cog_map_step_00.html">cog_map_step_00.html</a></p>
+<p>Live Demo: <a href="html/cog_map_step_00.html">html/cog_map_step_00.html</a></p>
 <h2 id="overview">Overview</h2>
 <p>In this first step, we'll create the most basic HTML document possible. This is the foundation that every web page needs.</p>
 <h2 id="learning-objectives">Learning Objectives</h2>
@@ -404,17 +404,24 @@
 <h3 id="your-project-structure">Your Project Structure</h3>
 <p>When you download this workshop, your files are organized like this:</p>
 <pre><code>hacking-stanford-libraries/
-├── cog_map_step_00.html
-├── cog_map_step_01.html
-├── collection/
-│   ├── stanford_campus.geojson
-│   ├── stanford_public_art.geojson
-│   └── stanford_campus_irg.tif
+├── stanford_campus.geojson
+├── stanford_public_art.geojson
+├── stanford_campus_irg.tif
+├── html/
+│   ├── cog_map_step_00.html
+│   ├── cog_map_step_01.html
+│   ├── ...
+│   ├── styles_wikidata.css
+│   └── lib/
+│       ├── leaflet.js
+│       ├── leaflet.css
+│       └── ...
 └── supporting_docs/
     └── Digital Stacks.pdf
-</code></pre><p><strong><a href="GLOSSARY.html#relative-path" class="glossary-term" title="A file path specified relative to the current file's location. Example: collection/data.json">Relative Path</a> Example:</strong> If you're editing <code>cog_map_step_00.html</code> and want to reference a file in the <code>collection</code> folder, you would write:</p>
-<pre><code>collection/stanford_campus.geojson
-</code></pre><p>This means: "Look in the collection folder (which is in the same directory as this HTML file) for a file called stanford_campus.<a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">geojson</a>"</p>
+</code></pre><p><strong><a href="GLOSSARY.html#relative-path" class="glossary-term" title="A file path specified relative to the current file's location. Example: collection/data.json">Relative Path</a> Example:</strong> If you're editing <code>html/cog_map_step_03.html</code> and want to reference a data file at the root level, you would write:</p>
+<pre><code>../stanford_public_art.geojson
+</code></pre><p>This means: "Go up one directory (..) from the html/ folder, then find stanford_public_art.<a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">geojson</a>"</p>
+<p><strong>This structure mirrors how files will be organized in SDR:</strong> The HTML viewer files are in a subdirectory, while the main data assets (<a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a>, TIF files) are at the collection's root level.</p>
 <h3 id="digital-stacks-paths">Digital Stacks Paths</h3>
 <p>When files are in the Stanford <a href="GLOSSARY.html#digital-repository" class="glossary-term" title="A system for storing, managing, and providing access to digital content over time.">Digital Repository</a>, they have <strong>absolute URLs</strong>:</p>
 <pre><code>https://stacks.stanford.edu/file/druid:vb564st1676/graduation-stanford.tif
@@ -577,7 +584,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Step 0: Basic HTML Structure","level":"3.1","depth":1,"next":{"title":"Step 1: Adding a Map Container","level":"3.2","depth":1,"path":"02-step-01-map-container.md","ref":"02-step-01-map-container.md","articles":[]},"previous":{"title":"Working with Images from the Stanford Digital Repository (SDR): IIIF API & OpenCV","level":"2.1","depth":1,"url":"https://colab.research.google.com/drive/1HQ6gQHVV2coZvz_QrrJ6IelLgp4gS8Fo?usp=sharing","ref":"https://colab.research.google.com/drive/1HQ6gQHVV2coZvz_QrrJ6IelLgp4gS8Fo?usp=sharing","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"01-step-00-basic-html.md","mtime":"2026-01-26T23:36:00.692Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T23:36:12.021Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Step 0: Basic HTML Structure","level":"3.1","depth":1,"next":{"title":"Step 1: Adding a Map Container","level":"3.2","depth":1,"path":"02-step-01-map-container.md","ref":"02-step-01-map-container.md","articles":[]},"previous":{"title":"Working with Images from the Stanford Digital Repository (SDR): IIIF API & OpenCV","level":"2.1","depth":1,"url":"https://colab.research.google.com/drive/1HQ6gQHVV2coZvz_QrrJ6IelLgp4gS8Fo?usp=sharing","ref":"https://colab.research.google.com/drive/1HQ6gQHVV2coZvz_QrrJ6IelLgp4gS8Fo?usp=sharing","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"01-step-00-basic-html.md","mtime":"2026-01-27T00:14:44.526Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-27T00:14:52.122Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

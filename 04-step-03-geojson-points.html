@@ -389,7 +389,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="step-3-load-geojson-points">Step 3: Load GeoJSON Points</h1>
-<p>Live Demo: <a href="cog_map_step_03.html">cog_map_step_03.html</a></p>
+<p>Live Demo: <a href="html/cog_map_step_03.html">html/cog_map_step_03.html</a></p>
 <h2 id="overview">Overview</h2>
 <p>In this step, we'll add data points (artwork locations) to our map by loading a <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> file. This introduces working with geographic data and customizing how markers appear.</p>
 <h2 id="learning-objectives">Learning Objectives</h2>
@@ -486,7 +486,7 @@
     }).<span class="hljs-title function_">addTo</span>(map);
 
     <span class="hljs-comment">// Load GeoJSON data</span>
-    <span class="hljs-title function_">fetch</span>(<span class="hljs-string">'collection/stanford_public_art.geojson'</span>)
+    <span class="hljs-title function_">fetch</span>(<span class="hljs-string">'../stanford_public_art.geojson'</span>)
         .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> response.<span class="hljs-title function_">json</span>())
         .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> {
             <span class="hljs-comment">// Add GeoJSON layer with custom circle markers</span>
@@ -514,22 +514,22 @@
 </code></pre>
 <h2 id="whats-new">What's New?</h2>
 <h3 id="1-the-fetch-api">1. The Fetch API</h3>
-<pre><code class="lang-javascript"><span class="hljs-title function_">fetch</span>(<span class="hljs-string">'collection/stanford_public_art.geojson'</span>)
+<pre><code class="lang-javascript"><span class="hljs-title function_">fetch</span>(<span class="hljs-string">'../stanford_public_art.geojson'</span>)
 </code></pre>
 <p><strong>What is <code>fetch()</code>?</strong> A built-in JavaScript <a href="GLOSSARY.html#function" class="glossary-term" title="A reusable block of code that performs a specific task. Can accept input (parameters) and return output.">function</a> for loading files from URLs (local or remote).</p>
 <p><strong>This is a <a href="GLOSSARY.html#relative-path" class="glossary-term" title="A file path specified relative to the current file's location. Example: collection/data.json">relative path</a>!</strong> Looking for:</p>
 <pre><code>your-project/
-├── cog_map_step_03.html (this file)
-└── collection/
-    └── stanford_public_art.geojson (the data file)
+├── stanford_public_art.geojson (the data file)
+└── html/
+    └── cog_map_step_03.html (this file)
 </code></pre><p><strong>In <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> (after deposit to SDR):</strong></p>
 <pre><code>https://stacks.stanford.edu/file/druid:abc123xyz456/
-├── index.html
-└── collection/
-    └── stanford_public_art.geojson
-</code></pre><p>The <a href="GLOSSARY.html#relative-path" class="glossary-term" title="A file path specified relative to the current file's location. Example: collection/data.json">relative path</a> <code>collection/stanford_public_art.geojson</code> works in both locations!</p>
+├── stanford_public_art.geojson
+└── html/
+    └── index.html
+</code></pre><p>The <a href="GLOSSARY.html#relative-path" class="glossary-term" title="A file path specified relative to the current file's location. Example: collection/data.json">relative path</a> <code>../stanford_public_art.geojson</code> works in both locations!</p>
 <p><strong>You could also use an absolute <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> URL:</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-title function_">fetch</span>(<span class="hljs-string">'https://stacks.stanford.edu/file/druid:abc123xyz456/collection/data.geojson'</span>)
+<pre><code class="lang-javascript"><span class="hljs-title function_">fetch</span>(<span class="hljs-string">'https://stacks.stanford.edu/file/druid:abc123xyz456/stanford_public_art.geojson'</span>)
 </code></pre>
 <h3 id="2-promises-and-then-chains">2. Promises and .then() Chains</h3>
 <pre><code class="lang-javascript"><span class="hljs-title function_">fetch</span>(<span class="hljs-string">'file.geojson'</span>)
@@ -656,16 +656,16 @@ response =&gt; response.<span class="hljs-title function_">json</span>()
 <h3 id="local-development">Local Development</h3>
 <p>Your file structure:</p>
 <pre><code>project/
-├── index.html
-└── collection/
-    └── stanford_public_art.geojson
-</code></pre><p>Your code:</p>
-<pre><code class="lang-javascript"><span class="hljs-title function_">fetch</span>(<span class="hljs-string">'collection/stanford_public_art.geojson'</span>)
+├── stanford_public_art.geojson
+└── html/
+    └── index.html
+</code></pre><p>Your code (in html/index.html):</p>
+<pre><code class="lang-javascript"><span class="hljs-title function_">fetch</span>(<span class="hljs-string">'../stanford_public_art.geojson'</span>)
 </code></pre>
 <h3 id="after-sdr-deposit-druid-abc123xyz456">After SDR Deposit (DRUID: abc123xyz456)</h3>
 <p>Files at:</p>
-<pre><code>https://stacks.stanford.edu/file/druid:abc123xyz456/index.html
-https://stacks.stanford.edu/file/druid:abc123xyz456/collection/stanford_public_art.geojson
+<pre><code>https://stacks.stanford.edu/file/druid:abc123xyz456/stanford_public_art.geojson
+https://stacks.stanford.edu/file/druid:abc123xyz456/html/index.html
 </code></pre><p>Your <a href="GLOSSARY.html#relative-path" class="glossary-term" title="A file path specified relative to the current file's location. Example: collection/data.json">relative path</a> <strong>still works!</strong> No changes needed.</p>
 <h3 id="referencing-external-geojson">Referencing External GeoJSON</h3>
 <p>You can also load <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> from other DRUIDs:</p>
@@ -674,8 +674,8 @@ https://stacks.stanford.edu/file/druid:abc123xyz456/collection/stanford_public_a
 <p><strong>Use case:</strong> Build a collection viewer that combines data from multiple SDR deposits.</p>
 <h2 id="try-it-yourself">Try It Yourself</h2>
 <ol>
-<li><strong>Copy the complete code</strong> into <code>step-03.html</code></li>
-<li><strong>Make sure</strong> <code>collection/stanford_public_art.geojson</code> exists</li>
+<li><strong>Copy the complete code</strong> into <code>html/step-03.html</code></li>
+<li><strong>Make sure</strong> <code>stanford_public_art.geojson</code> exists at the root level (not in a collection/ folder)</li>
 <li><strong>Open in your <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a></strong></li>
 </ol>
 <p>You should see blue circles at artwork locations!</p>
@@ -712,7 +712,7 @@ https://stacks.stanford.edu/file/druid:abc123xyz456/collection/stanford_public_a
 <li>Draw points, lines, or polygons on the map</li>
 <li>Add properties in the table</li>
 <li>Download the <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> file</li>
-<li>Add to your <code>collection/</code> folder</li>
+<li>Add to your project's root folder (or wherever your HTML file expects it)</li>
 </ol>
 <h3 id="option-2-export-from-gis-software">Option 2: Export from GIS Software</h3>
 <ul>
@@ -752,7 +752,10 @@ https://stacks.stanford.edu/file/druid:abc123xyz456/collection/stanford_public_a
 <span class="hljs-comment">// Missing: .addTo(map)</span>
 </code></pre>
 <p><strong>❌ Using wrong path:</strong></p>
-<pre><code class="lang-javascript"><span class="hljs-title function_">fetch</span>(<span class="hljs-string">'stanford_public_art.geojson'</span>)  <span class="hljs-comment">// Won't find it if it's in collection/</span>
+<pre><code class="lang-javascript"><span class="hljs-title function_">fetch</span>(<span class="hljs-string">'stanford_public_art.geojson'</span>)  <span class="hljs-comment">// Won't find it if HTML is in html/ subdirectory</span>
+</code></pre>
+<p><strong>✅ Correct (when HTML is in html/ subdirectory):</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-title function_">fetch</span>(<span class="hljs-string">'../stanford_public_art.geojson'</span>)  <span class="hljs-comment">// Go up one level to find the file</span>
 </code></pre>
 <h2 id="whats-next">What's Next?</h2>
 <p>In <a href="05-step-04-popups.html">Step 4: Add Popups</a>, we'll make these markers interactive by adding popups that display artwork information when clicked!</p>
@@ -816,7 +819,7 @@ https://stacks.stanford.edu/file/druid:abc123xyz456/collection/stanford_public_a
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Step 3: Load GeoJSON Points","level":"3.4","depth":1,"next":{"title":"Step 4: Add Popups","level":"3.5","depth":1,"path":"05-step-04-popups.md","ref":"05-step-04-popups.md","articles":[]},"previous":{"title":"Step 2: Initialize Leaflet Map","level":"3.3","depth":1,"path":"03-step-02-initialize-map.md","ref":"03-step-02-initialize-map.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"04-step-03-geojson-points.md","mtime":"2026-01-26T23:36:00.693Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-26T23:36:12.021Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Step 3: Load GeoJSON Points","level":"3.4","depth":1,"next":{"title":"Step 4: Add Popups","level":"3.5","depth":1,"path":"05-step-04-popups.md","ref":"05-step-04-popups.md","articles":[]},"previous":{"title":"Step 2: Initialize Leaflet Map","level":"3.3","depth":1,"path":"03-step-02-initialize-map.md","ref":"03-step-02-initialize-map.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"04-step-03-geojson-points.md","mtime":"2026-01-27T00:14:44.527Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-27T00:14:52.122Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

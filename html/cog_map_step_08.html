@@ -151,7 +151,7 @@
     }).catch(console.error);
 
     // Load the public art GeoJSON file
-    fetch('collection/stanford_public_art.geojson')
+    fetch('../stanford_public_art.geojson')
         .then(response => response.json())
         .then(data => {
             // Create a GeoJSON layer with custom styling and interactivity
