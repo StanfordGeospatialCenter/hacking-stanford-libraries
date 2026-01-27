@@ -93,7 +93,7 @@
     }
 
     // Load and display the Cloud Optimized GeoTIFF (COG) raster layer
-    var url_to_geotiff_file = new URL("collection/stanford_campus_irg.tif", window.location.href).href;
+    var url_to_geotiff_file = new URL("../stanford_campus_irg.tif", window.location.href).href;
 
     // Parse the GeoTIFF file to extract georaster information
     parseGeoraster(url_to_geotiff_file).then(georaster => {
