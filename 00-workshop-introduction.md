@@ -37,7 +37,7 @@ In this workshop, we'll create a **Stanford Public Art Interactive Map** that:
 - Uses a split-screen layout for easy exploration
 - Can be deposited directly into SDR alongside your data
 
-![Final Application Screenshot](supporting_docs/final-app-preview.png)
+![Final Application Screenshot](html/images/sdr_map_app.png)
 
 ## Prerequisites
 
