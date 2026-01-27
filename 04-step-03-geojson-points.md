@@ -1,6 +1,6 @@
 # Step 3: Load GeoJSON Points
 
-Live Demo: [cog_map_step_03.html](cog_map_step_03.html)
+Live Demo: [html/cog_map_step_03.html](html/cog_map_step_03.html)
 
 ## Overview
 
@@ -107,7 +107,7 @@ A simple GeoJSON file looks like this:
     }).addTo(map);
 
     // Load GeoJSON data
-    fetch('collection/stanford_public_art.geojson')
+    fetch('../stanford_public_art.geojson')
         .then(response => response.json())
         .then(data => {
             // Add GeoJSON layer with custom circle markers
@@ -139,7 +139,7 @@ A simple GeoJSON file looks like this:
 ### 1. The Fetch API
 
 ```javascript
-fetch('collection/stanford_public_art.geojson')
+fetch('../stanford_public_art.geojson')
 ```
 
 **What is `fetch()`?** A built-in JavaScript function for loading files from URLs (local or remote).
@@ -147,24 +147,24 @@ fetch('collection/stanford_public_art.geojson')
 **This is a relative path!** Looking for:
 ```
 your-project/
-├── cog_map_step_03.html (this file)
-└── collection/
-    └── stanford_public_art.geojson (the data file)
+├── stanford_public_art.geojson (the data file)
+└── html/
+    └── cog_map_step_03.html (this file)
 ```
 
 **In Digital Stacks (after deposit to SDR):**
 ```
 https://stacks.stanford.edu/file/druid:abc123xyz456/
-├── index.html
-└── collection/
-    └── stanford_public_art.geojson
+├── stanford_public_art.geojson
+└── html/
+    └── index.html
 ```
 
-The relative path `collection/stanford_public_art.geojson` works in both locations!
+The relative path `../stanford_public_art.geojson` works in both locations!
 
 **You could also use an absolute Digital Stacks URL:**
 ```javascript
-fetch('https://stacks.stanford.edu/file/druid:abc123xyz456/collection/data.geojson')
+fetch('https://stacks.stanford.edu/file/druid:abc123xyz456/stanford_public_art.geojson')
 ```
 
 ### 2. Promises and .then() Chains
@@ -338,22 +338,22 @@ pointToLayer: function(feature, latlng) {
 Your file structure:
 ```
 project/
-├── index.html
-└── collection/
-    └── stanford_public_art.geojson
+├── stanford_public_art.geojson
+└── html/
+    └── index.html
 ```
 
-Your code:
+Your code (in html/index.html):
 ```javascript
-fetch('collection/stanford_public_art.geojson')
+fetch('../stanford_public_art.geojson')
 ```
 
 ### After SDR Deposit (DRUID: abc123xyz456)
 
 Files at:
 ```
-https://stacks.stanford.edu/file/druid:abc123xyz456/index.html
-https://stacks.stanford.edu/file/druid:abc123xyz456/collection/stanford_public_art.geojson
+https://stacks.stanford.edu/file/druid:abc123xyz456/stanford_public_art.geojson
+https://stacks.stanford.edu/file/druid:abc123xyz456/html/index.html
 ```
 
 Your relative path **still works!** No changes needed.
@@ -370,8 +370,8 @@ fetch('https://stacks.stanford.edu/file/druid:xyz789def123/boundaries.geojson')
 
 ## Try It Yourself
 
-1. **Copy the complete code** into `step-03.html`
-2. **Make sure** `collection/stanford_public_art.geojson` exists
+1. **Copy the complete code** into `html/step-03.html`
+2. **Make sure** `stanford_public_art.geojson` exists at the root level (not in a collection/ folder)
 3. **Open in your browser**
 
 You should see blue circles at artwork locations!
@@ -420,7 +420,7 @@ pointToLayer: function(feature, latlng) {
 2. Draw points, lines, or polygons on the map
 3. Add properties in the table
 4. Download the GeoJSON file
-5. Add to your `collection/` folder
+5. Add to your project's root folder (or wherever your HTML file expects it)
 
 ### Option 2: Export from GIS Software
 - QGIS: Layer → Save As → GeoJSON
@@ -467,7 +467,12 @@ const artworkLayer = L.geoJSON(data, { ... });
 
 **❌ Using wrong path:**
 ```javascript
-fetch('stanford_public_art.geojson')  // Won't find it if it's in collection/
+fetch('stanford_public_art.geojson')  // Won't find it if HTML is in html/ subdirectory
+```
+
+**✅ Correct (when HTML is in html/ subdirectory):**
+```javascript
+fetch('../stanford_public_art.geojson')  // Go up one level to find the file
 ```
 
 ## What's Next?

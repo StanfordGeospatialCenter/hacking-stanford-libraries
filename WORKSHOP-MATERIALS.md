@@ -9,35 +9,35 @@ This folder contains complete workshop documentation for building an interactive
 
 ### Step-by-Step Tutorials
 
-1. **[01-step-00-basic-html.md](01-step-00-basic-html.md)** - Basic HTML structure | [View Demo →](cog_map_step_00.html)
+1. **[01-step-00-basic-html.md](01-step-00-basic-html.md)** - Basic HTML structure | [View Demo →](html/cog_map_step_00.html)
    - Understanding HTML tags and structure
    - DOCTYPE, head, and body elements
    - Introduction to file paths
 
-2. **[02-step-01-map-container.md](02-step-01-map-container.md)** - Adding a map container | [View Demo →](cog_map_step_01.html)
+2. **[02-step-01-map-container.md](02-step-01-map-container.md)** - Adding a map container | [View Demo →](html/cog_map_step_01.html)
    - Page title and headings
    - Creating div elements
    - Inline CSS styling
    - Understanding IDs
 
-3. **[03-step-02-initialize-map.md](03-step-02-initialize-map.md)** - Initialize Leaflet map | [View Demo →](cog_map_step_02.html)
+3. **[03-step-02-initialize-map.md](03-step-02-initialize-map.md)** - Initialize Leaflet map | [View Demo →](html/cog_map_step_02.html)
    - Loading external JavaScript libraries
    - Creating an interactive map
    - Understanding coordinates and zoom levels
    - Working with map tiles
 
-4. **[04-step-03-geojson-points.md](04-step-03-geojson-points.md)** - Load GeoJSON Points (Add artwork markers) | [View Demo →](cog_map_step_03.html)
+4. **[04-step-03-geojson-points.md](04-step-03-geojson-points.md)** - Load GeoJSON Points (Add artwork markers) | [View Demo →](html/cog_map_step_03.html)
    - Loading GeoJSON data
    - Creating custom markers
    - Understanding GeoJSON format
    - Using fetch() API
 
-5. **[05-step-04-popups.md](05-step-04-popups.md)** - Interactive popups | [View Demo →](cog_map_step_04.html)
+5. **[05-step-04-popups.md](05-step-04-popups.md)** - Interactive popups | [View Demo →](html/cog_map_step_04.html)
    - Binding popups to markers
    - Accessing feature properties
    - Building HTML strings in JavaScript
 
-6. **[06-step-05-cog-from-stacks.md](06-step-05-cog-from-stacks.md)** - Cloud Optimized GeoTIFF from Digital Stacks | [View Demo →](cog_map_step_05.html)
+6. **[06-step-05-cog-from-stacks.md](06-step-05-cog-from-stacks.md)** - Cloud Optimized GeoTIFF from Digital Stacks | [View Demo →](html/cog_map_step_05.html)
    - Understanding COGs and their benefits
    - Digital Stacks URL patterns
    - Understanding DRUIDs and PURLs
@@ -45,36 +45,36 @@ This folder contains complete workshop documentation for building an interactive
    - Using masks to clip imagery
    - Relative vs. absolute paths in SDR
 
-7. **[07-step-06-split-layout.md](07-step-06-split-layout.md)** - Split-Screen Layout (External CSS file) | [View Demo →](cog_map_step_06.html)
+7. **[07-step-06-split-layout.md](07-step-06-split-layout.md)** - Split-Screen Layout (External CSS file) | [View Demo →](html/cog_map_step_06.html)
    - Moving CSS to external file
    - Creating flexbox layouts
    - Split-screen design
    - Linking stylesheets
 
-8. **[08-step-07-wikidata-basic.md](08-step-07-wikidata-basic.md)** - Basic Wikidata Fetching (API integration) | [View Demo →](cog_map_step_07.html)
+8. **[08-step-07-wikidata-basic.md](08-step-07-wikidata-basic.md)** - Basic Wikidata Fetching (API integration) | [View Demo →](html/cog_map_step_07.html)
    - Fetching data from Wikidata API
    - Async/await syntax
    - Displaying dynamic content
    - Error handling
 
-9. **[09-step-08-wikidata-images.md](09-step-08-wikidata-images.md)** - Wikidata Images (Adding images) | [View Demo →](cog_map_step_08.html)
+9. **[09-step-08-wikidata-images.md](09-step-08-wikidata-images.md)** - Wikidata Images (Adding images) | [View Demo →](html/cog_map_step_08.html)
    - Accessing Wikimedia Commons
    - Property-based queries (P18)
    - Image URL construction
    - Loading external images
 
-10. **[10-step-09-complete-integration.md](10-step-09-complete-integration.md)** - Complete Integration (Final application) | [View Demo →](cog_map_step_09.html)
+10. **[10-step-09-complete-integration.md](10-step-09-complete-integration.md)** - Complete Integration (Final application) | [View Demo →](html/cog_map_step_09.html)
     - Multiple API requests
     - Displaying complex properties
     - Full click-to-view interactivity
     - Production-ready code
 
-11. **[11-bonus-step-10-wikidata-filter.md](11-bonus-step-10-wikidata-filter.md)** - BONUS: Filter to features with Wikidata IDs | [View Demo →](cog_map_step_10.html)
+11. **[11-bonus-step-10-wikidata-filter.md](11-bonus-step-10-wikidata-filter.md)** - BONUS: Filter to features with Wikidata IDs | [View Demo →](html/cog_map_step_10.html)
    - Filter GeoJSON features by presence of `wikidata`
    - Handle empty datasets gracefully
    - Preserve interactivity and split layout
 
-12. **[12-step-11-future-proofing.md](12-step-11-future-proofing.md)** - Future Proofing: Creating Self-Contained Deposits | [View Demo →](cog_map_step_11.html)
+12. **[12-step-11-future-proofing.md](12-step-11-future-proofing.md)** - Future Proofing: Creating Self-Contained Deposits | [View Demo →](html/cog_map_step_11.html)
    - Download and include JavaScript libraries locally
    - Create self-contained, future-proof applications
    - Ensure your application works forever in SDR

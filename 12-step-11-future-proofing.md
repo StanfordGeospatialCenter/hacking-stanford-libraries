@@ -1,6 +1,6 @@
 # Step 11: Future Proofing - Creating Self-Contained Deposits
 
-Live Demo: [cog_map_step_11.html](cog_map_step_11.html)
+Live Demo: [html/cog_map_step_11.html](html/cog_map_step_11.html)
 
 ## Overview
 

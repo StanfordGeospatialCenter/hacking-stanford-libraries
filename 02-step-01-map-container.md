@@ -1,6 +1,6 @@
 # Step 1: Adding a Map Container
 
-Live Demo: [cog_map_step_01.html](cog_map_step_01.html)
+Live Demo: [html/cog_map_step_01.html](html/cog_map_step_01.html)
 
 ## Overview
 

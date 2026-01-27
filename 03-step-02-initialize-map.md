@@ -1,6 +1,6 @@
 # Step 2: Initialize Leaflet Map
 
-Live Demo: [cog_map_step_02.html](cog_map_step_02.html)
+Live Demo: [html/cog_map_step_02.html](html/cog_map_step_02.html)
 
 ## Overview
 

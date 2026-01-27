@@ -1,6 +1,6 @@
 # Step 6: Split-Screen Layout with External CSS
 
-Live Demo: [cog_map_step_06.html](cog_map_step_06.html)
+Live Demo: [html/cog_map_step_06.html](html/cog_map_step_06.html)
 
 ## Overview
 

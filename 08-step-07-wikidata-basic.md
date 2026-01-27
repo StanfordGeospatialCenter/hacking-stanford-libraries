@@ -1,6 +1,6 @@
 # Step 7: Basic Wikidata Fetching
 
-Live Demo: [cog_map_step_07.html](cog_map_step_07.html)
+Live Demo: [html/cog_map_step_07.html](html/cog_map_step_07.html)
 
 ## Overview
 

@@ -1,6 +1,6 @@
 # BONUS Step 10: Filter to Features with Wikidata IDs
 
-Live Demo: [cog_map_step_10.html](cog_map_step_10.html)
+Live Demo: [html/cog_map_step_10.html](html/cog_map_step_10.html)
 
 ## Overview
 

@@ -76,7 +76,7 @@ Progress through these tutorials in order to build a Stanford Public Art Interac
 
 ## Working Files
 
-Each step includes a corresponding working HTML file (`cog_map_step_00.html` through `cog_map_step_11.html`) demonstrating the complete code for that stage.
+All working HTML files are located in the `html/` directory (`html/cog_map_step_00.html` through `html/cog_map_step_11.html`), demonstrating the complete code for each stage. Data files (GeoJSON, TIF) are at the repository root, mirroring the structure they would have in an SDR deposit.
 
 ## Data Sources
 
@@ -90,5 +90,5 @@ http://{s}.tile.osm.org/{z}/{x}/{y}.png
 https://stacks.stanford.edu/file/druid:hf224mw4004/20231116.pmtiles
 
 **Stanford Public Art GeoJSON:**  
-`./collection/stanford_public_art.geojson`
+`./stanford_public_art.geojson`
 

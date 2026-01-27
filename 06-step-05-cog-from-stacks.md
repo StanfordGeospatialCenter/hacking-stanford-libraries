@@ -1,6 +1,6 @@
 # Step 5: Adding Cloud Optimized GeoTIFF from Digital Stacks
 
-Live Demo: [cog_map_step_05.html](cog_map_step_05.html)
+Live Demo: [html/cog_map_step_05.html](html/cog_map_step_05.html)
 
 ## Overview
 

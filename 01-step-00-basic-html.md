@@ -1,6 +1,6 @@
 # Step 0: Basic HTML Structure
 
-Live Demo: [cog_map_step_00.html](cog_map_step_00.html)
+Live Demo: [html/cog_map_step_00.html](html/cog_map_step_00.html)
 
 ## Overview
 
@@ -28,22 +28,30 @@ When you download this workshop, your files are organized like this:
 
 ```
 hacking-stanford-libraries/
-├── cog_map_step_00.html
-├── cog_map_step_01.html
-├── collection/
-│   ├── stanford_campus.geojson
-│   ├── stanford_public_art.geojson
-│   └── stanford_campus_irg.tif
+├── stanford_campus.geojson
+├── stanford_public_art.geojson
+├── stanford_campus_irg.tif
+├── html/
+│   ├── cog_map_step_00.html
+│   ├── cog_map_step_01.html
+│   ├── ...
+│   ├── styles_wikidata.css
+│   └── lib/
+│       ├── leaflet.js
+│       ├── leaflet.css
+│       └── ...
 └── supporting_docs/
     └── Digital Stacks.pdf
 ```
 
-**Relative Path Example:** If you're editing `cog_map_step_00.html` and want to reference a file in the `collection` folder, you would write:
+**Relative Path Example:** If you're editing `html/cog_map_step_03.html` and want to reference a data file at the root level, you would write:
 ```
-collection/stanford_campus.geojson
+../stanford_public_art.geojson
 ```
 
-This means: "Look in the collection folder (which is in the same directory as this HTML file) for a file called stanford_campus.geojson"
+This means: "Go up one directory (..) from the html/ folder, then find stanford_public_art.geojson"
+
+**This structure mirrors how files will be organized in SDR:** The HTML viewer files are in a subdirectory, while the main data assets (GeoJSON, TIF files) are at the collection's root level.
 
 ### Digital Stacks Paths
 

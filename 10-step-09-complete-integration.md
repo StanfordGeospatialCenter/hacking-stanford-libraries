@@ -1,6 +1,6 @@
 # Step 9: Complete Integration
 
-Live Demo: [cog_map_step_09.html](cog_map_step_09.html)
+Live Demo: [html/cog_map_step_09.html](html/cog_map_step_09.html)
 
 ## Overview
 

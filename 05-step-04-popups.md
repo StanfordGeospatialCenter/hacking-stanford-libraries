@@ -1,6 +1,6 @@
 # Step 4: Add Popups with Information
 
-Live Demo: [cog_map_step_04.html](cog_map_step_04.html)
+Live Demo: [html/cog_map_step_04.html](html/cog_map_step_04.html)
 
 ## Overview
 

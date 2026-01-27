@@ -1,6 +1,6 @@
 # Step 8: Wikidata Images
 
-Live Demo: [cog_map_step_08.html](cog_map_step_08.html)
+Live Demo: [html/cog_map_step_08.html](html/cog_map_step_08.html)
 
 ## Overview
 
