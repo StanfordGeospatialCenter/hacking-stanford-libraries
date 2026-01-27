@@ -176,14 +176,14 @@
     }
 
     // Load and display the Cloud Optimized GeoTIFF (COG) raster layer
-    var url_to_geotiff_file = new URL("collection/stanford_campus_irg.tif", window.location.href).href;
+    var url_to_geotiff_file = new URL("../stanford_campus_irg.tif", window.location.href).href;
 
     // Parse the GeoTIFF file to extract georaster information
     parseGeoraster(url_to_geotiff_file).then(georaster => {
       console.log("georaster:", georaster);
 
       // Fetch the mask GeoJSON to clip the raster to Stanford campus boundary
-      fetch("collection/stanford_campus.geojson")
+      fetch("../stanford_campus.geojson")
         .then(r => r.json())
         .then(maskGeojson => {
           // Create a new GeoRaster layer with the parsed data and mask
