@@ -263,9 +263,6 @@ Visual content displayed on a map (tiles, markers, shapes, images).
 ## Leaflet
 A [JavaScript library for creating interactive maps in web browsers](https://leafletjs.com/).
 
-## let
-JavaScript keyword for declaring variables that can be reassigned. Block-scoped.
-
 ## Linked Data
 A method of connecting related data across different sources using references (like Wikidata items linking to other items).
 
