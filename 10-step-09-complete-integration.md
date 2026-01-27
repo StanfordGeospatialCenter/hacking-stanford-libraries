@@ -2,6 +2,8 @@
 
 Live Demo: [html/cog_map_step_09.html](html/cog_map_step_09.html)
 
+![Step 9: Complete application with full Wikidata integration showing artist, images, and metadata](html/images/step_09.png)
+
 ## Overview
 
 In this final step, we'll create a fully-featured application by adding multiple Wikidata properties: artist names, creation dates, materials, and more. This demonstrates how to build a comprehensive information display from structured data.

@@ -2,6 +2,8 @@
 
 Live Demo: [html/cog_map_step_02.html](html/cog_map_step_02.html)
 
+![Step 2: Interactive Leaflet map centered on Stanford campus with OpenStreetMap basemap](html/images/step_02.png)
+
 ## Overview
 
 Now we'll transform our empty container into an interactive web map using Leaflet, a popular open-source JavaScript mapping library.

@@ -2,6 +2,8 @@
 
 Live Demo: [html/cog_map_step_03.html](html/cog_map_step_03.html)
 
+![Step 3: Map with blue circle markers showing Stanford public art locations](html/images/step_03.png)
+
 ## Overview
 
 In this step, we'll add data points (artwork locations) to our map by loading a GeoJSON file. This introduces working with geographic data and customizing how markers appear.

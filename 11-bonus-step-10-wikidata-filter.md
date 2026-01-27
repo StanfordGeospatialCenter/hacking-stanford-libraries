@@ -2,6 +2,8 @@
 
 Live Demo: [html/cog_map_step_10.html](html/cog_map_step_10.html)
 
+![Bonus Step 10: Filtered view showing only artworks with Wikidata IDs for enhanced data quality](html/images/step_10.png)
+
 ## Overview
 
 In this bonus step, we refine the application so it only displays artworks that include a `wikidata` identifier in the GeoJSON. This keeps the map focused on items that can return rich details from Wikidata.

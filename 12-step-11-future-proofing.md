@@ -2,6 +2,8 @@
 
 Live Demo: [html/cog_map_step_11.html](html/cog_map_step_11.html)
 
+![Step 11: Future-proofed application using local libraries and relative paths for long-term preservation](html/images/step_11.png)
+
 ## Overview
 
 In this final step, we'll ensure your interactive web application remains fully functional in perpetuity by creating a self-contained deposit. Instead of relying on external CDNs that might change or disappear, we'll download and include local copies of all required JavaScript libraries with your deposit.

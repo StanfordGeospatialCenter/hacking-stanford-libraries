@@ -2,6 +2,8 @@
 
 Live Demo: [html/cog_map_step_01.html](html/cog_map_step_01.html)
 
+![Step 1: Page with heading, description, and empty map container](html/images/step_01.png)
+
 ## Overview
 
 In this step, we'll add visible content to our HTML page and create a container where our interactive map will live.

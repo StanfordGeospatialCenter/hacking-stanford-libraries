@@ -2,6 +2,8 @@
 
 Live Demo: [html/cog_map_step_00.html](html/cog_map_step_00.html)
 
+![Step 0: Basic HTML structure - A blank HTML page with basic document structure](html/images/step_00.png)
+
 ## Overview
 
 In this first step, we'll create the most basic HTML document possible. This is the foundation that every web page needs.

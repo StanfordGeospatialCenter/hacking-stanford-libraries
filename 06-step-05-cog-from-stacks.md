@@ -2,6 +2,8 @@
 
 Live Demo: [html/cog_map_step_05.html](html/cog_map_step_05.html)
 
+![Step 5: Map with false-color infrared aerial imagery overlay from Stanford Digital Stacks](html/images/step_05.png)
+
 ## Overview
 
 In this step, we'll add a high-resolution aerial photograph of Stanford campus, served directly from the [Stanford Digital Repository](https://sdr.stanford.edu/) through the [Digital Stacks API](https://api.library.stanford.edu/docs/digital-stacks/api/).

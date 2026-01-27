@@ -2,6 +2,8 @@
 
 Live Demo: [html/cog_map_step_07.html](html/cog_map_step_07.html)
 
+![Step 7: Split-screen showing map with Wikidata labels and descriptions in right panel](html/images/step_07.png)
+
 ## Overview
 
 In this step, we'll connect to the Wikidata API to fetch information about artworks and display it in our right panel. This introduces working with external APIs and asynchronous JavaScript.

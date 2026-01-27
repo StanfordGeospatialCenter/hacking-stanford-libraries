@@ -2,6 +2,8 @@
 
 Live Demo: [html/cog_map_step_04.html](html/cog_map_step_04.html)
 
+![Step 4: Interactive map with popup showing artwork details (title, artist, type)](html/images/step_04.png)
+
 ## Overview
 
 In this step, we'll make our map interactive by adding popups that display artwork information when users click on markers. This introduces working with feature properties and building dynamic HTML content.

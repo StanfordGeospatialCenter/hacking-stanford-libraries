@@ -2,6 +2,8 @@
 
 Live Demo: [html/cog_map_step_08.html](html/cog_map_step_08.html)
 
+![Step 8: Application displaying artwork images from Wikimedia Commons alongside artwork details](html/images/step_08.png)
+
 ## Overview
 
 In this step, we'll enhance our application by fetching and displaying images of the artworks from Wikimedia Commons. Images make our application much more engaging and informative!
