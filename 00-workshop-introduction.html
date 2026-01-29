@@ -6,7 +6,7 @@
         <title>Workshop Introduction · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 6.1.5">
+        <meta name="generator" content="HonKit 6.1.6">
         
         
         
@@ -295,6 +295,19 @@
             
         </li>
     
+        <li class="chapter " data-level="3.13" data-path="13-step-12-publishing-to-github.html">
+            
+                <a href="13-step-12-publishing-to-github.html">
+            
+                    
+                    Step 12: Publishing to GitHub Pages
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
         
@@ -468,28 +481,25 @@ When you deposit files in SDR, they maintain their folder structure. If you use 
 <li><strong>JavaScript</strong> is the electricity and plumbing - makes things interactive and dynamic</li>
 </ul>
 <p>We'll build our application step by step, showing how each piece works.</p>
-<h2 id="workshop-structure">Workshop Structure</h2>
-<p>We'll progress through these steps:</p>
+<h2 id="getting-ready-for-this-workshop">Getting Ready for this Workshop</h2>
+<p>Since we are building a real <a href="GLOSSARY.html#web-application" class="glossary-term" title="An application accessed through a web browser rather than installed software.">web application</a>, we need a place to host it. The Stanford <a href="GLOSSARY.html#digital-repository" class="glossary-term" title="A system for storing, managing, and providing access to digital content over time.">Digital Repository</a> (SDR) is a permanent research <a href="GLOSSARY.html#repository" class="glossary-term" title="A storage location for digital content or code.">repository</a>. We want to treat it with respect and ensure that we only deposit finished, significant scholarly work, rather than temporary files from a workshop.</p>
+<p>Fortunately, <strong>GitHub Pages</strong> works in a very similar way to the <strong>SDR <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a></strong>. Both serve files via HTTP, and if you structure your application using <strong>relative paths</strong>, an application that works on GitHub Pages will work perfectly when deposited into the SDR. This makes GitHub an excellent "staging area" or "testbed" for your SDR deposits.</p>
+<p>To get set up, follow these steps:</p>
+<h3 id="1-create-a-github-account">1. Create a GitHub Account</h3>
+<p>If you don't already have one, sign up for a free account at <a href="https://github.com" target="_blank">github.com</a>.</p>
+<h3 id="2-fork-and-clone-the-workshop-repository">2. Fork and Clone the Workshop Repository</h3>
+<p>To work along with us, you'll need your own copy of the workshop materials.</p>
 <ol>
-<li><strong>Step 0:</strong> Basic HTML structure (the foundation)</li>
-<li><strong>Step 1:</strong> Adding a map container (creating the space for our map)</li>
-<li><strong>Step 2:</strong> Initializing a <a href="GLOSSARY.html#leaflet" class="glossary-term" title="A JavaScript library for creating interactive maps in web browsers.">Leaflet</a> map (making the map interactive)</li>
-<li><strong>Step 3:</strong> Loading <a href="GLOSSARY.html#geojson" class="glossary-term" title="A format for encoding geographic data structures using JSON. Defines features with geometry and properties.">GeoJSON</a> points (adding artwork locations)</li>
-<li><strong>Step 4:</strong> Adding popups with information (making markers clickable)</li>
-<li><strong>Step 5:</strong> Adding a Cloud Optimized <a href="GLOSSARY.html#geotiff" class="glossary-term" title="A file format for storing geospatial raster images with geographic metadata.">GeoTIFF</a> from <a href="GLOSSARY.html#digital-stacks" class="glossary-term" title="Stanford's infrastructure for accessing files stored in the Stanford Digital Repository via HTTP URLs.">Digital Stacks</a> (aerial imagery)</li>
-<li><strong>Step 6:</strong> Creating a split-screen layout with external CSS (organizing the page)</li>
-<li><strong>Step 7:</strong> Fetching basic <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> information (getting artwork details)</li>
-<li><strong>Step 8:</strong> Adding <a href="GLOSSARY.html#wikidata" class="glossary-term" title="A free, open knowledge base of structured data that can be read and edited by humans and machines.">Wikidata</a> images (showing artwork photos)</li>
-<li><strong>Step 9:</strong> Complete integration with all properties (the final application)</li>
+<li>Go to the <a href="https://github.com/StanfordGeospatialCenter/hacking-stanford-libraries" target="_blank">workshop repository on GitHub</a>.</li>
+<li>Click the <strong>Fork</strong> button in the top-right corner to create a copy in your own account.</li>
+<li>Once forked, you can work directly in the <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a> using GitHub Codespaces, or clone it to your local machine if you are comfortable with Git.</li>
 </ol>
-<p>Each step builds on the previous one, so you'll see exactly how each feature is added.</p>
-<h2 id="how-to-use-these-materials">How to Use These Materials</h2>
+<h3 id="3-create-your-work-file">3. Create Your Work File</h3>
+<p>Throughout this workshop, you will be building a single HTML file step-by-step.</p>
 <ol>
-<li><strong>Read each step's markdown document</strong> to understand what you're building</li>
-<li><strong>Look at the corresponding HTML file</strong> to see the working code</li>
-<li><strong>Open the HTML file in your <a href="GLOSSARY.html#browser" class="glossary-term" title="Software application used to access and display web pages (Chrome, Firefox, Safari, Edge).">browser</a></strong> to see the result</li>
-<li><strong>Try modifying the code</strong> yourself to experiment</li>
-<li><strong>Use these examples as templates</strong> for your own projects</li>
+<li>In the root of your new <a href="GLOSSARY.html#repository" class="glossary-term" title="A storage location for digital content or code.">repository</a>, create a new file named <code>index.html</code>.</li>
+<li>We will paste code into this file as we progress through the steps.</li>
+<li>By naming it <code>index.html</code>, GitHub Pages will automatically serve it as the home page of your site later on.</li>
 </ol>
 <h2 id="ready-to-get-started">Ready to Get Started?</h2>
 <p>Let's begin with <a href="01-step-00-basic-html.html">Step 0: Basic HTML Structure</a>!</p>
@@ -543,7 +553,7 @@ When you deposit files in SDR, they maintain their folder structure. If you use 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Workshop Introduction","level":"1.2","depth":1,"next":{"title":"Working with Images from the Stanford Digital Repository (SDR): IIIF API & OpenCV","level":"2.1","depth":1,"url":"https://colab.research.google.com/drive/1HQ6gQHVV2coZvz_QrrJ6IelLgp4gS8Fo?usp=sharing","ref":"https://colab.research.google.com/drive/1HQ6gQHVV2coZvz_QrrJ6IelLgp4gS8Fo?usp=sharing","articles":[]},"previous":{"title":"Overview","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"00-workshop-introduction.md","mtime":"2026-01-27T01:12:38.447Z","type":"markdown"},"gitbook":{"version":"6.1.5","time":"2026-01-27T01:12:45.934Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Workshop Introduction","level":"1.2","depth":1,"next":{"title":"Working with Images from the Stanford Digital Repository (SDR): IIIF API & OpenCV","level":"2.1","depth":1,"url":"https://colab.research.google.com/drive/1HQ6gQHVV2coZvz_QrrJ6IelLgp4gS8Fo?usp=sharing","ref":"https://colab.research.google.com/drive/1HQ6gQHVV2coZvz_QrrJ6IelLgp4gS8Fo?usp=sharing","articles":[]},"previous":{"title":"Overview","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"00-workshop-introduction.md","mtime":"2026-01-29T19:32:11.876Z","type":"markdown"},"gitbook":{"version":"6.1.6","time":"2026-01-29T19:32:20.912Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
