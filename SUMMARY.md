@@ -19,6 +19,7 @@
 - [Step 9: Complete Integration](10-step-09-complete-integration.md) — [View Demo →](html/cog_map_step_09.html)
 - [BONUS Step 10: Wikidata Filter](11-bonus-step-10-wikidata-filter.md) — [View Demo →](html/cog_map_step_10.html)
 - [Step 11: Future Proofing](12-step-11-future-proofing.md) — [View Demo →](html/cog_map_step_11.html)
+- [Step 12: Publishing to GitHub Pages](13-step-12-publishing-to-github.md)
 
 ## Reference
 - [Digital Stacks Reference](DIGITAL-STACKS-REFERENCE.md)

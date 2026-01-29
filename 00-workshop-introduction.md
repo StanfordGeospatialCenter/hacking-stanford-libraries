@@ -100,30 +100,33 @@ Think of building a web application like building a house:
 
 We'll build our application step by step, showing how each piece works.
 
-## Workshop Structure
+## Getting Ready for this Workshop
 
-We'll progress through these steps:
+Since we are building a real web application, we need a place to host it. The Stanford Digital Repository (SDR) is a permanent research repository. We want to treat it with respect and ensure that we only deposit finished, significant scholarly work, rather than temporary files from a workshop.
 
-0. **Step 0:** Basic HTML structure (the foundation)
-1. **Step 1:** Adding a map container (creating the space for our map)
-2. **Step 2:** Initializing a Leaflet map (making the map interactive)
-3. **Step 3:** Loading GeoJSON points (adding artwork locations)
-4. **Step 4:** Adding popups with information (making markers clickable)
-5. **Step 5:** Adding a Cloud Optimized GeoTIFF from Digital Stacks (aerial imagery)
-6. **Step 6:** Creating a split-screen layout with external CSS (organizing the page)
-7. **Step 7:** Fetching basic Wikidata information (getting artwork details)
-8. **Step 8:** Adding Wikidata images (showing artwork photos)
-9. **Step 9:** Complete integration with all properties (the final application)
+Fortunately, **GitHub Pages** works in a very similar way to the **SDR Digital Stacks**. Both serve files via HTTP, and if you structure your application using **relative paths**, an application that works on GitHub Pages will work perfectly when deposited into the SDR. This makes GitHub an excellent "staging area" or "testbed" for your SDR deposits.
 
-Each step builds on the previous one, so you'll see exactly how each feature is added.
+To get set up, follow these steps:
 
-## How to Use These Materials
+### 1. Create a GitHub Account
 
-1. **Read each step's markdown document** to understand what you're building
-2. **Look at the corresponding HTML file** to see the working code
-3. **Open the HTML file in your browser** to see the result
-4. **Try modifying the code** yourself to experiment
-5. **Use these examples as templates** for your own projects
+If you don't already have one, sign up for a free account at [github.com](https://github.com).
+
+### 2. Fork and Clone the Workshop Repository
+
+To work along with us, you'll need your own copy of the workshop materials.
+
+1.  Go to the [workshop repository on GitHub](https://github.com/StanfordGeospatialCenter/hacking-stanford-libraries).
+2.  Click the **Fork** button in the top-right corner to create a copy in your own account.
+3.  Once forked, you can work directly in the browser using GitHub Codespaces, or clone it to your local machine if you are comfortable with Git.
+
+### 3. Create Your Work File
+
+Throughout this workshop, you will be building a single HTML file step-by-step.
+
+1.  In the root of your new repository, create a new file named `index.html`.
+2.  We will paste code into this file as we progress through the steps.
+3.  By naming it `index.html`, GitHub Pages will automatically serve it as the home page of your site later on.
 
 ## Ready to Get Started?
 
