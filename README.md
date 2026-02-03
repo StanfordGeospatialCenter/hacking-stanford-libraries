@@ -1,6 +1,8 @@
 # Hacking Stanford Libraries: Building Interactive Web Applications with SDR
 
-This workshop as a GitBook: https://stanfordgeospatialcenter.github.io/hacking-stanford-libraries/ 
+This workshop's URL: [https://stanfordgeospatialcenter.github.io/hacking-stanford-libraries](https://stanfordgeospatialcenter.github.io/hacking-stanford-libraries)
+The Github Repo: [https://github.com/StanfordGeospatialCenter/hacking-stanford-libraries](https://github.com/StanfordGeospatialCenter/hacking-stanford-libraries)
+The Slides: [https://slides.com/staceymaples/hacksdr_app](https://slides.com/staceymaples/hacksdr_app)
 
 A practical workshop on using Stanford Libraries' [Digital Stacks](https://api.library.stanford.edu/docs/digital-stacks/api/), [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page), and web mapping to build interactive applications.
 

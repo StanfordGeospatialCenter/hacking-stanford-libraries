@@ -5,6 +5,8 @@
 This workshop's URL: [https://stanfordgeospatialcenter.github.io/hacking-stanford-libraries](https://stanfordgeospatialcenter.github.io/hacking-stanford-libraries)
 The Github Repo: [https://github.com/StanfordGeospatialCenter/hacking-stanford-libraries](https://github.com/StanfordGeospatialCenter/hacking-stanford-libraries)
 The Slides: [https://slides.com/staceymaples/hacksdr_app](https://slides.com/staceymaples/hacksdr_app)
+
+
 Welcome to this hands-on workshop on building interactive web applications using the Stanford Digital Repository (SDR) infrastructure!
 
 ### Inspiration
