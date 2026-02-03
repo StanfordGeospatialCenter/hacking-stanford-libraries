@@ -7,7 +7,6 @@
 * The Slides: [https://slides.com/staceymaples/hacksdr_app](https://slides.com/staceymaples/hacksdr_app)
 * The DEMO Repo to FORK for your own use: [https://github.com/StanfordGeospatialCenter/Hacking_SDR_Demo_App](https://github.com/StanfordGeospatialCenter/Hacking_SDR_Demo_App)
 
-
 Welcome to this hands-on workshop on building interactive web applications using the Stanford Digital Repository (SDR) infrastructure!
 
 ### Inspiration
@@ -39,13 +38,13 @@ The Stanford Digital Repository (SDR) is Stanford's permanent digital preservati
 
 ## What We'll Build
 
-In this workshop, we'll create a **Stanford Public Art Interactive Map** that:
+In this workshop, we'll create a **[Stanford Public Art Interactive Map](https://stacks.stanford.edu/file/px356nx6116/test.htmlhttps:/)** that:
 
 - Displays artwork locations on an interactive Leaflet map
 - Shows a high-resolution aerial photograph from the Digital Stacks
 - Integrates data from Wikidata to show images and details about each artwork
 - Uses a split-screen layout for easy exploration
-- Can be deposited directly into SDR alongside your data
+- Can be [deposited directly into SDR alongside your data](https://purl.stanford.edu/px356nx6116)
 
 ![Final Application Screenshot](html/images/sdr_map_app.png)
 
