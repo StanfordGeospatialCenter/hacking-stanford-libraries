@@ -2,12 +2,14 @@
 
 ## Workshop Introduction
 
+This workshop's URL: [https://stanfordgeospatialcenter.github.io/hacking-stanford-libraries](https://stanfordgeospatialcenter.github.io/hacking-stanford-libraries)
+The Github Repo: [https://github.com/StanfordGeospatialCenter/hacking-stanford-libraries](https://github.com/StanfordGeospatialCenter/hacking-stanford-libraries)
+The Slides: [https://slides.com/staceymaples/hacksdr_app](https://slides.com/staceymaples/hacksdr_app)
 Welcome to this hands-on workshop on building interactive web applications using the Stanford Digital Repository (SDR) infrastructure!
 
 ### Inspiration
 
 This workshop was inspired by extensive experimentation with SDR as a spatial data infrastructure. A key example that motivated this work is [this interactive web application](https://stacks.stanford.edu/file/dz983xf0632/data/raw/fig1/index.html), which is published directly within an [SDR deposit](https://purl.stanford.edu/dz983xf0632).
-
 
 ![](images/20260131_154906_image.png)
 
