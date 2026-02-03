@@ -3,6 +3,7 @@
 This workshop's URL: [https://stanfordgeospatialcenter.github.io/hacking-stanford-libraries](https://stanfordgeospatialcenter.github.io/hacking-stanford-libraries)
 The Github Repo: [https://github.com/StanfordGeospatialCenter/hacking-stanford-libraries](https://github.com/StanfordGeospatialCenter/hacking-stanford-libraries)
 The Slides: [https://slides.com/staceymaples/hacksdr_app](https://slides.com/staceymaples/hacksdr_app)
+The DEMO Repo to FORK for your own use: [https://github.com/StanfordGeospatialCenter/Hacking_SDR_Demo_App](https://github.com/StanfordGeospatialCenter/Hacking_SDR_Demo_App)
 
 A practical workshop on using Stanford Libraries' [Digital Stacks](https://api.library.stanford.edu/docs/digital-stacks/api/), [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page), and web mapping to build interactive applications.
 
@@ -46,6 +47,7 @@ This workshop teaches you that SDR isn't just for archival—it's a complete pla
 ## Workshop Materials
 
 ### Getting Started
+
 - **[Workshop Introduction](00-workshop-introduction.md)** - Workshop overview and objectives
 - **[Workshop Materials Index](WORKSHOP-MATERIALS.md)** - Complete step-by-step documentation index
 
@@ -67,11 +69,13 @@ Progress through these tutorials in order to build a Stanford Public Art Interac
 12. [Step 11: Future Proofing](12-step-11-future-proofing.md)
 
 ### Reference Documentation
+
 - **[Digital Stacks Reference](DIGITAL-STACKS-REFERENCE.md)** - Quick reference for Digital Stacks API and DRUIDs
 - **[Glossary](GLOSSARY.md)** - Technical terms, acronyms, and concepts
 - **[HonKit/GitBook Navigation](SUMMARY.md)** - Structured navigation for documentation systems
 
 ## Stanford Resources
+
 - Stanford Digital Repository: https://sdr.stanford.edu/
 - Stanford Libraries APIs: https://api.library.stanford.edu/
 - Stanford Geospatial Center: https://gis.stanford.edu/
@@ -82,15 +86,14 @@ All working HTML files are located in the `html/` directory (`html/cog_map_step_
 
 ## Data Sources
 
-**Stanford Graduation False Color Infrared:**  
+**Stanford Graduation False Color Infrared:**
 https://stacks.stanford.edu/file/druid:vb564st1676/graduation-stanford_stanford-california_20240616_171600_ssc2_nrg_flat_50cm_rotated-154_large_COG.tif
 
-**OSM Basemap Tiles:**  
-http://{s}.tile.osm.org/{z}/{x}/{y}.png 
+**OSM Basemap Tiles:**
+http://{s}.tile.osm.org/{z}/{x}/{y}.png
 
-**World Level OSM PMTiles:**  
+**World Level OSM PMTiles:**
 https://stacks.stanford.edu/file/druid:hf224mw4004/20231116.pmtiles
 
-**Stanford Public Art GeoJSON:**  
+**Stanford Public Art GeoJSON:**
 `./stanford_public_art.geojson`
-
