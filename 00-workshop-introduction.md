@@ -6,7 +6,12 @@ Welcome to this hands-on workshop on building interactive web applications using
 
 ### Inspiration
 
-This workshop was inspired by extensive experimentation with SDR as a spatial data infrastructure. A key example that motivated this work is [this interactive web application](https://stacks.stanford.edu/file/dz983xf0632/data/raw/fig1/index.html), which is published directly within an [SDR deposit](https://purl.stanford.edu/dz983xf0632). It beautifully demonstrates that SDR is not just an archive—it's a complete platform for hosting interactive scholarly applications alongside your research data. This workshop teaches you how to create similar applications for your own projects.
+This workshop was inspired by extensive experimentation with SDR as a spatial data infrastructure. A key example that motivated this work is [this interactive web application](https://stacks.stanford.edu/file/dz983xf0632/data/raw/fig1/index.html), which is published directly within an [SDR deposit](https://purl.stanford.edu/dz983xf0632).
+
+
+![](images/20260131_154906_image.png)
+
+It beautifully demonstrates that SDR is not just an archive—it's a complete platform for hosting interactive scholarly applications alongside your research data. This workshop teaches you how to create similar applications for your own projects.
 
 ## Workshop Objectives
 
@@ -44,6 +49,7 @@ In this workshop, we'll create a **Stanford Public Art Interactive Map** that:
 **No prior programming experience required!** We'll teach you everything you need to know, starting from the basics.
 
 You will need:
+
 - A text editor (VS Code, Sublime Text, Notepad++, or even Notepad)
 - A web browser (Chrome, Firefox, Safari, or Edge)
 - The sample files from this workshop repository
@@ -55,11 +61,15 @@ You will need:
 Understanding file paths is crucial for web development, especially when working with the Digital Stacks.
 
 **Absolute Paths** start from the root of a file system or a complete URL:
+
 - `https://stacks.stanford.edu/file/druid:vb564st1676/graduation-stanford.tif`
 - `C:\Users\YourName\Documents\project\index.html` (Windows)
 - `/Users/YourName/Documents/project/index.html` (Mac/Linux)
 
+![alt text](images/image.png)
+
 **Relative Paths** are relative to the current file's location:
+
 - `./image.jpg` - file in the same directory as the HTML file
 - `../data/info.json` - file in a data folder one level up
 - `collection/map.geojson` - file in a collection subfolder
@@ -76,15 +86,18 @@ https://stacks.stanford.edu/file/druid:[DRUID]/[filename]
 ```
 
 Where:
+
 - `[DRUID]` is the unique identifier for your SDR object (e.g., `vb564st1676`)
 - `[filename]` is the name of the file within that object (e.g., `data.geojson`)
 
 **Example:**
+
 ```
 https://stacks.stanford.edu/file/druid:vb564st1676/graduation-stanford_stanford-california_20240616_171600_ssc2_nrg_flat_50cm_rotated-154_large_COG.tif
 ```
 
 This URL pattern means:
+
 - Your files are **always accessible** via their DRUID
 - URLs are **permanent** and won't break
 - You can **reference files from your HTML** using these URLs
@@ -116,17 +129,17 @@ If you don't already have one, sign up for a free account at [github.com](https:
 
 To work along with us, you'll need your own copy of the workshop materials.
 
-1.  Go to the [workshop repository on GitHub](https://github.com/StanfordGeospatialCenter/hacking-stanford-libraries).
-2.  Click the **Fork** button in the top-right corner to create a copy in your own account.
-3.  Once forked, you can work directly in the browser using GitHub Codespaces, or clone it to your local machine if you are comfortable with Git.
+1. Go to the [workshop repository on GitHub](https://github.com/StanfordGeospatialCenter/hacking-stanford-libraries).
+2. Click the **Fork** button in the top-right corner to create a copy in your own account.
+3. Once forked, you can work directly in the browser using GitHub Codespaces, or clone it to your local machine if you are comfortable with Git.
 
 ### 3. Create Your Work File
 
 Throughout this workshop, you will be building a single HTML file step-by-step.
 
-1.  In the root of your new repository, create a new file named `index.html`.
-2.  We will paste code into this file as we progress through the steps.
-3.  By naming it `index.html`, GitHub Pages will automatically serve it as the home page of your site later on.
+1. In the root of your new repository, create a new file named `index.html`.
+2. We will paste code into this file as we progress through the steps.
+3. By naming it `index.html`, GitHub Pages will automatically serve it as the home page of your site later on.
 
 ## Ready to Get Started?
 
